@@ -1,0 +1,8 @@
+{
+  "editor.insertSpaces": false,
+  "files.exclude": {
+    "__error": "Not found",
+    "LICENSE": true,
+    ".gitignore": true
+  }
+}
