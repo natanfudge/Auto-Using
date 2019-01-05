@@ -1,93 +1,88 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { readFileSync } from 'fs';
-import { stringify } from 'querystring';
-import { references } from './hardcodedreferences';
+import { homedir } from 'os';
+import { CompletionProvider, NO_PREFIX } from './CompletionProvider';
 
 const TXT = "plaintext";
 const CSHARP = "csharp";
 
+export const PROJECT_NAME = "auto-using";
+export const STORE_COMPLETION_COMMAND = "extension.storeCompletion";
+export const WIPE_STORAGE_COMMAND = "extension.wipeCommon";
+export const COMPLETION_STORAGE = "commonwords";
+
+export const PROJECT_ID = "fudge.auto-using";
+export const PREFERENCE_RECIEVED = "preferenceRecieved";
+
+
+
+export class Completion {
+	label: string;
+	namespace: string;
+}
+
+export function completionExists(completion: Completion, completions: Completion[]) {
+	return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
+}
+
+const NO_PREFIX_OPTION = "Old (None)";
+const CURLY_BRACKETS_OPTION = "Default - '{Import}'";
+const SQUIGGLE_OPTION = "'~'";
+const PARENTHESES_OPTION = "~(Import)";
+
 export async function activate(context: vscode.ExtensionContext) {
 
+	if(!context.globalState.get<Boolean>(PREFERENCE_RECIEVED)){
+		askForPrefixPreference(context);
+	}
 
-
-
-	let provider1 = vscode.languages.registerCompletionItemProvider(CSHARP, {
-
-
-
-		async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
-
-			let types = references.toString().split("\n");
-			let usings = await getUsingsInFile(document);
-			types = await Promise.all(types.filter(type => !usings.includes(type.split(" ")[1])));
-
-			// var list = new vscode.CompletionList();
-			let completions = new Array<vscode.CompletionItem>(types.length);
-			let completionPos = 0;
-			for (let i = 0; i < types.length; i++) {
-
-
-				let type = types[i];
-				let [clazz, namespace] = type.split(" ");
-
-
-				let completion: vscode.CompletionItem = {
-					label: clazz,
-					kind: vscode.CompletionItemKind.Reference,
-					detail: namespace,
-					additionalTextEdits: [vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`)],
-					commitCharacters: ['.']
-				};
-
-
-				completions[i] = completion;
-
-
+	let storeCompletionCommand = vscode.commands.registerCommand(STORE_COMPLETION_COMMAND, (completion: Completion) => {
+		let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
+		if (Array.isArray(completions)) {
+			if (!completionExists(completion, completions)) {
+				completions.push(completion);
+				context.globalState.update(COMPLETION_STORAGE, completions);
 			}
-
-			// completions.
-
-
-
-			// return all completion items as array
-			return completions;
+		} else {
+			context.globalState.update(COMPLETION_STORAGE, [completion]);
 		}
+
 	});
 
-	const provider2 = vscode.languages.registerCompletionItemProvider(
-		'plaintext',
-		{
-			provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
+	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, (completion: Completion) => {
+		context.globalState.update(COMPLETION_STORAGE, []);
+	});
 
-				// get all text until the `position` and check if it reads `console.`
-				// and iff so then complete if `log`, `warn`, and `error`
-				let linePrefix = document.lineAt(position).text.substr(0, position.character);
-				if (!linePrefix.endsWith('console.')) {
-					return undefined;
-				}
 
-				return [
-					new vscode.CompletionItem('log', vscode.CompletionItemKind.Method),
-					new vscode.CompletionItem('warn', vscode.CompletionItemKind.Method),
-					new vscode.CompletionItem('error', vscode.CompletionItemKind.Method),
-				];
+
+	let provider1 = vscode.languages.registerCompletionItemProvider(CSHARP, new CompletionProvider(context));
+
+
+	context.subscriptions.push(provider1, storeCompletionCommand, wipeStorageCommand);
+}
+
+function askForPrefixPreference(context : vscode.ExtensionContext) {
+	vscode.window.showInformationMessage("A change was made to make 'Auto Using for C#' clutter Intellisense less. References that were never imported will now be prefixed. What prefix would you like?",
+		CURLY_BRACKETS_OPTION, NO_PREFIX_OPTION, SQUIGGLE_OPTION, PARENTHESES_OPTION).then((chosen) => {
+			let prefix = "";
+			switch (chosen) {
+				case NO_PREFIX_OPTION:
+					prefix = NO_PREFIX;
+					break;
+				case CURLY_BRACKETS_OPTION:
+					prefix = "{Import}";
+					break;
+				case SQUIGGLE_OPTION:
+					prefix = "~";
+					break;
+				case PARENTHESES_OPTION:
+					prefix = "~(Import)";
+					break;
 			}
-		},
-		'.' // triggered whenever a '.' is being typed
-	);
-
-	context.subscriptions.push(provider1, provider2);
+			vscode.workspace.getConfiguration(PROJECT_NAME).update(NO_PREFIX_OPTION, prefix);
+			context.globalState.update(PREFERENCE_RECIEVED,true);
+			vscode.window.showInformationMessage("You can change this in the settings at any time.", "OK");
+		});
 }
 
-async function getUsingsInFile(document: vscode.TextDocument): Promise<string[]> {
-	var regExp = /^using.*;/gm;
-	var matches = document.getText().match(regExp);
-	if (matches == null) return [];
-	return await Promise.all(matches.map(async using => {
-		var usingWithSC = using.split(" ")[1];
-		return usingWithSC.substring(0, usingWithSC.length - 1);
-	}));
-
-}

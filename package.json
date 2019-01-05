@@ -1,7 +1,7 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
-	"version": "0.0.2",
+	"version": "0.1.1",
 	"publisher": "Fudge",
 	"repository": {
 		"type":"git",
@@ -26,6 +26,34 @@
 	"categories": [
 		"Other"
 	],
+	"contributes": {
+		"commands":[
+			{
+				"command": "extension.wipeCommon",
+				"title": "Wipe Memory Of Commonly Used References"
+			}
+		],
+		"configuration":{
+			"title": "Auto-Using for C#",
+			"properties": {
+				"auto-using.prefix":{
+					"type":"string",
+					"default":"{Import}",
+					"enum": ["{Import}","No Prefix","~","~(Import)"],
+					"enumDescriptions": [
+						"Completions will be prefixed with {Import}.",
+						"UNRECOMMENDED! There will be no prefix but hundreds of unimported references will clutter your Intellisense.",
+						"Completions will be prefixed with ~.",
+						"Completions will be prefixed with ~(Import)."
+					],
+					"description": "The prefix that will be added to unimported reference completions that you have never used for the sake of deprioritizing them."
+					
+				}
+				
+			}
+		}
+	},
+	
 	"activationEvents": [
 		"*"
 	],
