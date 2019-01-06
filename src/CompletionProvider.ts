@@ -5,7 +5,6 @@ import { STORE_COMPLETION_COMMAND, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE
 export const LOWPRIO_PREFIX_OPTION = "prefix";
 export const NO_PREFIX = "No Prefix";
 
-// const LOWPRIO_PREFIX = "~(Import)";
 
 export class CompletionProvider {
 	extensionContext: vscode.ExtensionContext;
