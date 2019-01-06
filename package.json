@@ -1,7 +1,7 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"publisher": "Fudge",
 	"repository": {
 		"type": "git",
@@ -10,7 +10,10 @@
 	"bugs": {
 		"url": "https://github.com/natanfudge/Auto-Using/issues"
 	},
-	"files": ["out/**","!out/test/**"],
+	"files": [
+		"out/**",
+		"!out/test/**"
+	],
 	"keywords": [
 		"C#",
 		"csharp",
