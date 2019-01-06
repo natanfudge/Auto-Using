@@ -1,25 +1,24 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"publisher": "Fudge",
 	"repository": {
-		"type":"git",
-		"url":"https://github.com/natanfudge/Auto-Using"
+		"type": "git",
+		"url": "https://github.com/natanfudge/Auto-Using"
 	},
-	"bugs":{
-		"url":"https://github.com/natanfudge/Auto-Using/issues"
+	"bugs": {
+		"url": "https://github.com/natanfudge/Auto-Using/issues"
 	},
-	
 	"keywords": [
 		"C#",
 		"csharp",
-        "import",
+		"import",
 		"require",
 		"using",
 		"auto-using",
-        "auto-import"
-    ],
+		"auto-import"
+	],
 	"engines": {
 		"vscode": "^1.18.0"
 	},
@@ -27,19 +26,24 @@
 		"Other"
 	],
 	"contributes": {
-		"commands":[
+		"commands": [
 			{
 				"command": "extension.wipeCommon",
 				"title": "Wipe Memory Of Commonly Used References"
 			}
 		],
-		"configuration":{
+		"configuration": {
 			"title": "Auto-Using for C#",
 			"properties": {
-				"auto-using.prefix":{
-					"type":"string",
-					"default":"{Import}",
-					"enum": ["{Import}","No Prefix","~","~(Import)"],
+				"auto-using.prefix": {
+					"type": "string",
+					"default": "{Import}",
+					"enum": [
+						"{Import}",
+						"No Prefix",
+						"~",
+						"~(Import)"
+					],
 					"enumDescriptions": [
 						"Completions will be prefixed with {Import}.",
 						"UNRECOMMENDED! There will be no prefix but hundreds of unimported references will clutter your Intellisense.",
@@ -47,13 +51,10 @@
 						"Completions will be prefixed with ~(Import)."
 					],
 					"description": "The prefix that will be added to unimported reference completions that you have never used for the sake of deprioritizing them."
-					
 				}
-				
 			}
 		}
 	},
-	
 	"activationEvents": [
 		"*"
 	],
