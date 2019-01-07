@@ -2,6 +2,7 @@
 !out
 out/test
 !README.md
+!CHANGELOG.md
 #!demo.gif
 #!memory.gif
 #!AutoUsing/TypeInfoNew.txt

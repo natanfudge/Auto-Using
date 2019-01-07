@@ -31,6 +31,12 @@ Gives priority to completions that were chosen before.
 
 ## Changelog
 
+
+### 0.3.0 
+- Increased the amount of references you can import from mscorelib (~900 references) to entire .NET base library (~3000 refrences).
+
+If there is something missing from the base classes please make an issue.
+
 ### 0.2.3 
 No more of that weird prefix stuff, completions that you have never chosen will be deprioitized but not prefixed. 
 
