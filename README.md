@@ -14,6 +14,9 @@ Gives priority to completions that were chosen before.
 
 ## Changelog
 
+### 0.2.3 
+No more of that weird prefix stuff, completions that you have never chosen will be deprioitized but not prefixed. 
+
 ### 0.2.0
 Removed unnecessary files
 

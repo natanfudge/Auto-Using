@@ -2,7 +2,7 @@
 
 import * as vscode from 'vscode';
 import { homedir } from 'os';
-import { CompletionProvider, NO_PREFIX } from './CompletionProvider';
+import { CompletionProvider, SORT_CHEAT } from './CompletionProvider';
 
 const TXT = "plaintext";
 const CSHARP = "csharp";
@@ -26,16 +26,11 @@ export function completionExists(completion: Completion, completions: Completion
 	return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
 }
 
-const NO_PREFIX_OPTION = "Old (None)";
-const CURLY_BRACKETS_OPTION = "Default - '{Import}'";
-const SQUIGGLE_OPTION = "'~'";
-const PARENTHESES_OPTION = "~(Import)";
+
+
 
 export async function activate(context: vscode.ExtensionContext) {
 
-	if(!context.globalState.get<Boolean>(PREFERENCE_RECIEVED)){
-		askForPrefixPreference(context);
-	}
 
 	let storeCompletionCommand = vscode.commands.registerCommand(STORE_COMPLETION_COMMAND, (completion: Completion) => {
 		let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
@@ -55,34 +50,9 @@ export async function activate(context: vscode.ExtensionContext) {
 	});
 
 
-
 	let provider1 = vscode.languages.registerCompletionItemProvider(CSHARP, new CompletionProvider(context));
 
 
 	context.subscriptions.push(provider1, storeCompletionCommand, wipeStorageCommand);
-}
-
-function askForPrefixPreference(context : vscode.ExtensionContext) {
-	vscode.window.showInformationMessage("A change was made to make 'Auto Using for C#' clutter Intellisense less. References that were never imported will now be prefixed. What prefix would you like?",
-		CURLY_BRACKETS_OPTION, NO_PREFIX_OPTION, SQUIGGLE_OPTION, PARENTHESES_OPTION).then((chosen) => {
-			let prefix = "";
-			switch (chosen) {
-				case NO_PREFIX_OPTION:
-					prefix = NO_PREFIX;
-					break;
-				case CURLY_BRACKETS_OPTION:
-					prefix = "{Import}";
-					break;
-				case SQUIGGLE_OPTION:
-					prefix = "~";
-					break;
-				case PARENTHESES_OPTION:
-					prefix = "~(Import)";
-					break;
-			}
-			vscode.workspace.getConfiguration(PROJECT_NAME).update(NO_PREFIX_OPTION, prefix);
-			context.globalState.update(PREFERENCE_RECIEVED,true);
-			vscode.window.showInformationMessage("You can change this in the settings at any time.", "OK");
-		});
 }
 

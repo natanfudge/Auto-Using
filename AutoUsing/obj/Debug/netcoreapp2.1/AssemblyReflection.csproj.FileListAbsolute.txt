@@ -1,0 +1,11 @@
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\bin\Debug\netcoreapp2.1\AssemblyReflection.deps.json
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\bin\Debug\netcoreapp2.1\AssemblyReflection.runtimeconfig.json
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\bin\Debug\netcoreapp2.1\AssemblyReflection.runtimeconfig.dev.json
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\bin\Debug\netcoreapp2.1\AssemblyReflection.dll
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\bin\Debug\netcoreapp2.1\AssemblyReflection.pdb
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\obj\Debug\netcoreapp2.1\AssemblyReflection.csprojAssemblyReference.cache
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\obj\Debug\netcoreapp2.1\AssemblyReflection.csproj.CoreCompileInputs.cache
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\obj\Debug\netcoreapp2.1\AssemblyReflection.AssemblyInfoInputs.cache
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\obj\Debug\netcoreapp2.1\AssemblyReflection.AssemblyInfo.cs
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\obj\Debug\netcoreapp2.1\AssemblyReflection.dll
+C:\Users\natan\Desktop\assemblyreflection\AssemblyReflection\obj\Debug\netcoreapp2.1\AssemblyReflection.pdb

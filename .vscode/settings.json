@@ -1,7 +1,7 @@
 {
   "editor.insertSpaces": false,
   "files.exclude": {
-    "LICENSE": true,
-    ".gitignore": true
-  }
+    "LICENSE": true
+  },
+  "dotnet-test-explorer.testProjectPath": "AutoUsingTest"
 }

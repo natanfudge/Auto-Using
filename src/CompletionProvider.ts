@@ -2,8 +2,8 @@ import * as vscode from 'vscode';
 import { references } from './hardcodedreferences';
 import { STORE_COMPLETION_COMMAND, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE, Completion, completionExists, PROJECT_NAME } from './extension';
 
-export const LOWPRIO_PREFIX_OPTION = "prefix";
-export const NO_PREFIX = "No Prefix";
+
+export const SORT_CHEAT = "\u200B";
 
 
 export class CompletionProvider {
@@ -24,8 +24,6 @@ export class CompletionProvider {
 
 		let completions = new Array<vscode.CompletionItem>(types.length);
 
-		let lowprioPrefix = vscode.workspace.getConfiguration(PROJECT_NAME).get<string>(LOWPRIO_PREFIX_OPTION);
-		if(lowprioPrefix === NO_PREFIX) lowprioPrefix = "";
 
 		for (let i = 0; i < types.length; i++) {
 
@@ -40,7 +38,7 @@ export class CompletionProvider {
 
 			// Build vscode completion object
 			let completion: vscode.CompletionItem = {
-				label: priorityCompletion ? clazz : lowprioPrefix + clazz,
+				label: priorityCompletion ? clazz : SORT_CHEAT + clazz,
 				insertText:clazz,
 				filterText:clazz,
 				kind: vscode.CompletionItemKind.Reference,
@@ -48,8 +46,6 @@ export class CompletionProvider {
 				additionalTextEdits: [vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`)],
 				commitCharacters: ['.'],
 				command: { command: STORE_COMPLETION_COMMAND, arguments: [completionData], title: "amar" },
-				// sortText :"~"
-				// sortText: completionExists(completionData, prioritized) ? clazz : "~" + clazz,
 				
 
 			};

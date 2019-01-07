@@ -1,0 +1,17 @@
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using-Test.deps.json
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using-Test.runtimeconfig.json
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using-Test.runtimeconfig.dev.json
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using-Test.dll
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using-Test.pdb
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using.dll
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\bin\Debug\netcoreapp2.1\Auto-Using.pdb
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.csprojAssemblyReference.cache
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.csproj.CoreCompileInputs.cache
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.AssemblyInfoInputs.cache
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.AssemblyInfo.cs
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.csproj.CopyComplete
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.dll
+c:\Users\natan\Desktop\Auto-Using\Auto-Using-Test\obj\Debug\netcoreapp2.1\Auto-Using-Test.pdb
