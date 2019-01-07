@@ -46,8 +46,6 @@ export class CompletionProvider {
 				additionalTextEdits: [vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`)],
 				commitCharacters: ['.'],
 				command: { command: STORE_COMPLETION_COMMAND, arguments: [completionData], title: "amar" },
-				
-
 			};
 
 
