@@ -3,6 +3,24 @@ Auto-imports and provides intellisense for references that were not yet imported
 
 ![Sample](demo.gif)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Gives priority to completions that were chosen before.
 
 ![Memory](memory.gif)
