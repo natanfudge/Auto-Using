@@ -1,7 +1,7 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"publisher": "Fudge",
 	"repository": {
 		"type": "git",
@@ -36,7 +36,6 @@
 				"title": "Wipe Memory Of Commonly Used References"
 			}
 		]
-		
 	},
 	"activationEvents": [
 		"onLanguage:csharp"
