@@ -2,6 +2,6 @@
 !out
 out/test
 !README.md
-!demo.gif
-!memory.gif
+#!demo.gif
+#!memory.gif
 #!AutoUsing/TypeInfoNew.txt
