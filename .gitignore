@@ -2,3 +2,7 @@ out
 node_modules
 .vscode-test/
 *.vsix
+AutoUsing/bin
+AutoUsing/obj
+AutoUsingTest/bin
+AutoUsingTest/obj
