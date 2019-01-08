@@ -8,8 +8,12 @@ using System.Linq;
 namespace AutoUsing
 {
 
+	
+
 	public class ReferenceScanner
 	{
+		// string x;
+		
 
 		public static FileInfo[] GetBinFiles()
 		{

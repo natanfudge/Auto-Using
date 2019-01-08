@@ -33,7 +33,7 @@ Gives priority to completions that were chosen before.
 
 
 ### 0.3.3
-- Increased the amount of references you can import from mscorelib (~900 references) to entire .NET base library (~3000 refrences).
+- Increased the amount of references you can import from mscorelib (~900 references) to entire .NET base library (~3000 references).
 
 If there is something missing from the base classes please make an issue.
 

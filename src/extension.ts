@@ -3,6 +3,7 @@
 import * as vscode from 'vscode';
 import { homedir } from 'os';
 import { CompletionProvider, SORT_CHEAT } from './CompletionProvider';
+import CSharpExtensionExports from './omnisharp/interfaces';
 
 const TXT = "plaintext";
 const CSHARP = "csharp";
@@ -46,11 +47,17 @@ export async function activate(context: vscode.ExtensionContext) {
 	});
 
 	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, (completion: Completion) => {
+		let amount = context.globalState.get<Completion[]>(COMPLETION_STORAGE).length;
+		vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
 		context.globalState.update(COMPLETION_STORAGE, []);
 	});
 
+	// const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>("ms-vscode.csharp");
+	// await csharpExtension.exports.initializationFinished();
+	// const server = await csharpExtension.exports.getAdvisor();
 
-	let provider1 = vscode.languages.registerCompletionItemProvider(CSHARP, new CompletionProvider(context));
+
+	let provider1 = vscode.languages.registerCompletionItemProvider(CSHARP, new CompletionProvider(context),"."," ");
 
 
 	context.subscriptions.push(provider1, storeCompletionCommand, wipeStorageCommand);

@@ -1,7 +1,7 @@
 ## Changelog
 
 ### 0.3.0 
-Increase the amount of references you can import from mscorelib (~900 references) to entire .NET base library (~3000 refrences).
+Increase the amount of references you can import from mscorelib (~900 references) to entire .NET base library (~3000 references).
 
 ### 0.2.3 
 No more of that weird prefix stuff, completions that you have never chosen will be deprioitized but not prefixed. 

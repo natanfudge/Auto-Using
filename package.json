@@ -35,6 +35,12 @@
 				"command": "extension.wipeCommon",
 				"title": "Wipe Memory Of Commonly Used References"
 			}
+		],
+		"keybindings":[
+			{
+				"command": "extension.wipeCommon",
+				"key": "Ctrl+Shift+W"
+			}
 		]
 	},
 	"activationEvents": [
@@ -52,5 +58,6 @@
 		"tslint": "^5.11.0",
 		"typescript": "^2.1.4",
 		"vscode": "^1.1.17"
-	}
+	},
+	"extensionDependencies": ["ms-vscode.csharp"]
 }
