@@ -31,8 +31,11 @@ Gives priority to completions that were chosen before.
 
 ## Changelog
 
+### 0.5.0 
+- When there are two or more types with the same name, a (sorted based on your previously selected completions) quick pick menu will show up, giving you an option to choose between the different namespaces. 
+
 ### 0.4.0 
-- Completions no longer appear when typing a variable name 
+- Completions no longer appear when typing a variable name.
 
 If completions are appearing when they shouldn't, or not appearing when they should, please make an issue. 
 

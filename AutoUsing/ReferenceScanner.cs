@@ -21,7 +21,7 @@ namespace AutoUsing
 		}
 
 
-		public static string GetAllReferences()
+		public static List<Reference> GetAllReferences()
 		{
 			var bins = GetBinFiles();
 			var assemblies = bins.Select(file =>
@@ -37,51 +37,21 @@ namespace AutoUsing
 
 			}).Where(assembly => assembly != null).Append(typeof(int).Assembly);
 
+			var references = new List<KeyValuePair<string,string>>();
+
+			foreach(var assembly in assemblies){
+				foreach(var type in assembly.GetExportedTypes()){
+					references.Add(new KeyValuePair<string, string>(WithoutTilde( type.Name),type.Namespace));
+				}
+			}
 
 
-			var referenceList = string.Join("\n",assemblies.Select(assembly =>
-			{
-				var types = assembly.GetExportedTypes().Select(type =>
-					{
-						var neededAssemblyInfo = $"{WithoutTilde(type.Name)} {type.Namespace}";
-						return neededAssemblyInfo;
-					}).Where(typeStr => typeStr != null).ToList();
-				return string.Join("\n",types);
-			})).Split("\n").Distinct().ToList();
-
-			return string.Join("\n",referenceList);
-
-
+			var grouped = references.Distinct().GroupBy(kv => kv.Key).Select(group => new Reference(group.Key,group.Select(kv => kv.Value).ToList())).ToList();
 			
+			return grouped;
 
-
-			// var neededInfo = bins.Select(file =>
-			// // {
-			// // 	try
-			// // 	{
-			// // 		var assembly = Assembly.LoadFile(file.FullName);
-
-
-			// // 	}
-			// // 	catch ()
-			// // 	{
-			// // 		return null;
-			// // 	}
-			// // }).Where(info => info != null && info.Count > 0).ToList();
-
-			// var lines = string.Join("\n", neededInfo.Select(referenceList => string.Join("\n", referenceList))).Split("\n");
-			// var linesDistinct = lines.Distinct().ToList();
-
-			// var finalStr = string.Join("\n", linesDistinct);
-
-
-			// return finalStr;
 
 		}
-
-		// public static bool IsVisualBasic(string nameSpace){
-		//     return nameSpace.
-		// }
 
 		public static string WithoutTilde(string str)
 		{

@@ -1,8 +1,8 @@
-import { references } from './hardcodedreferences';
-import { STORE_COMPLETION_COMMAND, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE, Completion, completionExists, PROJECT_NAME } from './extension';
+import { HANDLE_COMPLETION, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE, Completion, completionExists as completionCommon, PROJECT_NAME } from './extension';
 import * as vscode from "vscode";
 import { TypeLookupResponse, TypeLookupRequest } from './omnisharp/interfaces';
 import { createRequest } from './omnisharp/util';
+import { references } from './csReferences';
 
 export const SORT_CHEAT = "\u200B";
 
@@ -14,6 +14,9 @@ const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "str
 	"internal", "private", "await"
 ];
 
+export class Reference {
+	constructor(public name: string, public namespaces: string[]) { }
+}
 
 
 
@@ -32,7 +35,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 	private isWhitespace(char: string): boolean {
-		return /\s/.test(char);
+		return /\s/.test(char) || char == "";
 	}
 
 
@@ -43,22 +46,22 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 	private async getCurrentType(position: vscode.Position): Promise<string> {
-		try{
+		try {
 			let hover = <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
 
 			let str = (<{ language: string; value: string }>hover[0].contents[1]).value;
-	
+
 			const start = 10;
-	
+
 			let typeStart = str.substring(start, str.length);
-	
+
 			let i: number;
 			for (i = 0; typeStart[i] != " " && typeStart[i] != "\n"; i++);
-	
+
 			let type = typeStart.substr(0, i);
-	
+
 			return type;
-		}catch{
+		} catch{
 			return "ERROR";
 		}
 	}
@@ -105,63 +108,56 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 
-	async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
+	async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
-		if(requiredCompletion === false) return [];
-		if(requiredCompletion !== true){
-			// console.log("Type = " + requiredCompletion);
+		if (requiredCompletion === false) return [];
+		if (requiredCompletion !== true) {
 			return [];
 		}
 
-		// Get available types from the references file and filter out o
-		let types = references.toString().split("\n");
+
 		let usings = await this.getUsingsInFile(document);
 
-		// Filter out stuff that we are using already
-		types = await Promise.all(types.filter(type => !usings.includes(type.split(" ")[1])));
-		
-		let completions = types.map(type =>{
-			let [clazz, namespace] = type.split(" ");
-
-			let prioritized = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE);
-
-
-			let completionData: Completion = { label: clazz, namespace: namespace };
-
-			let priorityCompletion = completionExists(completionData, prioritized);
-
-			// Build vscode completion object
-			return {
-				label: priorityCompletion ? clazz : SORT_CHEAT + clazz,
-				insertText: clazz,
-				filterText: clazz,
-				kind: vscode.CompletionItemKind.Reference,
-				detail: namespace,
-				additionalTextEdits: [vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`)],
-				commitCharacters: ['.'],
-				command: { command: STORE_COMPLETION_COMMAND, arguments: [completionData], title: "amar" },
-			};
-
-			
-		});
-		
-
-
-		// // let completions = new Array<vscode.CompletionItem>(types.length);
-
-
-		// for (let i = 0; i < types.length; i++) {
-
-			
-
-
-		// 	completions[i] = completion;
-
-		// }
+		let completions = this.referencesToCompletions(references, usings);
 
 		// return all completion items as array
 		return completions;
+	}
+
+
+
+	private async referencesToCompletions(references: Reference[], usings: string[]): Promise<vscode.CompletionItem[]> {
+		references = await filterOutAlreadyUsing(references, usings);
+
+		let prioritized = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE);
+
+		return references.map(reference => {
+
+			let priorityCompletion = completionCommon(new Completion(reference.name, reference.namespaces[0]), prioritized);
+
+			let oneOption = reference.namespaces.length === 1;
+
+			// We instantly put the using statement only if there is only one option
+			let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined;
+
+
+			// Build vscode completion object
+			let completion: vscode.CompletionItem = {
+				label: priorityCompletion ? reference.name : SORT_CHEAT + reference.name,
+				insertText: reference.name,
+				filterText: reference.name,
+				kind: vscode.CompletionItemKind.Reference,
+				detail: reference.namespaces.join("\n"),
+				additionalTextEdits: usingStatementEdit,
+				commitCharacters: ['.'],
+				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" },
+			};
+
+			return completion;
+
+
+		});
 	}
 
 	/**
@@ -179,4 +175,12 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 	}
 
+}
+
+export function usingEdit(namespace: string): vscode.TextEdit {
+	return vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
+}
+
+async function filterOutAlreadyUsing(references: Reference[], usings: string[]): Promise<Reference[]> {
+	return await Promise.all(references.map(reference => new Reference(reference.name, reference.namespaces.filter(namespace => !usings.includes(namespace)))).filter(reference => reference.namespaces.length > 0));
 }

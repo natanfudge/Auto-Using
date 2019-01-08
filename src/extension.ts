@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { homedir } from 'os';
+import { homedir, type } from 'os';
 import { CompletionProvider, SORT_CHEAT } from './CompletionProvider';
 import CSharpExtensionExports from './omnisharp/interfaces';
 
@@ -9,7 +9,7 @@ const TXT = "plaintext";
 const CSHARP = "csharp";
 
 export const PROJECT_NAME = "auto-using";
-export const STORE_COMPLETION_COMMAND = "extension.storeCompletion";
+export const HANDLE_COMPLETION = "extension.handleCompletion";
 export const WIPE_STORAGE_COMMAND = "extension.wipeCommon";
 export const COMPLETION_STORAGE = "commonwords";
 
@@ -19,8 +19,7 @@ export const PREFERENCE_RECIEVED = "preferenceRecieved";
 
 
 export class Completion {
-	label: string;
-	namespace: string;
+	constructor(public label: string, public namespace: string) { }
 }
 
 export function completionExists(completion: Completion, completions: Completion[]) {
@@ -33,33 +32,76 @@ export function completionExists(completion: Completion, completions: Completion
 export async function activate(context: vscode.ExtensionContext) {
 
 
-	let storeCompletionCommand = vscode.commands.registerCommand(STORE_COMPLETION_COMMAND, (completion: Completion) => {
-		let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
-		if (Array.isArray(completions)) {
-			if (!completionExists(completion, completions)) {
-				completions.push(completion);
-				context.globalState.update(COMPLETION_STORAGE, completions);
-			}
-		} else {
-			context.globalState.update(COMPLETION_STORAGE, [completion]);
-		}
+	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
+		if (reference.namespaces.length > 1) {
 
+			let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
+			let namespaceUsedMore: string = "";
+
+			for (let namespace of reference.namespaces) {
+				let checkCompletion = new Completion(reference.name, namespace);
+				if (completionExists(checkCompletion, completions)) {
+					namespaceUsedMore = namespace;
+				}
+			}
+
+			let namespacesSorted = await Promise.all(reference.namespaces.sort((n1,n2) => {
+				let firstPrio = completionExists(new Completion(reference.name, n1), completions);
+				let secondPrio = completionExists(new Completion(reference.name, n2), completions);
+
+				if(firstPrio && !secondPrio) return -1;
+				if(!firstPrio && secondPrio) return 1;
+				return n1.localeCompare(n2);
+
+			}));
+
+			// let options : vscode.QuickPickOptions = {placeHolder : namespaceUsedMore};
+
+			vscode.window.showQuickPick(namespacesSorted).then(pick => {
+				// Remove invisible unicode char
+				if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
+
+				if (typeof pick === "undefined") return;
+				storeCompletion(context, new Completion(reference.name, pick));
+
+				let editBuilder = textEdit => {
+					textEdit.insert(new vscode.Position(0, 0), `using ${pick};\n`);
+				};
+
+				vscode.window.activeTextEditor.edit(editBuilder);
+			});
+		} else {
+			storeCompletion(context, new Completion(reference.name, reference.namespaces[0]));
+		}
 	});
 
-	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, (completion: Completion) => {
+	// Remove all stored completions
+	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => {
 		let amount = context.globalState.get<Completion[]>(COMPLETION_STORAGE).length;
 		vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
 		context.globalState.update(COMPLETION_STORAGE, []);
 	});
 
-	// const csharpExtension = vscode.extensions.getExtension<CSharpExtensionExports>("ms-vscode.csharp");
-	// await csharpExtension.exports.initializationFinished();
-	// const server = await csharpExtension.exports.getAdvisor();
 
 
-	let provider1 = vscode.languages.registerCompletionItemProvider(CSHARP, new CompletionProvider(context),"."," ");
+
+	let provider1 = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP }, new CompletionProvider(context), ".", " ");
 
 
-	context.subscriptions.push(provider1, storeCompletionCommand, wipeStorageCommand);
+	context.subscriptions.push(provider1, handleCompletionCommand, wipeStorageCommand);
+}
+
+function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {
+	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
+	if (Array.isArray(completions) /*&& typeof completions[0] === "string"*/ && completions[0] instanceof Completion) {
+		// if(completions instanceof Completion[])
+		if (!completionExists(completion, completions)) {
+			completions.push(completion);
+			context.globalState.update(COMPLETION_STORAGE, completions);
+		}
+	}
+	else {
+		context.globalState.update(COMPLETION_STORAGE, [completion]);
+	}
 }
 
