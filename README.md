@@ -31,6 +31,10 @@ Gives priority to completions that were chosen before.
 
 ## Changelog
 
+### 0.4.0 
+- Completions no longer appear when typing a variable name 
+
+If completions are appearing when they shouldn't, or not appearing when they should, please make an issue. 
 
 ### 0.3.3
 - Increased the amount of references you can import from mscorelib (~900 references) to entire .NET base library (~3000 references).
