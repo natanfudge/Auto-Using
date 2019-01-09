@@ -20,11 +20,11 @@ export class Reference {
 }
 
 
-
 export class CompletionProvider implements vscode.CompletionItemProvider {
 	private document: vscode.TextDocument;
 
-	constructor(private context: vscode.ExtensionContext) { }
+	constructor(private context: vscode.ExtensionContext) {
+	 }
 
 	private getCharAtPos(pos: vscode.Position): string {
 		return this.document.getText(new vscode.Range(pos, pos.translate(0, 1)));
@@ -116,29 +116,43 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	performance: any;
 
 
-	async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
-
+	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
 		if (requiredCompletion === false) return [];
+		//TODO return extension functions in this case
 		if (requiredCompletion !== true) {
 			return [];
 		}
+		
+		let found = this.filterByTypedWord(document, position);
 
 
 		let usings = await this.getUsingsInFile(document);
 
-		let completions = this.referencesToCompletions(references, usings);
+		let completions = this.referencesToCompletions(found,usings);
 
 		return completions;
+
 
 	}
 
 
 
+	private filterByTypedWord(document: vscode.TextDocument, position: vscode.Position) {
+		let wordToComplete = '';
+		let range = document.getWordRangeAtPosition(position);
+		if (range) {
+			wordToComplete = document.getText(new vscode.Range(range.start, position)).toLowerCase();
+		}
+		let matcher = f => f.name.toLowerCase().indexOf(wordToComplete) > -1;
+		let found = references.filter(matcher);
+		return found;
+	}
+
 	private referencesToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
-		let completionAmount =filterOutAlreadyUsing(references, usings);
+		let completionAmount = filterOutAlreadyUsing(references, usings);
 
 		let commonNames = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE).map(completion => completion.label);
 
@@ -222,7 +236,7 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 			// Get rid of references that their usings exist
 			if (binarySearch<string>(usings, references[i].namespaces[j]) != -1) {
 				references[i].namespaces[j] = references[i].namespaces[m - 1];
-				references[i].namespaces.length -=1;
+				references[i].namespaces.length -= 1;
 				j--;
 				m--;
 			}
@@ -239,3 +253,5 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 	return n;
 
 }
+
+

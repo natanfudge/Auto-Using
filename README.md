@@ -3,20 +3,8 @@ Auto-imports and provides intellisense for references that were not yet imported
 
 ![Sample](newdemo.gif)
   
-  
-  
-  
-  
-  
+
   <br><br><br><br><br><br><br>
-  
-  
-  
-   
-  
-   
-  
-  
   
   
   
@@ -25,14 +13,24 @@ Gives priority to completions that were chosen before.
 ![Memory](memory.gif)
 
 
+  <br><br><br><br><br><br><br>
+
+
+Sometimes there are multiple completions with the same name. In that case they are compressed into a single completion and you get to choose between then.
+![Option](option.gif)
+
 
 ----
 
 
+
 ## Changelog
 
+### 0.6.1
+- Improved time it takes to provide completions from "essentialy nothing" to "actually nothing most of the time and almost actually nothing the rest of the time". (Thanks for the Auto-Import ext for a cool idea)
+
 ### 0.6.0
-- Improved time it takes to provide completions from 0.4 seconds to essentialy nothing.
+- Improved time it takes to provide completions from at least 0.4 seconds to essentialy nothing.
 
 ### 0.5.0 
 - When there are two or more types with the same name, a (sorted based on your previously selected completions) quick pick menu will show up, giving you an option to choose between the different namespaces. 
