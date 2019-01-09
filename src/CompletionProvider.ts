@@ -69,7 +69,6 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 	private async isPlaceToComplete(position: vscode.Position): Promise<boolean | string> {
 		let currentPos = this.getPrevPos(position);
-		// let currentPos = position;
 
 		let currentChar = this.getCharAtPos(currentPos);
 
@@ -77,7 +76,6 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		while (!this.isWhitespace(currentChar)) {
 			if (currentChar === ".") {
 				return await this.getCurrentType(this.getTypeInfoLocation(currentPos));
-				// return "";
 			}
 			if (syntaxChars.includes(currentChar)) return true;
 			currentPos = this.getPrevPos(currentPos);
@@ -123,7 +121,6 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
-		this.measure("placetocomplete");
 		if (requiredCompletion === false) return [];
 		if (requiredCompletion !== true) {
 			return [];
@@ -131,38 +128,28 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 
 		let usings = await this.getUsingsInFile(document);
-		this.measure("getusings");
 
 		let completions = this.referencesToCompletions(references, usings);
 
-		this.measure("all");
-
 		return completions;
-
-		
-
-
-
-
 
 	}
 
 
 
 	private referencesToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
-		// this.measure("before");
-		let completionAmount = filterOutAlreadyUsing(references, usings);
-		// this.measure("filterout");
+		let completionAmount =filterOutAlreadyUsing(references, usings);
 
 		let commonNames = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE).map(completion => completion.label);
 
 		commonNames.sort();
 
 		let completions = new Array<vscode.CompletionItem>(completionAmount);
-		// let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined
-		// let completion: vscode.CompletionItem = { label: "", kind: ,  };
+
 
 		for (let i = 0; i < completionAmount; i++) {
+
+
 			let reference = references[i];
 			let name = reference.name;
 			let isCommon = binarySearch(commonNames, name) != -1;
@@ -190,33 +177,6 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		return completions;
 
-
-		// let ref = references.map(async reference => {
-
-		// 	let priorityCompletion = await reference.namespaces.some(namespace => completionCommon(new Completion(reference.name, namespace), prioritized));
-
-		// 	let oneOption = reference.namespaces.length === 1;
-
-		// 	// We instantly put the using statement only if there is only one option
-		// 	let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined;
-
-
-		// 	// Build vscode completion object
-		// 	let completion: vscode.CompletionItem = {
-		// 		label: priorityCompletion ? reference.name : SORT_CHEAT + reference.name,
-		// 		insertText: reference.name,
-		// 		filterText: reference.name,
-		// 		kind: vscode.CompletionItemKind.Reference,
-		// 		detail: reference.namespaces.join("\n"),
-		// 		additionalTextEdits: usingStatementEdit,
-		// 		commitCharacters: ['.'],
-		// 		command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" },
-		// 	};
-
-		// 	return completion;
-
-
-		// });
 
 
 
@@ -262,6 +222,7 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 			// Get rid of references that their usings exist
 			if (binarySearch<string>(usings, references[i].namespaces[j]) != -1) {
 				references[i].namespaces[j] = references[i].namespaces[m - 1];
+				references[i].namespaces.length -=1;
 				j--;
 				m--;
 			}
