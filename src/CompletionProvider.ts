@@ -1,8 +1,9 @@
-import { HANDLE_COMPLETION, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE, Completion, completionExists as completionCommon, PROJECT_NAME } from './extension';
+import { HANDLE_COMPLETION, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE, Completion, PROJECT_NAME, completionCommon } from './extension';
 import * as vscode from "vscode";
 import { TypeLookupResponse, TypeLookupRequest } from './omnisharp/interfaces';
 import { createRequest } from './omnisharp/util';
 import { references } from './csReferences';
+import { binarySearch } from './speedutil';
 
 export const SORT_CHEAT = "\u200B";
 
@@ -107,10 +108,22 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return hoverInfoContainer;
 	}
 
+	private measure(name: string) {
+		let now: number = this.performance.now();
+		console.log(name + " = " + (now - this.startTime));
+		// this.startTime = now;
+	}
+
+	startTime: number;
+	performance: any;
+
 
 	async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
+
+
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
+		this.measure("placetocomplete");
 		if (requiredCompletion === false) return [];
 		if (requiredCompletion !== true) {
 			return [];
@@ -118,46 +131,96 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 
 		let usings = await this.getUsingsInFile(document);
+		this.measure("getusings");
 
 		let completions = this.referencesToCompletions(references, usings);
 
-		// return all completion items as array
+		this.measure("all");
+
 		return completions;
+
+		
+
+
+
+
+
 	}
 
 
 
-	private async referencesToCompletions(references: Reference[], usings: string[]): Promise<vscode.CompletionItem[]> {
-		references = await filterOutAlreadyUsing(references, usings);
+	private referencesToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
+		// this.measure("before");
+		let completionAmount = filterOutAlreadyUsing(references, usings);
+		// this.measure("filterout");
 
-		let prioritized = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE);
+		let commonNames = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE).map(completion => completion.label);
 
-		return references.map(reference => {
+		commonNames.sort();
 
-			let priorityCompletion = completionCommon(new Completion(reference.name, reference.namespaces[0]), prioritized);
+		let completions = new Array<vscode.CompletionItem>(completionAmount);
+		// let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined
+		// let completion: vscode.CompletionItem = { label: "", kind: ,  };
+
+		for (let i = 0; i < completionAmount; i++) {
+			let reference = references[i];
+			let name = reference.name;
+			let isCommon = binarySearch(commonNames, name) != -1;
+
 
 			let oneOption = reference.namespaces.length === 1;
 
 			// We instantly put the using statement only if there is only one option
 			let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined;
 
+			let completion = new vscode.CompletionItem(isCommon ? name : SORT_CHEAT + name);
 
-			// Build vscode completion object
-			let completion: vscode.CompletionItem = {
-				label: priorityCompletion ? reference.name : SORT_CHEAT + reference.name,
-				insertText: reference.name,
-				filterText: reference.name,
-				kind: vscode.CompletionItemKind.Reference,
-				detail: reference.namespaces.join("\n"),
-				additionalTextEdits: usingStatementEdit,
-				commitCharacters: ['.'],
-				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" },
-			};
+			completion.insertText = name;
+			completion.filterText = name;
+			completion.kind = vscode.CompletionItemKind.Reference;
+			completion.additionalTextEdits = usingStatementEdit;
+			completion.commitCharacters = ["."];
+			completion.detail = reference.namespaces.join("\n");
+			completion.command = { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" };
 
-			return completion;
+			completions[i] = completion;
+		}
+
+		// this.measure("map");
+
+		return completions;
 
 
-		});
+		// let ref = references.map(async reference => {
+
+		// 	let priorityCompletion = await reference.namespaces.some(namespace => completionCommon(new Completion(reference.name, namespace), prioritized));
+
+		// 	let oneOption = reference.namespaces.length === 1;
+
+		// 	// We instantly put the using statement only if there is only one option
+		// 	let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined;
+
+
+		// 	// Build vscode completion object
+		// 	let completion: vscode.CompletionItem = {
+		// 		label: priorityCompletion ? reference.name : SORT_CHEAT + reference.name,
+		// 		insertText: reference.name,
+		// 		filterText: reference.name,
+		// 		kind: vscode.CompletionItemKind.Reference,
+		// 		detail: reference.namespaces.join("\n"),
+		// 		additionalTextEdits: usingStatementEdit,
+		// 		commitCharacters: ['.'],
+		// 		command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" },
+		// 	};
+
+		// 	return completion;
+
+
+		// });
+
+
+
+		// return Promise.all(ref);
 	}
 
 	/**
@@ -181,6 +244,37 @@ export function usingEdit(namespace: string): vscode.TextEdit {
 	return vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
 }
 
-async function filterOutAlreadyUsing(references: Reference[], usings: string[]): Promise<Reference[]> {
-	return await Promise.all(references.map(reference => new Reference(reference.name, reference.namespaces.filter(namespace => !usings.includes(namespace)))).filter(reference => reference.namespaces.length > 0));
+/**
+ * 
+ * @param references 
+ * @param usings 
+ * @returns new size
+ */
+function filterOutAlreadyUsing(references: Reference[], usings: string[]): number {
+	usings.sort();
+
+	let n = references.length;
+
+	for (let i = 0; i < n; i++) {
+
+		let m = references[i].namespaces.length;
+		for (let j = 0; j < m; j++) {
+			// Get rid of references that their usings exist
+			if (binarySearch<string>(usings, references[i].namespaces[j]) != -1) {
+				references[i].namespaces[j] = references[i].namespaces[m - 1];
+				j--;
+				m--;
+			}
+		}
+
+		// Get rid of empty references
+		if (references[i].namespaces.length == 0) {
+			references[i] = references[n - 1];
+			i--;
+			n--;
+		}
+	}
+
+	return n;
+
 }

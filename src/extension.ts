@@ -22,7 +22,7 @@ export class Completion {
 	constructor(public label: string, public namespace: string) { }
 }
 
-export function completionExists(completion: Completion, completions: Completion[]) {
+export function completionCommon(completion: Completion, completions: Completion[]) {
 	return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
 }
 
@@ -40,14 +40,14 @@ export async function activate(context: vscode.ExtensionContext) {
 
 			for (let namespace of reference.namespaces) {
 				let checkCompletion = new Completion(reference.name, namespace);
-				if (completionExists(checkCompletion, completions)) {
+				if (completionCommon(checkCompletion, completions)) {
 					namespaceUsedMore = namespace;
 				}
 			}
 
 			let namespacesSorted = await Promise.all(reference.namespaces.sort((n1,n2) => {
-				let firstPrio = completionExists(new Completion(reference.name, n1), completions);
-				let secondPrio = completionExists(new Completion(reference.name, n2), completions);
+				let firstPrio = completionCommon(new Completion(reference.name, n1), completions);
+				let secondPrio = completionCommon(new Completion(reference.name, n2), completions);
 
 				if(firstPrio && !secondPrio) return -1;
 				if(!firstPrio && secondPrio) return 1;
@@ -95,7 +95,7 @@ function storeCompletion(context: vscode.ExtensionContext, completion: Completio
 	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
 	if (Array.isArray(completions) /*&& typeof completions[0] === "string"*/ && completions[0] instanceof Completion) {
 		// if(completions instanceof Completion[])
-		if (!completionExists(completion, completions)) {
+		if (!completionCommon(completion, completions)) {
 			completions.push(completion);
 			context.globalState.update(COMPLETION_STORAGE, completions);
 		}

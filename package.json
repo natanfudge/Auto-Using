@@ -61,5 +61,10 @@
 	},
 	"extensionDependencies": [
 		"ms-vscode.csharp"
-	]
+	],
+	"dependencies": {
+		"benchmark": "^2.1.4",
+		"i": "^0.3.6",
+		"perf_hooks": "0.0.1"
+	}
 }

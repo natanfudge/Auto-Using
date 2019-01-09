@@ -31,6 +31,9 @@ Gives priority to completions that were chosen before.
 
 ## Changelog
 
+### 0.6.0
+- Improved time it takes to provide completions from 0.4 seconds to essentialy nothing.
+
 ### 0.5.0 
 - When there are two or more types with the same name, a (sorted based on your previously selected completions) quick pick menu will show up, giving you an option to choose between the different namespaces. 
 
