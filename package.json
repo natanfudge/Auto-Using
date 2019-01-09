@@ -1,7 +1,7 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
-	"version": "0.6.1",
+	"version": "0.6.2",
 	"publisher": "Fudge",
 	"repository": {
 		"type": "git",
