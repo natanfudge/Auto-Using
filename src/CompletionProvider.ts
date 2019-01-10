@@ -23,9 +23,9 @@ export class Reference {
 	constructor(public name: string, public namespaces: string[]) { }
 }
 export class Amar {
-	private sneaky() {
-		console.log("oomer");
-	}
+	// private sneaky() {
+	// 	console.log("oomer");
+	// }
 }
 
 export function getStoredCompletions(context: vscode.ExtensionContext): Completion[] {
