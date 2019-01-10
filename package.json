@@ -2,7 +2,7 @@
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
 	"icon": "icon.png",
-	"version": "0.6.4",
+	"version": "0.6.5",
 	"publisher": "Fudge",
 	"repository": {
 		"type": "git",
@@ -28,7 +28,8 @@
 		"vscode": "^1.18.0"
 	},
 	"categories": [
-		"Other","Programming Languages"
+		"Other",
+		"Programming Languages"
 	],
 	"contributes": {
 		"commands": [
