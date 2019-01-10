@@ -15,6 +15,7 @@
 		"out/**",
 		"!out/test/**"
 	],
+	"license": "LICENSE",
 	"keywords": [
 		"C#",
 		"csharp",
