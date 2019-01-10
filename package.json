@@ -28,7 +28,7 @@
 		"vscode": "^1.18.0"
 	},
 	"categories": [
-		"Other"
+		"Other","Programming Languages"
 	],
 	"contributes": {
 		"commands": [
