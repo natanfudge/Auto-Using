@@ -1,11 +1,8 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { homedir, type } from 'os';
-import { CompletionProvider, SORT_CHEAT } from './CompletionProvider';
-import CSharpExtensionExports from './omnisharp/interfaces';
+import { CompletionProvider, SORT_CHEAT, getStoredCompletions } from './CompletionProvider';
 
-const TXT = "plaintext";
 const CSHARP = "csharp";
 
 export const PROJECT_NAME = "auto-using";
@@ -35,40 +32,32 @@ export async function activate(context: vscode.ExtensionContext) {
 	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
 		if (reference.namespaces.length > 1) {
 
-			let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
-			let namespaceUsedMore: string = "";
+			let completions = getStoredCompletions(context);
 
-			for (let namespace of reference.namespaces) {
-				let checkCompletion = new Completion(reference.name, namespace);
-				if (completionCommon(checkCompletion, completions)) {
-					namespaceUsedMore = namespace;
-				}
-			}
 
-			let namespacesSorted = await Promise.all(reference.namespaces.sort((n1,n2) => {
+			let namespacesSorted = await Promise.all(reference.namespaces.sort((n1, n2) => {
 				let firstPrio = completionCommon(new Completion(reference.name, n1), completions);
 				let secondPrio = completionCommon(new Completion(reference.name, n2), completions);
 
-				if(firstPrio && !secondPrio) return -1;
-				if(!firstPrio && secondPrio) return 1;
+				if (firstPrio && !secondPrio) return -1;
+				if (!firstPrio && secondPrio) return 1;
 				return n1.localeCompare(n2);
 
 			}));
 
-			// let options : vscode.QuickPickOptions = {placeHolder : namespaceUsedMore};
 
 			vscode.window.showQuickPick(namespacesSorted).then(pick => {
+				if (typeof pick === "undefined") return;
 				// Remove invisible unicode char
 				if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
 
-				if (typeof pick === "undefined") return;
 				storeCompletion(context, new Completion(reference.name, pick));
 
-				let editBuilder = textEdit => {
+				let editBuilder = (textEdit: any) => {
 					textEdit.insert(new vscode.Position(0, 0), `using ${pick};\n`);
 				};
 
-				vscode.window.activeTextEditor.edit(editBuilder);
+				vscode.window.activeTextEditor!.edit(editBuilder);
 			});
 		} else {
 			storeCompletion(context, new Completion(reference.name, reference.namespaces[0]));
@@ -77,7 +66,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	// Remove all stored completions
 	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => {
-		let amount = context.globalState.get<Completion[]>(COMPLETION_STORAGE).length;
+		let amount = getStoredCompletions(context).length;
 		vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
 		context.globalState.update(COMPLETION_STORAGE, []);
 	});
@@ -86,13 +75,17 @@ export async function activate(context: vscode.ExtensionContext) {
 
 
 	let provider1 = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP }, new CompletionProvider(context), ".", " ");
+	let providerTest = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: "plaintext" },{
+		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
+			return [new vscode.CompletionItem("C#")];
+		}});
 
 
-	context.subscriptions.push(provider1, handleCompletionCommand, wipeStorageCommand);
+	context.subscriptions.push(provider1, handleCompletionCommand, wipeStorageCommand,providerTest);
 }
 
 function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {
-	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
+	let completions = getStoredCompletions(context);
 	if (Array.isArray(completions) /*&& typeof completions[0] === "string"*/ && completions[0] instanceof Completion) {
 		// if(completions instanceof Completion[])
 		if (!completionCommon(completion, completions)) {

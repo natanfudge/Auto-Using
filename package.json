@@ -1,6 +1,7 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
+	"icon": "icon.png",
 	"version": "0.6.4",
 	"publisher": "Fudge",
 	"repository": {

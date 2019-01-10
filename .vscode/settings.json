@@ -1,5 +1,18 @@
 {
-  "editor.insertSpaces": false,
-  "files.exclude": {},
-  "dotnet-test-explorer.testProjectPath": "AutoUsingTest"
+    "files.exclude": {
+        "LICENSE": true,
+        "memory.gif": true,
+        "newdemo.gif": true,
+        "option.gif": true,
+        "package-lock.json": true,
+        ".gitignore": true,
+        "node_modules": true
+    },
+    // Place your settings in this file to overwrite default and user settings.
+    "search.exclude": {
+        "out": true // set this to false to include "out" folder in search results
+    },
+    // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+    "typescript.tsc.autoDetect": "off",
+    "dotnet-test-explorer.testProjectPath": "AutoUsingTest"
 }

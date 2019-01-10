@@ -1,7 +1,5 @@
-import { HANDLE_COMPLETION, COMPLETION_STORAGE as COMMON_COMPLETE_STORAGE, Completion, PROJECT_NAME, completionCommon } from './extension';
+import { HANDLE_COMPLETION, Completion, COMPLETION_STORAGE } from './extension';
 import * as vscode from "vscode";
-import { TypeLookupResponse, TypeLookupRequest } from './omnisharp/interfaces';
-import { createRequest } from './omnisharp/util';
 import { references } from './csReferences';
 import { binarySearch } from './speedutil';
 
@@ -15,21 +13,33 @@ const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "str
 	"internal", "private", "await"
 ];
 
+// function x(){
+// 	readf
+// }
+
+
+
 export class Reference {
 	constructor(public name: string, public namespaces: string[]) { }
 }
-export class Amar{
+export class Amar {
 	private sneaky() {
 		console.log("oomer");
 	}
 }
 
+export function getStoredCompletions(context: vscode.ExtensionContext): Completion[] {
+	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
+	if (typeof completions === "undefined") throw new Error("The completion storage is unexpectedly undefined");
+	return completions;
+}
+
 
 export class CompletionProvider implements vscode.CompletionItemProvider {
-	private document: vscode.TextDocument;
+	private document!: vscode.TextDocument;
 
 	constructor(private context: vscode.ExtensionContext) {
-	 }
+	}
 
 	private getCharAtPos(pos: vscode.Position): string {
 		return this.document.getText(new vscode.Range(pos, pos.translate(0, 1)));
@@ -41,7 +51,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 	private isWhitespace(char: string): boolean {
-		return /\s/.test(char) || char == "";
+		return /\s/.test(char) || char === "";
 	}
 
 
@@ -62,7 +72,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 			let typeStart = str.substring(start, str.length);
 
 			let i: number;
-			for (i = 0; typeStart[i] != " " && typeStart[i] != "\n"; i++);
+			for (i = 0; typeStart[i] !== " " && typeStart[i] !== "\n"; i++);
 
 			let type = typeStart.substr(0, i);
 
@@ -111,14 +121,14 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return hoverInfoContainer;
 	}
 
-	private measure(name: string) {
-		let now: number = this.performance.now();
-		console.log(name + " = " + (now - this.startTime));
-		// this.startTime = now;
-	}
+	// private measure(name: string) {
+	// 	let now: number = this.performance.now();
+	// 	console.log(name + " = " + (now - this.startTime));
+	// 	// this.startTime = now;
+	// }
 
-	startTime: number;
-	performance: any;
+	// startTime: number;
+	// performance: any;
 
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
@@ -130,13 +140,13 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		if (requiredCompletion !== true) {
 			return [];
 		}
-		
+
 		let found = this.filterByTypedWord(document, position);
 
 
 		let usings = await this.getUsingsInFile(document);
 
-		let completions = this.referencesToCompletions(found,usings);
+		let completions = this.referencesToCompletions(found, usings);
 
 		return completions;
 
@@ -151,7 +161,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		if (range) {
 			wordToComplete = document.getText(new vscode.Range(range.start, position)).toLowerCase();
 		}
-		let matcher = f => f.name.toLowerCase().indexOf(wordToComplete) > -1;
+		let matcher = (f: Reference) => f.name.toLowerCase().indexOf(wordToComplete) > -1;
 		let found = references.filter(matcher);
 		return found;
 	}
@@ -159,7 +169,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	private referencesToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
 		let completionAmount = filterOutAlreadyUsing(references, usings);
 
-		let commonNames = this.context.globalState.get<Completion[]>(COMMON_COMPLETE_STORAGE).map(completion => completion.label);
+		let commonNames = getStoredCompletions(this.context).map(completion => completion.label);
 
 		commonNames.sort();
 
@@ -168,10 +178,16 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		for (let i = 0; i < completionAmount; i++) {
 
+			
 
 			let reference = references[i];
 			let name = reference.name;
-			let isCommon = binarySearch(commonNames, name) != -1;
+			if(name === "File"){
+				// let x= 2;
+			}
+			let isCommon = binarySearch(commonNames, name) !== -1;
+
+
 
 
 			let oneOption = reference.namespaces.length === 1;
@@ -209,7 +225,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	private async getUsingsInFile(document: vscode.TextDocument): Promise<string[]> {
 		let regExp = /^using.*;/gm;
 		let matches = document.getText().match(regExp);
-		if (matches == null) return [];
+		if (matches === null) return [];
 		return await Promise.all(matches.map(async using => {
 			let usingWithSC = using.split(" ")[1];
 			return usingWithSC.substring(0, usingWithSC.length - 1);
@@ -239,7 +255,7 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 		let m = references[i].namespaces.length;
 		for (let j = 0; j < m; j++) {
 			// Get rid of references that their usings exist
-			if (binarySearch<string>(usings, references[i].namespaces[j]) != -1) {
+			if (binarySearch<string>(usings, references[i].namespaces[j]) !== -1) {
 				references[i].namespaces[j] = references[i].namespaces[m - 1];
 				references[i].namespaces.length -= 1;
 				j--;
@@ -248,7 +264,7 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 		}
 
 		// Get rid of empty references
-		if (references[i].namespaces.length == 0) {
+		if (references[i].namespaces.length === 0) {
 			references[i] = references[n - 1];
 			i--;
 			n--;
