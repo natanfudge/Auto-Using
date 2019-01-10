@@ -5597,11 +5597,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsingTest\\AutoUsingTest.csproj",
+      "projectUniqueName": "c:\\Users\\natan\\Desktop\\Auto-UsingFiles\\AutoUsingTest\\AutoUsingTest.csproj",
       "projectName": "AutoUsingTest",
-      "projectPath": "c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsingTest\\AutoUsingTest.csproj",
+      "projectPath": "c:\\Users\\natan\\Desktop\\Auto-UsingFiles\\AutoUsingTest\\AutoUsingTest.csproj",
       "packagesPath": "C:\\Users\\natan\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsingTest\\obj\\",
+      "outputPath": "c:\\Users\\natan\\Desktop\\Auto-UsingFiles\\AutoUsingTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5621,8 +5621,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsing\\AutoUsing.csproj": {
-              "projectPath": "c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsing\\AutoUsing.csproj"
+            "c:\\Users\\natan\\Desktop\\Auto-UsingFiles\\AutoUsing\\AutoUsing.csproj": {
+              "projectPath": "c:\\Users\\natan\\Desktop\\Auto-UsingFiles\\AutoUsing\\AutoUsing.csproj"
             }
           }
         }

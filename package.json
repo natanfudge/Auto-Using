@@ -63,6 +63,7 @@
 		"ms-vscode.csharp"
 	],
 	"dependencies": {
+		"@types/mocha": "^5.2.5",
 		"benchmark": "^2.1.4",
 		"i": "^0.3.6",
 		"perf_hooks": "0.0.1",

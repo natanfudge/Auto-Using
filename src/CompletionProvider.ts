@@ -18,6 +18,11 @@ const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "str
 export class Reference {
 	constructor(public name: string, public namespaces: string[]) { }
 }
+export class Amar{
+	private sneaky() {
+		console.log("oomer");
+	}
+}
 
 
 export class CompletionProvider implements vscode.CompletionItemProvider {
