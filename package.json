@@ -2,7 +2,7 @@
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
 	"icon": "icon.png",
-	"version": "0.6.9",
+	"version": "0.6.10",
 	"publisher": "Fudge",
 	"repository": {
 		"type": "git",
