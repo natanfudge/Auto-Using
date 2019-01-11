@@ -23,10 +23,24 @@ export function completionCommon(completion: Completion, completions: Completion
 	return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
 }
 
+class TestHelper {
 
+	constructor(private context: vscode.ExtensionContext) {
+		if (this.context === undefined) {
+			console.log(this.context);
+		}
+	}
+
+
+}
+
+export let testHelper: TestHelper;
 
 
 export async function activate(context: vscode.ExtensionContext) {
+
+
+	testHelper = new TestHelper(context);
 
 
 	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
@@ -46,45 +60,45 @@ export async function activate(context: vscode.ExtensionContext) {
 			}));
 
 
-			vscode.window.showQuickPick(namespacesSorted).then(pick => {
-				if (typeof pick === "undefined") return;
-				// Remove invisible unicode char
-				if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
-
-				storeCompletion(context, new Completion(reference.name, pick));
-
-				let editBuilder = (textEdit: any) => {
-					textEdit.insert(new vscode.Position(0, 0), `using ${pick};\n`);
-				};
-
-				vscode.window.activeTextEditor!.edit(editBuilder);
-			});
+			vscode.window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, reference));
 		} else {
 			storeCompletion(context, new Completion(reference.name, reference.namespaces[0]));
 		}
 	});
 
 	// Remove all stored completions
-	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => {
-		let amount = getStoredCompletions(context).length;
-		vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
-		context.globalState.update(COMPLETION_STORAGE, []);
-	});
-
-
-
+	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => wipeStoredCompletions(context));
 
 	let provider1 = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP }, new CompletionProvider(context), ".", " ");
-	let providerTest = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: "plaintext" },{
-		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
-			return [new vscode.CompletionItem("C#")];
-		}});
 
-
-	context.subscriptions.push(provider1, handleCompletionCommand, wipeStorageCommand,providerTest);
+	context.subscriptions.push(provider1, handleCompletionCommand, wipeStorageCommand);
 }
 
-function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {
+export function x(){
+	console.log("amar");
+}
+
+export function wipeStoredCompletions(context: vscode.ExtensionContext) {
+	let amount = getStoredCompletions(context).length;
+	vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
+	context.globalState.update(COMPLETION_STORAGE, []);
+}
+
+export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, reference: Reference){
+	if (typeof pick === "undefined") return;
+	// Remove invisible unicode char
+	if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
+
+	storeCompletion(context, new Completion(reference.name, pick));
+
+	let editBuilder = (textEdit: any) => {
+		textEdit.insert(new vscode.Position(0, 0), `using ${pick};\n`);
+	};
+
+	await vscode.window.activeTextEditor!.edit(editBuilder);
+}
+
+export function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {
 	let completions = getStoredCompletions(context);
 	if (Array.isArray(completions) /*&& typeof completions[0] === "string"*/ && completions[0] instanceof Completion) {
 		// if(completions instanceof Completion[])
@@ -96,5 +110,6 @@ function storeCompletion(context: vscode.ExtensionContext, completion: Completio
 	else {
 		context.globalState.update(COMPLETION_STORAGE, [completion]);
 	}
+
 }
 

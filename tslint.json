@@ -8,7 +8,9 @@
 			"always"
 		],
 		"triple-equals": true,
-		"no-var-keyword":true
+		"no-var-keyword":true,
+		"no-unused-variable":true,
+		"no-unused-expression":true
 	},
 	"defaultSeverity": "warning"
 }

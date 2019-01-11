@@ -22,15 +22,11 @@ const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "str
 export class Reference {
 	constructor(public name: string, public namespaces: string[]) { }
 }
-export class Amar {
-	// private sneaky() {
-	// 	console.log("oomer");
-	// }
-}
 
 export function getStoredCompletions(context: vscode.ExtensionContext): Completion[] {
 	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
-	if (typeof completions === "undefined") throw new Error("The completion storage is unexpectedly undefined");
+
+	if (typeof completions === "undefined") return [];//throw new Error("The completion storage is unexpectedly undefined");
 	return completions;
 }
 
@@ -41,12 +37,12 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	constructor(private context: vscode.ExtensionContext) {
 	}
 
+
 	private getCharAtPos(pos: vscode.Position): string {
 		return this.document.getText(new vscode.Range(pos, pos.translate(0, 1)));
 	}
 
 	private getPrevPos(pos: vscode.Position): vscode.Position {
-		// console.log(document.offsetAt(pos));
 		return this.document.positionAt(this.document.offsetAt(pos) - 1);
 	}
 
@@ -61,25 +57,25 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return syntaxChars.includes(char);
 	}
 
-	private async getCurrentType(position: vscode.Position): Promise<string> {
-		try {
-			let hover = <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
+	/**
+	 *  @returns The type in the specified position
+	 * */
+	private async getType(position: vscode.Position): Promise<string> {
+		// Get the hover info of the variable from the C# extension
+		let hover = <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
 
-			let str = (<{ language: string; value: string }>hover[0].contents[1]).value;
+		// Converts into readable format
+		let str = (<{ language: string; value: string }>hover[0].contents[1]).value;
 
-			const start = 10;
+		const start = 10;
+		let typeStart = str.substring(start, str.length);
 
-			let typeStart = str.substring(start, str.length);
+		let i: number;
+		for (i = 0; typeStart[i] !== " " && typeStart[i] !== "\n"; i++);
 
-			let i: number;
-			for (i = 0; typeStart[i] !== " " && typeStart[i] !== "\n"; i++);
+		let type = typeStart.substr(0, i);
 
-			let type = typeStart.substr(0, i);
-
-			return type;
-		} catch{
-			return "ERROR";
-		}
+		return type;
 	}
 
 	private async isPlaceToComplete(position: vscode.Position): Promise<boolean | string> {
@@ -90,7 +86,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		// Travel to before this word
 		while (!this.isWhitespace(currentChar)) {
 			if (currentChar === ".") {
-				return await this.getCurrentType(this.getTypeInfoLocation(currentPos));
+				return await this.getType(this.getTypeInfoLocation(currentPos));
 			}
 			if (syntaxChars.includes(currentChar)) return true;
 			currentPos = this.getPrevPos(currentPos);
@@ -131,6 +127,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	// performance: any;
 
 
+
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 
 		this.document = document;
@@ -140,6 +137,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		if (requiredCompletion !== true) {
 			return [];
 		}
+
 
 		let found = this.filterByTypedWord(document, position);
 
@@ -178,11 +176,11 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		for (let i = 0; i < completionAmount; i++) {
 
-			
+
 
 			let reference = references[i];
 			let name = reference.name;
-			if(name === "File"){
+			if (name === "File") {
 				// let x= 2;
 			}
 			let isCommon = binarySearch(commonNames, name) !== -1;
@@ -234,6 +232,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 }
+
 
 export function usingEdit(namespace: string): vscode.TextEdit {
 	return vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
