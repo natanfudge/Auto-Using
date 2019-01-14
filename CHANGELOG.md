@@ -1,5 +1,13 @@
 
+
 ## Changelog
+
+### 0.7.0
+- Auto-Using now Auto-Imports extension methods! Using Linq has never been easier.
+- Fixed completions appearing when typing space unlike the C# extensions, which causes completions to seem like they are happening for no reason.
+
+### 0.6.12
+- Fixed completions not appearing after the "this" keyword (matters for writing extension methods).
 
 ### 0.6.1
 - Improved time it takes to provide completions from "essentialy nothing" to "actually nothing most of the time and almost actually nothing the rest of the time". (Thanks for the Auto-Import ext for a cool idea)

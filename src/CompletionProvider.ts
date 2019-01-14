@@ -137,8 +137,14 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return hoverInfoContainer;
 	}
 
+	private waitedForCsExt: boolean = false;
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
+		if (!this.waitedForCsExt) {
+			this.waitedForCsExt = true;
+			await vscode.commands.executeCommand("vscode.executeCompletionItemProvider", document.uri, position);
+			return [];
+		}
 
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
@@ -160,27 +166,33 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 	private getExtensionMethods(extendingClass: string, usings: string[]): vscode.CompletionItem[] {
-		let extensibleClasses = classHierachies[binarySearchGen(classHierachies, extendingClass, ((h1, h2) => h1.localeCompare(h2.class)))];
+		try {
+			return this.getExtensionMethodsChecked(extendingClass, usings);
+		} catch (e) {
+			console.log(e.stack);
+			return [];
+		}
+	}
+
+	private getExtensionMethodsChecked(extendingClass: string, usings: string[]) {
+		let extensibleClasses: ClassHiearchies = getFatherCopies(extendingClass);
+
 		if (extensibleClasses.namespaces.length === 1) {
-			let fathers = extensibleClasses.namespaces[0].fathers.slice(0);
+			let fathers = extensibleClasses.namespaces[0].fathers;
 			// Add the class itself to the list of classes that we will get extension methods for.
 			let classItselfStr = extensibleClasses.namespaces[0].namespace + "." + extendingClass;
 			if (classItselfStr[classItselfStr.length - 1] === ">") classItselfStr = classItselfStr.substr(0, classItselfStr.length - 2);
 			fathers.push(classItselfStr);
 
-			try {
-				let extensionsArr = fathers.map(father =>
-					extensionMethods[binarySearchGen(extensionMethods, father, (str, ext) => str.localeCompare(ext.extendedClass))])
-					.filter(obj => typeof obj !== "undefined").map(extendedClass => extendedClass.extensionMethods);
+			let extensionsArr = fathers.map(father =>
+				extensionMethods[binarySearchGen(extensionMethods, father, (str, ext) => str.localeCompare(ext.extendedClass))])
+				.filter(obj => typeof obj !== "undefined").map(extendedClass => extendedClass.extensionMethods);
 
 
-				let extensions = flatten<Reference>(extensionsArr);
+			let extensions = flatten<Reference>(extensionsArr);
 
-				return this.referencesToCompletions(extensions, usings);
-			} catch (e) {
-				console.log(e.stack);
-				return [];
-			}
+			return this.referencesToCompletions(extensions, usings);
+
 		} else {
 			throw new Error("Auto Using does not support ambigous references yet.");
 		}
@@ -263,6 +275,17 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 }
 
+
+function getFatherCopies(extendingClass: string) {
+	let extensibleClassesRef = classHierachies[binarySearchGen(classHierachies, extendingClass, ((h1, h2) => h1.localeCompare(h2.class)))];
+	let extensibleClasses: ClassHiearchies = {
+		class: extensibleClassesRef.class, namespaces: extensibleClassesRef.namespaces.map(ref => {
+			let hiearchyCopy: NamespaceHiearchy = { namespace: ref.namespace, fathers: ref.fathers.slice(0) };
+			return hiearchyCopy;
+		})
+	};
+	return extensibleClasses;
+}
 
 export function usingEdit(namespace: string): vscode.TextEdit {
 	return vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);

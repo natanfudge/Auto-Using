@@ -5,7 +5,15 @@ Auto-imports and provides intellisense for references that were not yet imported
   
 
   <br><br><br><br><br><br><br>
-  
+
+
+Works for extension methods. No more being confused that linq methods don't exist.
+
+![Extension](extensions.gif)
+
+
+  <br><br><br><br><br><br><br>
+
   
   
 Gives priority to completions that were chosen before.
@@ -26,6 +34,10 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 
 ## Changelog
+
+### 0.7.0
+- Auto-Using now Auto-Imports extension methods! Using Linq has never been easier.
+- Fixed completions appearing when typing space unlike the C# extensions, which causes completions to seem like they are happening for no reason.
 
 ### 0.6.12
 - Fixed completions not appearing after the "this" keyword (matters for writing extension methods).

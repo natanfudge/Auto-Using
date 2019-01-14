@@ -1,5 +1,14 @@
+using System.Linq;
 using System.Collections.Generic;
-namespace TestAssets{ class ShouldShowGenericExtensions{ void x(){
-    List<string> x = null;
-x.Equals("");
-}}}
+namespace Showspace
+{
+    class Showcase
+    {
+        void x()
+        {
+            IEnumerable<string> x = null;
+            var y = x.Select(z => z+="Hooray!");
+            
+        }
+    }
+}
