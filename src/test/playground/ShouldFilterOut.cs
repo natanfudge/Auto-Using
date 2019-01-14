@@ -1,6 +1,5 @@
 using System.Net;
 using System.IO;
-
-void x(){
+namespace TestAssets{ class ShouldFilterOut{ void x(){
 //F
-}
+}}}

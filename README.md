@@ -27,6 +27,9 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
+### 0.6.12
+- Fixed completions not appearing after the "this" keyword (matters for writing extension methods).
+
 ### 0.6.1
 - Improved time it takes to provide completions from "essentialy nothing" to "actually nothing most of the time and almost actually nothing the rest of the time". (Thanks for the Auto-Import ext for a cool idea)
 

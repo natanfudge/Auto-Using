@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import * as path from "path";
-import { activateExtension, assertContains, sleep, openTest, assertNotContains, assertSize, assertStringContains } from './testUtil';
+import { activateExtension, assertContains, sleep, openTest, assertNotContains, assertSize, assertStringContains, getTestPlaygroundDirUri, activateCSharpExtension } from './testUtil';
 import * as assert from "assert";
 import { SORT_CHEAT, Reference } from '../CompletionProvider';
 import { wipeStoredCompletions } from '../extension';
@@ -8,7 +8,9 @@ import { wipeStoredCompletions } from '../extension';
 suite(`Auto-Using e2e tests`, () => {
 
     suiteSetup(async () => {
+        // let wait1 =  vscode.commands.executeCommand("vscode.openFolder", getTestPlaygroundDirUri());
         await activateExtension();
+        // await wait1;
     });
 
     test("Completes when needed", async () => {
@@ -37,6 +39,7 @@ suite(`Auto-Using e2e tests`, () => {
         assertStringContains(enumerable.detail!, "System.Collections");
         assertStringContains(enumerable.detail!, "System.Collections.Generic");
     });
+
     
 
 });
@@ -54,7 +57,7 @@ export async function completeWithData(testName: string, line: number, character
     let completions = <vscode.CompletionList>(await vscode.commands.executeCommand("vscode.executeCompletionItemProvider",
         doc.uri, new vscode.Position(line, character), " "));
 
-    let char = doc.getText(new vscode.Range(new vscode.Position(line,character),new vscode.Position(line,character + 1)));
+    let char = doc.getText(new vscode.Range(new vscode.Position(line, character), new vscode.Position(line, character + 1)));
 
     return [completions, doc];
 }

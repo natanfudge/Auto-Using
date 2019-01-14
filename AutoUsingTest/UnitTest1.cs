@@ -13,7 +13,7 @@ namespace AutoUsingTest
 		[TestMethod]
 		public void TestMethod1()
 		{
-			var str = ReferenceScanner.GetAllReferences();
+			// var str = AssemblyScanner.GetAllReferences();
             
 		}
 	}

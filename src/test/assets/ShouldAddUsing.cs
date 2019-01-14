@@ -1,3 +1,3 @@
-void x(){
+namespace TestAssets{ class ShouldAddUsing{ void x(){
 //bi
-}
+}}}

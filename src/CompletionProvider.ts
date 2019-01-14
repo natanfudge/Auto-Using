@@ -1,7 +1,9 @@
 import { HANDLE_COMPLETION, Completion, COMPLETION_STORAGE } from './extension';
 import * as vscode from "vscode";
-import { references } from './csReferences';
-import { binarySearch } from './speedutil';
+import { references } from './csdata/csReferences';
+import { binarySearch, binarySearchGen } from './speedutil';
+import { extensionMethods } from './csdata/csExtensionMethods';
+import { classHierachies } from './csdata/csHierachies';
 
 export const SORT_CHEAT = "\u200B";
 
@@ -10,14 +12,8 @@ const syntaxChars = ["{", "}", "(", ")", "[", "]", "<", ">", "@", ";", "=", "%",
 const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "struct", "using", "volatile", "as",
 	"checked", "explicit", "fixed", "goto", "lock", "override", "public", "stackalloc", "unchecked",
 	"static", "base", "case", "else", "extern", "if", "params", "readonly", "sealed", "static", "typeof", "unsafe", "virtual", "const", "implicit",
-	"internal", "private", "await"
+	"internal", "private", "await", "this"
 ];
-
-// function x(){
-// 	readf
-// }
-
-
 
 export class Reference {
 	constructor(public name: string, public namespaces: string[]) { }
@@ -29,6 +25,16 @@ export function getStoredCompletions(context: vscode.ExtensionContext): Completi
 	if (typeof completions === "undefined") return [];//throw new Error("The completion storage is unexpectedly undefined");
 	return completions;
 }
+
+// interface Primitive{
+// 	primName:string;
+// 	className:string;
+// }
+const primitives = {
+	bool: "Boolean", byte: "Byte", sbyte: "SByte", char: "Char", decimal: "Decimal",
+	double: "Double", float: "Single", int: "Int32", uint: "UInt32", long: "Int64", ulong: "System.UInt64",
+	object: "Object", short: "Int16", ushort: "Uint16", string: "String"
+};
 
 
 export class CompletionProvider implements vscode.CompletionItemProvider {
@@ -60,23 +66,38 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	/**
 	 *  @returns The type in the specified position
 	 * */
-	private async getType(position: vscode.Position): Promise<string> {
+	private async getType(position: vscode.Position): Promise<boolean | string> {
 		// Get the hover info of the variable from the C# extension
 		let hover = <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
-
+		if (hover.length === 0) return false;
 		// Converts into readable format
 		let str = (<{ language: string; value: string }>hover[0].contents[1]).value;
 
 		const start = 10;
 		let typeStart = str.substring(start, str.length);
 
+		let generic = false;
 		let i: number;
-		for (i = 0; typeStart[i] !== " " && typeStart[i] !== "\n"; i++);
+		for (i = 0; typeStart[i] !== " " && typeStart[i] !== "\n"; i++) {
+			if (typeStart[i] === "<") {
+				generic = true;
+				break;
+			}
+		}
 
 		let type = typeStart.substr(0, i);
 
+		//@ts-ignore
+		let typeAsObject: string = primitives[type];
+		if (typeof typeAsObject !== "undefined") type = typeAsObject;
+
+
+
+		if (generic) type += "<>";
+
 		return type;
 	}
+
 
 	private async isPlaceToComplete(position: vscode.Position): Promise<boolean | string> {
 		let currentPos = this.getPrevPos(position);
@@ -117,24 +138,20 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return hoverInfoContainer;
 	}
 
-	// private measure(name: string) {
-	// 	let now: number = this.performance.now();
-	// 	console.log(name + " = " + (now - this.startTime));
-	// 	// this.startTime = now;
-	// }
-
-	// startTime: number;
-	// performance: any;
-
-
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
 		if (requiredCompletion === false) return [];
-		//TODO return extension functions in this case
 		if (requiredCompletion !== true) {
+			let extensibleClasses = classHierachies[ binarySearchGen(classHierachies, requiredCompletion, ((h1, h2) => h1.localeCompare(h2.class)))];
+			if(extensibleClasses.namespaces.length === 1){
+				let fathers = extensibleClasses.namespaces[0].fathers;
+				let x = 2;
+			}else{
+				throw new Error("Auto Using does not support ambigous references yet.");
+			}
 			return [];
 		}
 
