@@ -2,15 +2,13 @@ import * as vscode from 'vscode';
 import * as path from "path";
 import { activateExtension, assertContains, sleep, openTest, assertNotContains, assertSize, assertStringContains, getTestPlaygroundDirUri, activateCSharpExtension } from './testUtil';
 import * as assert from "assert";
-import { SORT_CHEAT, Reference } from '../CompletionProvider';
+import { SORT_CHEAT } from '../CompletionProvider';
 import { wipeStoredCompletions } from '../extension';
 
 suite(`Auto-Using e2e tests`, () => {
 
     suiteSetup(async () => {
-        // let wait1 =  vscode.commands.executeCommand("vscode.openFolder", getTestPlaygroundDirUri());
         await activateExtension();
-        // await wait1;
     });
 
     test("Completes when needed", async () => {

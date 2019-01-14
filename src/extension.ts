@@ -100,8 +100,7 @@ export async function addUsing(pick: string | undefined, context: vscode.Extensi
 
 export function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {
 	let completions = getStoredCompletions(context);
-	if (Array.isArray(completions) /*&& typeof completions[0] === "string"*/ && completions[0] instanceof Completion) {
-		// if(completions instanceof Completion[])
+	if (Array.isArray(completions) && completions[0] instanceof Completion) {
 		if (!completionCommon(completion, completions)) {
 			completions.push(completion);
 			context.globalState.update(COMPLETION_STORAGE, completions);

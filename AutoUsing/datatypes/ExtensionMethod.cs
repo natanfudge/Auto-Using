@@ -6,81 +6,80 @@ namespace AutoUsing
     public class ExtendedClass
     {
 
+        public ExtendedClass(){}
 
-        public ExtendedClass() { }
-        public ExtendedClass(string extendedClass, List<ExtendedNamespace> extendedNamespaces)
+        public ExtendedClass(string extendedClass, List<ExtensionMethod> extensionMethods)
         {
             this.extendedClass = extendedClass;
-            this.extendedNamespaces = extendedNamespaces;
+            this.extensionMethods = extensionMethods;
         }
 
         public string extendedClass { get; set; }
-        public List<ExtendedNamespace> extendedNamespaces { get; set; }
+        public List<ExtensionMethod> extensionMethods { get; set; }
 
         public override bool Equals(object obj)
         {
             var @class = obj as ExtendedClass;
             return @class != null &&
                    extendedClass == @class.extendedClass &&
-                   EqualityComparer<List<ExtendedNamespace>>.Default.Equals(extendedNamespaces, @class.extendedNamespaces);
+                   EqualityComparer<List<ExtensionMethod>>.Default.Equals(extensionMethods, @class.extensionMethods);
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(extendedClass, extendedNamespaces);
+            return HashCode.Combine(extendedClass, extensionMethods);
         }
     }
 
 
-    public class ExtendedNamespace
-    {
-
-        public ExtendedNamespace() { }
-
-        public ExtendedNamespace(string extendedNamespace, List<ExtensionMethod> extensionMethods)
-        {
-            this.extendedNamespace = extendedNamespace;
-            this.extensionMethods = extensionMethods;
-        }
-
-        public string extendedNamespace { get; set; }
-        public List<ExtensionMethod> extensionMethods { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            var namespaces = obj as ExtendedNamespace;
-            return namespaces != null &&
-                   extendedNamespace == namespaces.extendedNamespace &&
-                   EqualityComparer<List<ExtensionMethod>>.Default.Equals(extensionMethods, namespaces.extensionMethods);
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(extendedNamespace, extensionMethods);
-        }
-    }
     public class ExtensionMethod
     {
-        public ExtensionMethod(string extendingMethod, string extendingNamespace)
+
+        public ExtensionMethod(){}
+        public ExtensionMethod(string name, List<string> namespaces)
         {
-            this.extendingMethod = extendingMethod;
-            this.extendingNamespace = extendingNamespace;
+            this.name = name;
+            this.namespaces = namespaces;
         }
 
-        public string extendingMethod { get; set; }
-        public string extendingNamespace { get; set; }
+        public string name { get; set; }
+        public List<string> namespaces { get; set; }
 
         public override bool Equals(object obj)
         {
             var method = obj as ExtensionMethod;
             return method != null &&
-                   extendingMethod == method.extendingMethod &&
-                   extendingNamespace == method.extendingNamespace;
+                   name == method.name &&
+                   EqualityComparer<List<string>>.Default.Equals(namespaces, method.namespaces);
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(extendingMethod, extendingNamespace);
+            return HashCode.Combine(name, namespaces);
         }
     }
+    // public class ExtensionMethod
+    // {
+    //     public ExtensionMethod(string extendingMethod, string extendingNamespace)
+    //     {
+    //         this.extendingMethod = extendingMethod;
+    //         this.extendingNamespace = extendingNamespace;
+    //     }
+
+    //     public string extendingMethod { get; set; }
+    //     public string extendingNamespace { get; set; }
+
+    //     public override bool Equals(object obj)
+    //     {
+    //         var method = obj as ExtensionMethod;
+    //         return method != null &&
+    //                extendingMethod == method.extendingMethod &&
+    //                extendingNamespace == method.extendingNamespace;
+    //     }
+
+    //     public override int GetHashCode()
+    //     {
+    //         return HashCode.Combine(extendingMethod, extendingNamespace);
+    //     }
+    // }
 }

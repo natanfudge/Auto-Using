@@ -8,7 +8,6 @@
 import { activateExtension, assertInFirst } from './testUtil';
 import * as vscode from "vscode";
 // import { testHelper, COMPLETION_STORAGE, Completion } from '../extension';
-import { Reference } from '../CompletionProvider';
 import * as assert from "assert";
 import { Completion, COMPLETION_STORAGE, testHelper, addUsing, storeCompletion } from '../extension';
 import * as extension from "../extension";
@@ -34,7 +33,7 @@ suite("CompletionProvider Integration Tests", function () {
 
     test("Add Using expression", async () => {
         let [list, doc] = await completeWithData("ShouldAddUsing.cs", 1, 5);
-        await addUsing("System.Collections.Specialized", context, new Reference("BitVector32", ["System.Collections.Specialized"]));
+        await addUsing("System.Collections.Specialized", context, {name: "BitVector32", namespaces:["System.Collections.Specialized"]});
 
         let addedLine = doc.lineAt(0).text;
         assert.equal(addedLine, "using System.Collections.Specialized;");

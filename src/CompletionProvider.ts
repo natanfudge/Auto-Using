@@ -2,8 +2,9 @@ import { HANDLE_COMPLETION, Completion, COMPLETION_STORAGE } from './extension';
 import * as vscode from "vscode";
 import { references } from './csdata/csReferences';
 import { binarySearch, binarySearchGen } from './speedutil';
-import { extensionMethods } from './csdata/csExtensionMethods';
 import { classHierachies } from './csdata/csHierachies';
+import { extensionMethods } from './csdata/csExtensionMethods';
+import { flatten } from './util';
 
 export const SORT_CHEAT = "\u200B";
 
@@ -15,9 +16,7 @@ const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "str
 	"internal", "private", "await", "this"
 ];
 
-export class Reference {
-	constructor(public name: string, public namespaces: string[]) { }
-}
+
 
 export function getStoredCompletions(context: vscode.ExtensionContext): Completion[] {
 	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
@@ -143,29 +142,48 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		this.document = document;
 		let requiredCompletion = await this.isPlaceToComplete(position);
-		if (requiredCompletion === false) return [];
-		if (requiredCompletion !== true) {
-			let extensibleClasses = classHierachies[ binarySearchGen(classHierachies, requiredCompletion, ((h1, h2) => h1.localeCompare(h2.class)))];
-			if(extensibleClasses.namespaces.length === 1){
-				let fathers = extensibleClasses.namespaces[0].fathers;
-				let x = 2;
-			}else{
-				throw new Error("Auto Using does not support ambigous references yet.");
-			}
-			return [];
-		}
-
-
-		let found = this.filterByTypedWord(document, position);
-
 
 		let usings = await this.getUsingsInFile(document);
+
+		if (requiredCompletion === false) return [];
+		if (requiredCompletion !== true) {
+			return this.getExtensionMethods(requiredCompletion, usings);
+		}
+
+		let found = this.filterByTypedWord(document, position);
 
 		let completions = this.referencesToCompletions(found, usings);
 
 		return completions;
 
 
+	}
+
+	private getExtensionMethods(extendingClass: string, usings: string[]): vscode.CompletionItem[] {
+		let extensibleClasses = classHierachies[binarySearchGen(classHierachies, extendingClass, ((h1, h2) => h1.localeCompare(h2.class)))];
+		if (extensibleClasses.namespaces.length === 1) {
+			let fathers = extensibleClasses.namespaces[0].fathers.slice(0);
+			// Add the class itself to the list of classes that we will get extension methods for.
+			let classItselfStr = extensibleClasses.namespaces[0].namespace + "." + extendingClass;
+			if (classItselfStr[classItselfStr.length - 1] === ">") classItselfStr = classItselfStr.substr(0, classItselfStr.length - 2);
+			fathers.push(classItselfStr);
+
+			try {
+				let extensionsArr = fathers.map(father =>
+					extensionMethods[binarySearchGen(extensionMethods, father, (str, ext) => str.localeCompare(ext.extendedClass))])
+					.filter(obj => typeof obj !== "undefined").map(extendedClass => extendedClass.extensionMethods);
+
+
+				let extensions = flatten<Reference>(extensionsArr);
+
+				return this.referencesToCompletions(extensions, usings);
+			} catch (e) {
+				console.log(e.stack);
+				return [];
+			}
+		} else {
+			throw new Error("Auto Using does not support ambigous references yet.");
+		}
 	}
 
 
@@ -180,6 +198,8 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		let found = references.filter(matcher);
 		return found;
 	}
+
+
 
 	private referencesToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
 		let completionAmount = filterOutAlreadyUsing(references, usings);
@@ -223,14 +243,7 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 			completions[i] = completion;
 		}
 
-		// this.measure("map");
-
 		return completions;
-
-
-
-
-		// return Promise.all(ref);
 	}
 
 	/**

@@ -47,7 +47,10 @@ export function binarySearchGen<T,V>(items: Array<T>, value: V, comparer: (el1: 
 
         //recalculate middle
         middle = Math.floor((stopIndex + startIndex) / 2);
+        if(middle < 0) return -1;
     }
+
+
 
     //make sure it's the right value
     return comparer(value, items[middle]) !== 0 ? -1 : middle;

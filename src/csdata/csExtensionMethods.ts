@@ -1,2080 +1,2504 @@
 export const extensionMethods : ExtendedClass[] = [
   {
-    "extendedClass": "ArraySegment<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.ArraySegment",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "AsSpan",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "AsMemory",
-            "extendingNamespace": "System"
-          }
+        "name": "AsSpan",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "AsMemory",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Assembly",
-    "extendedNamespaces": [
+    "extendedClass": "System.Buffers.IBufferWriter",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetCustomAttribute",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetCustomAttributes",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "IsDefined",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "TryGetRawMetadata",
-            "extendingNamespace": "System.Reflection.Metadata"
-          }
+        "name": "Write",
+        "namespaces": [
+          "System.Buffers"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Builder<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Buffers.ReadOnlySequence",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Immutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "First",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "FirstOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Last",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LastOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Any",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "PositionOf",
+        "namespaces": [
+          "System.Buffers"
+        ]
+      },
+      {
+        "name": "CopyTo",
+        "namespaces": [
+          "System.Buffers"
+        ]
+      },
+      {
+        "name": "ToArray",
+        "namespaces": [
+          "System.Buffers"
         ]
       }
     ]
   },
   {
-    "extendedClass": "CompareInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Concurrent.Partitioner",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Globalization",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetStringComparer",
-            "extendingNamespace": "System.Globalization"
-          }
+        "name": "AsParallel",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "DataContractSerializer",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Generic.IDictionary",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Runtime.Serialization",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetSerializationSurrogateProvider",
-            "extendingNamespace": "System.Runtime.Serialization"
-          },
-          {
-            "extendingMethod": "SetSerializationSurrogateProvider",
-            "extendingNamespace": "System.Runtime.Serialization"
-          }
+        "name": "TryAdd",
+        "namespaces": [
+          "System.Collections.Generic"
+        ]
+      },
+      {
+        "name": "Remove",
+        "namespaces": [
+          "System.Collections.Generic"
         ]
       }
     ]
   },
   {
-    "extendedClass": "DbDataReader",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Generic.IEnumerable",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Data.Common",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetColumnSchema",
-            "extendingNamespace": "System.Data.Common"
-          },
-          {
-            "extendingMethod": "CanGetColumnSchema",
-            "extendingNamespace": "System.Data.Common"
-          }
+        "name": "ToImmutableArray",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "ToImmutableDictionary",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "ToImmutableHashSet",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "ToImmutableList",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "ToImmutableSortedDictionary",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "ToImmutableSortedSet",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "SelectMany",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SequenceEqual",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Single",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SingleOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Skip",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SkipWhile",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SkipLast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Sum",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Take",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "TakeWhile",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "TakeLast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToArray",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToList",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToDictionary",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToHashSet",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Union",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Where",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Zip",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Join",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Last",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LastOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToLookup",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Max",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Min",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OrderBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OrderByDescending",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Reverse",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Select",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Any",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "All",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Append",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Prepend",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Average",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Concat",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Contains",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Count",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LongCount",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "DefaultIfEmpty",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Distinct",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAt",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAtOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsEnumerable",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Except",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "First",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "FirstOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "GroupBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "GroupJoin",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Intersect",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsParallel",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsQueryable",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Attributes",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "Ancestors",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "AncestorsAndSelf",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "Nodes",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "DescendantNodes",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "Descendants",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "DescendantNodesAndSelf",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "DescendantsAndSelf",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "Elements",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "InDocumentOrder",
+        "namespaces": [
+          "System.Xml.Linq"
+        ]
+      },
+      {
+        "name": "Remove",
+        "namespaces": [
+          "System.Xml.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Delegate",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Generic.IReadOnlyDictionary",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetMethodInfo",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "GetValueOrDefault",
+        "namespaces": [
+          "System.Collections.Generic"
         ]
       }
     ]
   },
   {
-    "extendedClass": "DirectoryInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.IEnumerable",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.IO",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetAccessControl",
-            "extendingNamespace": "System.IO"
-          },
-          {
-            "extendingMethod": "SetAccessControl",
-            "extendingNamespace": "System.IO"
-          }
+        "name": "OfType",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Cast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsParallel",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsQueryable",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ExportedType",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Immutable.Builder",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection.Metadata",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetTypeDefinitionId",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          }
+        "name": "First",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "FirstOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Last",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LastOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Any",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "FileInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Immutable.IImmutableDictionary",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.IO",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetAccessControl",
-            "extendingNamespace": "System.IO"
-          },
-          {
-            "extendingMethod": "SetAccessControl",
-            "extendingNamespace": "System.IO"
-          }
+        "name": "Contains",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "GetValueOrDefault",
+        "namespaces": [
+          "System.Collections.Immutable"
         ]
       }
     ]
   },
   {
-    "extendedClass": "FileStream",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Immutable.IImmutableList",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.IO",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetAccessControl",
-            "extendingNamespace": "System.IO"
-          },
-          {
-            "extendingMethod": "SetAccessControl",
-            "extendingNamespace": "System.IO"
-          }
+        "name": "Replace",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "Remove",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "RemoveRange",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "IndexOf",
+        "namespaces": [
+          "System.Collections.Immutable"
+        ]
+      },
+      {
+        "name": "LastIndexOf",
+        "namespaces": [
+          "System.Collections.Immutable"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IBufferWriter<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Immutable.IImmutableQueue",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Buffers",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Write",
-            "extendingNamespace": "System.Buffers"
-          }
+        "name": "Dequeue",
+        "namespaces": [
+          "System.Collections.Immutable"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IDictionary<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Immutable.IImmutableStack",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Generic",
-        "extensionMethods": [
-          {
-            "extendingMethod": "TryAdd",
-            "extendingNamespace": "System.Collections.Generic"
-          },
-          {
-            "extendingMethod": "Remove",
-            "extendingNamespace": "System.Collections.Generic"
-          }
+        "name": "Pop",
+        "namespaces": [
+          "System.Collections.Immutable"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IEnumerable",
-    "extendedNamespaces": [
+    "extendedClass": "System.Collections.Immutable.ImmutableArray",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections",
-        "extensionMethods": [
-          {
-            "extendingMethod": "OfType",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Cast",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsParallel",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsQueryable",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "Select",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SelectMany",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Where",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Any",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "All",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SequenceEqual",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAt",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAtOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "First",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "FirstOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Last",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LastOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Single",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SingleOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToDictionary",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToArray",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "BinarySearch",
+        "namespaces": [
+          "System.Collections.Immutable"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IEnumerable<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Data.Common.DbDataReader",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Generic",
-        "extensionMethods": [
-          {
-            "extendingMethod": "ToImmutableArray",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "ToImmutableDictionary",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "ToImmutableHashSet",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "ToImmutableList",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "ToImmutableSortedDictionary",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "ToImmutableSortedSet",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "SelectMany",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SequenceEqual",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Single",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SingleOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Skip",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SkipWhile",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SkipLast",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Sum",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Take",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "TakeWhile",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "TakeLast",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToArray",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToList",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToDictionary",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToHashSet",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Union",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Where",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Zip",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Join",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Last",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LastOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToLookup",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Max",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Min",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "OrderBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "OrderByDescending",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Reverse",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Select",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Aggregate",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Any",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "All",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Append",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Prepend",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Average",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Concat",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Contains",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Count",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LongCount",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "DefaultIfEmpty",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Distinct",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAt",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAtOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsEnumerable",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Except",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "First",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "FirstOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "GroupBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "GroupJoin",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Intersect",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsParallel",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsQueryable",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Attributes",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "Ancestors",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "AncestorsAndSelf",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "Nodes",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "DescendantNodes",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "Descendants",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "DescendantNodesAndSelf",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "DescendantsAndSelf",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "Elements",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "InDocumentOrder",
-            "extendingNamespace": "System.Xml.Linq"
-          },
-          {
-            "extendingMethod": "Remove",
-            "extendingNamespace": "System.Xml.Linq"
-          }
+        "name": "GetColumnSchema",
+        "namespaces": [
+          "System.Data.Common"
+        ]
+      },
+      {
+        "name": "CanGetColumnSchema",
+        "namespaces": [
+          "System.Data.Common"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IImmutableDictionary<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Delegate",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Immutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Contains",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "GetValueOrDefault",
-            "extendingNamespace": "System.Collections.Immutable"
-          }
+        "name": "GetMethodInfo",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IImmutableList<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Diagnostics.StackFrame",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Immutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Replace",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "Remove",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "RemoveRange",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "IndexOf",
-            "extendingNamespace": "System.Collections.Immutable"
-          },
-          {
-            "extendingMethod": "LastIndexOf",
-            "extendingNamespace": "System.Collections.Immutable"
-          }
+        "name": "HasNativeImage",
+        "namespaces": [
+          "System.Diagnostics"
+        ]
+      },
+      {
+        "name": "HasMethod",
+        "namespaces": [
+          "System.Diagnostics"
+        ]
+      },
+      {
+        "name": "HasILOffset",
+        "namespaces": [
+          "System.Diagnostics"
+        ]
+      },
+      {
+        "name": "HasSource",
+        "namespaces": [
+          "System.Diagnostics"
+        ]
+      },
+      {
+        "name": "GetNativeIP",
+        "namespaces": [
+          "System.Diagnostics"
+        ]
+      },
+      {
+        "name": "GetNativeImageBase",
+        "namespaces": [
+          "System.Diagnostics"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IImmutableQueue<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Globalization.CompareInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Immutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Dequeue",
-            "extendingNamespace": "System.Collections.Immutable"
-          }
+        "name": "GetStringComparer",
+        "namespaces": [
+          "System.Globalization"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IImmutableStack<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.IO.Compression.ZipArchive",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Immutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Pop",
-            "extendingNamespace": "System.Collections.Immutable"
-          }
+        "name": "CreateEntryFromFile",
+        "namespaces": [
+          "System.IO.Compression"
+        ]
+      },
+      {
+        "name": "ExtractToDirectory",
+        "namespaces": [
+          "System.IO.Compression"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ILOpCode",
-    "extendedNamespaces": [
+    "extendedClass": "System.IO.Compression.ZipArchiveEntry",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection.Metadata",
-        "extensionMethods": [
-          {
-            "extendingMethod": "IsBranch",
-            "extendingNamespace": "System.Reflection.Metadata"
-          },
-          {
-            "extendingMethod": "GetBranchOperandSize",
-            "extendingNamespace": "System.Reflection.Metadata"
-          },
-          {
-            "extendingMethod": "GetShortBranch",
-            "extendingNamespace": "System.Reflection.Metadata"
-          },
-          {
-            "extendingMethod": "GetLongBranch",
-            "extendingNamespace": "System.Reflection.Metadata"
-          }
+        "name": "ExtractToFile",
+        "namespaces": [
+          "System.IO.Compression"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ImmutableArray<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.IO.DirectoryInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Immutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Select",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SelectMany",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Where",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Any",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "All",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SequenceEqual",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Aggregate",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAt",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAtOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "First",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "FirstOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Last",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LastOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Single",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SingleOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToDictionary",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToArray",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "BinarySearch",
-            "extendingNamespace": "System.Collections.Immutable"
-          }
+        "name": "GetAccessControl",
+        "namespaces": [
+          "System.IO"
+        ]
+      },
+      {
+        "name": "SetAccessControl",
+        "namespaces": [
+          "System.IO"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IOrderedEnumerable<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.IO.FileInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "ThenBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ThenByDescending",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "GetAccessControl",
+        "namespaces": [
+          "System.IO"
+        ]
+      },
+      {
+        "name": "SetAccessControl",
+        "namespaces": [
+          "System.IO"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IOrderedQueryable<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.IO.FileStream",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "ThenBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ThenByDescending",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "GetAccessControl",
+        "namespaces": [
+          "System.IO"
+        ]
+      },
+      {
+        "name": "SetAccessControl",
+        "namespaces": [
+          "System.IO"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IQueryable",
-    "extendedNamespaces": [
+    "extendedClass": "System.IO.Pipes.PipeStream",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "OfType",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Cast",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "GetAccessControl",
+        "namespaces": [
+          "System.IO.Pipes"
+        ]
+      },
+      {
+        "name": "SetAccessControl",
+        "namespaces": [
+          "System.IO.Pipes"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IQueryable<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Linq.IOrderedEnumerable",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "DefaultIfEmpty",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Contains",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Reverse",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SequenceEqual",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Any",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "All",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Count",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LongCount",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Min",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Max",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Sum",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Average",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Aggregate",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SkipLast",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "TakeLast",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Append",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Prepend",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Where",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Select",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SelectMany",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Join",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "GroupJoin",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "OrderBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "OrderByDescending",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Take",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "TakeWhile",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Skip",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SkipWhile",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "GroupBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Distinct",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Concat",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Zip",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Union",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Intersect",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Except",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "First",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "FirstOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Last",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LastOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Single",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SingleOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAt",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAtOrDefault",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "ThenBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ThenByDescending",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IReadOnlyDictionary<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Linq.IOrderedQueryable",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Generic",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetValueOrDefault",
-            "extendingNamespace": "System.Collections.Generic"
-          }
+        "name": "ThenBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ThenByDescending",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "IReceivableSourceBlock<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Linq.IQueryable",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Threading.Tasks.Dataflow",
-        "extensionMethods": [
-          {
-            "extendingMethod": "TryReceive",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          }
+        "name": "DefaultIfEmpty",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Contains",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Reverse",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SequenceEqual",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Any",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "All",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Count",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LongCount",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Min",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Max",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Sum",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Average",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SkipLast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "TakeLast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Append",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Prepend",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Where",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OfType",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Cast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Select",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SelectMany",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Join",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "GroupJoin",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OrderBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OrderByDescending",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Take",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "TakeWhile",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Skip",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SkipWhile",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "GroupBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Distinct",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Concat",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Zip",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Union",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Intersect",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Except",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "First",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "FirstOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Last",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LastOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Single",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SingleOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAt",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAtOrDefault",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ISourceBlock<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Linq.OrderedParallelQuery",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Threading.Tasks.Dataflow",
-        "extensionMethods": [
-          {
-            "extendingMethod": "LinkTo",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          },
-          {
-            "extendingMethod": "ReceiveAsync",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          },
-          {
-            "extendingMethod": "Receive",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          },
-          {
-            "extendingMethod": "OutputAvailableAsync",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          },
-          {
-            "extendingMethod": "AsObservable",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          }
+        "name": "ThenBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ThenByDescending",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ITargetBlock<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Linq.ParallelQuery",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Threading.Tasks.Dataflow",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Post",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          },
-          {
-            "extendingMethod": "SendAsync",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          },
-          {
-            "extendingMethod": "AsObserver",
-            "extendingNamespace": "System.Threading.Tasks.Dataflow"
-          }
+        "name": "Contains",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Take",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "TakeWhile",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Skip",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SkipWhile",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Concat",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SequenceEqual",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Distinct",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Union",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Intersect",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Except",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsEnumerable",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToArray",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToList",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToDictionary",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ToLookup",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Reverse",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OfType",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Cast",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "First",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "FirstOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Last",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LastOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Single",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SingleOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "DefaultIfEmpty",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAt",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ElementAtOrDefault",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Sum",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Min",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Max",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Average",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Any",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "All",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsOrdered",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsUnordered",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "AsSequential",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "WithDegreeOfParallelism",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "WithCancellation",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "WithExecutionMode",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "WithMergeOptions",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "ForAll",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Where",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Select",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Zip",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Join",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "GroupJoin",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "SelectMany",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OrderBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "OrderByDescending",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "GroupBy",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "Count",
+        "namespaces": [
+          "System.Linq"
+        ]
+      },
+      {
+        "name": "LongCount",
+        "namespaces": [
+          "System.Linq"
         ]
       }
     ]
   },
   {
-    "extendedClass": "MemberInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Net.Sockets.Socket",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection",
-        "extensionMethods": [
-          {
-            "extendingMethod": "HasMetadataToken",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetMetadataToken",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetCustomAttribute",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetCustomAttributes",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "IsDefined",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "AcceptAsync",
+        "namespaces": [
+          "System.Net.Sockets"
+        ]
+      },
+      {
+        "name": "ConnectAsync",
+        "namespaces": [
+          "System.Net.Sockets"
+        ]
+      },
+      {
+        "name": "ReceiveAsync",
+        "namespaces": [
+          "System.Net.Sockets"
+        ]
+      },
+      {
+        "name": "ReceiveFromAsync",
+        "namespaces": [
+          "System.Net.Sockets"
+        ]
+      },
+      {
+        "name": "ReceiveMessageFromAsync",
+        "namespaces": [
+          "System.Net.Sockets"
+        ]
+      },
+      {
+        "name": "SendAsync",
+        "namespaces": [
+          "System.Net.Sockets"
+        ]
+      },
+      {
+        "name": "SendToAsync",
+        "namespaces": [
+          "System.Net.Sockets"
         ]
       }
     ]
   },
   {
-    "extendedClass": "MetadataReader",
-    "extendedNamespaces": [
+    "extendedClass": "System.ReadOnlySpan",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection.Metadata",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetTableRowCount",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetTableRowSize",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetTableMetadataOffset",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetHeapSize",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetHeapMetadataOffset",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetNextHandle",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetEditAndContinueLogEntries",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetEditAndContinueMapEntries",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetTypesWithProperties",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetTypesWithEvents",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "ResolveSignatureTypeKind",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetRowNumber",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetHeapOffset",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          },
-          {
-            "extendingMethod": "GetToken",
-            "extendingNamespace": "System.Reflection.Metadata.Ecma335"
-          }
+        "name": "Trim",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "TrimStart",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "TrimEnd",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "IsWhiteSpace",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "IndexOf",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "LastIndexOf",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "IndexOfAny",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "LastIndexOfAny",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "SequenceEqual",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "SequenceCompareTo",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "StartsWith",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "EndsWith",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "Overlaps",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "BinarySearch",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "Contains",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "Equals",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "CompareTo",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "ToLower",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "ToLowerInvariant",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "ToUpper",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "ToUpperInvariant",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "MethodInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.Assembly",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetRuntimeBaseDefinition",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "GetCustomAttribute",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetCustomAttributes",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "IsDefined",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "TryGetRawMetadata",
+        "namespaces": [
+          "System.Reflection.Metadata"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Module",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.MemberInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection",
-        "extensionMethods": [
-          {
-            "extendingMethod": "HasModuleVersionId",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetModuleVersionId",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetCustomAttribute",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetCustomAttributes",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "IsDefined",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "HasMetadataToken",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetMetadataToken",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetCustomAttribute",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetCustomAttributes",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "IsDefined",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "OrderedParallelQuery<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.Metadata.ExportedType",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "ThenBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ThenByDescending",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "GetTypeDefinitionId",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ParallelQuery",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.Metadata.ILOpCode",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "OfType",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Cast",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsOrdered",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "IsBranch",
+        "namespaces": [
+          "System.Reflection.Metadata"
+        ]
+      },
+      {
+        "name": "GetBranchOperandSize",
+        "namespaces": [
+          "System.Reflection.Metadata"
+        ]
+      },
+      {
+        "name": "GetShortBranch",
+        "namespaces": [
+          "System.Reflection.Metadata"
+        ]
+      },
+      {
+        "name": "GetLongBranch",
+        "namespaces": [
+          "System.Reflection.Metadata"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ParallelQuery<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.Metadata.MetadataReader",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Contains",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Take",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "TakeWhile",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Skip",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SkipWhile",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Concat",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SequenceEqual",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Distinct",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Union",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Intersect",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Except",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsEnumerable",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToArray",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToList",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToDictionary",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ToLookup",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Reverse",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "First",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "FirstOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Last",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LastOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Single",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SingleOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "DefaultIfEmpty",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAt",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ElementAtOrDefault",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Sum",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Min",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Max",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Average",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Any",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "All",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsOrdered",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsUnordered",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "AsSequential",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "WithDegreeOfParallelism",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "WithCancellation",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "WithExecutionMode",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "WithMergeOptions",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "ForAll",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Where",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Select",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Zip",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Join",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "GroupJoin",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "SelectMany",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "OrderBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "OrderByDescending",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "GroupBy",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Aggregate",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "Count",
-            "extendingNamespace": "System.Linq"
-          },
-          {
-            "extendingMethod": "LongCount",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "GetTableRowCount",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetTableRowSize",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetTableMetadataOffset",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetHeapSize",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetHeapMetadataOffset",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetNextHandle",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetEditAndContinueLogEntries",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetEditAndContinueMapEntries",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetTypesWithProperties",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetTypesWithEvents",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "ResolveSignatureTypeKind",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetRowNumber",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetHeapOffset",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
+        ]
+      },
+      {
+        "name": "GetToken",
+        "namespaces": [
+          "System.Reflection.Metadata.Ecma335"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ParameterInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.MethodInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetCustomAttribute",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetCustomAttributes",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "IsDefined",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "GetRuntimeBaseDefinition",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Partitioner<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.Module",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Collections.Concurrent",
-        "extensionMethods": [
-          {
-            "extendingMethod": "AsParallel",
-            "extendingNamespace": "System.Linq"
-          }
+        "name": "HasModuleVersionId",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetModuleVersionId",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetCustomAttribute",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetCustomAttributes",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "IsDefined",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "PEReader",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.ParameterInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection.PortableExecutable",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetMethodBody",
-            "extendingNamespace": "System.Reflection.Metadata"
-          },
-          {
-            "extendingMethod": "GetMetadataReader",
-            "extendingNamespace": "System.Reflection.Metadata"
-          }
+        "name": "GetCustomAttribute",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetCustomAttributes",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "IsDefined",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "PipeStream",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.PortableExecutable.PEReader",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.IO.Pipes",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetAccessControl",
-            "extendingNamespace": "System.IO.Pipes"
-          },
-          {
-            "extendingMethod": "SetAccessControl",
-            "extendingNamespace": "System.IO.Pipes"
-          }
+        "name": "GetMethodBody",
+        "namespaces": [
+          "System.Reflection.Metadata"
+        ]
+      },
+      {
+        "name": "GetMetadataReader",
+        "namespaces": [
+          "System.Reflection.Metadata"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ReadOnlySequence",
-    "extendedNamespaces": [
+    "extendedClass": "System.Reflection.TypeInfo",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Buffers",
-        "extensionMethods": [
-          {
-            "extendingMethod": "PositionOf",
-            "extendingNamespace": "System.Buffers"
-          },
-          {
-            "extendingMethod": "CopyTo",
-            "extendingNamespace": "System.Buffers"
-          },
-          {
-            "extendingMethod": "ToArray",
-            "extendingNamespace": "System.Buffers"
-          }
+        "name": "GetRuntimeInterfaceMap",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ReadOnlySpan<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Runtime.Serialization.DataContractSerializer",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Trim",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "TrimStart",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "TrimEnd",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "IsWhiteSpace",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "IndexOf",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "LastIndexOf",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "IndexOfAny",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "LastIndexOfAny",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "SequenceEqual",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "SequenceCompareTo",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "StartsWith",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "EndsWith",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "Overlaps",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "BinarySearch",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "Contains",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "Equals",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "CompareTo",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "ToLower",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "ToLowerInvariant",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "ToUpper",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "ToUpperInvariant",
-            "extendingNamespace": "System"
-          }
+        "name": "GetSerializationSurrogateProvider",
+        "namespaces": [
+          "System.Runtime.Serialization"
+        ]
+      },
+      {
+        "name": "SetSerializationSurrogateProvider",
+        "namespaces": [
+          "System.Runtime.Serialization"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Socket",
-    "extendedNamespaces": [
+    "extendedClass": "System.Security.Cryptography.X509Certificates.X509Certificate2",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Net.Sockets",
-        "extensionMethods": [
-          {
-            "extendingMethod": "AcceptAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          },
-          {
-            "extendingMethod": "ConnectAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          },
-          {
-            "extendingMethod": "ReceiveAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          },
-          {
-            "extendingMethod": "ReceiveFromAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          },
-          {
-            "extendingMethod": "ReceiveMessageFromAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          },
-          {
-            "extendingMethod": "SendAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          },
-          {
-            "extendingMethod": "SendToAsync",
-            "extendingNamespace": "System.Net.Sockets"
-          }
+        "name": "GetDSAPublicKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
+        ]
+      },
+      {
+        "name": "GetDSAPrivateKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
+        ]
+      },
+      {
+        "name": "CopyWithPrivateKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
+        ]
+      },
+      {
+        "name": "GetECDsaPublicKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
+        ]
+      },
+      {
+        "name": "GetECDsaPrivateKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
+        ]
+      },
+      {
+        "name": "GetRSAPublicKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
+        ]
+      },
+      {
+        "name": "GetRSAPrivateKey",
+        "namespaces": [
+          "System.Security.Cryptography.X509Certificates"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Span<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Span",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "IndexOf",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "LastIndexOf",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "SequenceEqual",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "SequenceCompareTo",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "IndexOfAny",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "LastIndexOfAny",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "StartsWith",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "EndsWith",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "Reverse",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "Overlaps",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "BinarySearch",
-            "extendingNamespace": "System"
-          }
+        "name": "IndexOf",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "LastIndexOf",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "SequenceEqual",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "SequenceCompareTo",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "IndexOfAny",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "LastIndexOfAny",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "StartsWith",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "EndsWith",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "Reverse",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "Overlaps",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "BinarySearch",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "StackFrame",
-    "extendedNamespaces": [
+    "extendedClass": "System.String",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Diagnostics",
-        "extensionMethods": [
-          {
-            "extendingMethod": "HasNativeImage",
-            "extendingNamespace": "System.Diagnostics"
-          },
-          {
-            "extendingMethod": "HasMethod",
-            "extendingNamespace": "System.Diagnostics"
-          },
-          {
-            "extendingMethod": "HasILOffset",
-            "extendingNamespace": "System.Diagnostics"
-          },
-          {
-            "extendingMethod": "HasSource",
-            "extendingNamespace": "System.Diagnostics"
-          },
-          {
-            "extendingMethod": "GetNativeIP",
-            "extendingNamespace": "System.Diagnostics"
-          },
-          {
-            "extendingMethod": "GetNativeImageBase",
-            "extendingNamespace": "System.Diagnostics"
-          }
+        "name": "IsNormalized",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "Normalize",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "AsSpan",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "AsMemory",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "String",
-    "extendedNamespaces": [
+    "extendedClass": "System.T[]",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "IsNormalized",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "Normalize",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "AsSpan",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "AsMemory",
-            "extendingNamespace": "System"
-          }
+        "name": "AsSpan",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "AsMemory",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "CopyTo",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "T[]",
-    "extendedNamespaces": [
+    "extendedClass": "System.Threading.Tasks.Dataflow.IReceivableSourceBlock",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "AsSpan",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "AsMemory",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "CopyTo",
-            "extendingNamespace": "System"
-          }
+        "name": "TryReceive",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Task<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Threading.Tasks.Dataflow.ISourceBlock",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Threading.Tasks",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Unwrap",
-            "extendingNamespace": "System.Threading.Tasks"
-          }
+        "name": "LinkTo",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
+        ]
+      },
+      {
+        "name": "ReceiveAsync",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
+        ]
+      },
+      {
+        "name": "Receive",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
+        ]
+      },
+      {
+        "name": "OutputAvailableAsync",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
+        ]
+      },
+      {
+        "name": "AsObservable",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Tuple<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Threading.Tasks.Dataflow.ITargetBlock",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Deconstruct",
-            "extendingNamespace": "System"
-          },
-          {
-            "extendingMethod": "ToValueTuple",
-            "extendingNamespace": "System"
-          }
+        "name": "Post",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
+        ]
+      },
+      {
+        "name": "SendAsync",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
+        ]
+      },
+      {
+        "name": "AsObserver",
+        "namespaces": [
+          "System.Threading.Tasks.Dataflow"
         ]
       }
     ]
   },
   {
-    "extendedClass": "Type",
-    "extendedNamespaces": [
+    "extendedClass": "System.Threading.Tasks.Task",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetRuntimeFields",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeMethods",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeProperties",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeEvents",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeField",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeMethod",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeProperty",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetRuntimeEvent",
-            "extendingNamespace": "System.Reflection"
-          },
-          {
-            "extendingMethod": "GetTypeInfo",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "Unwrap",
+        "namespaces": [
+          "System.Threading.Tasks"
         ]
       }
     ]
   },
   {
-    "extendedClass": "TypeInfo",
-    "extendedNamespaces": [
+    "extendedClass": "System.Threading.WaitHandle",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Reflection",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetRuntimeInterfaceMap",
-            "extendingNamespace": "System.Reflection"
-          }
+        "name": "GetSafeWaitHandle",
+        "namespaces": [
+          "System.Threading"
+        ]
+      },
+      {
+        "name": "SetSafeWaitHandle",
+        "namespaces": [
+          "System.Threading"
         ]
       }
     ]
   },
   {
-    "extendedClass": "ValueTuple<>",
-    "extendedNamespaces": [
+    "extendedClass": "System.Tuple",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System",
-        "extensionMethods": [
-          {
-            "extendingMethod": "ToTuple",
-            "extendingNamespace": "System"
-          }
+        "name": "Deconstruct",
+        "namespaces": [
+          "System"
+        ]
+      },
+      {
+        "name": "ToValueTuple",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "WaitHandle",
-    "extendedNamespaces": [
+    "extendedClass": "System.Type",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Threading",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetSafeWaitHandle",
-            "extendingNamespace": "System.Threading"
-          },
-          {
-            "extendingMethod": "SetSafeWaitHandle",
-            "extendingNamespace": "System.Threading"
-          }
+        "name": "GetRuntimeFields",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeMethods",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeProperties",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeEvents",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeField",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeMethod",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeProperty",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetRuntimeEvent",
+        "namespaces": [
+          "System.Reflection"
+        ]
+      },
+      {
+        "name": "GetTypeInfo",
+        "namespaces": [
+          "System.Reflection"
         ]
       }
     ]
   },
   {
-    "extendedClass": "X509Certificate2",
-    "extendedNamespaces": [
+    "extendedClass": "System.ValueTuple",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Security.Cryptography.X509Certificates",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetDSAPublicKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          },
-          {
-            "extendingMethod": "GetDSAPrivateKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          },
-          {
-            "extendingMethod": "CopyWithPrivateKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          },
-          {
-            "extendingMethod": "GetECDsaPublicKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          },
-          {
-            "extendingMethod": "GetECDsaPrivateKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          },
-          {
-            "extendingMethod": "GetRSAPublicKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          },
-          {
-            "extendingMethod": "GetRSAPrivateKey",
-            "extendingNamespace": "System.Security.Cryptography.X509Certificates"
-          }
+        "name": "ToTuple",
+        "namespaces": [
+          "System"
         ]
       }
     ]
   },
   {
-    "extendedClass": "XAttribute",
-    "extendedNamespaces": [
+    "extendedClass": "System.Xml.Linq.XAttribute",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Xml.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetSchemaInfo",
-            "extendingNamespace": "System.Xml.Schema"
-          },
-          {
-            "extendingMethod": "Validate",
-            "extendingNamespace": "System.Xml.Schema"
-          }
+        "name": "GetSchemaInfo",
+        "namespaces": [
+          "System.Xml.Schema"
+        ]
+      },
+      {
+        "name": "Validate",
+        "namespaces": [
+          "System.Xml.Schema"
         ]
       }
     ]
   },
   {
-    "extendedClass": "XDocument",
-    "extendedNamespaces": [
+    "extendedClass": "System.Xml.Linq.XDocument",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Xml.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "Validate",
-            "extendingNamespace": "System.Xml.Schema"
-          }
+        "name": "Validate",
+        "namespaces": [
+          "System.Xml.Schema"
         ]
       }
     ]
   },
   {
-    "extendedClass": "XElement",
-    "extendedNamespaces": [
+    "extendedClass": "System.Xml.Linq.XElement",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Xml.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "GetSchemaInfo",
-            "extendingNamespace": "System.Xml.Schema"
-          },
-          {
-            "extendingMethod": "Validate",
-            "extendingNamespace": "System.Xml.Schema"
-          }
+        "name": "GetSchemaInfo",
+        "namespaces": [
+          "System.Xml.Schema"
+        ]
+      },
+      {
+        "name": "Validate",
+        "namespaces": [
+          "System.Xml.Schema"
         ]
       }
     ]
   },
   {
-    "extendedClass": "XNode",
-    "extendedNamespaces": [
+    "extendedClass": "System.Xml.Linq.XNode",
+    "extensionMethods": [
       {
-        "extendedNamespace": "System.Xml.Linq",
-        "extensionMethods": [
-          {
-            "extendingMethod": "CreateNavigator",
-            "extendingNamespace": "System.Xml.XPath"
-          },
-          {
-            "extendingMethod": "XPathEvaluate",
-            "extendingNamespace": "System.Xml.XPath"
-          },
-          {
-            "extendingMethod": "XPathSelectElement",
-            "extendingNamespace": "System.Xml.XPath"
-          },
-          {
-            "extendingMethod": "XPathSelectElements",
-            "extendingNamespace": "System.Xml.XPath"
-          },
-          {
-            "extendingMethod": "ToXPathNavigable",
-            "extendingNamespace": "System.Xml.XPath"
-          }
+        "name": "CreateNavigator",
+        "namespaces": [
+          "System.Xml.XPath"
         ]
-      }
-    ]
-  },
-  {
-    "extendedClass": "ZipArchive",
-    "extendedNamespaces": [
+      },
       {
-        "extendedNamespace": "System.IO.Compression",
-        "extensionMethods": [
-          {
-            "extendingMethod": "CreateEntryFromFile",
-            "extendingNamespace": "System.IO.Compression"
-          },
-          {
-            "extendingMethod": "ExtractToDirectory",
-            "extendingNamespace": "System.IO.Compression"
-          }
+        "name": "XPathEvaluate",
+        "namespaces": [
+          "System.Xml.XPath"
         ]
-      }
-    ]
-  },
-  {
-    "extendedClass": "ZipArchiveEntry",
-    "extendedNamespaces": [
+      },
       {
-        "extendedNamespace": "System.IO.Compression",
-        "extensionMethods": [
-          {
-            "extendingMethod": "ExtractToFile",
-            "extendingNamespace": "System.IO.Compression"
-          }
+        "name": "XPathSelectElement",
+        "namespaces": [
+          "System.Xml.XPath"
+        ]
+      },
+      {
+        "name": "XPathSelectElements",
+        "namespaces": [
+          "System.Xml.XPath"
+        ]
+      },
+      {
+        "name": "ToXPathNavigable",
+        "namespaces": [
+          "System.Xml.XPath"
         ]
       }
     ]

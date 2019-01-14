@@ -13,8 +13,11 @@ namespace AutoUsing
 
 
 
+
+
     public class AssemblyScanner
     {
+
         private IEnumerable<Assembly> assemblies;
 
         public AssemblyScanner()
@@ -91,14 +94,15 @@ namespace AutoUsing
         {
             var allExtensionMethods = assemblies.SelectMany(GetExtensionMethods).ToList();
 
-            var grouped = allExtensionMethods.GroupBy(ExtendedClassName).Select(group => group.GroupBy(ExtendedClassNamespace)
-            );
+            var grouped = allExtensionMethods.GroupBy(ExtendedClassName)
+            .Select(extensionMethods => extensionMethods.GroupBy(extensionMethod => extensionMethod.extendingMethod));
 
             var easierFormat = grouped.Select(extendedClass => new ExtendedClass(extendedClass.First().First().extendedClass,
-            extendedClass.Select(extendedNamespace => new ExtendedNamespace(extendedNamespace.First().extendedNamespace,
-            extendedNamespace.Select(extensionMethod => new ExtensionMethod(extensionMethod.extendingMethod, extensionMethod.extendingNamespace)).Distinct().ToList()
-            )).ToList()
-            )).OrderBy(extendedClass => extendedClass.extendedClass).ToList();
+
+            extendedClass.Select(extensionMethod => new ExtensionMethod(extensionMethod.First().extendingMethod,
+             extensionMethod.Select(info => info.extendingNamespace).Distinct().ToList()))
+            .Distinct().ToList())).ToList()
+            .OrderBy(extendedClass => extendedClass.extendedClass).ToList();
 
 
             return easierFormat;
@@ -108,7 +112,7 @@ namespace AutoUsing
 
         private static string ExtendedClassName(ExtensionMethodInfo info) => (info.extendedClass).NoTilde();
 
-        private static string ExtendedClassNamespace(ExtensionMethodInfo info) => info.extendedNamespace;
+        // private static string ExtendedClassNamespace(ExtensionMethodInfo info) => info.extendedNamespace;
 
         public static List<ExtensionMethodInfo> GetExtensionMethods(Assembly assembly)
         {
@@ -118,13 +122,12 @@ namespace AutoUsing
                 extendingClass => extendingClass.GetExtensionMethods()
                 .Select(extendingMethod =>
                 {
-                    var extendedClass = extendingMethod.GetExtendedClass().Name.NoTilde();
-                    if (extendingMethod.GetExtendedClass().IsGenericType) extendedClass += "<>";
+                    var extendedClass = extendingMethod.GetExtendedClass().Namespace + "." + extendingMethod.GetExtendedClass().Name.NoTilde();
+                    // if (extendingMethod.GetExtendedClass().IsGenericType) extendedClass += "<>";
                     return new ExtensionMethodInfo(
                         extendingClass.Namespace,
                         extendingMethod.Name,
-                        extendedClass,
-                        extendingMethod.GetExtendedClass().Namespace
+                        extendedClass
                      );
                 })).ToList();
 

@@ -42,10 +42,7 @@ namespace AutoUsing
             File.WriteAllText(csreferences, $"export const references = {referencesJson};");
             File.WriteAllText(extensionMethods, $"export const extensionMethods : ExtendedClass[] = {extensionsJson};");
             File.WriteAllText(hierachies, $"export const classHierachies : ClassHiearchies[] = {hierachiesJson};");
-
-            int x = 2;
-            
-
+            // y.ass
 
 
         }

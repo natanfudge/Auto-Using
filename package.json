@@ -4,6 +4,7 @@
 	"icon": "icon.png",
 	"version": "0.6.11",
 	"publisher": "Fudge",
+	"description": "Provides intellisense for and imports references from all available sources.",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/natanfudge/Auto-Using"
