@@ -20,13 +20,6 @@ export async function activateCSharpExtension(){
 
     await csharpExtension.exports.initializationFinished();
 
-    // try {
-    //     // await csharpExtension.exports.initializationFinished();
-    // }
-    // catch (err) {
-    //     console.log(JSON.stringify(err));
-    //     return undefined;
-    // }
 }
 
 export function assertContains<T>(arr: Array<T>, element: T): void {
@@ -104,9 +97,6 @@ export async function openTest(testName: string): Promise<vscode.TextDocument> {
     await writeFileSync(getTestPlaygroundPath(testName), await readFileSync(getTestAssetPath(testName)));
 
     let doc = await vscode.workspace.openTextDocument(getTestPlaygroundUri(testName));
-    // let namespaceEdit = (textEdit: any) => {
-    //     textEdit.insert(new vscode.Position(namespaceLine, 20), `.Playground`);
-    // };
     await vscode.window.showTextDocument(doc);
 
     return doc;

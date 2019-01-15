@@ -21,14 +21,11 @@ const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "str
 export function getStoredCompletions(context: vscode.ExtensionContext): Completion[] {
 	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
 
-	if (typeof completions === "undefined") return [];//throw new Error("The completion storage is unexpectedly undefined");
+	if (typeof completions === "undefined") return [];
 	return completions;
 }
 
-// interface Primitive{
-// 	primName:string;
-// 	className:string;
-// }
+
 const primitives = {
 	bool: "Boolean", byte: "Byte", sbyte: "SByte", char: "Char", decimal: "Decimal",
 	double: "Double", float: "Single", int: "Int32", uint: "UInt32", long: "Int64", ulong: "System.UInt64",
@@ -40,6 +37,26 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	private document!: vscode.TextDocument;
 
 	constructor(private context: vscode.ExtensionContext) {
+	}
+
+	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
+		this.document = document;
+		let requiredCompletion = await this.isPlaceToComplete(position);
+
+		let usings = await this.getUsingsInFile(document);
+
+		if (requiredCompletion === false) return [];
+		if (requiredCompletion !== true) {
+			return this.getExtensionMethods(requiredCompletion, usings);
+		}
+
+		let found = this.filterByTypedWord(document, position);
+
+		let completions = this.referencesToCompletions(found, usings);
+
+		return completions;
+
+
 	}
 
 
@@ -137,34 +154,6 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return hoverInfoContainer;
 	}
 
-	private waitedForCsExt: boolean = false;
-
-	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
-		if (!this.waitedForCsExt) {
-			this.waitedForCsExt = true;
-			await vscode.commands.executeCommand("vscode.executeCompletionItemProvider", document.uri, position);
-			return [];
-		}
-
-		this.document = document;
-		let requiredCompletion = await this.isPlaceToComplete(position);
-
-		let usings = await this.getUsingsInFile(document);
-
-		if (requiredCompletion === false) return [];
-		if (requiredCompletion !== true) {
-			return this.getExtensionMethods(requiredCompletion, usings);
-		}
-
-		let found = this.filterByTypedWord(document, position);
-
-		let completions = this.referencesToCompletions(found, usings);
-
-		return completions;
-
-
-	}
-
 	private getExtensionMethods(extendingClass: string, usings: string[]): vscode.CompletionItem[] {
 		try {
 			return this.getExtensionMethodsChecked(extendingClass, usings);
@@ -222,20 +211,11 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		let completions = new Array<vscode.CompletionItem>(completionAmount);
 
-
 		for (let i = 0; i < completionAmount; i++) {
-
-
 
 			let reference = references[i];
 			let name = reference.name;
-			if (name === "File") {
-				// let x= 2;
-			}
 			let isCommon = binarySearch(commonNames, name) !== -1;
-
-
-
 
 			let oneOption = reference.namespaces.length === 1;
 

@@ -69,9 +69,10 @@ export async function activate(context: vscode.ExtensionContext) {
 	// Remove all stored completions
 	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => wipeStoredCompletions(context));
 
-	let provider1 = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP }, new CompletionProvider(context), ".");
+	//TODO add this to test helper
+	let autoUsingProvider = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP }, new CompletionProvider(context), ".");
 
-	context.subscriptions.push(provider1, handleCompletionCommand, wipeStorageCommand);
+	context.subscriptions.push(autoUsingProvider, handleCompletionCommand, wipeStorageCommand);
 }
 
 export function x(){

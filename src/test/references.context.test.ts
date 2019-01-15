@@ -5,35 +5,34 @@
 
 // The module 'assert' provides assertion methods from node
 
-import { activateExtension, assertInFirst } from './testUtil';
+import { activateExtension, assertInFirst, openTest, assertContains } from './testUtil';
 import * as vscode from "vscode";
 // import { testHelper, COMPLETION_STORAGE, Completion } from '../extension';
 import * as assert from "assert";
 import { Completion, COMPLETION_STORAGE, testHelper, addUsing, storeCompletion } from '../extension';
 import * as extension from "../extension";
-import { complete, completeWithData } from './extension.e2e.test';
+import { completeWithData, complete, DirectCompletionTestHelper } from './TestCompletionUtil';
+import { CompletionProvider } from '../CompletionProvider';
 
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
-// import * as vscode from 'vscode';
-// import * as myExtension from '../extension';
 
 // Defines a Mocha test suite to group tests of similar kind together
-suite("CompletionProvider Integration Tests", function () {
+suite("CompletionProvider References Context Tests", function () {
 
 
     let context: vscode.ExtensionContext;
+    let helper: DirectCompletionTestHelper;
 
 
     suiteSetup(async () => {
         await activateExtension();
         //@ts-ignore
         context = testHelper.context;
+        helper = new DirectCompletionTestHelper(new CompletionProvider(context));
     });
 
-    test("Add Using expression", async () => {
+    test("Should add using expression", async () => {
         let [list, doc] = await completeWithData("ShouldAddUsing.cs", 1, 5);
-        await addUsing("System.Collections.Specialized", context, {name: "BitVector32", namespaces:["System.Collections.Specialized"]});
+        await addUsing("System.Collections.Specialized", context, { name: "BitVector32", namespaces: ["System.Collections.Specialized"] });
 
         let addedLine = doc.lineAt(0).text;
         assert.equal(addedLine, "using System.Collections.Specialized;");
@@ -44,6 +43,11 @@ suite("CompletionProvider Integration Tests", function () {
         storeCompletion(context, new Completion("ApartmentState", "System.Threading"));
         let list = await complete("ShouldPrioritize.cs", 1, 3);
         assertInFirst(5, list, "ApartmentState");
+    });
+
+    test("Should show completions", async () => {
+        let completionList = await helper.directlyComplete("ShouldShow.cs", 1, 5);
+        assertContains(completionList, "File");
     });
 
 
