@@ -24,7 +24,7 @@ Gives priority to completions that were chosen before.
   <br><br><br><br><br><br><br>
 
 
-Sometimes there are multiple completions with the same name. In that case they are compressed into a single completion and you get to choose between then.
+Sometimes there are multiple completions with the same name. In that case they are compressed into a single completion and you get to choose between them.
 
 ![Option](option.gif)
 
