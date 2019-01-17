@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 0.7.1
+- Fixed completions not appearing after the `in` keyword (relevant for `freach` loops).
+
 ### 0.7.0
 - Auto-Using now Auto-Imports extension methods! Using Linq has never been easier.
 - Fixed completions appearing when typing space unlike the C# extensions, which causes completions to seem like they are happening for no reason.
