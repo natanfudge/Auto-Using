@@ -341,17 +341,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Activator",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ActiveDesignerEventArgs",
     "namespaces": [
       {
@@ -460,18 +449,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.IDisposable",
           "System.Security.Cryptography.SymmetricAlgorithm"
-        ]
-      },
-      {
-        "namespace": "System.Runtime.Intrinsics.Arm.Arm64",
-        "fathers": [
-          "System.Object"
-        ]
-      },
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -663,17 +640,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "AppContext",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "AppDomain",
     "namespaces": [
       {
@@ -692,17 +658,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Application",
-    "namespaces": [
-      {
-        "namespace": "System.Net.Mime",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -1128,23 +1083,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Reflection",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "AssemblyExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
-        ]
-      },
-      {
-        "namespace": "System.Reflection.Metadata",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -1656,17 +1594,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "AsyncOperationManager",
-    "namespaces": [
-      {
-        "namespace": "System.ComponentModel",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "AsyncStateMachineAttribute",
     "namespaces": [
       {
@@ -2041,28 +1968,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Avx",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Avx2",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "BackgroundWorker",
     "namespaces": [
       {
@@ -2107,28 +2012,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Base",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.Arm.Arm64",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Base64",
-    "namespaces": [
-      {
-        "namespace": "System.Buffers.Text",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -2261,17 +2144,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "BinaryPrimitives",
-    "namespaces": [
-      {
-        "namespace": "System.Buffers.Binary",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "BinaryReader",
     "namespaces": [
       {
@@ -2334,12 +2206,6 @@ export const classHierachies : ClassHiearchies[] = [
   {
     "class": "Binder",
     "namespaces": [
-      {
-        "namespace": "Microsoft.CSharp.RuntimeBinder",
-        "fathers": [
-          "System.Object"
-        ]
-      },
       {
         "namespace": "System.Reflection",
         "fathers": [
@@ -2442,17 +2308,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.ICloneable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "BitConverter",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -2592,28 +2447,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Bmi1",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Bmi2",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Boolean",
     "namespaces": [
       {
@@ -2726,17 +2559,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Buffer",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "BufferBlock<>",
     "namespaces": [
       {
@@ -2761,17 +2583,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.IDisposable",
           "System.IO.Stream"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "BuffersExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Buffers",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -3130,28 +2941,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "CallSiteHelpers",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "CallSiteOps",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "CallType",
     "namespaces": [
       {
@@ -3448,17 +3237,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "CharUnicodeInfo",
-    "namespaces": [
-      {
-        "namespace": "System.Globalization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "CheckoutException",
     "namespaces": [
       {
@@ -3554,28 +3332,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Security.Claims",
         "fathers": [
           "System.Security.Principal.IPrincipal",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ClaimTypes",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Claims",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ClaimValueTypes",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Claims",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -3912,17 +3668,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "CodedIndex",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "CodeGenerationOptions",
     "namespaces": [
       {
@@ -4074,17 +3819,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "CollectionExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Generic",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "CollectionsUtil",
     "namespaces": [
       {
@@ -4192,17 +3926,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Runtime.InteropServices",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ComEventsHelper",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -4476,17 +4199,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Runtime.CompilerServices",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "CompilerMarshalOverride",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -5118,23 +4830,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Console",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      },
-      {
-        "namespace": "Internal",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ConsoleCancelEventArgs",
     "namespaces": [
       {
@@ -5495,17 +5190,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Contract",
-    "namespaces": [
-      {
-        "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ContractAbbreviatorAttribute",
     "namespaces": [
       {
@@ -5582,17 +5266,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ContractHelper",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -5704,17 +5377,6 @@ export const classHierachies : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Convert",
-    "namespaces": [
-      {
-        "namespace": "System",
         "fathers": [
           "System.Object"
         ]
@@ -5974,17 +5636,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "CryptographicOperations",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Cryptography",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "CryptographicUnexpectedOperationException",
     "namespaces": [
       {
@@ -6236,17 +5887,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Reflection.Metadata.Ecma335",
         "fathers": [
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "CustomAttributeExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -6653,17 +6293,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "DataContractSerializerExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Serialization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "DataContractSerializerSettings",
     "namespaces": [
       {
@@ -6707,17 +6336,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "DataflowBlock",
-    "namespaces": [
-      {
-        "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -7532,17 +7150,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "DbDataReaderExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Data.Common",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "DbDataRecord",
     "namespaces": [
       {
@@ -7591,28 +7198,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "DbMetaDataCollectionNames",
-    "namespaces": [
-      {
-        "namespace": "System.Data.Common",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "DbMetaDataColumnNames",
-    "namespaces": [
-      {
-        "namespace": "System.Data.Common",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "DBNull",
     "namespaces": [
       {
@@ -7649,17 +7234,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.MarshalByRefObject"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "DbProviderFactories",
-    "namespaces": [
-      {
-        "namespace": "System.Data.Common",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -7714,17 +7288,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Debug",
-    "namespaces": [
-      {
-        "namespace": "System.Diagnostics",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "DebugDirectoryBuilder",
     "namespaces": [
       {
@@ -7767,17 +7330,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Diagnostics",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Debugger",
-    "namespaces": [
-      {
-        "namespace": "System.Diagnostics",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -8871,17 +8423,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Directory",
-    "namespaces": [
-      {
-        "namespace": "System.IO",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "DirectoryEntry",
     "namespaces": [
       {
@@ -9051,17 +8592,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "DispositionTypeNames",
-    "namespaces": [
-      {
-        "namespace": "System.Net.Mime",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "DISPPARAMS",
     "namespaces": [
       {
@@ -9131,17 +8661,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.TypeLoadException"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Dns",
-    "namespaces": [
-      {
-        "namespace": "System.Net",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -9398,17 +8917,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.IDisposable",
           "System.Security.Cryptography.AsymmetricAlgorithm"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "DSACertificateExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -9749,17 +9257,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.IDisposable",
           "System.Security.Cryptography.AsymmetricAlgorithm"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ECDsaCertificateExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -10289,17 +9786,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.Generic.IEqualityComparer",
           "System.Runtime.Serialization.ISerializable",
           "System.Collections.Generic.EqualityComparer"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Enumerable",
-    "namespaces": [
-      {
-        "namespace": "System.Linq",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -10855,28 +10341,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Environment",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "EnvironmentAugments",
-    "namespaces": [
-      {
-        "namespace": "Internal.Runtime.Augments",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "EnvironmentVariableTarget",
     "namespaces": [
       {
@@ -11242,17 +10706,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MemberInfo"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "EventInfoExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -11702,17 +11155,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ExportedTypeExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ExportedTypeHandle",
     "namespaces": [
       {
@@ -11881,29 +11323,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Extensions",
-    "namespaces": [
-      {
-        "namespace": "System.Xml.XPath",
-        "fathers": [
-          "System.Object"
-        ]
-      },
-      {
-        "namespace": "System.Xml.Schema",
-        "fathers": [
-          "System.Object"
-        ]
-      },
-      {
-        "namespace": "System.Xml.Linq",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ExternalException",
     "namespaces": [
       {
@@ -12020,23 +11439,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Reflection.Emit",
         "fathers": [
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "File",
-    "namespaces": [
-      {
-        "namespace": "System.IO",
-        "fathers": [
-          "System.Object"
-        ]
-      },
-      {
-        "namespace": "System.Net",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -12204,17 +11606,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "FileSystemAclExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.IO",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "FileSystemAuditRule",
     "namespaces": [
       {
@@ -12295,17 +11686,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.MarshalByRefObject"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "FileSystemName",
-    "namespaces": [
-      {
-        "namespace": "System.IO.Enumeration",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -12541,17 +11921,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Fma",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "FollowingSiblingIterator",
     "namespaces": [
       {
@@ -12642,17 +12011,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "FormattableStringFactory",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Formatter",
     "namespaces": [
       {
@@ -12685,17 +12043,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Runtime.Serialization",
         "fathers": [
           "System.Runtime.Serialization.IFormatterConverter",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "FormatterServices",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Serialization",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -12776,17 +12123,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Ftp",
-    "namespaces": [
-      {
-        "namespace": "System.Net",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -13061,17 +12397,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "GC",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "GCCollectionMode",
     "namespaces": [
       {
@@ -13148,17 +12473,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "GCSettings",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -13417,17 +12731,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Dynamic",
         "fathers": [
           "System.Dynamic.DynamicMetaObjectBinder"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "GlobalizationExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Globalization",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -14049,17 +13352,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Http",
-    "namespaces": [
-      {
-        "namespace": "System.Net",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "HttpCacheAgeControl",
     "namespaces": [
       {
@@ -14463,17 +13755,6 @@ export const classHierachies : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Web",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "HttpVersion",
-    "namespaces": [
-      {
-        "namespace": "System.Net",
         "fathers": [
           "System.Object"
         ]
@@ -16173,28 +15454,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ILOpCodeExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection.Metadata",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Image",
-    "namespaces": [
-      {
-        "namespace": "System.Net.Mime",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ImageFileMachine",
     "namespaces": [
       {
@@ -16244,17 +15503,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ImmutableArray",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ImmutableArray<>",
     "namespaces": [
       {
@@ -16274,28 +15522,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.IStructuralEquatable",
           "System.Collections.Immutable.IImmutableList",
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ImmutableArrayExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Linq",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ImmutableDictionary",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -16323,17 +15549,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ImmutableHashSet",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ImmutableHashSet<>",
     "namespaces": [
       {
@@ -16348,28 +15563,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.Generic.ISet",
           "System.Collections.ICollection",
           "System.Collections.Immutable.IStrongEnumerable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ImmutableInterlocked",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ImmutableList",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -16410,17 +15603,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ImmutableQueue",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ImmutableQueue<>",
     "namespaces": [
       {
@@ -16429,17 +15611,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.Immutable.IImmutableQueue",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ImmutableSortedDictionary",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -16467,17 +15638,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ImmutableSortedSet",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ImmutableSortedSet<>",
     "namespaces": [
       {
@@ -16495,17 +15655,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.Immutable.IStrongEnumerable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ImmutableStack",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Immutable",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -17153,17 +16302,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Interlocked",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "InternalBufferOverflowException",
     "namespaces": [
       {
@@ -17219,17 +16357,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IntrospectionExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -18125,56 +17252,12 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "IsBoxed",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "IsByRefLikeAttribute",
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsByValue",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsConst",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsCopyConstructed",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -18272,17 +17355,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "IsExplicitlyDereferenced",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ISignatureTypeProvider<>",
     "namespaces": [
       {
@@ -18320,17 +17392,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "IsImplicitlyDereferenced",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ISinglePhaseNotification",
     "namespaces": [
       {
@@ -18349,28 +17410,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.ComponentModel",
         "fathers": [
           "System.IServiceProvider",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsJitIntrinsic",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsLong",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -18473,34 +17512,12 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "IsPinned",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "IsReadOnlyAttribute",
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsSignUnspecifiedByte",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -18561,17 +17578,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "IsUdtReturn",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ISupportInitialize",
     "namespaces": [
       {
@@ -18599,17 +17605,6 @@ export const classHierachies : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "IsVolatile",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
         "fathers": [
           "System.Object"
         ]
@@ -19250,28 +18245,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "JsonFormatGeneratorStatics",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Serialization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "JsonReaderWriterFactory",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Serialization.Json",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "JulianCalendar",
     "namespaces": [
       {
@@ -19445,17 +18418,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "KeyValuePair",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Generic",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "KeyValuePair<>",
     "namespaces": [
       {
@@ -19621,17 +18583,6 @@ export const classHierachies : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "LazyInitializer",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
         "fathers": [
           "System.Object"
         ]
@@ -20379,17 +19330,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Lzcnt",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Machine",
     "namespaces": [
       {
@@ -20582,17 +19522,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Marshal",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "MarshalAsAttribute",
     "namespaces": [
       {
@@ -20749,28 +19678,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Math",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "MathF",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Matrix3x2",
     "namespaces": [
       {
@@ -20838,17 +19745,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Net.Http.Headers",
         "fathers": [
           "System.ICloneable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "MediaTypeNames",
-    "namespaces": [
-      {
-        "namespace": "System.Net.Mime",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -20956,17 +19852,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Reflection",
         "fathers": [
           "System.Reflection.ICustomAttributeProvider",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "MemberInfoExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -21104,17 +19989,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "MemoryExtensions",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "MemoryFailPoint",
     "namespaces": [
       {
@@ -21226,17 +20100,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.IDisposable",
           "System.IO.UnmanagedMemoryStream"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "MemoryMarshal",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -21371,17 +20234,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "MetadataReaderExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "MetadataReaderOptions",
     "namespaces": [
       {
@@ -21459,17 +20311,6 @@ export const classHierachies : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "MetadataTokens",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection.Metadata.Ecma335",
         "fathers": [
           "System.Object"
         ]
@@ -21793,17 +20634,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "MethodInfoExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "MethodSemanticsAttributes",
     "namespaces": [
       {
@@ -22060,17 +20890,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ModuleExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ModuleHandle",
     "namespaces": [
       {
@@ -22113,17 +20932,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Monitor",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -22280,17 +21088,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Reflection.Metadata.Ecma335",
         "fathers": [
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "NamedCurves",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Cryptography",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -22944,17 +21741,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Security.Principal",
         "fathers": [
           "System.Security.Principal.IdentityReference"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Nullable",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -23721,28 +22507,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Parallel",
-    "namespaces": [
-      {
-        "namespace": "System.Threading.Tasks",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ParallelEnumerable",
-    "namespaces": [
-      {
-        "namespace": "System.Linq",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ParallelExecutionMode",
     "namespaces": [
       {
@@ -24058,17 +22822,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Partitioner",
-    "namespaces": [
-      {
-        "namespace": "System.Collections.Concurrent",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Partitioner<>",
     "namespaces": [
       {
@@ -24103,17 +22856,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Path",
-    "namespaces": [
-      {
-        "namespace": "System.IO",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "PathList",
     "namespaces": [
       {
@@ -24132,17 +22874,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Pclmulqdq",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -24259,17 +22990,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Reflection.PortableExecutable",
         "fathers": [
           "System.IDisposable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "PEReaderExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection.Metadata",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -24470,17 +23190,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "PipesAclExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.IO.Pipes",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "PipeSecurity",
     "namespaces": [
       {
@@ -24636,17 +23345,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Popcnt",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -25239,17 +23937,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "PropertyInfoExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "PropertyTabAttribute",
     "namespaces": [
       {
@@ -25423,17 +24110,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.IEquatable",
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Queryable",
-    "namespaces": [
-      {
-        "namespace": "System.Linq",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -25932,17 +24608,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ReflectionXmlSerializationReaderHelper",
-    "namespaces": [
-      {
-        "namespace": "System.Xml.Serialization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "RefreshEventArgs",
     "namespaces": [
       {
@@ -26108,17 +24773,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Registry",
-    "namespaces": [
-      {
-        "namespace": "Microsoft.Win32",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -26725,17 +25379,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "RSACertificateExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "RSACng",
     "namespaces": [
       {
@@ -26984,28 +25627,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "RuntimeEnvironment",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "RuntimeFeature",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "RuntimeFieldHandle",
     "namespaces": [
       {
@@ -27013,17 +25634,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "RuntimeHelpers",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -27040,17 +25650,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "RuntimeInformation",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "RuntimeMethodHandle",
     "namespaces": [
       {
@@ -27058,28 +25657,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "RuntimeOps",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "RuntimeReflectionExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -27506,28 +26083,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "SchemaTableColumn",
-    "namespaces": [
-      {
-        "namespace": "System.Data.Common",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "SchemaTableOptionalColumn",
-    "namespaces": [
-      {
-        "namespace": "System.Data.Common",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "SchemaType",
     "namespaces": [
       {
@@ -27634,17 +26189,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Security",
         "fathers": [
           "System.IDisposable",
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "SecureStringMarshal",
-    "namespaces": [
-      {
-        "namespace": "System.Security",
-        "fathers": [
           "System.Object"
         ]
       }
@@ -27975,17 +26519,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "SequenceMarshal",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "SequencePoint",
     "namespaces": [
       {
@@ -28301,17 +26834,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Sha1",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.Arm.Arm64",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "SHA1",
     "namespaces": [
       {
@@ -28346,17 +26868,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA1"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Sha256",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.Arm.Arm64",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -28611,17 +27122,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Simd",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.Arm.Arm64",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -29206,17 +27706,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "SocketTaskExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Net.Sockets",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "SocketType",
     "namespaces": [
       {
@@ -29758,61 +28247,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Sse",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Sse2",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Sse3",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Sse41",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Sse42",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "SslApplicationProtocol",
     "namespaces": [
       {
@@ -29887,17 +28321,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Ssse3",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Stack",
     "namespaces": [
       {
@@ -29942,17 +28365,6 @@ export const classHierachies : ClassHiearchies[] = [
   },
   {
     "class": "StackFrame",
-    "namespaces": [
-      {
-        "namespace": "System.Diagnostics",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "StackFrameExtensions",
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
@@ -30524,17 +28936,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "StringNormalizationExtensions",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "StringReader",
     "namespaces": [
       {
@@ -30650,17 +29051,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Runtime.InteropServices",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "StructuralComparisons",
-    "namespaces": [
-      {
-        "namespace": "System.Collections",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -30936,17 +29326,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "SyntaxCheck",
-    "namespaces": [
-      {
-        "namespace": "System.ComponentModel",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "SyntaxErrorException",
     "namespaces": [
       {
@@ -31212,17 +29591,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "TaskExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Threading.Tasks",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "TaskFactory",
     "namespaces": [
       {
@@ -31334,17 +29702,6 @@ export const classHierachies : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Text",
-    "namespaces": [
-      {
-        "namespace": "System.Net.Mime",
         "fathers": [
           "System.Object"
         ]
@@ -31496,17 +29853,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "ThreadPool",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "ThreadPoolBoundHandle",
     "namespaces": [
       {
@@ -31627,17 +29973,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Timeout",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -32084,28 +30419,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "TransactionInterop",
-    "namespaces": [
-      {
-        "namespace": "System.Transactions",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "TransactionManager",
-    "namespaces": [
-      {
-        "namespace": "System.Transactions",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "TransactionManagerCommunicationException",
     "namespaces": [
       {
@@ -32399,17 +30712,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Tuple",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Tuple<>",
     "namespaces": [
       {
@@ -32509,17 +30811,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System.Runtime.CompilerServices",
         "fathers": [
           "System.Attribute"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "TupleExtensions",
-    "namespaces": [
-      {
-        "namespace": "System",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -32762,17 +31053,6 @@ export const classHierachies : ClassHiearchies[] = [
         "namespace": "System",
         "fathers": [
           "System.ValueType"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "TypeExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Reflection",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -33558,17 +31838,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Unsafe",
-    "namespaces": [
-      {
-        "namespace": "Internal.Runtime.CompilerServices",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "UnsafeValueTypeAttribute",
     "namespaces": [
       {
@@ -33925,28 +32194,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Utf8Formatter",
-    "namespaces": [
-      {
-        "namespace": "System.Buffers.Text",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Utf8Parser",
-    "namespaces": [
-      {
-        "namespace": "System.Buffers.Text",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Utils",
     "namespaces": [
       {
@@ -34037,17 +32284,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "Validator",
-    "namespaces": [
-      {
-        "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -34400,17 +32636,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Vector",
-    "namespaces": [
-      {
-        "namespace": "System.Numerics",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "Vector<>",
     "namespaces": [
       {
@@ -34535,17 +32760,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "VersioningHelper",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Versioning",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "VersionNotFoundException",
     "namespaces": [
       {
@@ -34595,17 +32809,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "Volatile",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "WaitCallback",
     "namespaces": [
       {
@@ -34649,17 +32852,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.ApplicationException"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "WaitHandleExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Threading",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -34819,17 +33011,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "WebRequestMethods",
-    "namespaces": [
-      {
-        "namespace": "System.Net",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "WebResponse",
     "namespaces": [
       {
@@ -34945,17 +33126,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "WebUtility",
-    "namespaces": [
-      {
-        "namespace": "System.Net",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "WellKnownSidType",
     "namespaces": [
       {
@@ -35032,17 +33202,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Security.Principal.IPrincipal",
           "System.Security.Claims.ClaimsPrincipal"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "WindowsRuntimeMarshal",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -35612,17 +33771,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XContainer"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "XDocumentExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.Xml.XPath",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -36226,17 +34374,6 @@ export const classHierachies : ClassHiearchies[] = [
   },
   {
     "class": "XmlILIndex",
-    "namespaces": [
-      {
-        "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "XmlILStorageConverter",
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
@@ -37789,17 +35926,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "XmlSerializableServices",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Serialization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "XmlSerializationCollectionFixupCallback",
     "namespaces": [
       {
@@ -38463,17 +36589,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "XPathQueryGenerator",
-    "namespaces": [
-      {
-        "namespace": "System.Runtime.Serialization",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "XPathResultType",
     "namespaces": [
       {
@@ -38558,17 +36673,6 @@ export const classHierachies : ClassHiearchies[] = [
     ]
   },
   {
-    "class": "XsltConvert",
-    "namespaces": [
-      {
-        "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
     "class": "XsltException",
     "namespaces": [
       {
@@ -38576,17 +36680,6 @@ export const classHierachies : ClassHiearchies[] = [
         "fathers": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "XsltFunctions",
-    "namespaces": [
-      {
-        "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]
@@ -38729,28 +36822,6 @@ export const classHierachies : ClassHiearchies[] = [
           "System.IFormattable",
           "System.IConvertible",
           "System.Enum"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ZipFile",
-    "namespaces": [
-      {
-        "namespace": "System.IO.Compression",
-        "fathers": [
-          "System.Object"
-        ]
-      }
-    ]
-  },
-  {
-    "class": "ZipFileExtensions",
-    "namespaces": [
-      {
-        "namespace": "System.IO.Compression",
-        "fathers": [
-          "System.Object"
         ]
       }
     ]

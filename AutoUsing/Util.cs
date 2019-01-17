@@ -21,6 +21,10 @@ namespace AutoUsing
                 .Where(method => method.IsDefined(typeof(ExtensionAttribute), false)).ToList();
         }
 
+        public static bool IsStatic(this Type @class){
+            return @class.IsAbstract && @class.IsSealed;
+        }
+
         public static Type GetExtendedClass(this MethodInfo method)
         {
             return method.GetParameters()[0].ParameterType;

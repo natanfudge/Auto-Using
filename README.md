@@ -37,6 +37,7 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ### 0.7.1
 - Fixed completions not appearing after the `in` keyword (relevant for `freach` loops).
+- Fixed extension methods not appearing for fully qualified paths. 
 
 ### 0.7.0
 - Auto-Using now Auto-Imports extension methods! Using Linq has never been easier.

@@ -1,6 +1,6 @@
-import { activateCSharpExtension, assertContains, getTestPlaygroundDirUri, activateExtension } from "./testUtil";
+import { activateCSharpExtension, assertContains, getTestPlaygroundDirUri, activateExtension, assertNone } from "./testUtil";
 import * as vscode from "vscode";
-import { complete } from "./TestCompletionUtil";
+import { complete, completeWithData } from "./TestCompletionUtil";
 
 suite(`CompletionProvider Extension Method Tests`, () => {
 
@@ -30,6 +30,16 @@ suite(`CompletionProvider Extension Method Tests`, () => {
     test("Should show extension methods for generic types", async () => {
         let completionList = await complete("ShouldShowGenericExtensions.cs", 3, 2);
         assertContains(completionList, "Select");
+    });
+
+    test("Should show extension methods for full qualified paths", async () => {
+        let completionList = await complete("ShouldExtendFullPaths.cs", 7, 14);
+        assertContains(completionList, "Select");
+    });
+
+    test("Should not show extension methods for static types", async () => {
+        let [completionList,doc] = await completeWithData("ShouldNotShowExtensionsForStatic.cs", 6, 17);
+        assertNone(completionList.items, (completion) => completion.kind === vscode.CompletionItemKind.Reference);
     });
 
 });

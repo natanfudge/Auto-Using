@@ -11,7 +11,7 @@ export async function activateExtension(): Promise<void> {
 
 }
 
-export async function activateCSharpExtension(){
+export async function activateCSharpExtension() {
     const csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;
 
     if (!csharpExtension.isActive) {
@@ -62,6 +62,19 @@ export function assertNotContains<T>(arr: Array<T>, element: T): void {
         const el = arr[i];
         if (el === element) {
             throw new Error(`Assertion Error: \n Expected array to not contain '${element}' but it contains it in index ${i}`);
+        }
+    }
+}
+
+/**
+ * Asserts that none of the elements in the array return true to the specified attribute
+ */
+export function assertNone<T>(arr: Array<T>, attribute: (element: T) => boolean){
+    for (let i = 0; i < arr.length; i++) {
+        const el = arr[i];
+        if (attribute(el)) {
+            throw new Error(`Assertion Error: \n Expected none of the elements to return true to ${attribute.toString().green},
+             but the element ${JSON.stringify(el).red} at index ${i.toString().red} does return true.`);
         }
     }
 }

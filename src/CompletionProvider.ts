@@ -80,9 +80,11 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	}
 
 	/**
-	 *  @returns The type in the specified position
+	 *  @returns False if there is no type.
+	 *  If there is a type it returns [typeClass,typeNamespace] if the hover shows the full path of a time (example : System.IO.File)
+	 * 	If the hover only shows the type's class it returns [typeClass,undefined]
 	 * */
-	private async getType(position: vscode.Position): Promise<boolean | string> {
+	private async getType(position: vscode.Position): Promise<boolean | [string,string | undefined]> {
 		// Get the hover info of the variable from the C# extension
 		let hover = <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
 		if (hover.length === 0) return false;
@@ -103,19 +105,33 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 		let type = typeStart.substr(0, i);
 
+		let typeClass : string, typeNamespace : string | undefined;
+
+		// If it is a full path return the class and namespace
+		if(type.includes(".")){
+			let classAndNamespace = type.split(".");
+			typeNamespace = classAndNamespace.slice(0,classAndNamespace.length - 1).join(".");
+			typeClass = classAndNamespace.slice(classAndNamespace.length - 1, classAndNamespace.length).join(".");
+			// If it is just a class name return just the class
+		}else{
+			typeClass = type;
+			typeNamespace = undefined;
+		}
+
+		// Convert primitives to objects. I.E. string => String.
 		//@ts-ignore
-		let typeAsObject: string = primitives[type];
-		if (typeof typeAsObject !== "undefined") type = typeAsObject;
+		let typeAsObject: string = primitives[typeClass];
+		if (typeof typeAsObject !== "undefined") typeClass = typeAsObject;
 
 
 
-		if (generic) type += "<>";
+		if (generic) typeClass += "<>";
 
-		return type;
+		return [typeClass,typeNamespace];
 	}
 
 
-	private async isPlaceToComplete(position: vscode.Position): Promise<boolean | string> {
+	private async isPlaceToComplete(position: vscode.Position): Promise<boolean | [string,string | undefined]> {
 		let currentPos = this.getPrevPos(position);
 
 		let currentChar = this.getCharAtPos(currentPos);
@@ -154,17 +170,18 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 		return hoverInfoContainer;
 	}
 
-	private getExtensionMethods(extendingClass: string, usings: string[]): vscode.CompletionItem[] {
+	private getExtensionMethods(extendingType: [string,string | undefined], usings: string[]): vscode.CompletionItem[] {
 		try {
-			return this.getExtensionMethodsChecked(extendingClass, usings);
+			return this.getExtensionMethodsChecked(extendingType, usings);
 		} catch (e) {
 			console.log(e.stack);
 			return [];
 		}
 	}
 
-	private getExtensionMethodsChecked(extendingClass: string, usings: string[]) {
-		let extensibleClasses: ClassHiearchies = getFatherCopies(extendingClass);
+	private getExtensionMethodsChecked([extendingClass,extendingNamespace]: [string,string | undefined], usings: string[]) : vscode.CompletionItem[]{
+		let extensibleClasses = getFatherCopies(extendingClass);
+		if(extensibleClasses === undefined) return [];
 
 		if (extensibleClasses.namespaces.length === 1) {
 			let fathers = extensibleClasses.namespaces[0].fathers;
@@ -255,9 +272,12 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 
 }
 
-
-function getFatherCopies(extendingClass: string) {
+/**
+ * @returns Copies of all fathers of the class. If it is static returns undefined.
+ */
+function getFatherCopies(extendingClass: string) :ClassHiearchies | undefined{
 	let extensibleClassesRef = classHierachies[binarySearchGen(classHierachies, extendingClass, ((h1, h2) => h1.localeCompare(h2.class)))];
+
 	let extensibleClasses: ClassHiearchies = {
 		class: extensibleClassesRef.class, namespaces: extensibleClassesRef.namespaces.map(ref => {
 			let hiearchyCopy: NamespaceHiearchy = { namespace: ref.namespace, fathers: ref.fathers.slice(0) };

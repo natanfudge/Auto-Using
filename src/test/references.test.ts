@@ -1,6 +1,7 @@
-import { activateExtension, assertNotContains, assertSize, assertStringContains, assertContains} from './testUtil';
+import { activateExtension, assertNotContains, assertSize, assertStringContains, assertContains, assertNone } from './testUtil';
 import { complete, completeWithData, removeCheat } from './TestCompletionUtil';
 import { test, suite, suiteSetup } from 'mocha';
+import * as vscode from "vscode";
 
 suite(`CompletionProvider References Tests`, () => {
 
@@ -14,8 +15,8 @@ suite(`CompletionProvider References Tests`, () => {
     });
 
     test("Should not show completions when not needed", async () => {
-        let completionList = await complete("ShouldNotShow.cs", 1, 4);
-        assertNotContains(completionList, "File");
+        let [completionList, doc] = await completeWithData("ShouldNotShow.cs", 1, 4);
+        assertNone(completionList.items, (completion) => completion.kind === vscode.CompletionItemKind.Reference);
     });
 
     test("Should filter out already used namespaces", async () => {
@@ -36,7 +37,7 @@ suite(`CompletionProvider References Tests`, () => {
     });
 
 
-    
+
 
 });
 

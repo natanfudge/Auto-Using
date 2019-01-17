@@ -66,6 +66,7 @@ namespace AutoUsing
             var hierachies = assemblies.SelectMany(assembly => assembly.GetExportedTypes()
             .Select(type =>
             {
+                if(type.IsStatic()) return null;
                 var baseClass = type.BaseType;
                 var baseClassStr = baseClass != null ? baseClass.Namespace + "." + baseClass.Name.NoTilde() : "System.Object";
                 var fathers = type.GetInterfaces().Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
@@ -75,7 +76,7 @@ namespace AutoUsing
                 if (type.IsGenericType) name += "<>";
 
                 return new HiearchyInfo(name, type.Namespace, fathers);
-            })).ToList();
+            })).Where(info => info != null).ToList();
 
             var easierFormat = hierachies.GroupBy(hierachy => hierachy.className)
             .Select(group => new ClassHiearchies(group.Key, group.Select(info => new NamespaceHiearchy(info.@namespace, info.fathers))
@@ -106,6 +107,8 @@ namespace AutoUsing
         private static bool ClassCanHaveExtensionMethods(Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
 
         private static string ExtendedClassName(ExtensionMethodInfo info) => (info.extendedClass).NoTilde();
+
+        
 
         // private static string ExtendedClassNamespace(ExtensionMethodInfo info) => info.extendedNamespace;
 
