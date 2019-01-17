@@ -35,7 +35,7 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
-### 0.7.1
+### 0.7.2
 - Fixed completions not appearing after the `in` keyword (relevant for `freach` loops).
 - Fixed extension methods not appearing for fully qualified paths. 
 
