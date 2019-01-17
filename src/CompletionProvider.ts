@@ -13,7 +13,7 @@ const syntaxChars = ["{", "}", "(", ")", "[", "]", "<", ">", "@", ";", "=", "%",
 const showSuggestFor = ["abstract", "new", "protected", "return", "sizeof", "struct", "using", "volatile", "as",
 	"checked", "explicit", "fixed", "goto", "lock", "override", "public", "stackalloc", "unchecked",
 	"static", "base", "case", "else", "extern", "if", "params", "readonly", "sealed", "static", "typeof", "unsafe", "virtual", "const", "implicit",
-	"internal", "private", "await", "this"
+	"internal", "private", "await", "this","in"
 ];
 
 

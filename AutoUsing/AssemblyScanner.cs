@@ -1,3 +1,5 @@
+using System.Collections.Immutable;
+using System.Xml.Linq;
 using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,11 +12,6 @@ using AutoUsing.datatypes;
 
 namespace AutoUsing
 {
-
-
-
-
-
     public class AssemblyScanner
     {
 
@@ -25,13 +22,11 @@ namespace AutoUsing
             assemblies = GetAllAssemblies();
         }
 
-        // string x;
-
-
         public static FileInfo[] GetBinFiles()
         {
             var dotnetDir = typeof(int).Assembly.Location;
             return new DirectoryInfo(Util.GetParentDir(dotnetDir)).GetFiles("*.dll");
+            
         }
 
         private IEnumerable<Assembly> GetAllAssemblies()

@@ -32,6 +32,8 @@ namespace AutoUsing
         const string extensionMethods = csdata + "csExtensionMethods.ts";
         const string hierachies = csdata + "csHierachies.ts";
 
+        
+
         static void Main(string[] args)
         {
             var assemblyScanner = new AssemblyScanner();
