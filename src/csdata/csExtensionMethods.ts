@@ -1,4 +1,4 @@
-export const extensionMethods : ExtendedClass[] = [
+export const _CSHARP_EXTENSION_METHODS : ExtendedClass[] = [
   {
     "extendedClass": "System.ArraySegment",
     "extensionMethods": [

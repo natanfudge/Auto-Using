@@ -18,6 +18,7 @@ import { CompletionProvider } from '../CompletionProvider';
 // Defines a Mocha test suite to group tests of similar kind together
 suite("CompletionProvider References Context Tests", function () {
 
+    
 
     let context: vscode.ExtensionContext;
     let helper: DirectCompletionTestHelper;

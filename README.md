@@ -35,6 +35,11 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
+### 0.7.3 
+- Fixed extension methods not appearing after method calls with parameters, and after variables enclosed in parentheses. 
+- Fixed certain extension method options sometimes not appearing 
+
+
 ### 0.7.2
 - Fixed completions not appearing after the `in` keyword (relevant for `foreach` loops).
 - Fixed extension methods not appearing for fully qualified paths. 

@@ -1,4 +1,4 @@
-export const references = [
+export const _CSHARP_REFERENCES = [
   {
     "name": "Binder",
     "namespaces": [

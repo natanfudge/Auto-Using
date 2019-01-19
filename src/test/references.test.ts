@@ -4,6 +4,7 @@ import { test, suite, suiteSetup } from 'mocha';
 import * as vscode from "vscode";
 
 suite(`CompletionProvider References Tests`, () => {
+    //TODO add space tests
 
     suiteSetup(async () => {
         await activateExtension();

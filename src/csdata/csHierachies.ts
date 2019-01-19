@@ -1,4 +1,4 @@
-export const classHierachies : ClassHiearchies[] = [
+export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
   {
     "class": "AbandonedMutexException",
     "namespaces": [

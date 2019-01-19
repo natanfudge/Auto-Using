@@ -1,7 +1,8 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { CompletionProvider, SORT_CHEAT, getStoredCompletions } from './CompletionProvider';
+import { CompletionProvider, getStoredCompletions } from './CompletionProvider';
+import { SORT_CHEAT } from './Constants';
 
 const CSHARP = "csharp";
 
@@ -97,6 +98,8 @@ export async function addUsing(pick: string | undefined, context: vscode.Extensi
 	};
 
 	await vscode.window.activeTextEditor!.edit(editBuilder);
+
+	
 }
 
 export function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {

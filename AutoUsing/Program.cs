@@ -41,9 +41,10 @@ namespace AutoUsing
             var extensionsJson = JsonConvert.SerializeObject(assemblyScanner.GetAllExtensionMethods(), Formatting.Indented);
             var hierachiesJson = JsonConvert.SerializeObject(assemblyScanner.GetAllHierarchies(), Formatting.Indented);
 
-            File.WriteAllText(csreferences, $"export const references = {referencesJson};");
-            File.WriteAllText(extensionMethods, $"export const extensionMethods : ExtendedClass[] = {extensionsJson};");
-            File.WriteAllText(hierachies, $"export const classHierachies : ClassHiearchies[] = {hierachiesJson};");
+
+            File.WriteAllText(csreferences, $"export const _CSHARP_REFERENCES = {referencesJson};");
+            File.WriteAllText(extensionMethods, $"export const _CSHARP_EXTENSION_METHODS : ExtendedClass[] = {extensionsJson};");
+            File.WriteAllText(hierachies, $"export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = {hierachiesJson};");
             // y.ass
 
 

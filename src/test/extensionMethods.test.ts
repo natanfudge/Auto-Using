@@ -32,7 +32,7 @@ suite(`CompletionProvider Extension Method Tests`, () => {
         assertContains(completionList, "Select");
     });
 
-    test("Should show extension methods for full qualified paths", async () => {
+    test("Should show extension methods for fully qualified paths", async () => {
         let completionList = await complete("ShouldExtendFullPaths.cs", 7, 14);
         assertContains(completionList, "Select");
     });
@@ -40,6 +40,21 @@ suite(`CompletionProvider Extension Method Tests`, () => {
     test("Should not show extension methods for static types", async () => {
         let [completionList,doc] = await completeWithData("ShouldNotShowExtensionsForStatic.cs", 6, 17);
         assertNone(completionList.items, (completion) => completion.kind === vscode.CompletionItemKind.Reference);
+    });
+
+    test("Should show extension methods after methods calls with parameters",async() =>{
+        let completionList = await complete("ShouldShowExtensionsAfterParams.cs", 9, 43);
+        assertContains(completionList, "ToImmutableArray");
+    });
+
+    test("Should show extension methods after parentheses", async() =>{
+        let completionList = await complete("ShouldShowExtendAfterParentheses.cs", 7, 20);
+        assertContains(completionList, "Select");
+    });
+
+    test("Should show extension methods even when there are spaces between the dot and other text", async() =>{
+        let completionList = await complete("ShouldShowExtensionsForSpaces.cs", 7, 16);
+        assertContains(completionList, "Select");
     });
 
 });

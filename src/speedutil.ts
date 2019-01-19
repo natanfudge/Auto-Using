@@ -1,3 +1,10 @@
+
+
+        
+
+
+
+
 /** Uses a binary search algorithm to locate a value in the specified array. 
 * @param {Array} items The array containing the item. 
 * @param {variant} value The value to search for. 
@@ -47,7 +54,7 @@ export function binarySearchGen<T,V>(items: Array<T>, value: V, comparer: (el1: 
 
         //recalculate middle
         middle = Math.floor((stopIndex + startIndex) / 2);
-        if(middle < 0) return -1;
+        if(middle < 0 || middle >= items.length) return -1;
     }
 
 
@@ -55,3 +62,4 @@ export function binarySearchGen<T,V>(items: Array<T>, value: V, comparer: (el1: 
     //make sure it's the right value
     return comparer(value, items[middle]) !== 0 ? -1 : middle;
 }
+
