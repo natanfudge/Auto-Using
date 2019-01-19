@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/AssemblyReflection.csproj"
+                "${workspaceFolder}/AutoUsing.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
