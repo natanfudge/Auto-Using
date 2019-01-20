@@ -95,6 +95,9 @@ class CompletionInstance {
 			typeNamespace = undefined;
 		}
 
+		// Is an array type
+		if(typeClass[typeClass.length - 1] === "]") typeClass = "Array";
+
 		// Convert primitives to objects. I.E. string => String.
 		//@ts-ignore
 		let typeAsObject: string = primitives[typeClass];

@@ -770,7 +770,8 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
           "System.Collections.IEnumerable",
           "System.Collections.IStructuralComparable",
           "System.Collections.IStructuralEquatable",
-          "System.Object"
+          "System.Object",
+          "System.Collections.Generic.IList", "System.Collections.Generic.ICollection", "System.Collections.Generic.IEnumerable" 
         ]
       }
     ]

@@ -1,8 +1,4 @@
 using System.Collections.Specialized;
-namespace TestAssets
-{
-    class ShouldAddUsing
-    {
-        // private bi
-    }
-}
+namespace TestAssets{ class ShouldAddUsing{ void x(){
+//bi
+}}}
