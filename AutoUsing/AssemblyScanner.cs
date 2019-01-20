@@ -1,127 +1,150 @@
+using System;
+using System.IO;
+using System.Linq;
 using System.Collections.Immutable;
 using System.Xml.Linq;
 using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using System;
-using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using AutoUsing.datatypes;
+
+using AutoUsing.DataTypes;
 
 namespace AutoUsing
 {
     public class AssemblyScanner
     {
+        // private IEnumerable<Assembly> assemblies;
 
-        private IEnumerable<Assembly> assemblies;
+        // public AssemblyScanner()
+        // {
+        //     assemblies = GetAllAssemblies();
+        // }
 
-        public AssemblyScanner()
+        // public static FileInfo[] GetBinFiles()
+        // {
+        //     var dotnetDir = @"/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/bin/Debug/netcoreapp2.1/";
+        //     return new DirectoryInfo(dotnetDir).GetFiles("*.dll");
+
+        // }
+
+        // private IEnumerable<Assembly> GetAllAssemblies()
+        // {
+        //     var bins = GetBinFiles();
+        //     return bins.Select(file =>
+        //     {
+        //         try
+        //         {
+        //             return Assembly.LoadFile(file.FullName);
+        //         }
+        //         catch (BadImageFormatException)
+        //         {
+        //             return null;
+        //         }
+
+        //     }).Where(assembly => assembly != null).Append(typeof(int).Assembly);
+
+        // }
+
+        Assembly Assembly { get; set; }
+
+        public bool LoadAssembly(string path)
         {
-            assemblies = GetAllAssemblies();
-        }
-
-        public static FileInfo[] GetBinFiles()
-        {
-            var dotnetDir = typeof(int).Assembly.Location;
-            return new DirectoryInfo(Util.GetParentDir(dotnetDir)).GetFiles("*.dll");
-            
-        }
-
-        private IEnumerable<Assembly> GetAllAssemblies()
-        {
-            var bins = GetBinFiles();
-            return bins.Select(file =>
+            try
             {
-                try
-                {
-                    return Assembly.LoadFile(file.FullName);
-                }
-                catch (BadImageFormatException)
-                {
-                    return null;
-                }
-
-            }).Where(assembly => assembly != null).Append(typeof(int).Assembly);
-
+                Assembly = Assembly.LoadFile(path);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-
-        public List<ReferencePointer> GetAllReferences()
+        public List<Reference> GetAllTypes()
         {
-            var references = assemblies.SelectMany(assembly => assembly.GetExportedTypes()
-            .Select(type => new KeyValuePair<string, string>((type.Name).NoTilde(), type.Namespace)));
+            var references = Assembly.GetExportedTypes()
+                                    .Select(type => new KeyValuePair<string, string>((type.Name).NoTilde(), type.Namespace));
 
-            var grouped = references.Distinct()
-            .GroupBy(kv => kv.Key)
-            .Select(group => new ReferencePointer(group.Key, group.Select(kv => kv.Value).ToList()))
-            .ToList();
+            var grouped = references
+                .Distinct()
+                .GroupBy(kv => kv.Key)
+                .Select(group => new Reference(group.Key, group.Select(kv => kv.Value).ToList()))
+                .ToList();
 
             return grouped;
         }
 
-        public List<ClassHiearchies> GetAllHierarchies()
+        public List<Hierarchies> GetAllHierarchies()
         {
-            var hierachies = assemblies.SelectMany(assembly => assembly.GetExportedTypes()
-            .Select(type =>
-            {
-                if(type.IsStatic()) return null;
-                var baseClass = type.BaseType;
-                var baseClassStr = baseClass != null ? baseClass.Namespace + "." + baseClass.Name.NoTilde() : "System.Object";
-                var fathers = type.GetInterfaces().Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
-                .Append(baseClassStr).ToList();
+            var hierachies = Assembly.GetExportedTypes()
+                .Select(type =>
+                {
+                    if (type.IsStatic()) return null;
 
-                var name = type.Name.NoTilde();
-                if (type.IsGenericType) name += "<>";
+                    var baseClass = type.BaseType;
+                    var baseClassStr = baseClass != null ? baseClass.Namespace + "." + baseClass.Name.NoTilde() : "System.Object";
+                    var fathers = type
+                        .GetInterfaces()
+                        .Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
+                        .Append(baseClassStr)
+                        .ToList();
+                    var name = type.Name.NoTilde();
 
-                return new HiearchyInfo(name, type.Namespace, fathers);
-            })).Where(info => info != null).ToList();
+                    if (type.IsGenericType)
+                        name += "<>";
 
-            var easierFormat = hierachies.GroupBy(hierachy => hierachy.className)
-            .Select(group => new ClassHiearchies(group.Key, group.Select(info => new NamespaceHiearchy(info.@namespace, info.fathers))
-            .ToList())).OrderBy(classHierachies => classHierachies.@class).ToList();
+                    return new HierarchyInfo(name, type.Namespace, fathers);
+                })
+                .Where(info => info != null).ToList();
+
+            var easierFormat = hierachies
+                .GroupBy(hierachy => hierachy.Name)
+                .Select(group => new Hierarchies(group.Key, group.Select(info => new Hierarchy(info.Namespace, info.Parents)).ToList()))
+                .OrderBy(classHierachies => classHierachies.Name)
+                .ToList();
 
 
             return easierFormat;
         }
 
-        public List<ExtendedClass> GetAllExtensionMethods()
+        public List<ExtensionClass> GetAllExtensionMethods()
         {
-            var allExtensionMethods = assemblies.SelectMany(GetExtensionMethods).ToList();
+            var allExtensionMethods = GetExtensionMethods(Assembly);
 
-            var grouped = allExtensionMethods.GroupBy(ExtendedClassName)
-            .Select(extensionMethods => extensionMethods.GroupBy(extensionMethod => extensionMethod.extendingMethod));
+            var grouped = allExtensionMethods
+                .GroupBy(ExtendedClassName)
+                .Select(extensionMethods => extensionMethods.GroupBy(extensionMethod => extensionMethod.Method));
 
-            var easierFormat = grouped.Select(extendedClass => new ExtendedClass(extendedClass.First().First().extendedClass,
-
-            extendedClass.Select(extensionMethod => new ExtensionMethod(extensionMethod.First().extendingMethod,
-             extensionMethod.Select(info => info.extendingNamespace).Distinct().ToList()))
-            .Distinct().ToList())).ToList()
-            .OrderBy(extendedClass => extendedClass.extendedClass).ToList();
-
+            var easierFormat = grouped
+                .Select(extendedClass => new ExtensionClass(extendedClass.First().First().Class,
+                        extendedClass.Select(extensionMethod => new ExtensionMethod(extensionMethod.First().Method,
+                        extensionMethod.Select(info => info.Namespace).Distinct().ToList())).Distinct().ToList()))
+                .ToList()
+                .OrderBy(extendedClass => extendedClass.Extends)
+                .ToList();
 
             return easierFormat;
         }
 
         private static bool ClassCanHaveExtensionMethods(Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
 
-        private static string ExtendedClassName(ExtensionMethodInfo info) => (info.extendedClass).NoTilde();
+        private static string ExtendedClassName(ExtensionMethodInfo info) => (info.Class).NoTilde();
 
-        
-
-        // private static string ExtendedClassNamespace(ExtensionMethodInfo info) => info.extendedNamespace;
 
         public static List<ExtensionMethodInfo> GetExtensionMethods(Assembly assembly)
         {
-            var extendingClasses = assembly.GetExportedTypes().Where(ClassCanHaveExtensionMethods);
+            var extendingClasses = assembly
+                .GetExportedTypes()
+                .Where(ClassCanHaveExtensionMethods);
 
             var extensionMethods = extendingClasses.SelectMany(
                 extendingClass => extendingClass.GetExtensionMethods()
                 .Select(extendingMethod =>
                 {
                     var extendedClass = extendingMethod.GetExtendedClass().Namespace + "." + extendingMethod.GetExtendedClass().Name.NoTilde();
-                    // if (extendingMethod.GetExtendedClass().IsGenericType) extendedClass += "<>";
+
                     return new ExtensionMethodInfo(
                         extendingClass.Namespace,
                         extendingMethod.Name,
@@ -132,11 +155,9 @@ namespace AutoUsing
             return extensionMethods;
         }
 
-
         public static Type TargetType(MethodInfo method)
         {
             return method.GetParameters()[0].ParameterType;
         }
-
     }
 }

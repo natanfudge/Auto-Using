@@ -1,11 +1,8 @@
 {
     "files.exclude": {
-        // "LICENSE": true,
-        "memory.gif": true,
-        "newdemo.gif": true,
-        "option.gif": true,
+        "*.gif": true,
+        "*.png": true,
         "package-lock.json": true,
-        ".gitignore": true,
     },
     // Place your settings in this file to overwrite default and user settings.
     "search.exclude": {

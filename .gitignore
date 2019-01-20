@@ -1,8 +1,7 @@
 out
 node_modules
 .vscode-test/
+.DS_Store
 *.vsix
-AutoUsing/bin
-AutoUsing/obj
-AutoUsingTest/bin
-AutoUsingTest/obj
+**/bin
+**/obj

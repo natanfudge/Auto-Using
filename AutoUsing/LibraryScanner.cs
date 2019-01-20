@@ -5,23 +5,11 @@ namespace AutoUsing
     public class LibraryScanner
     {
         private LibraryScanner(string projectName, string projectDir){
-            this.projectName = projectName;
-            this.projectDir = projectDir;
+            this.ProjectName = projectName;
+            this.ProjectDir = projectDir;
         }
 
-        private string projectName;
-        private string projectDir;
-
-        
-
-        // public static List<LibraryScanner> GetScannersForAllProjects(string workspaceDir){
-        //     // var scanners = Directory.GetFiles(workspaceDir,"*.csproj",SearchOption.AllDirectories).
-        //     // foreach(var file in ){
-
-        //     // }
-        // }
-
-        
-
+        private string ProjectName;
+        private string ProjectDir;
     }
 }

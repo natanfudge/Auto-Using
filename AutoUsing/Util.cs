@@ -6,6 +6,24 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
+namespace Peter
+{
+    namespace Griffin
+    {
+        namespace Lois
+        {
+            public static class Stewie
+            {
+                public static void Pew(this string test)
+                {
+
+                }
+            }
+        }
+    }
+}
+
+
 namespace AutoUsing
 {
     public static class Util
@@ -35,19 +53,22 @@ namespace AutoUsing
             return map.ToDictionary(kv => kv.Key, kv => kv.Value);
         }
 
-
         public static string NoTilde(this string str){
             if (str == null) return null;
             if (str.Length < 2) return str;
 
             var possibleTilde = str[str.Length - 2];
+
             if (possibleTilde == '`')
             {
                 return str.Substring(0, str.Length - 2);
             }
 
-            if (str.Length < 3) return str;
+            if (str.Length < 3) 
+                return str;
+
             possibleTilde = str[str.Length - 3];
+
             if (possibleTilde == '`')
             {
                 return str.Substring(0, str.Length - 3);
@@ -55,10 +76,5 @@ namespace AutoUsing
 
             return str;
         }
-
-        // public static void ASODIFGNOASIDFASDNF(this Array arr){}
-
-
-
     }
 }
