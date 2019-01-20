@@ -7,7 +7,8 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 	public constructor(private extensionContext: vscode.ExtensionContext) { }
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 		try {
-			return await provideCompletionItems(document, position, token, context, this.extensionContext);
+			let result = await provideCompletionItems(document, position, token, context, this.extensionContext);
+			return result;
 		} catch (e) {
 			console.log(e.stack);
 			throw new Error(e);

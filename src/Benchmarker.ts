@@ -12,3 +12,20 @@
 
 // // A performance timeline entry will be created
 // wrapped();
+
+export class Benchmarker{
+    private performance :any;
+    private startTime : number;
+
+    constructor(){
+        const {performance} = require("perf_hooks");
+        this.performance = performance;
+        this.startTime = performance.now();
+    }
+
+    public check(){
+        console.log("Time passed = " + (this.performance.now() - this.startTime));
+    }
+
+
+}
