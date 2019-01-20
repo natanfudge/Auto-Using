@@ -20,7 +20,7 @@ namespace AutoUsing
         /// </summary>
         public void ReadData(MessageEventArgs args)
         {
-            // TODO CURRENTLY DOESN"T... JUST A PROXY
+            // TODO CURRENTLY DOESN'T... JUST A PROXY
             EditorDataReceived?.Invoke(this, args);
         }
     }

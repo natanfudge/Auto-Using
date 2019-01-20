@@ -37,27 +37,24 @@ namespace AutoUsing
                     case "scan":
                         Scanner = new AssemblyScanner();
 
-                        if (Scanner.LoadAssembly(req.Arguments) is false)
-                            Proxy.WriteData(Errors.CannotLoadAssembly, false);
+                        bool loadingSuccessfull = Scanner.LoadAssembly(req.Arguments);
+                        if (!loadingSuccessfull) Proxy.WriteData(Errors.CannotLoadAssembly, false);
 
                         Proxy.WriteData();
                         break;
                     case "getAllTypes":
-                        if (Scanner is null)
-                            Proxy.WriteData(Errors.LoadAssemblyFirst, false);
+                        if (Scanner is null) Proxy.WriteData(Errors.LoadAssemblyFirst, false);
 
                         Proxy.WriteData(Scanner.GetAllTypes());
                         break;
                     case "getAllExtensionMethods":
-                        if (Scanner is null)
-                            Proxy.WriteData(Errors.LoadAssemblyFirst, false);
+                        if (Scanner is null) Proxy.WriteData(Errors.LoadAssemblyFirst, false);
 
                         Proxy.WriteData(Scanner.GetAllExtensionMethods());
                         break;
                     case "getAllHierarchies":
-                        if (Scanner is null)
-                            Proxy.WriteData(Errors.LoadAssemblyFirst, false);
-
+                        if (Scanner is null) Proxy.WriteData(Errors.LoadAssemblyFirst, false);
+                            
                         Proxy.WriteData(Scanner.GetAllHierarchies());
                         break;
                     case "ping":

@@ -53,7 +53,7 @@ namespace AutoUsing
         {
             try
             {
-                Assembly =  Assembly.LoadFile(path);
+                Assembly = Assembly.LoadFile(path);
                 return true;
             }
             catch
@@ -81,8 +81,7 @@ namespace AutoUsing
             var hierachies = Assembly.GetExportedTypes()
                 .Select(type =>
                 {
-                    if (type.IsStatic())
-                        return null;
+                    if (type.IsStatic()) return null;
 
                     var baseClass = type.BaseType;
                     var baseClassStr = baseClass != null ? baseClass.Namespace + "." + baseClass.Name.NoTilde() : "System.Object";
@@ -129,11 +128,10 @@ namespace AutoUsing
             return easierFormat;
         }
 
-        private static bool ClassCanHaveExtensionMethods(Type @class) =>
-                @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
+        private static bool ClassCanHaveExtensionMethods(Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
 
-        private static string ExtendedClassName(ExtensionMethodInfo info) =>
-                (info.Class).NoTilde();
+        private static string ExtendedClassName(ExtensionMethodInfo info) => (info.Class).NoTilde();
+
 
         public static List<ExtensionMethodInfo> GetExtensionMethods(Assembly assembly)
         {
