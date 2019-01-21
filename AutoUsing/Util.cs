@@ -6,28 +6,30 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace Peter
-{
-    namespace Griffin
-    {
-        namespace Lois
-        {
-            public static class Stewie
-            {
-                public static void Pew(this string test)
-                {
-
-                }
-            }
-        }
-    }
-}
-
-
 namespace AutoUsing
 {
     public static class Util
     {
+        public static bool IsNullOrEmpty(this string value)
+        {
+            return string.IsNullOrEmpty(value);
+        }
+
+        public static string ToCamelCase(this string value)
+        {
+            string result = string.Empty;
+
+            for (int i = 0; i < value.Length; i++)
+            {
+                char c = value[i];
+                char p = i == 0 ? char.MinValue : value[i - 1];
+
+                result += ((p is ' ') || p is char.MinValue ) ? $"{char.ToLower(c)}" : $"{c}";    
+            }
+
+            return result;
+        }
+
         public static string GetParentDir(string dir)
         {
             return Path.GetFullPath(Path.Combine(dir, @"..\"));
@@ -59,20 +61,13 @@ namespace AutoUsing
 
             var possibleTilde = str[str.Length - 2];
 
-            if (possibleTilde == '`')
-            {
-                return str.Substring(0, str.Length - 2);
-            }
+            if (possibleTilde == '`') return str.Substring(0, str.Length - 2);
 
-            if (str.Length < 3) 
-                return str;
+            if (str.Length < 3) return str;
 
             possibleTilde = str[str.Length - 3];
 
-            if (possibleTilde == '`')
-            {
-                return str.Substring(0, str.Length - 3);
-            }
+            if (possibleTilde == '`') return str.Substring(0, str.Length - 3);
 
             return str;
         }
