@@ -16,18 +16,20 @@ namespace AutoUsing
             // I just wanna see this working, a very rough version. 
             // then i'll write tests, refactor the code.
 
-            args = new [] 
+            args = new[]
             {
-                "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
-                "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
+                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj"
             };
+
 
             if (args.Length <= 0)
             {
                 Proxy.WriteData(new ErrorResponse { Body = Errors.AtLeastOneProjectFileIsRequired });
                 return;
             }
-           
+
             foreach (var path in args)
             {
                 Projects.Add(new Project(path, watch: true));
@@ -47,7 +49,7 @@ namespace AutoUsing
                         {
                             var projectName = req.Arguments;
 
-                            if (projectName.IsNullOrEmpty()) 
+                            if (projectName.IsNullOrEmpty())
                             {
                                 Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
                                 break;
@@ -87,7 +89,7 @@ namespace AutoUsing
                         {
                             var projectFilePath = req.Arguments;
 
-                            if (!projectFilePath.IsNullOrEmpty()) 
+                            if (!projectFilePath.IsNullOrEmpty())
                             {
                                 Projects.Add(new Project(projectFilePath, watch: true));
 
@@ -101,7 +103,7 @@ namespace AutoUsing
                         {
                             var projectName = req.Arguments;
 
-                            if (!projectName.IsNullOrEmpty()) 
+                            if (!projectName.IsNullOrEmpty())
                             {
                                 // One line torture :D
                                 foreach (var project in Projects.Select(o => { if (o.Name != projectName) return null; o.Dispose(); return o; }))
@@ -111,7 +113,7 @@ namespace AutoUsing
 
                                 break;
                             }
-                            
+
                             Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
                         }
                         break;

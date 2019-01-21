@@ -5,7 +5,7 @@ namespace AutoUsing
     /// <summary>
     /// A request received from Visual Studio Code.
     /// </summary>
-    public abstract class Request
+    public class Request
     {
         public string Command { get; set; }
 
