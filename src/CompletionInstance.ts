@@ -1,13 +1,14 @@
 import * as vscode from "vscode";
 import { DataProvider } from "./DataProvider";
 
-import { HANDLE_COMPLETION} from './extension';
+import { HANDLE_COMPLETION } from './extension';
 import { binarySearch, binarySearchGen } from './speedutil';
 import { flatten, AUDebug } from './util';
 import { DocumentWalker, CompletionType } from "./DocumentWalker";
 import { SORT_CHEAT, primitives } from "./Constants";
 import { getStoredCompletions } from "./CompletionProvider";
 import { debug } from "util";
+import { Benchmarker } from "./Benchmarker";
 
 
 export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext): Promise<vscode.CompletionItem[]> {
@@ -26,6 +27,10 @@ class CompletionInstance {
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 
+
+
+
+
 		let completionType = await this.documentWalker.getCompletionType(position);
 
 		let completions: vscode.CompletionItem[];
@@ -37,7 +42,7 @@ class CompletionInstance {
 			if (completionType === CompletionType.EXTENSION) {
 				let methodCallerHover = await this.documentWalker.getMethodCallerHoverString(position);
 				if (methodCallerHover !== undefined) {
-					let methodCallerType = this.parseType(methodCallerHover);
+					let methodCallerType = this.parseType(methodCallerHover!);
 					completions = this.getExtensionMethods(methodCallerType, usings);
 					return completions;
 				} else {
@@ -48,10 +53,13 @@ class CompletionInstance {
 			} else if (completionType === CompletionType.REFERENCE) {
 				let references = await this.documentWalker.filterByTypedWord(position, this.data.getReferences());
 
+
 				completions = this.referencesToCompletions(references, usings);
+
 			}
 
 		}
+
 
 		return completions!;
 	}
@@ -151,15 +159,16 @@ class CompletionInstance {
 			// We instantly put the using statement only if there is only one option
 			let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined;
 
-			let completion = new vscode.CompletionItem(isCommon ? name : SORT_CHEAT + name);
-
-			completion.insertText = name;
-			completion.filterText = name;
-			completion.kind = vscode.CompletionItemKind.Reference;
-			completion.additionalTextEdits = usingStatementEdit;
-			completion.commitCharacters = ["."];
-			completion.detail = reference.namespaces.join("\n");
-			completion.command = { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" };
+			let completion: vscode.CompletionItem = {
+				label: isCommon ? name : SORT_CHEAT + name,
+				insertText: name,
+				filterText: name,
+				kind: vscode.CompletionItemKind.Reference,
+				additionalTextEdits: usingStatementEdit,
+				commitCharacters: ["."],
+				detail: reference.namespaces.join("\n"),
+				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" }
+			};
 
 			completions[i] = completion;
 		}

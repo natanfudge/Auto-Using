@@ -1,64 +1,122 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-
-using Microsoft.VisualBasic;
-
-using Newtonsoft.Json;
 
 namespace AutoUsing
 {
     class Program
     {
-        static StdProxy Proxy { get; set; }
+        static IOProxy Proxy = new IOProxy();
         static AssemblyScanner Scanner { get; set; }
+        static List<Project> Projects = new List<Project>();
 
         static void Main(string[] args)
         {
-            Proxy = new StdProxy();
+            // TODO: Error Handling.. 👌
+            // I just wanna see this working, a very rough version. 
+            // then i'll write tests, refactor the code.
+
+            args = new [] 
+            {
+                "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
+                "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+            };
+
+            if (args.Length <= 0)
+            {
+                Proxy.WriteData(new ErrorResponse { Body = Errors.AtLeastOneProjectFileIsRequired });
+                return;
+            }
+           
+            foreach (var path in args)
+            {
+                Projects.Add(new Project(path, watch: true));
+            }
 
             Proxy.EditorDataReceived += (s, e) =>
             {
                 /*
                     {"Command":"ping","Arguments":""}
-                    {"Command":"scan","Arguments":"/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll"}
-                    {"Command":"getAllTypes","Arguments":""}
                     ...
                 */
                 Request req = e.Data;
 
                 switch (req.Command)
                 {
-                    case "scan":
-                        Scanner = new AssemblyScanner();
+                    case EndPoints.GetAllCompletions:
+                        {
+                            var projectName = req.Arguments;
 
-                        bool loadingSuccessfull = Scanner.LoadAssembly(req.Arguments);
-                        if (!loadingSuccessfull) Proxy.WriteData(Errors.CannotLoadAssembly, false);
+                            if (projectName.IsNullOrEmpty()) 
+                            {
+                                Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
+                                break;
+                            }
 
-                        Proxy.WriteData();
+                            // Using C# 7.2 `is expression` to check for null, and assign variable
+                            if (Projects.Find(o => o.Name == projectName) is Project project)
+                            {
+                                // ? Wanna determine whether we scan assemblies on the fly
+                                // ? or do the scan as part of the project initialization above.
+                                // ? and have a specific command to issue a rescan.
+
+                                /* Psuedo-code
+                                    foreach (var reference in project.References)
+                                    {
+                                        * We have these data...
+
+                                        reference.Name; 
+                                        reference.Version;
+                                        reference.Path;
+
+                                        * Can do something like this...
+
+                                        Scanner = new AssemblyScanner();
+                                        Scanner.LoadAssembly(reference.Path);
+                                        Scanner.GetAllTypes();
+                                    }
+                                */
+
+                                break;
+                            }
+
+                            Proxy.WriteData(new ErrorResponse { Body = Errors.SpecifiedProjectWasNotFound });
+                        }
                         break;
-                    case "getAllTypes":
-                        if (Scanner is null) Proxy.WriteData(Errors.LoadAssemblyFirst, false);
+                    case EndPoints.AddProject:
+                        {
+                            var projectFilePath = req.Arguments;
 
-                        Proxy.WriteData(Scanner.GetAllTypes());
-                        break;
-                    case "getAllExtensionMethods":
-                        if (Scanner is null) Proxy.WriteData(Errors.LoadAssemblyFirst, false);
+                            if (!projectFilePath.IsNullOrEmpty()) 
+                            {
+                                Projects.Add(new Project(projectFilePath, watch: true));
 
-                        Proxy.WriteData(Scanner.GetAllExtensionMethods());
+                                break;
+                            }
+
+                            Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectFilePathIsRequired });
+                        }
                         break;
-                    case "getAllHierarchies":
-                        if (Scanner is null) Proxy.WriteData(Errors.LoadAssemblyFirst, false);
+                    case EndPoints.RemoveProject:
+                        {
+                            var projectName = req.Arguments;
+
+                            if (!projectName.IsNullOrEmpty()) 
+                            {
+                                // One line torture :D
+                                foreach (var project in Projects.Select(o => { if (o.Name != projectName) return null; o.Dispose(); return o; }))
+                                {
+                                    Projects.Remove(project);
+                                }
+
+                                break;
+                            }
                             
-                        Proxy.WriteData(Scanner.GetAllHierarchies());
+                            Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
+                        }
                         break;
-                    case "ping":
-                        Proxy.WriteData("pong");
+                    case EndPoints.Ping:
+                        Proxy.WriteData(new SuccessResponse { Body = "pong" });
                         break;
                 }
             };
@@ -67,15 +125,6 @@ namespace AutoUsing
             {
                 Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
             }
-
-            // var assemblyScanner = new AssemblyScanner();
-            // var referencesJson = JsonConvert.SerializeObject(assemblyScanner.GetAllTypes(), Formatting.Indented);
-            // var extensionsJson = JsonConvert.SerializeObject(assemblyScanner.GetAllExtensionMethods(), Formatting.Indented);
-            // var hierachiesJson = JsonConvert.SerializeObject(assemblyScanner.GetAllHierarchies(), Formatting.Indented);
-
-            // File.WriteAllText(csreferences, $"export const _CSHARP_REFERENCES = {referencesJson};");
-            // File.WriteAllText(extensionMethods, $"export const _CSHARP_EXTENSION_METHODS : ExtendedClass[] = {extensionsJson};");
-            // File.WriteAllText(hierachies, $"export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = {hierachiesJson};");
         }
     }
 }
