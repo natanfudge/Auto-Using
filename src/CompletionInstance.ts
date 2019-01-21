@@ -16,6 +16,27 @@ export async function provideCompletionItems(document: vscode.TextDocument, posi
 	return await completionInstance.provideCompletionItems(document, position, token, context);
 }
 
+export async function activateCSharpExtension() {
+	let csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;
+
+	if (!csharpExtension.isActive) {
+		await csharpExtension.activate();
+	}
+
+	try {
+		await csharpExtension.exports.initializationFinished();
+		console.log("ms-vscode.csharp activated");
+
+		csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;
+		let advisor = await csharpExtension.exports.getAdvisor();
+
+		return { advisor };
+	}
+	catch (err) {
+		console.log(err.stack);
+		return undefined;
+	}
+}
 
 class CompletionInstance {
 
@@ -25,10 +46,14 @@ class CompletionInstance {
 		private context: vscode.ExtensionContext,
 		private documentWalker: DocumentWalker) { }
 
+
+
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 
 
-
+		let result = await activateCSharpExtension();
+		//@ts-ignore
+		let server = result._server;
 
 
 		let completionType = await this.documentWalker.getCompletionType(position);
@@ -94,6 +119,9 @@ class CompletionInstance {
 			typeClass = type;
 			typeNamespace = undefined;
 		}
+
+		// Is an array type
+		if (typeClass[typeClass.length - 1] === "]") typeClass = "Array";
 
 		// Convert primitives to objects. I.E. string => String.
 		//@ts-ignore

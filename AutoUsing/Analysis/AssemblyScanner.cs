@@ -92,8 +92,13 @@ namespace AutoUsing
                         .ToList();
                     var name = type.Name.NoTilde();
 
-                    if (type.IsGenericType)
-                        name += "<>";
+                    if (type.IsGenericType) name += "<>";
+
+                    if (name.Equals("Array"))
+                    {
+                        fathers.AddRange(ArrayRuntimeImplementations);
+                    }
+
 
                     return new HierarchyInfo(name, type.Namespace, fathers);
                 })
@@ -108,6 +113,9 @@ namespace AutoUsing
 
             return easierFormat;
         }
+
+        readonly List<string> ArrayRuntimeImplementations = new List<string>
+         { "System.Collections.Generic.IList", "System.Collections.Generic.ICollection", "System.Collections.Generic.IEnumerable" };
 
         public List<ExtensionClass> GetAllExtensionMethods()
         {
@@ -127,6 +135,8 @@ namespace AutoUsing
 
             return easierFormat;
         }
+
+
 
         private static bool ClassCanHaveExtensionMethods(Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
 
