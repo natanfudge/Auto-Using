@@ -10,7 +10,7 @@ namespace AutoUsing
         /// </summary>
         public event EventHandler<MessageEventArgs> EditorDataReceived;
 
-        public void WriteData(object response)
+        public void WriteData(string response)
         {
             Console.WriteLine(response);
         }
