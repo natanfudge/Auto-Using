@@ -1,18 +1,18 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 
 namespace AutoUsing
 {
-    public class StdProxy
+    public class IOProxy
     {
         /// <summary>
         /// Fired when data received from the Editor.
         /// </summary>
         public event EventHandler<MessageEventArgs> EditorDataReceived;
 
-        public void WriteData(object body = null, bool success = true)
+        public void WriteData(object response)
         {
-            Console.WriteLine(new Response{ Success = success, Body = body });
+            Console.WriteLine(response);
         }
 
         /// <summary>
@@ -20,7 +20,6 @@ namespace AutoUsing
         /// </summary>
         public void ReadData(MessageEventArgs args)
         {
-            // TODO CURRENTLY DOESN'T... JUST A PROXY
             EditorDataReceived?.Invoke(this, args);
         }
     }
