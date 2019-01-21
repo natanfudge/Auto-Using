@@ -2,45 +2,25 @@ import * as vscode from "vscode";
 import { DataProvider } from "./DataProvider";
 
 import { HANDLE_COMPLETION } from './extension';
-import { binarySearch, binarySearchGen } from './speedutil';
 import { flatten, AUDebug } from './util';
 import { DocumentWalker, CompletionType } from "./DocumentWalker";
 import { SORT_CHEAT, primitives } from "./Constants";
 import { getStoredCompletions } from "./CompletionProvider";
 import { debug } from "util";
 import { Benchmarker } from "./Benchmarker";
+import { binSearch, binarySearch } from "./speedutil";
 
 
-export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext): Promise<vscode.CompletionItem[]> {
+export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
+	 token: vscode.CancellationToken, context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext): Promise<vscode.CompletionItem[]> {
 	let completionInstance = new CompletionInstance(extensionContext, new DocumentWalker(document));
-	return await completionInstance.provideCompletionItems(document, position, token, context);
+	return completionInstance.provideCompletionItems(document, position, token, context);
 }
 
-export async function activateCSharpExtension() {
-	let csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;
-
-	if (!csharpExtension.isActive) {
-		await csharpExtension.activate();
-	}
-
-	try {
-		await csharpExtension.exports.initializationFinished();
-		console.log("ms-vscode.csharp activated");
-
-		csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;
-		let advisor = await csharpExtension.exports.getAdvisor();
-
-		return { advisor };
-	}
-	catch (err) {
-		console.log(err.stack);
-		return undefined;
-	}
-}
 
 class CompletionInstance {
 
-	data = new DataProvider();
+	private data = new DataProvider();
 
 	constructor(
 		private context: vscode.ExtensionContext,
@@ -48,14 +28,8 @@ class CompletionInstance {
 
 
 
-	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
-
-
-		let result = await activateCSharpExtension();
-		//@ts-ignore
-		let server = result._server;
-
-
+	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
+		 token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 		let completionType = await this.documentWalker.getCompletionType(position);
 
 		let completions: vscode.CompletionItem[];
@@ -64,27 +38,26 @@ class CompletionInstance {
 			completions = [];
 		} else {
 			let usings = await this.documentWalker.getUsings();
+			let completionData: Reference[];
+
 			if (completionType === CompletionType.EXTENSION) {
+
 				let methodCallerHover = await this.documentWalker.getMethodCallerHoverString(position);
 				if (methodCallerHover !== undefined) {
-					let methodCallerType = this.parseType(methodCallerHover!);
-					completions = this.getExtensionMethods(methodCallerType, usings);
-					return completions;
+					let methodCallerType = this.parseType(methodCallerHover);
+					completionData = this.getExtensionMethods(methodCallerType);
+
 				} else {
 					AUDebug("Could not find method caller type! Assuming it's just a non-existent type followed by a dot.");
-					return [];
+					completionData = [];
 				}
 
 			} else if (completionType === CompletionType.REFERENCE) {
-				let references = await this.documentWalker.filterByTypedWord(position, this.data.getReferences());
-
-
-				completions = this.referencesToCompletions(references, usings);
-
+				completionData = await this.documentWalker.filterByTypedWord(position, this.data.getReferences());
 			}
 
+			completions = this.completionDataToCompletions(completionData!, usings);
 		}
-
 
 		return completions!;
 	}
@@ -92,6 +65,9 @@ class CompletionInstance {
 
 
 
+	/** 
+	 * Takes a omnisharp hover string from when you hover over a type, and returns the type that is written in it.
+	 */
 	private parseType(hoverString: string): Type {
 		const start = 10;
 		let typeStart = hoverString.substring(start, hoverString.length);
@@ -134,44 +110,46 @@ class CompletionInstance {
 		return { class: typeClass, namespace: typeNamespace };
 	}
 
-
-	private getExtensionMethods(callerType: Type, usings: string[]): vscode.CompletionItem[] {
-		let classPos = binarySearchGen(this.data.getHierachies(), callerType.class, ((h1, h2) => h1.localeCompare(h2.class)));
+	/**
+	 * Get all extension methods of a type
+	 */
+	private getExtensionMethods(callerType: Type): Reference[] {
+		let classPos = binSearch(this.data.getHierachies(), callerType.class, ((h1, h2) => h1.localeCompare(h2.class)));
 		if (classPos === - 1) return [];
 
 		let extensibleClasses = this.data.getHierachies()[classPos];
 
 		if (extensibleClasses.namespaces.length === 1) {
-			let fathers = extensibleClasses.namespaces[0].fathers;
+			let baseclasses = extensibleClasses.namespaces[0].fathers;
 			// Add the class itself to the list of classes that we will get extension methods for.
 			let classItselfStr = extensibleClasses.namespaces[0].namespace + "." + callerType.class;
+			// Remove generic marker '<>'
 			if (classItselfStr[classItselfStr.length - 1] === ">") classItselfStr = classItselfStr.substr(0, classItselfStr.length - 2);
-			fathers.push(classItselfStr);
+			baseclasses.push(classItselfStr);
 
-			let extensionsArr = fathers.map(father =>
-				this.data.getExtensionMethods()[binarySearchGen(this.data.getExtensionMethods(), father, (str, ext) => str.localeCompare(ext.extendedClass))])
-				.filter(obj => typeof obj !== "undefined").map(extendedClass => extendedClass.extensionMethods);
+			let extensions = flatten(
+				baseclasses.map(baseclass =>
+					this.data.getExtensionMethods()[binSearch(this.data.getExtensionMethods(), baseclass, (str, ext) => str.localeCompare(ext.extendedClass))])
+					.filter(obj => typeof obj !== "undefined")
+					.map(extendedClass => extendedClass.extensionMethods));
 
 
-			let extensions = flatten<Reference>(extensionsArr)
-				// Copy all of the stuff to prevent different completion calls interacting with each other
-				.map(reference => {
-					let copiedReference: Reference = { namespaces: reference.namespaces.splice(0), name: reference.name };
-					return copiedReference;
-				});
-
-			return this.referencesToCompletions(extensions, usings);
+			return extensions;
 
 		} else {
 			throw new Error("Auto Using does not support ambigous references yet.");
 		}
 	}
 
-	private referencesToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
+	/**
+	 * Map pure completion data to vscode's CompletionItem[] format
+	 * @param usings A list of the using directive in the file. All already imported references will be removed from the array.
+	 */
+	private completionDataToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
 		let completionAmount = filterOutAlreadyUsing(references, usings);
 
+		// All references the user has imported before. They will gain a higher priority. 
 		let commonNames = getStoredCompletions(this.context).map(completion => completion.label);
-
 		commonNames.sort();
 
 		let completions = new Array<vscode.CompletionItem>(completionAmount);
@@ -182,10 +160,10 @@ class CompletionInstance {
 			let name = reference.name;
 			let isCommon = binarySearch(commonNames, name) !== -1;
 
-			let oneOption = reference.namespaces.length === 1;
+			let thereIsOnlyOneClassWithThatName = reference.namespaces.length === 1;
 
 			// We instantly put the using statement only if there is only one option
-			let usingStatementEdit = oneOption ? [usingEdit(reference.namespaces[0])] : undefined;
+			let usingStatementEdit = thereIsOnlyOneClassWithThatName ? [usingEdit(reference.namespaces[0])] : undefined;
 
 			let completion: vscode.CompletionItem = {
 				label: isCommon ? name : SORT_CHEAT + name,
@@ -212,10 +190,7 @@ const usingEdit = (namespace: string) => vscode.TextEdit.insert(new vscode.Posit
 
 
 /**
- * 
- * @param references 
- * @param usings 
- * @returns new size
+ * Removes all namespaces that already have a using statement
  */
 function filterOutAlreadyUsing(references: Reference[], usings: string[]): number {
 	usings.sort();

@@ -5,7 +5,7 @@ namespace AutoUsing
     /// <summary>
     /// The JSON serialized response returned to Visual Studio Code. 
     /// </summary>
-    public abstract class Response<T>
+    public class Response<T>
     {
         public bool Success { get; set; }
         public object Body { get; set; }

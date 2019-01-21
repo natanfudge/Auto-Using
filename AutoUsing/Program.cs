@@ -23,7 +23,6 @@ namespace AutoUsing
                "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj"
             };
 
-//ttest
 
             if (args.Length <= 0)
             {
@@ -59,27 +58,7 @@ namespace AutoUsing
                             // Using C# 7.2 `is expression` to check for null, and assign variable
                             if (Projects.Find(o => o.Name == projectName) is Project project)
                             {
-                                // ? Wanna determine whether we scan assemblies on the fly
-                                // ? or do the scan as part of the project initialization above.
-                                // ? and have a specific command to issue a rescan.
-
-                                /* Psuedo-code
-                                    foreach (var reference in project.References)
-                                    {
-                                        * We have these data...
-
-                                        reference.Name; 
-                                        reference.Version;
-                                        reference.Path;
-
-                                        * Can do something like this...
-
-                                        Scanner = new AssemblyScanner();
-                                        Scanner.LoadAssembly(reference.Path);
-                                        Scanner.GetAllTypes();
-                                    }
-                                */
-
+                                //TODO:
                                 break;
                             }
 
@@ -127,7 +106,9 @@ namespace AutoUsing
             while (true)
             {
                 Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-            }
+            }            
+
+            
         }
     }
 }

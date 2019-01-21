@@ -13,19 +13,25 @@
 // // A performance timeline entry will be created
 // wrapped();
 
-export class Benchmarker{
-    private performance :any;
-    private startTime : number;
+/**
+ * Start measuring the amount of time has passed
+ */
+export class Benchmarker {
+    private performance: any;
+    private startTime: number;
 
-    constructor(){
-        const {performance} = require("perf_hooks");
+    constructor() {
+        const { performance } = require("perf_hooks");
         this.performance = performance;
         this.startTime = performance.now();
+
     }
 
-    public check(){
+    /**
+     * Prints the amount of time passed since benchmarker construction.
+     */
+    public check() : void {
         console.log("Time passed = " + (this.performance.now() - this.startTime));
     }
-
 
 }

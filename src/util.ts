@@ -4,6 +4,7 @@ export function flatten<T>(arr : T[][]) : T[]{
 
 const debugging = false;
 
-export function AUDebug(str : string){
+// Log only when debugging
+export function AUDebug(str : string) : void{
     if(debugging) console.log(str);
 }

@@ -16,6 +16,8 @@ namespace AutoUsing
             return string.IsNullOrEmpty(value);
         }
 
+
+        //TODO: What is the purpose of this method?
         public static string ToCamelCase(this string value)
         {
             string result = string.Empty;
@@ -25,12 +27,11 @@ namespace AutoUsing
                 char c = value[i];
                 char p = i == 0 ? char.MinValue : value[i - 1];
 
-                result += ((p is ' ') || p is char.MinValue ) ? $"{char.ToLower(c)}" : $"{c}";    
+                result += ((p is ' ') || p is char.MinValue) ? $"{char.ToLower(c)}" : $"{c}";
             }
 
             return result;
         }
-
         public static string GetParentDir(string dir)
         {
             return Path.GetFullPath(Path.Combine(dir, @"..\"));
@@ -42,10 +43,14 @@ namespace AutoUsing
                 .Where(method => method.IsDefined(typeof(ExtensionAttribute), false)).ToList();
         }
 
-        public static bool IsStatic(this Type @class){
+        public static bool IsStatic(this Type @class)
+        {
             return @class.IsAbstract && @class.IsSealed;
         }
 
+
+        /// <param name="method">Extension method info</param>
+        /// <returns>The class the method is extending</returns>
         public static Type GetExtendedClass(this MethodInfo method)
         {
             return method.GetParameters()[0].ParameterType;
@@ -56,7 +61,12 @@ namespace AutoUsing
             return map.ToDictionary(kv => kv.Key, kv => kv.Value);
         }
 
-        public static string NoTilde(this string str){
+        /// <summary>
+        /// Removes the tilde (`) that sometimes appears at the end of class names.
+        /// For example List`1 => List
+        /// </summary>
+        public static string NoTilde(this string str)
+        {
             if (str == null) return null;
             if (str.Length < 2) return str;
 

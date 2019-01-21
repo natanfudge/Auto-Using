@@ -6,9 +6,9 @@
 
 
 /** Uses a binary search algorithm to locate a value in the specified array. 
-* @param {Array} items The array containing the item. 
-* @param {variant} value The value to search for. 
-* @return {int} The zero-based index of the value in the array or -1 if not found. 
+* @param items The array containing the item. 
+* @param value The value to search for. 
+* @return The zero-based index of the value in the array or -1 if not found. 
 */
 export function binarySearch<T>(items: Array<T>, value: T): number {
     let startIndex = 0,
@@ -33,12 +33,12 @@ export function binarySearch<T>(items: Array<T>, value: T): number {
 }
 
 /** Uses a binary search algorithm to locate a value in the specified array. 
-* @param {Array} items The array containing the item. 
-* @param {variant} value The value to search for. 
-* @param {(T,T) => boolean} comparer A function that determines between two objects which comes first.
-* @return {int} The zero-based index of the value in the array or -1 if not found. 
+* @param items The array containing the item. 
+* @param  value The value to search for. 
+* @param comparer A function that determines between two objects which comes first.
+* @return The zero-based index of the value in the array or -1 if not found. 
 */
-export function binarySearchGen<T,V>(items: Array<T>, value: V, comparer: (el1: V, el2: T) => number): number {
+export function binSearch<T,V>(items: Array<T>, value: V, comparer: (el1: V, el2: T) => number): number {
     let startIndex = 0,
         stopIndex = items.length - 1,
         middle = Math.floor((stopIndex + startIndex) / 2);
