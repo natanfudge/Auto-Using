@@ -3,6 +3,8 @@ using System.IO;
 using System.Xml;
 using System.Linq;
 using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace AutoUsing
 {
@@ -13,6 +15,8 @@ namespace AutoUsing
         private FileWatcher FileWatcher { get; set; }
 
         public List<PackageReference> References { get; set; }
+
+        public Dictionary<string, List<string>> LibraryAssemblies { get; set; }
         public string RootDirectory { get; private set; }
         public string Name { get; private set; }
         public string NuGetPackageRoot { get; private set; }
@@ -36,6 +40,8 @@ namespace AutoUsing
             // the dlls directly from the NuGet installation folder set by the user.
             GetNuGetRootDirectory();
 
+            LoadLibraryAssemblies();
+
             // Package References
             GetPackageReferences();
 
@@ -51,14 +57,15 @@ namespace AutoUsing
             FilePath = filePath;
         }
 
+
         private void Watch()
         {
             FileWatcher = new FileWatcher(FilePath);
-            FileWatcher.Changed += (s, e) => 
+            FileWatcher.Changed += (s, e) =>
             {
                 if (e.ChangeType is WatcherChangeTypes.Renamed) GetBasicInfo(e.Name);
 
-                if (e.ChangeType is WatcherChangeTypes.Deleted) 
+                if (e.ChangeType is WatcherChangeTypes.Deleted)
                 {
                     Dispose();
                     return;
@@ -76,9 +83,36 @@ namespace AutoUsing
             NuGetPackageRoot = Document.SelectSingleNode("//x:NuGetPackageRoot", NamespaceManager)?.InnerText;
         }
 
+        /// <summary>
+        /// Loads the dll paths of all the libraries of the project
+        /// </summary>
+        private void LoadLibraryAssemblies()
+        {
+            var assets = JObject.Parse(File.ReadAllText(Path.Combine(RootDirectory, $"obj/project.assets.json")));
+
+            // TODO: Need to see what we do when we have multiple targets
+            var targets = assets["targets"];
+            var targetLibs = targets.First().First();
+
+            LibraryAssemblies = targetLibs.ToDictionary(lib => ((JProperty)lib).Name, lib =>
+            {
+                var assemblies = lib.First()["compile"];
+
+                return assemblies?.Select(assembly =>
+                {
+                    var assemblyProp = assembly as JProperty;
+                    return assemblyProp.Name;
+                }).ToList();
+
+            }).Where(kv => kv.Value != null).ToDictionary();
+
+        }
+
         public void GetPackageReferences()
         {
             Document.Load(FilePath);
+
+            References = new List<PackageReference>();
 
             foreach (XmlNode node in Document.SelectNodes("//PackageReference"))
             {
@@ -87,13 +121,22 @@ namespace AutoUsing
 
                 if (packageName.IsNullOrEmpty() || packageVersion.IsNullOrEmpty()) continue;
 
-                // TODO - Need a way to determine which target dll is used.
                 var packagePath = Path.Combine(NuGetPackageRoot, $"{packageName}/{packageVersion}/");
 
-                // ? IDK ABOUT THIS YET.
-                References = new List<PackageReference>();
-                References.Add(new PackageReference { Name = packageName, Version = packageVersion, Path = packagePath });
+
+                foreach (var assemblyPath in LibraryAssemblies[packageName + "/" + packageVersion])
+                {
+                    References.Add(new PackageReference
+                    {
+                        Name = packageName,
+                        Version = packageVersion,
+                        Path = Path.Combine(packagePath, assemblyPath)
+                    });
+                }
+
+
             }
+
         }
 
         public void Dispose()
