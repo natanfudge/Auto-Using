@@ -23,6 +23,7 @@ namespace AutoUsing
                "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj"
             };
 
+// attempt #3
 
             if (args.Length <= 0)
             {
