@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Xml;
 using System.Linq;
-using System;
+using System.Xml;
 
 namespace AutoUsing
 {
+    /// <summary>
+    ///     Loads and keeps `.csproj` file's data.
+    ///     Optional: Watch the `.csproj` file for changes.
+    /// </summary>
     public class Project : IDisposable
     {
         private XmlDocument Document { get; set; }
@@ -19,6 +23,12 @@ namespace AutoUsing
         public string FilePath { get; private set; }
         public string FileName { get; private set; }
 
+        /// <summary>
+        ///     Loads and keeps `.csproj` file's data.
+        ///     Optional: Watch the `.csproj` file for changes.
+        /// </summary>
+        /// <param name="filePath">The path to the `.csproj` file to laod.</param>
+        /// <param name="watch">Whether to watch for further file changes.</param>
         public Project(string filePath, bool watch)
         {
             Document = new XmlDocument();
@@ -29,21 +39,21 @@ namespace AutoUsing
             NamespaceManager.AddNamespace("x", "http://schemas.microsoft.com/developer/msbuild/2003");
 
             // Essential info about given project file.
-            GetBasicInfo(filePath);
+            LoadBasicInfo(filePath);
 
             // Using NuGet Packages Location, We won't need to wait for project
             // builds to get completions for referenced dependencies. As we'll query
             // the dlls directly from the NuGet installation folder set by the user.
-            GetNuGetRootDirectory();
+            LoadNuGetRootDirectory();
 
             // Package References
-            GetPackageReferences();
+            LoadPackageReferences();
 
             // Optional: Watch for changes.
             if (watch) Watch();
         }
 
-        private void GetBasicInfo(string filePath)
+        private void LoadBasicInfo(string filePath)
         {
             RootDirectory = Path.GetDirectoryName(filePath);
             Name = Path.GetFileNameWithoutExtension(filePath);
@@ -54,29 +64,29 @@ namespace AutoUsing
         private void Watch()
         {
             FileWatcher = new FileWatcher(FilePath);
-            FileWatcher.Changed += (s, e) => 
+            FileWatcher.Changed += (s, e) =>
             {
-                if (e.ChangeType is WatcherChangeTypes.Renamed) GetBasicInfo(e.Name);
+                if (e.ChangeType is WatcherChangeTypes.Renamed) LoadBasicInfo(e.Name);
 
-                if (e.ChangeType is WatcherChangeTypes.Deleted) 
+                if (e.ChangeType is WatcherChangeTypes.Deleted)
                 {
                     Dispose();
                     return;
                 }
 
-                GetPackageReferences();
+                LoadPackageReferences();
             };
             FileWatcher.EnableRaisingEvents = true;
         }
 
-        private void GetNuGetRootDirectory()
+        private void LoadNuGetRootDirectory()
         {
             Document.Load(Path.Combine(RootDirectory, $"obj/{Name}.csproj.nuget.g.props"));
 
             NuGetPackageRoot = Document.SelectSingleNode("//x:NuGetPackageRoot", NamespaceManager)?.InnerText;
         }
 
-        public void GetPackageReferences()
+        public void LoadPackageReferences()
         {
             Document.Load(FilePath);
 

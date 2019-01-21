@@ -1,8 +1,11 @@
-
 using System.IO;
 
 namespace AutoUsing
 {
+    /// <summary>
+    ///     An abstraction over the <see cref"FileSystemWatcher"/> to watch
+    ///     over a single file.
+    /// </summary>
     public class FileWatcher : FileSystemWatcher
     {
         public FileWatcher(string filePath)
