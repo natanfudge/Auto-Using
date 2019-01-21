@@ -98,11 +98,8 @@ namespace AutoUsing
             {
                 var assemblies = lib.First()["compile"];
 
-                return assemblies?.Select(assembly =>
-                {
-                    var assemblyProp = assembly as JProperty;
-                    return assemblyProp.Name;
-                }).ToList();
+                return assemblies?.Select(assembly => ((JProperty)assembly).Name).ToList();
+              
 
             }).Where(kv => kv.Value != null).ToDictionary();
 

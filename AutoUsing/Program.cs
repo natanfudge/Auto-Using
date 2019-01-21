@@ -59,6 +59,7 @@ namespace AutoUsing
                             // Using C# 7.2 `is expression` to check for null, and assign variable
                             if (Projects.Find(o => o.Name == projectName) is Project project)
                             {
+                                //TODO:
                                 break;
                             }
 
@@ -106,7 +107,7 @@ namespace AutoUsing
             while (true)
             {
                 Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-            }
+            }            
 
             
         }
