@@ -35,6 +35,9 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
+### 0.7.4 
+- Fixed extension methods not appearing for arrays.
+
 ### 0.7.3 
 - Fixed extension methods not appearing after method calls with parameters, and after variables enclosed in parentheses. 
 - Fixed certain extension method options sometimes not appearing 

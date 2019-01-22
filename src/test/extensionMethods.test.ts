@@ -57,4 +57,9 @@ suite(`CompletionProvider Extension Method Tests`, () => {
         assertContains(completionList, "Select");
     });
 
+    test("Should show extension methods for arrays", async() =>{
+        let completionList = await complete("ShouldShowExtensionsForArray.cs", 6, 14);
+        assertContains(completionList, "Select");
+    });
+
 });

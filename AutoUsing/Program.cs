@@ -16,18 +16,20 @@ namespace AutoUsing
             // I just wanna see this working, a very rough version. 
             // then i'll write tests, refactor the code.
 
-            args = new [] 
+            args = new[]
             {
-                "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
-                "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
+                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj"
             };
+
 
             if (args.Length <= 0)
             {
                 Proxy.WriteData(new ErrorResponse { Body = Errors.AtLeastOneProjectFileIsRequired });
                 return;
             }
-           
+
             foreach (var path in args)
             {
                 Projects.Add(new Project(path, watch: true));
@@ -47,7 +49,7 @@ namespace AutoUsing
                         {
                             var projectName = req.Arguments;
 
-                            if (projectName.IsNullOrEmpty()) 
+                            if (projectName.IsNullOrEmpty())
                             {
                                 Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
                                 break;
@@ -56,27 +58,7 @@ namespace AutoUsing
                             // Using C# 7.2 `is expression` to check for null, and assign variable
                             if (Projects.Find(o => o.Name == projectName) is Project project)
                             {
-                                // ? Wanna determine whether we scan assemblies on the fly
-                                // ? or do the scan as part of the project initialization above.
-                                // ? and have a specific command to issue a rescan.
-
-                                /* Psuedo-code
-                                    foreach (var reference in project.References)
-                                    {
-                                        * We have these data...
-
-                                        reference.Name; 
-                                        reference.Version;
-                                        reference.Path;
-
-                                        * Can do something like this...
-
-                                        Scanner = new AssemblyScanner();
-                                        Scanner.LoadAssembly(reference.Path);
-                                        Scanner.GetAllTypes();
-                                    }
-                                */
-
+                                //TODO:
                                 break;
                             }
 
@@ -87,7 +69,7 @@ namespace AutoUsing
                         {
                             var projectFilePath = req.Arguments;
 
-                            if (!projectFilePath.IsNullOrEmpty()) 
+                            if (!projectFilePath.IsNullOrEmpty())
                             {
                                 Projects.Add(new Project(projectFilePath, watch: true));
 
@@ -101,7 +83,7 @@ namespace AutoUsing
                         {
                             var projectName = req.Arguments;
 
-                            if (!projectName.IsNullOrEmpty()) 
+                            if (!projectName.IsNullOrEmpty())
                             {
                                 // One line torture :D
                                 foreach (var project in Projects.Select(o => { if (o.Name != projectName) return null; o.Dispose(); return o; }))
@@ -111,7 +93,7 @@ namespace AutoUsing
 
                                 break;
                             }
-                            
+
                             Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
                         }
                         break;
@@ -124,7 +106,9 @@ namespace AutoUsing
             while (true)
             {
                 Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-            }
+            }            
+
+            
         }
     }
 }

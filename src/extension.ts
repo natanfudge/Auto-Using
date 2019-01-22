@@ -20,7 +20,7 @@ export class Completion {
 	constructor(public label: string, public namespace: string) { }
 }
 
-export function completionCommon(completion: Completion, completions: Completion[]) {
+export function completionCommon(completion: Completion, completions: Completion[]): boolean {
 	return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
 }
 
@@ -38,7 +38,7 @@ class TestHelper {
 export let testHelper: TestHelper;
 
 
-export async function activate(context: vscode.ExtensionContext) {
+export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
 
 	testHelper = new TestHelper(context);
@@ -76,17 +76,13 @@ export async function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(autoUsingProvider, handleCompletionCommand, wipeStorageCommand);
 }
 
-export function x(){
-	console.log("amar");
-}
-
-export function wipeStoredCompletions(context: vscode.ExtensionContext) {
+export function wipeStoredCompletions(context: vscode.ExtensionContext): void {
 	let amount = getStoredCompletions(context).length;
 	vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
 	context.globalState.update(COMPLETION_STORAGE, []);
 }
 
-export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, reference: Reference){
+export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, reference: Reference): Promise<void> {
 	if (typeof pick === "undefined") return;
 	// Remove invisible unicode char
 	if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
@@ -99,10 +95,10 @@ export async function addUsing(pick: string | undefined, context: vscode.Extensi
 
 	await vscode.window.activeTextEditor!.edit(editBuilder);
 
-	
+
 }
 
-export function storeCompletion(context: vscode.ExtensionContext, completion: Completion) {
+export function storeCompletion(context: vscode.ExtensionContext, completion: Completion) :void{
 	let completions = getStoredCompletions(context);
 	if (Array.isArray(completions) && completions[0] instanceof Completion) {
 		if (!completionCommon(completion, completions)) {
