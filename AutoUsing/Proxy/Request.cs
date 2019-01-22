@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 namespace AutoUsing
 {
     /// <summary>
-    /// A request received from Visual Studio Code.
+    ///     A request received from Visual Studio Code.
     /// </summary>
     public class Request
     {

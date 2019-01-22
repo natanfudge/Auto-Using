@@ -5,19 +5,33 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+
 using AutoUsing.DataTypes;
 
 namespace AutoUsing
 {
     public static class Util
     {
+        /// <summary>
+        ///     Indicates whether the specified string is null or an System.String.Empty string.
+        /// </summary>
+        /// <param name="value">The string to test.</param>
+        /// <returns>true if the value parameter is null or an empty string; otherwise, false.</returns>
         public static bool IsNullOrEmpty(this string value)
         {
             return string.IsNullOrEmpty(value);
         }
 
-
-        //TODO: What is the purpose of this method?
+        /// <summary>
+        ///     Returns a `camelCase` representation of the specified
+        ///     value.
+        /// 
+        /// Remarks:
+        ///     I implemented this method to aid in converting c# pascal case convetions
+        ///     to typescript friendly camelCase. It's not used currently though.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToCamelCase(this string value)
         {
             string result = string.Empty;
@@ -32,9 +46,10 @@ namespace AutoUsing
 
             return result;
         }
+
         public static string GetParentDir(string dir)
-        {
-            return Path.GetFullPath(Path.Combine(dir, @"..\"));
+            {
+                return Path.GetFullPath(Path.Combine(dir, @"..\"));
         }
 
         public static List<MethodInfo> GetExtensionMethods(this Type @class)
@@ -48,12 +63,14 @@ namespace AutoUsing
             return @class.IsAbstract && @class.IsSealed;
         }
 
-
-        /// <param name="method">Extension method info</param>
+        /// <summary>
+        ///     Extension method info.
+        /// </summary>
+        /// <param name="method "></param>
         /// <returns>The class the method is extending</returns>
         public static Type GetExtendedClass(this MethodInfo method)
         {
-            return method.GetParameters()[0].ParameterType;
+            return method.GetParameters() [0].ParameterType;
         }
 
         public static Dictionary<K, V> ToDictionary<K, V>(this IEnumerable<KeyValuePair<K, V>> map)
@@ -62,8 +79,8 @@ namespace AutoUsing
         }
 
         /// <summary>
-        /// Removes the tilde (`) that sometimes appears at the end of class names.
-        /// For example List`1 => List
+        ///     Removes the tilde (`) that sometimes appears at the end of class names.
+        ///     For example List`1 => List
         /// </summary>
         public static string NoTilde(this string str)
         {
@@ -82,6 +99,5 @@ namespace AutoUsing
 
             return str;
         }
-
     }
 }

@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-<<<<<<< HEAD
 using System.Xml;
-=======
-using System;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
->>>>>>> upstream/master
 
 namespace AutoUsing
 {
@@ -23,7 +20,6 @@ namespace AutoUsing
         private FileWatcher FileWatcher { get; set; }
 
         public List<PackageReference> References { get; set; }
-
         public Dictionary<string, List<string>> LibraryAssemblies { get; set; }
         public string RootDirectory { get; private set; }
         public string Name { get; private set; }
@@ -54,6 +50,7 @@ namespace AutoUsing
             // the dlls directly from the NuGet installation folder set by the user.
             LoadNuGetRootDirectory();
 
+            // Loads the relative pathes to the dll files for each referenced package.
             LoadLibraryAssemblies();
 
             // Package References
@@ -63,6 +60,10 @@ namespace AutoUsing
             if (watch) Watch();
         }
 
+        /// <summary>
+        ///     Loads the basic info about the specified project file.
+        /// </summary>
+        /// <param name="filePath">Full path to the project's `.csproj` file.</param>
         private void LoadBasicInfo(string filePath)
         {
             RootDirectory = Path.GetDirectoryName(filePath);
@@ -71,7 +72,9 @@ namespace AutoUsing
             FilePath = filePath;
         }
 
-
+        /// <summary>
+        ///     Starts watching the project file for changes.
+        /// </summary>
         private void Watch()
         {
             FileWatcher = new FileWatcher(FilePath);
@@ -90,6 +93,10 @@ namespace AutoUsing
             FileWatcher.EnableRaisingEvents = true;
         }
 
+        /// <summary>
+        ///     Gets the current NuGet packages installation directory
+        ///     used by this project.
+        /// </summary>
         private void LoadNuGetRootDirectory()
         {
             Document.Load(Path.Combine(RootDirectory, $"obj/{Name}.csproj.nuget.g.props"));
@@ -97,15 +104,12 @@ namespace AutoUsing
             NuGetPackageRoot = Document.SelectSingleNode("//x:NuGetPackageRoot", NamespaceManager)?.InnerText;
         }
 
-<<<<<<< HEAD
-        public void LoadPackageReferences()
-=======
         /// <summary>
-        /// Loads the dll paths of all the libraries of the project
+        ///     Loads the relative dll paths of all the libraries of the project.
         /// </summary>
         private void LoadLibraryAssemblies()
         {
-            var assets = JObject.Parse(File.ReadAllText(Path.Combine(RootDirectory, $"obj/project.assets.json")));
+            var assets = JObject.Parse(File.ReadAllText(Path.Combine(RootDirectory, "obj/project.assets.json")));
 
             // TODO: Need to see what we do when we have multiple targets
             var targets = assets["targets"];
@@ -113,17 +117,14 @@ namespace AutoUsing
 
             LibraryAssemblies = targetLibs.ToDictionary(lib => ((JProperty)lib).Name, lib =>
             {
-                var assemblies = lib.First()["compile"];
-
-                return assemblies?.Select(assembly => ((JProperty)assembly).Name).ToList();
-              
-
+                return lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList();
             }).Where(kv => kv.Value != null).ToDictionary();
-
         }
 
-        public void GetPackageReferences()
->>>>>>> upstream/master
+        /// <summary>
+        ///     Loads full package info for each reference of the project.
+        /// </summary>
+        private void LoadPackageReferences()
         {
             Document.Load(FilePath);
 
@@ -138,7 +139,6 @@ namespace AutoUsing
 
                 var packagePath = Path.Combine(NuGetPackageRoot, $"{packageName}/{packageVersion}/");
 
-
                 foreach (var assemblyPath in LibraryAssemblies[packageName + "/" + packageVersion])
                 {
                     References.Add(new PackageReference
@@ -148,12 +148,13 @@ namespace AutoUsing
                         Path = Path.Combine(packagePath, assemblyPath)
                     });
                 }
-
-
             }
-
         }
 
+        /// <summary>
+        ///     Stops the <see cref="FileWatcher"/> used by this instance
+        ///     before disposal.
+        /// </summary>
         public void Dispose()
         {
             FileWatcher.EnableRaisingEvents = false;

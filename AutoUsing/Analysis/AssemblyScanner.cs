@@ -136,12 +136,9 @@ namespace AutoUsing
             return easierFormat;
         }
 
-
-
         private static bool ClassCanHaveExtensionMethods(Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
 
         private static string ExtendedClassName(ExtensionMethodInfo info) => (info.Class).NoTilde();
-
 
         public static List<ExtensionMethodInfo> GetExtensionMethods(Assembly assembly)
         {

@@ -1,7 +1,7 @@
 namespace AutoUsing
 {
     /// <summary>
-    /// Represents a NuGet package reference.
+    ///     Represents a NuGet package reference information.
     /// </summary>
     public class PackageReference
     {

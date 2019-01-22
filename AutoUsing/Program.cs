@@ -106,9 +106,7 @@ namespace AutoUsing
             while (true)
             {
                 Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-            }            
-
-            
+            }
         }
     }
 }
