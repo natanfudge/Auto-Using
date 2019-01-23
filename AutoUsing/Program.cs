@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace AutoUsing
 {
     class Program
     {
-        static IOProxy Proxy = new IOProxy();
-        static AssemblyScanner Scanner { get; set; }
-        static List<Project> Projects = new List<Project>();
+        // static IOProxy Proxy = new IOProxy();
+        // static AssemblyScanner Scanner { get; set; }
+        // static List<Project> Projects = new List<Project>();
+
+        static Server Server = new Server();
 
         static void Main(string[] args)
         {
@@ -26,87 +29,80 @@ namespace AutoUsing
 
             if (args.Length <= 0)
             {
-                Proxy.WriteData(new ErrorResponse { Body = Errors.AtLeastOneProjectFileIsRequired });
+                Server.Error(Errors.AtLeastOneProjectFileIsRequired);
                 return;
             }
 
-            foreach (var path in args)
-            {
-                Projects.Add(new Project(path, watch: true));
-            }
+            Server.AddCmdArgProjects(args);
 
-            Proxy.EditorDataReceived += (s, e) =>
+            Server.Proxy.EditorDataReceived += (s, e) =>
             {
                 /*
-                    {"Command":"ping","Arguments":""}
+                    {"Command":"ping","arguments":""}
+                    {"Command":"AddProjects","arguments":"C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj,
+                    "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsingTest.csproj"}
                     ...
                 */
-                Request req = e.Data;
+
+                //TODO: turn that into:
+                /*
+                {"Name":"ping","arguments":{}}}
+                {
+                    "Name":"AddProjects",
+                    "arguments":{
+                        "Projects" : ["C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj",
+                                      "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsingTest.csproj"],
+                        "Color":"Orange"
+                    }
+                }
+
+                etc...
+                
+                Then each function in Server.cs is declared like this:
+                void Pong(PongRequest req){...}
+                void AddProjects(AddProjectsRequest req){...}
+                void RemoveProject(RemoveProjectRequest req){...}
+
+                Then we can actually access 'req.arguments.color' as a typed object without having to 'guess' that the string 'req.arguments' actually means color.
+                
+                
+                 */
+
+                
+
+                Request req;
+                try
+                {
+                    req = e.Data;
+                }
+                catch (JsonReaderException)
+                {
+                    Server.Error(Errors.InvalidRequestFormat);
+                    return;
+                }
 
                 switch (req.Command)
                 {
                     case EndPoints.GetAllCompletions:
-                        {
-                            var projectName = req.Arguments;
-
-                            if (projectName.IsNullOrEmpty())
-                            {
-                                Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
-                                break;
-                            }
-
-                            // Using C# 7.2 `is expression` to check for null, and assign variable
-                            if (Projects.Find(o => o.Name == projectName) is Project project)
-                            {
-                                //TODO:
-                                break;
-                            }
-
-                            Proxy.WriteData(new ErrorResponse { Body = Errors.SpecifiedProjectWasNotFound });
-                        }
+                        Server.SendAllCompletions(req);
                         break;
                     case EndPoints.AddProject:
-                        {
-                            var projectFilePath = req.Arguments;
-
-                            if (!projectFilePath.IsNullOrEmpty())
-                            {
-                                Projects.Add(new Project(projectFilePath, watch: true));
-
-                                break;
-                            }
-
-                            Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectFilePathIsRequired });
-                        }
+                        Server.AddProject(req);
                         break;
                     case EndPoints.RemoveProject:
-                        {
-                            var projectName = req.Arguments;
-
-                            if (!projectName.IsNullOrEmpty())
-                            {
-                                // One line torture :D
-                                foreach (var project in Projects.Select(o => { if (o.Name != projectName) return null; o.Dispose(); return o; }))
-                                {
-                                    Projects.Remove(project);
-                                }
-
-                                break;
-                            }
-
-                            Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
-                        }
+                        Server.RemoveProject(req);
                         break;
                     case EndPoints.Ping:
-                        Proxy.WriteData(new SuccessResponse { Body = "pong" });
+                        Server.Pong(req);
+                        break;
+
+                    default:
+                        Server.Error(Errors.UndefinedRequest);
                         break;
                 }
             };
 
-            while (true)
-            {
-                Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-            }
+            Server.Listen();
         }
     }
 }
