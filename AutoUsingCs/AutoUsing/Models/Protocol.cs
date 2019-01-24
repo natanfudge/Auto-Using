@@ -1,0 +1,21 @@
+using System.Collections.Generic;
+
+namespace AutoUsing
+{
+
+
+
+
+    // This file will list all requests and responses, so they will be strongly typed.
+    public class AddProjectsRequest
+    {
+        public List<string> Projects { get; set; }
+    }
+
+    public class GetAllReferencesRequest
+    {
+        public string projectName { get; set; }
+    }
+
+
+}
