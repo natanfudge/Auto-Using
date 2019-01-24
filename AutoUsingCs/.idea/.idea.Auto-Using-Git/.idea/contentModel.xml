@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\natan\.nuget\packages\mstest.testadapter\1.3.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\natan\.nuget\packages\mstest.testadapter\1.3.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
+    <e p="C:\Users\natan\.nuget\packages\mstest.testadapter\1.3.2\build\netcoreapp1.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
+    <e p="C:\Users\natan\.Rider2018.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\natan\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\natan\.Rider2018.2\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\natan\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\natan\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Auto-Using-Git.-777220890.00" t="ExcludeRecursive" />
+    <e p="C:\Users\natan\Desktop\Auto-Using-Git\AutoUsingCs" t="IncludeFlat">
+      <e p="Auto-Using-Git.sln" t="IncludeFlat" />
+      <e p="AutoUsing" t="IncludeRecursive">
+        <e p="Analysis" t="Include">
+          <e p="AssemblyScanner.cs" t="Include" />
+          <e p="DataTypes" t="Include">
+            <e p="ExtensionClass.cs" t="Include" />
+            <e p="ExtensionMethod.cs" t="Include" />
+            <e p="ExtensionMethodInfo.cs" t="Include" />
+            <e p="Hierarchies.cs" t="Include" />
+            <e p="Hierarchy.cs" t="Include" />
+            <e p="HierarchyInfo.cs" t="Include" />
+            <e p="PackageReference.cs" t="Include" />
+            <e p="Reference.cs" t="Include" />
+          </e>
+          <e p="FileWatcher.cs" t="Include" />
+          <e p="Project.cs" t="Include" />
+        </e>
+        <e p="AutoUsing.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="EndPoints.cs" t="Include" />
+        <e p="Errors.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="ErrorResponse.cs" t="Include" />
+          <e p="GetAllReferencesResponse.cs" t="Include" />
+          <e p="Protocol.cs" t="Include" />
+          <e p="SuccessResponse.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="AutoUsing.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Proxy" t="Include">
+          <e p="Cache.cs" t="Include" />
+          <e p="IOProxy.cs" t="Include" />
+          <e p="MessageEventArgs.cs" t="Include" />
+          <e p="Request.cs" t="Include" />
+          <e p="Response.cs" t="Include" />
+          <e p="SerializerSettings.cs" t="Include" />
+        </e>
+        <e p="Server.cs" t="Include" />
+        <e p="Util.cs" t="Include" />
+      </e>
+      <e p="AutoUsingTest" t="IncludeRecursive">
+        <e p="AutoUsingTest.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ChildProcessTracker.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="AutoUsingTest.AssemblyInfo.cs" t="Include" />
+              <e p="AutoUsingTest.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ServerTest.cs" t="Include" />
+        <e p="TestTest.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TestProg" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="TestProg.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="TestProg.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
