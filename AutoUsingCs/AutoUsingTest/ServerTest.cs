@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Collections.Generic;
 using AutoUsing.Analysis.DataTypes;
+using AutoUsing.Proxy;
 
 // using 
 
