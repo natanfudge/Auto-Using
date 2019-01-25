@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5699270a-1911-4204-84e0-0bfc5308a5e4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AutoUsing/Analysis/DataTypes/ReferenceInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoUsingTest/TestUtil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Auto-Using-Git/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Auto-Using-Git/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Auto-Using-Git/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Auto-Using-Git/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Analysis/AssemblyScanner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Analysis/AssemblyScanner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Analysis/DataTypes/Reference.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Analysis/DataTypes/Reference.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Analysis/Project.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Analysis/Project.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Models/ErrorResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Models/ErrorResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Models/GetAllReferencesResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Models/GetAllReferencesResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Models/Protocol.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Models/Protocol.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Models/SuccessResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Models/SuccessResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Proxy/GlobalCache.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Proxy/IOProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Proxy/IOProxy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Proxy/Response.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Proxy/Response.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Server.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/Util.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsing/obj/Debug/netcoreapp2.1/AutoUsing.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/ServerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/ServerTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/ServerTestHell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/ServerTestHell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsing.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsing.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsingTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsingTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsingTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/bin/Debug/netcoreapp2.1/AutoUsingTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AutoUsingTest/obj/Debug/netcoreapp2.1/AutoUsingTest.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestProg/obj/Debug/netcoreapp2.1/TestProg.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestProg/obj/Debug/netcoreapp2.1/TestProg.assets.cache" afterDir="false" />
-    </list>
+    <list default="true" id="5699270a-1911-4204-84e0-0bfc5308a5e4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +12,13 @@
     <session id="-1141774494">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.70" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -89,11 +54,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoUsing/Util.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
+            <state relative-caret-position="2838">
               <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
               <folding>
                 <marker date="1548419953331" expanded="true" signature="6:223" ph="..." />
-                <marker date="1548419953331" expanded="true" signature="244:4399" ph="{...}" />
                 <marker date="1548419953331" expanded="true" signature="275:4397" ph="{...}" />
                 <marker date="1548419953331" expanded="true" signature="290:588" ph="///     Indicates whether the specified string is null or an System.String.Empty string. ... " />
                 <marker date="1548419953331" expanded="true" signature="648:716" ph="{...}" />
@@ -122,8 +86,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoUsingTest/ServerTest.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-401">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="770">
+              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding>
                 <marker date="1548420162066" expanded="false" signature="6:182" ph="..." />
                 <marker date="1548420162066" expanded="true" signature="218:2198" ph="{...}" />
@@ -145,11 +109,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Cache/CompletionCaches.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="726">
               <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding>
                 <marker date="1548420050606" expanded="true" signature="6:129" ph="..." />
-                <marker date="1548420050606" expanded="true" signature="165:1758" ph="{...}" />
                 <marker date="1548420050606" expanded="true" signature="201:1756" ph="{...}" />
                 <marker date="1548420050606" expanded="true" signature="467:741" ph="{...}" />
                 <marker date="1548420050606" expanded="true" signature="671:731" ph="/* TODO save extensions,hierachies ... */" />
@@ -165,37 +128,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Project.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="1694">
               <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
               <folding>
-                <marker date="1548418090484" expanded="true" signature="6:197" ph="..." />
-                <marker date="1548418090484" expanded="true" signature="227:7295" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="234:377" ph="///     Loads and keeps `.csproj` file's data. ... " />
-                <marker date="1548418090484" expanded="true" signature="416:7293" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="1085:1406" ph="///     Loads and keeps `.csproj` file's data. ... " />
-                <marker date="1548418090484" expanded="true" signature="1458:2554" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="1891:2128" ph="/* Using NuGet Packages Location, We won't need to wait for project ... */" />
-                <marker date="1548418090484" expanded="true" signature="2588:2976" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="2653:2737" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="2779:2966" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="3190:3383" ph="///     Loads the basic info about the specified project file. ... " />
-                <marker date="1548418090484" expanded="true" signature="3435:3663" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="3673:3771" ph="///     Starts watching the project file for changes. ... " />
-                <marker date="1548418090484" expanded="true" signature="3800:4319" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="3908:4256" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="4074:4169" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="4329:4474" ph="///     Gets the current NuGet packages installation directory ... " />
-                <marker date="1548418090484" expanded="true" signature="4520:4744" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="4754:4872" ph="///     Loads the relative dll paths of all the libraries of the project. ... " />
-                <marker date="1548418090484" expanded="true" signature="4917:5514" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="5524:5635" ph="///     Loads full package info for each reference of the project. ... " />
-                <marker date="1548418090484" expanded="true" signature="5680:6683" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="5865:6673" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="6356:6659" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="6451:6639" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="6833:6995" ph="{...}" />
-                <marker date="1548418090484" expanded="true" signature="7005:7148" ph="///     Stops the &lt;see cref=&quot;FileWatcher&quot;/&gt; used by this instance ... " />
-                <marker date="1548418090484" expanded="true" signature="7178:7287" ph="{...}" />
+                <marker date="1548420579557" expanded="true" signature="6:197" ph="..." />
+                <marker date="1548420579557" expanded="true" signature="234:377" ph="///     Loads and keeps `.csproj` file's data. ... " />
+                <marker date="1548420579557" expanded="true" signature="416:7281" ph="{...}" />
+                <marker date="1548420579557" expanded="true" signature="1085:1406" ph="///     Loads and keeps `.csproj` file's data. ... " />
+                <marker date="1548420579557" expanded="true" signature="1458:2364" ph="{...}" />
+                <marker date="1548420579557" expanded="true" signature="1891:2128" ph="/* Using NuGet Packages Location, We won't need to wait for project ... */" />
+                <marker date="1548420579557" expanded="true" signature="6821:6983" ph="{...}" />
+                <marker date="1548420579557" expanded="true" signature="6993:7136" ph="///     Stops the &lt;see cref=&quot;FileWatcher&quot;/&gt; used by this instance ... " />
+                <marker date="1548420579557" expanded="true" signature="7166:7275" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -204,11 +148,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AutoUsingTest/ServerTestHell.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="132">
               <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
                 <marker date="1548413339781" expanded="false" signature="6:209" ph="..." />
-                <marker date="1548413339781" expanded="true" signature="234:4295" ph="{...}" />
                 <marker date="1548413339781" expanded="true" signature="241:394" ph="/// Starts an actual physical server as a server process to test if it works like that. This is hell to work with ... " />
                 <marker date="1548413339781" expanded="true" signature="442:4293" ph="{...}" />
                 <marker date="1548413339781" expanded="true" signature="583:1616" ph="{...}" />
@@ -334,6 +277,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -341,59 +285,11 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsing" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsing" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Analysis" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsing" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Analysis" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Cache" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsing" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Analysis" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="DataTypes" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsing" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Models" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsing" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Proxy" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="AutoUsingTest" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Auto-Using-Git" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="TestProg" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,7 +311,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.Default">
+  <component name="RunManager">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -439,9 +335,6 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue=".NET Project.Default" />
-    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -454,6 +347,7 @@
       <workItem from="1548354115296" duration="932000" />
       <workItem from="1548355051673" duration="11238000" />
       <workItem from="1548411258178" duration="8865000" />
+      <workItem from="1548420618548" duration="197000" />
     </task>
     <task id="LOCAL-00001" summary="project restructure + lots of changes">
       <created>1548354965696</created>
@@ -480,7 +374,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22304000" />
+    <option name="totallyTimeSpent" value="22501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,10 +389,9 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20682302" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20895523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Stacktrace" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
@@ -514,6 +407,7 @@
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5010661" side_tool="true" weight="0.3991323" />
       <window_info anchor="bottom" id="Build" order="14" weight="0.329718" />
+      <window_info anchor="bottom" id="Stacktrace" order="15" weight="0.329718" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -641,135 +535,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding>
-            <marker date="1548413150797" expanded="true" signature="38:1018" ph="{...}" />
-            <marker date="1548413150797" expanded="true" signature="71:1016" ph="{...}" />
-            <marker date="1548413150797" expanded="true" signature="218:291" ph="{...}" />
-            <marker date="1548413150797" expanded="true" signature="361:478" ph="{...}" />
-            <marker date="1548413150797" expanded="true" signature="527:773" ph="{...}" />
-            <marker date="1548413150797" expanded="true" signature="816:1010" ph="{...}" />
-            <marker date="1548413150797" expanded="true" signature="848:1000" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsingTest/TestUtil.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1548410773077" expanded="false" signature="6:89" ph="..." />
-            <marker date="1548410773077" expanded="true" signature="113:742" ph="{...}" />
-            <marker date="1548410773077" expanded="true" signature="148:610" ph="{...}" />
-            <marker date="1548410773077" expanded="true" signature="236:466" ph="{...}" />
-            <marker date="1548410773077" expanded="true" signature="287:456" ph="{...}" />
-            <marker date="1548410773077" expanded="true" signature="520:604" ph="{...}" />
-            <marker date="1548410773077" expanded="true" signature="659:740" ph="{...}" />
-            <marker date="1548410773077" expanded="true" signature="723:734" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F877879B-672A-4B22-8F21-69738D548E79/ad/8eb369b9/BaseRunTests.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="315" column="12" selection-start-line="315" selection-start-column="12" selection-end-line="315" selection-end-column="12" />
-          <folding>
-            <marker date="1548413790335" expanded="true" signature="0:443" ph="/* Decompiled with JetBrains decompiler ... */" />
-            <marker date="1548413790335" expanded="false" signature="451:2035" ph="..." />
-            <marker date="1548413790335" expanded="true" signature="2108:22563" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="2149:22561" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="3473:3485" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="3856:4417" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4451:4522" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4467:4516" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4579:4659" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4595:4653" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4717:4797" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4733:4791" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4839:4911" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4855:4905" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4955:5038" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="4971:5032" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5075:5145" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5091:5139" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5192:5267" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5208:5261" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5327:5411" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5343:5405" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5439:6756" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5477:6683" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5673:5891" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="5920:6178" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="6194:6675" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="6274:6431" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="6462:6665" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="6783:6980" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="7008:7333" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="7857:8078" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="7873:7916" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="7943:8072" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="8109:10266" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="8588:8816" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="8899:9065" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="10343:10425" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="10466:11150" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="11271:16213" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="11638:15799" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="11948:15438" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="11972:14689" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="12265:14639" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="13117:14152" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="13757:14069" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="14720:15330" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="15348:15428" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="15451:15791" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="16254:16362" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="16458:16969" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="16474:16738" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="16765:16963" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="17015:17027" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="17174:19167" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="17540:19035" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="18141:18373" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="18863:18937" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="19209:19271" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="19408:20048" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="19459:19835" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="19846:20042" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="20125:20928" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="20165:20370" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="20429:20903" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="21158:21470" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="21578:21979" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="21759:21946" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="22095:22557" ph="{...}" />
-            <marker date="1548413790335" expanded="true" signature="22360:22527" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsing/Models/GetAllReferencesResponse.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1548409587937" expanded="true" signature="61:173" ph="{...}" />
-            <marker date="1548409587937" expanded="true" signature="116:171" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/DataTypes/Reference.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding>
-            <marker date="1548413627437" expanded="false" signature="6:108" ph="..." />
-            <marker date="1548413627437" expanded="true" signature="129:765" ph="{...}" />
-            <marker date="1548413627437" expanded="true" signature="158:763" ph="{...}" />
-            <marker date="1548413627437" expanded="true" signature="321:412" ph="{...}" />
-            <marker date="1548413627437" expanded="true" signature="461:640" ph="{...}" />
-            <marker date="1548413627437" expanded="true" signature="683:757" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,12 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-          <folding>
-            <marker date="1548414432908" expanded="false" signature="6:57" ph="..." />
-            <marker date="1548414432908" expanded="true" signature="78:447" ph="{...}" />
-            <marker date="1548414432908" expanded="true" signature="218:281" ph="{...}" />
-            <marker date="1548414432908" expanded="true" signature="330:443" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,11 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding>
-            <marker date="1548409579480" expanded="true" signature="43:457" ph="{...}" />
-            <marker date="1548409579480" expanded="true" signature="50:338" ph="///     The JSON serialized response returned to Visual Studio Code.  ... " />
-            <marker date="1548409579480" expanded="true" signature="365:455" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,13 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <marker date="1548312288902" expanded="true" signature="43:744" ph="{...}" />
-            <marker date="1548312288902" expanded="true" signature="50:138" ph="///     A request received from Visual Studio Code. ... " />
-            <marker date="1548312288902" expanded="true" signature="163:686" ph="{...}" />
-            <marker date="1548312288902" expanded="true" signature="553:679" ph="{...}" />
-            <marker date="1548312288902" expanded="true" signature="692:740" ph="/* public class RequestArgs&lt;T&gt; ... */" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,42 +583,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <marker date="1548066988595" expanded="false" signature="6:47" ph="..." />
-            <marker date="1548066988595" expanded="true" signature="78:808" ph="{...}" />
-            <marker date="1548066988595" expanded="true" signature="109:806" ph="{...}" />
-            <marker date="1548066988595" expanded="true" signature="219:313" ph="{...}" />
-            <marker date="1548066988595" expanded="true" signature="460:682" ph="{...}" />
-            <marker date="1548066988595" expanded="true" signature="725:800" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/FileWatcher.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1548151469744" expanded="true" signature="37:551" ph="{...}" />
-            <marker date="1548151469744" expanded="true" signature="44:184" ph="///     An abstraction over the &lt;see cref&quot;FileSystemWatcher&quot;/&gt; to watch ... " />
-            <marker date="1548151469744" expanded="true" signature="233:549" ph="{...}" />
-            <marker date="1548151469744" expanded="true" signature="283:543" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Cache/Cache.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
           <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <marker date="1548415943281" expanded="false" signature="6:73" ph="..." />
-            <marker date="1548415943281" expanded="true" signature="109:1100" ph="{...}" />
-            <marker date="1548415943281" expanded="true" signature="137:1098" ph="{...}" />
-            <marker date="1548415943281" expanded="true" signature="278:748" ph="{...}" />
-            <marker date="1548415943281" expanded="true" signature="370:496" ph="{...}" />
-            <marker date="1548415943281" expanded="true" signature="513:738" ph="{...}" />
-            <marker date="1548415943281" expanded="true" signature="994:1092" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,28 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <marker date="1548419137113" expanded="false" signature="6:171" ph="..." />
-            <marker date="1548419137113" expanded="true" signature="201:5725" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="236:5723" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="286:726" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="312:540" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="572:716" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="777:830" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="993:1214" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="1019:1128" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="1159:1204" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="1264:1728" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="1448:1686" ph="/* var grouped = references ... */" />
-            <marker date="1548419137113" expanded="true" signature="1793:3274" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="1892:2828" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="2616:2731" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="3361:3515" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="3578:4388" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="4726:5579" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="5053:5519" ph="{...}" />
-            <marker date="1548419137113" expanded="true" signature="5637:5717" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,17 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
           <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <marker date="1548418090406" expanded="false" signature="6:144" ph="..." />
-            <marker date="1548418090406" expanded="true" signature="180:1359" ph="{...}" />
-            <marker date="1548418090406" expanded="true" signature="187:276" ph="/// Completion cache of all of the base c## libraries ... " />
-            <marker date="1548418090406" expanded="true" signature="312:1357" ph="{...}" />
-            <marker date="1548418090406" expanded="true" signature="396:577" ph="{...}" />
-            <marker date="1548418090406" expanded="true" signature="608:796" ph="{...}" />
-            <marker date="1548418090406" expanded="true" signature="707:786" ph="{...}" />
-            <marker date="1548418090406" expanded="true" signature="844:1043" ph="{...}" />
-            <marker date="1548418090406" expanded="true" signature="1116:1351" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -937,40 +645,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <marker date="1548419953376" expanded="true" signature="6:220" ph="..." />
-            <marker date="1548419953376" expanded="true" signature="242:3761" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="249:327" ph="/// Specifies the logic for every request ... " />
-            <marker date="1548419953376" expanded="true" signature="351:3759" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="508:584" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="629:702" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="732:887" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="767:877" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="959:1910" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="1062:1170" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="1332:1769" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="1551:1754" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="1786:1900" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="1970:2329" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="1993:2319" ph="/* var projectFilePath = req.Arguments; ... */" />
-            <marker date="1548419953376" expanded="true" signature="2392:2930" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="2415:2920" ph="/* var projectName = req.Arguments; ... */" />
-            <marker date="1548419953376" expanded="true" signature="2988:3141" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="3041:3131" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="3202:3753" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="3274:3379" ph="{...}" />
-            <marker date="1548419953376" expanded="true" signature="3503:3608" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsing/Util.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
+        <state relative-caret-position="2838">
           <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
           <folding>
             <marker date="1548419953331" expanded="true" signature="6:223" ph="..." />
-            <marker date="1548419953331" expanded="true" signature="244:4399" ph="{...}" />
             <marker date="1548419953331" expanded="true" signature="275:4397" ph="{...}" />
             <marker date="1548419953331" expanded="true" signature="290:588" ph="///     Indicates whether the specified string is null or an System.String.Empty string. ... " />
             <marker date="1548419953331" expanded="true" signature="648:716" ph="{...}" />
@@ -995,13 +678,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Cache/CompletionCaches.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <marker date="1548420050606" expanded="true" signature="6:129" ph="..." />
+            <marker date="1548420050606" expanded="true" signature="201:1756" ph="{...}" />
+            <marker date="1548420050606" expanded="true" signature="467:741" ph="{...}" />
+            <marker date="1548420050606" expanded="true" signature="671:731" ph="/* TODO save extensions,hierachies ... */" />
+            <marker date="1548420050606" expanded="true" signature="768:994" ph="/// Converts a list of raw reference info into data that is more easily interpreted as a completion ... " />
+            <marker date="1548420050606" expanded="true" signature="1087:1359" ph="{...}" />
+            <marker date="1548420050606" expanded="true" signature="1535:1580" ph="{...}" />
+            <marker date="1548420050606" expanded="true" signature="1705:1750" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Project.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1694">
+          <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
+          <folding>
+            <marker date="1548420579557" expanded="true" signature="6:197" ph="..." />
+            <marker date="1548420579557" expanded="true" signature="234:377" ph="///     Loads and keeps `.csproj` file's data. ... " />
+            <marker date="1548420579557" expanded="true" signature="416:7281" ph="{...}" />
+            <marker date="1548420579557" expanded="true" signature="1085:1406" ph="///     Loads and keeps `.csproj` file's data. ... " />
+            <marker date="1548420579557" expanded="true" signature="1458:2364" ph="{...}" />
+            <marker date="1548420579557" expanded="true" signature="1891:2128" ph="/* Using NuGet Packages Location, We won't need to wait for project ... */" />
+            <marker date="1548420579557" expanded="true" signature="6821:6983" ph="{...}" />
+            <marker date="1548420579557" expanded="true" signature="6993:7136" ph="///     Stops the &lt;see cref=&quot;FileWatcher&quot;/&gt; used by this instance ... " />
+            <marker date="1548420579557" expanded="true" signature="7166:7275" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsingTest/ServerTestHell.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="132">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
             <marker date="1548413339781" expanded="false" signature="6:209" ph="..." />
-            <marker date="1548413339781" expanded="true" signature="234:4295" ph="{...}" />
             <marker date="1548413339781" expanded="true" signature="241:394" ph="/// Starts an actual physical server as a server process to test if it works like that. This is hell to work with ... " />
             <marker date="1548413339781" expanded="true" signature="442:4293" ph="{...}" />
             <marker date="1548413339781" expanded="true" signature="583:1616" ph="{...}" />
@@ -1021,65 +738,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Project.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="77" column="62" selection-start-line="77" selection-start-column="62" selection-end-line="77" selection-end-column="62" />
-          <folding>
-            <marker date="1548418090484" expanded="true" signature="6:197" ph="..." />
-            <marker date="1548418090484" expanded="true" signature="227:7295" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="234:377" ph="///     Loads and keeps `.csproj` file's data. ... " />
-            <marker date="1548418090484" expanded="true" signature="416:7293" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="1085:1406" ph="///     Loads and keeps `.csproj` file's data. ... " />
-            <marker date="1548418090484" expanded="true" signature="1458:2554" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="1891:2128" ph="/* Using NuGet Packages Location, We won't need to wait for project ... */" />
-            <marker date="1548418090484" expanded="true" signature="2588:2976" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="2653:2737" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="2779:2966" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="3190:3383" ph="///     Loads the basic info about the specified project file. ... " />
-            <marker date="1548418090484" expanded="true" signature="3435:3663" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="3673:3771" ph="///     Starts watching the project file for changes. ... " />
-            <marker date="1548418090484" expanded="true" signature="3800:4319" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="3908:4256" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="4074:4169" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="4329:4474" ph="///     Gets the current NuGet packages installation directory ... " />
-            <marker date="1548418090484" expanded="true" signature="4520:4744" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="4754:4872" ph="///     Loads the relative dll paths of all the libraries of the project. ... " />
-            <marker date="1548418090484" expanded="true" signature="4917:5514" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="5524:5635" ph="///     Loads full package info for each reference of the project. ... " />
-            <marker date="1548418090484" expanded="true" signature="5680:6683" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="5865:6673" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="6356:6659" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="6451:6639" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="6833:6995" ph="{...}" />
-            <marker date="1548418090484" expanded="true" signature="7005:7148" ph="///     Stops the &lt;see cref=&quot;FileWatcher&quot;/&gt; used by this instance ... " />
-            <marker date="1548418090484" expanded="true" signature="7178:7287" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutoUsing/Analysis/Cache/CompletionCaches.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <marker date="1548420050606" expanded="true" signature="6:129" ph="..." />
-            <marker date="1548420050606" expanded="true" signature="165:1758" ph="{...}" />
-            <marker date="1548420050606" expanded="true" signature="201:1756" ph="{...}" />
-            <marker date="1548420050606" expanded="true" signature="467:741" ph="{...}" />
-            <marker date="1548420050606" expanded="true" signature="671:731" ph="/* TODO save extensions,hierachies ... */" />
-            <marker date="1548420050606" expanded="true" signature="768:994" ph="/// Converts a list of raw reference info into data that is more easily interpreted as a completion ... " />
-            <marker date="1548420050606" expanded="true" signature="1087:1359" ph="{...}" />
-            <marker date="1548420050606" expanded="true" signature="1535:1580" ph="{...}" />
-            <marker date="1548420050606" expanded="true" signature="1705:1750" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AutoUsingTest/ServerTest.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-401">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="770">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
             <marker date="1548420162066" expanded="false" signature="6:182" ph="..." />
             <marker date="1548420162066" expanded="true" signature="218:2198" ph="{...}" />

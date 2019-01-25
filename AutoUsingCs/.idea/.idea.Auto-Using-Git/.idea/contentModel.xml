@@ -12,6 +12,9 @@
     <e p="C:\Users\natan\Desktop\Auto-Using-Git\AutoUsingCs" t="IncludeFlat">
       <e p="Auto-Using-Git.sln" t="IncludeFlat" />
       <e p="AutoUsing" t="IncludeRecursive">
+        <e p="_autousingcache" t="Include">
+          <e p="AutoUsing.json" t="Include" />
+        </e>
         <e p="Analysis" t="Include">
           <e p="AssemblyScanner.cs" t="Include" />
           <e p="Cache" t="Include">
