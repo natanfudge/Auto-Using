@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace AutoUsing
 {
@@ -10,9 +11,9 @@ namespace AutoUsing
         /// </summary>
         public event EventHandler<MessageEventArgs> EditorDataReceived;
 
-        public void WriteData(string response)
+        public void WriteData(Response response)
         {
-            Console.WriteLine(response);
+            Console.WriteLine(JsonConvert.SerializeObject(response, Serializer.Settings));
         }
 
         /// <summary>

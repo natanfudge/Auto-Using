@@ -37,42 +37,12 @@ namespace AutoUsing
                 return;
             }
 
-//            Server.AddCmdArgProjects(args);
+            //            Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
             {
-                /*
-                    {"Command":"ping","arguments":""}
-                    {"Command":"AddProjects","arguments":"C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj,
-                    "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsingTest.csproj"}
-                    ...
-                */
+         
 
-                //TODO: turn that into:
-                /*
-                {"Name":"ping","arguments":{}}}
-                {
-                    "Name":"AddProjects",
-                    "arguments":{
-                        "Projects" : ["C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj",
-                                      "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsingTest.csproj"],
-                        "Color":"Orange"
-                    }
-                }
-
-                etc...
-                
-                Then each function in Server.cs is declared like this:
-                void Pong(PongRequest req){...}
-                void AddProjects(AddProjectsRequest req){...}
-                void RemoveProject(RemoveProjectRequest req){...}
-
-                Then we can actually access 'req.arguments.color' as a typed object without having to 'guess' that the string 'req.arguments' actually means color.
-                
-                
-                 */
-
-                
 
                 Request req;
                 try
@@ -81,8 +51,8 @@ namespace AutoUsing
                 }
                 catch (Exception ex)
                 {
-                    if(ex is JsonSerializationException || ex is JsonReaderException)
-                    Server.Error(Errors.InvalidRequestFormat);
+                    if (ex is JsonSerializationException || ex is JsonReaderException)
+                        Server.Error(Errors.InvalidRequestFormat);
                     return;
                 }
 
@@ -92,32 +62,49 @@ namespace AutoUsing
                     return;
                 }
 
-
+                Response response = new Response();
                 switch (req.Command)
                 {
                     case EndPoints.GetAllReferences:
-                        Server.GetAllReferences(req.Specificly<GetAllReferencesRequest>());
+                        response = Server.GetAllReferences(req.Specificly<GetAllReferencesRequest>());
                         break;
                     case EndPoints.AddProject:
+                        
+                        /* response =*/
                         Server.AddProject(req);
                         break;
                     case EndPoints.RemoveProject:
+                        
+                        /* response = */
                         Server.RemoveProject(req);
                         break;
                     case EndPoints.Ping:
-                        Server.Pong(req);
+                        response = Server.Pong(req);
                         break;
                     case EndPoints.AddProjects:
-                        Server.AddProjects(req.Specificly<AddProjectsRequest>());
+                        response = Server.AddProjects(req.Specificly<AddProjectsRequest>());
                         break;
 
                     default:
-                        Server.Error(Errors.UndefinedRequest);
+                        response = Server.Error(Errors.UndefinedRequest);
                         break;
                 }
+
+                // JsonConvert.SerializeObject()
+
+                Server.Proxy.WriteData(response);
+
+
             };
 
             Server.Listen();
         }
+        
+        
+//        static void OnProcessExit (object sender, EventArgs e)
+//        {
+//            Console.WriteLine ("Server closing and saving");
+//            GlobalCache.References.Save();
+//        }
     }
 }

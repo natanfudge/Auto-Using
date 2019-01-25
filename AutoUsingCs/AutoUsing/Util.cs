@@ -5,8 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-
 using AutoUsing.DataTypes;
+using Newtonsoft.Json;
 
 namespace AutoUsing
 {
@@ -107,7 +107,31 @@ namespace AutoUsing
             {
                 fileContents = reader.ReadToEnd();
             }
+
             return fileContents;
+        }
+
+        public static string ParseEnvironmentVariables(this string path)
+        {
+            var directories = path.Split(Path.DirectorySeparatorChar);
+            var parsed = directories.Select(dir =>
+            {
+                if (dir.StartsWith("$"))
+                {
+                    var variable = dir.Substring(2, dir.Length - 3);
+                    var result = Environment.GetEnvironmentVariable(variable);
+                    return result;
+                }
+                else return dir;
+            });
+            var joined = string.Join(Path.DirectorySeparatorChar, parsed);
+
+            return joined;
+        }
+
+        public static string ToIndentedJson(this object obj)
+        {
+            return JsonConvert.SerializeObject(obj, Formatting.Indented);
         }
     }
 }

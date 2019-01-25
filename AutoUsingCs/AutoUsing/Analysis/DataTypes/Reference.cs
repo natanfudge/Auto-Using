@@ -20,7 +20,7 @@ namespace AutoUsing
         {
             return obj is Reference reference &&
                    Name == reference.Name &&
-                   EqualityComparer<List<string>>.Default.Equals(Namespace, reference.Namespace);
+                   Namespace.SequenceEqual(reference.Namespace);
         }
 
         public override int GetHashCode()

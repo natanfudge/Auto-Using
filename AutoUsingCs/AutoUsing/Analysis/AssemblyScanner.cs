@@ -3,51 +3,38 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using AutoUsing.Analysis.DataTypes;
 using AutoUsing.DataTypes;
 
 namespace AutoUsing.Analysis
 {
     public class AssemblyScanner
     {
+        public AssemblyScanner(string path)
+        {
+            try
+            {
+//                var env = Environment.GetEnvironmentVariable("UserProfile");
+                var fullPath = path.ParseEnvironmentVariables();
+                Assembly = Assembly.LoadFile(fullPath);
+            }
+            catch (Exception e)
+            {
+                if (e is BadImageFormatException || e is FileLoadException) Assembly = null;
+                throw;
+            }
+        }
 
         public AssemblyScanner(Assembly assembly)
         {
             Assembly = assembly;
         }
         
-        // private IEnumerable<Assembly> assemblies;
 
-//        public AssemblyScanner()
-//        {
-//            assemblies = GetAllAssemblies();
-//        }
-
-        private static FileInfo[] GetBinFiles()
-        {
-            var dotnetDir = typeof(int).Assembly.Location;
-            return new DirectoryInfo(dotnetDir).GetFiles("*.dll");
-
-        }
-
-        public static IEnumerable<Assembly> GetAllAssemblies()
-        {
-            var bins = GetBinFiles();
-            return bins.Select(file =>
-            {
-                try
-                {
-                    return Assembly.LoadFile(file.FullName);
-                }
-                catch (BadImageFormatException)
-                {
-                    return null;
-                }
-
-            }).Where(assembly => assembly != null).Append(typeof(int).Assembly);
-
-        }
 
         private Assembly Assembly { get; set; }
+
+        public bool CouldNotLoad() => Assembly == null;
 
         public bool LoadAssembly(string path)
         {
@@ -62,19 +49,23 @@ namespace AutoUsing.Analysis
             }
         }
 
-        public List<Reference> GetAllTypes()
+        public List<ReferenceInfo> GetAllTypes()
         {
             var references = Assembly.GetExportedTypes()
-                                    .Select(type => new KeyValuePair<string, string>((type.Name).NoTilde(), type.Namespace));
-
-            var grouped = references
-                .Distinct()
-                .GroupBy(kv => kv.Key)
-                .Select(group => new Reference(group.Key, group.Select(kv => kv.Value).ToList()))
+                .Select(type => new ReferenceInfo(type.Name.NoTilde(), type.Namespace))
                 .ToList();
 
-            return grouped;
+//            var grouped = references
+//                .Distinct()
+//                .GroupBy(kv => kv.Key)
+//                .Select(group => new Reference(group.Key, group.Select(kv => kv.Value).ToList()))
+//                .ToList();
+
+            return references;
         }
+
+
+        
 
         public List<Hierarchies> GetAllHierarchies()
         {
@@ -84,7 +75,9 @@ namespace AutoUsing.Analysis
                     if (type.IsStatic()) return null;
 
                     var baseClass = type.BaseType;
-                    var baseClassStr = baseClass != null ? baseClass.Namespace + "." + baseClass.Name.NoTilde() : "System.Object";
+                    var baseClassStr = baseClass != null
+                        ? baseClass.Namespace + "." + baseClass.Name.NoTilde()
+                        : "System.Object";
                     var fathers = type
                         .GetInterfaces()
                         .Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
@@ -106,7 +99,8 @@ namespace AutoUsing.Analysis
 
             var easierFormat = hierachies
                 .GroupBy(hierachy => hierachy.Name)
-                .Select(group => new Hierarchies(group.Key, group.Select(info => new Hierarchy(info.Namespace, info.Parents)).ToList()))
+                .Select(group => new Hierarchies(group.Key,
+                    group.Select(info => new Hierarchy(info.Namespace, info.Parents)).ToList()))
                 .OrderBy(classHierachies => classHierachies.Name)
                 .ToList();
 
@@ -115,7 +109,10 @@ namespace AutoUsing.Analysis
         }
 
         readonly List<string> ArrayRuntimeImplementations = new List<string>
-         { "System.Collections.Generic.IList", "System.Collections.Generic.ICollection", "System.Collections.Generic.IEnumerable" };
+        {
+            "System.Collections.Generic.IList", "System.Collections.Generic.ICollection",
+            "System.Collections.Generic.IEnumerable"
+        };
 
         public List<ExtensionClass> GetAllExtensionMethods()
         {
@@ -127,7 +124,7 @@ namespace AutoUsing.Analysis
 
             var easierFormat = grouped
                 .Select(extendedClass => new ExtensionClass(extendedClass.First().First().Class,
-                        extendedClass.Select(extensionMethod => new ExtensionMethod(extensionMethod.First().Method,
+                    extendedClass.Select(extensionMethod => new ExtensionMethod(extensionMethod.First().Method,
                         extensionMethod.Select(info => info.Namespace).Distinct().ToList())).Distinct().ToList()))
                 .ToList()
                 .OrderBy(extendedClass => extendedClass.Extends)
@@ -136,7 +133,8 @@ namespace AutoUsing.Analysis
             return easierFormat;
         }
 
-        private static bool ClassCanHaveExtensionMethods(Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
+        private static bool ClassCanHaveExtensionMethods(Type @class) =>
+            @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
 
         private static string ExtendedClassName(ExtensionMethodInfo info) => (info.Class).NoTilde();
 
@@ -148,16 +146,17 @@ namespace AutoUsing.Analysis
 
             var extensionMethods = extendingClasses.SelectMany(
                 extendingClass => extendingClass.GetExtensionMethods()
-                .Select(extendingMethod =>
-                {
-                    var extendedClass = extendingMethod.GetExtendedClass().Namespace + "." + extendingMethod.GetExtendedClass().Name.NoTilde();
+                    .Select(extendingMethod =>
+                    {
+                        var extendedClass = extendingMethod.GetExtendedClass().Namespace + "." +
+                                            extendingMethod.GetExtendedClass().Name.NoTilde();
 
-                    return new ExtensionMethodInfo(
-                        extendingClass.Namespace,
-                        extendingMethod.Name,
-                        extendedClass
-                     );
-                })).ToList();
+                        return new ExtensionMethodInfo(
+                            extendingClass.Namespace,
+                            extendingMethod.Name,
+                            extendedClass
+                        );
+                    })).ToList();
 
             return extensionMethods;
         }

@@ -5,3 +5,5 @@ node_modules
 *.vsix
 **/bin
 **/obj
+
+#TODO i don't know why it's including the binaries, get rid of them :(

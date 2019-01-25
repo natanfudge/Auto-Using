@@ -1,7 +1,7 @@
 
 namespace AutoUsing
 {
-    public class ErrorResponse : Response<ErrorResponse>
+    public class ErrorResponse : Response
     {
         public ErrorResponse()
         {

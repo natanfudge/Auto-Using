@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using AutoUsing.Proxy;
-using Newtonsoft.Json;
+using AutoUsing.Analysis.Cache;
+using AutoUsing.Analysis.DataTypes;
 using Newtonsoft.Json.Linq;
 
-namespace AutoUsing
+namespace AutoUsing.Analysis
 {
     /// <summary>
     ///     Loads and keeps `.csproj` file's data.
@@ -26,6 +26,9 @@ namespace AutoUsing
         public string NuGetPackageRoot { get; private set; }
         public string FilePath { get; private set; }
         public string FileName { get; private set; }
+
+        public CompletionCaches Caches { get; private set; }
+
 
         /// <summary>
         ///     Loads and keeps `.csproj` file's data.
@@ -55,11 +58,31 @@ namespace AutoUsing
 
             // Package References
             LoadPackageReferences();
-
+            
             // Optional: Watch for changes.
             if (watch) Watch();
             
+            // Loads completion info from cache files
+            LoadCache();
         }
+
+        private void LoadCache()
+        {
+            Caches = new CompletionCaches
+            {
+                Types = new Cache<ReferenceInfo>(GetCacheLocation())
+            };
+
+            if (Caches.Types.IsEmpty())
+            {
+                var scanners = References.Select(reference => new AssemblyScanner(reference.Path));
+                Caches.LoadScanResults(scanners);         
+            }
+        }
+
+        // TODO: probably change this to somewhere more hidden
+        private string GetCacheLocation() =>
+            Path.Combine(Directory.GetParent(FilePath).FullName, "_autousingcache", FileName);
 
         /// <summary>
         ///     Loads the basic info about the specified project file.
@@ -90,6 +113,7 @@ namespace AutoUsing
                 }
 
                 LoadPackageReferences();
+                UpdateCache();
             };
             FileWatcher.EnableRaisingEvents = true;
         }
@@ -103,7 +127,6 @@ namespace AutoUsing
             Document.Load(Path.Combine(RootDirectory, $"obj/{Name}.csproj.nuget.g.props"));
 
             NuGetPackageRoot = Document.SelectSingleNode("//x:NuGetPackageRoot", NamespaceManager)?.InnerText;
-
         }
 
         /// <summary>
@@ -117,10 +140,10 @@ namespace AutoUsing
             var targets = assets["targets"];
             var targetLibs = targets.First().First();
 
-            LibraryAssemblies = targetLibs.ToDictionary(lib => ((JProperty)lib).Name, lib =>
-            {
-                return lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList();
-            }).Where(kv => kv.Value != null).ToDictionary();
+            LibraryAssemblies = targetLibs
+                .ToDictionary(lib => ((JProperty) lib).Name,
+                    lib => { return lib.First()["compile"]?.Select(assembly => ((JProperty) assembly).Name).ToList(); })
+                .Where(kv => kv.Value != null).ToDictionary();
         }
 
         /// <summary>
@@ -151,6 +174,14 @@ namespace AutoUsing
                     });
                 }
             }
+        }
+
+        
+        //TODO: Optimize to only update when a reference is added, and to only scan the reference added.
+        private void UpdateCache()
+        {
+            var scanners = References.Select(reference => new AssemblyScanner(reference.Path));
+            Caches.LoadScanResults(scanners);
         }
 
         /// <summary>

@@ -1,7 +1,7 @@
 
 namespace AutoUsing
 {
-    public class SuccessResponse : Response<SuccessResponse>
+    public class SuccessResponse : Response
     {
         public SuccessResponse()
         {

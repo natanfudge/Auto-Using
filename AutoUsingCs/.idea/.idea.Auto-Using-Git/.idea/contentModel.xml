@@ -14,6 +14,11 @@
       <e p="AutoUsing" t="IncludeRecursive">
         <e p="Analysis" t="Include">
           <e p="AssemblyScanner.cs" t="Include" />
+          <e p="Cache" t="Include">
+            <e p="Cache.cs" t="Include" />
+            <e p="CompletionCaches.cs" t="Include" />
+            <e p="GlobalCache.cs" t="Include" />
+          </e>
           <e p="DataTypes" t="Include">
             <e p="ExtensionClass.cs" t="Include" />
             <e p="ExtensionMethod.cs" t="Include" />
@@ -23,6 +28,7 @@
             <e p="HierarchyInfo.cs" t="Include" />
             <e p="PackageReference.cs" t="Include" />
             <e p="Reference.cs" t="Include" />
+            <e p="ReferenceInfo.cs" t="Include" />
           </e>
           <e p="FileWatcher.cs" t="Include" />
           <e p="Project.cs" t="Include" />
@@ -47,7 +53,6 @@
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Proxy" t="Include">
-          <e p="GlobalCache.cs" t="Include" />
           <e p="IOProxy.cs" t="Include" />
           <e p="MessageEventArgs.cs" t="Include" />
           <e p="Request.cs" t="Include" />
@@ -71,6 +76,7 @@
         </e>
         <e p="ServerTest.cs" t="Include" />
         <e p="ServerTestHell.cs" t="Include" />
+        <e p="TestUtil.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="TestProg" t="IncludeRecursive">

@@ -15,7 +15,10 @@ namespace AutoUsing
 
     public class GetAllReferencesRequest : Json
     {
-        public string projectName { get; set; }
+
+
+        public string ProjectName { get; set; }
+        public string WordToComplete { get; set; }
     }
 
 

@@ -9,6 +9,9 @@ using Newtonsoft.Json;
 
 namespace AutoUsingTest
 {
+    /// <summary>
+    /// Starts an actual physical server as a server process to test if it works like that. This is hell to work with...
+    /// </summary>
     [TestClass]
     public class ServerTestHell
     {
