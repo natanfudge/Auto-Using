@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace AutoUsing
+namespace AutoUsing.Proxy
 {
     /// <summary>
     ///     A request received from Visual Studio Code.

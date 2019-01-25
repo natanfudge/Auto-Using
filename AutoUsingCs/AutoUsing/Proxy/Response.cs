@@ -1,6 +1,4 @@
-using Newtonsoft.Json;
-
-namespace AutoUsing
+namespace AutoUsing.Proxy
 {
     /// <summary>
     ///     The JSON serialized response returned to Visual Studio Code. 

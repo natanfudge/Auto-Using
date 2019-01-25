@@ -1,9 +1,8 @@
 using System;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace AutoUsing
+namespace AutoUsing.Analysis.DataTypes
 {
     public class Reference
     {

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AutoUsing.DataTypes
+namespace AutoUsing.Analysis.DataTypes
 {
     public class HierarchyInfo
     {

@@ -1,4 +1,4 @@
-namespace AutoUsing
+namespace AutoUsing.Analysis.DataTypes
 {
     /// <summary>
     ///     Represents a NuGet package reference information.

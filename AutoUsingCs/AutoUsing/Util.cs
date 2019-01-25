@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
-using AutoUsing.DataTypes;
 using Newtonsoft.Json;
 
 namespace AutoUsing

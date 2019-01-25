@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AutoUsing.Models;
+using AutoUsing.Proxy;
 using Newtonsoft.Json;
-using AutoUsing.DataTypes;
 
 namespace AutoUsing
 {

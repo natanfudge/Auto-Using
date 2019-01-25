@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoUsing.Analysis.DataTypes;
-using AutoUsing.DataTypes;
 
 namespace AutoUsing.Analysis.Cache
 {

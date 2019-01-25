@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AutoUsing
+namespace AutoUsing.Analysis.DataTypes
 {
     public class ExtensionMethod
     {

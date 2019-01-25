@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace AutoUsing
+namespace AutoUsing.Proxy
 {
     /// <summary>
     ///     Encapsulated representation of data received or sent to the console.

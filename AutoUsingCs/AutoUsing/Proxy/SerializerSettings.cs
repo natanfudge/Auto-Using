@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace AutoUsing
+namespace AutoUsing.Proxy
 {
     /// <summary>
     ///     Json serialization settings.

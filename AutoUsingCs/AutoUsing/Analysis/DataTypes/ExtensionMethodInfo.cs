@@ -1,6 +1,6 @@
 using System;
 
-namespace AutoUsing
+namespace AutoUsing.Analysis.DataTypes
 {
     public class ExtensionMethodInfo
     {

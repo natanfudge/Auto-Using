@@ -1,5 +1,7 @@
 
-namespace AutoUsing
+using AutoUsing.Proxy;
+
+namespace AutoUsing.Models
 {
     public class SuccessResponse : Response
     {

@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using Newtonsoft.Json;
 
-namespace AutoUsing
+namespace AutoUsing.Proxy
 {
     public class IOProxy
     {

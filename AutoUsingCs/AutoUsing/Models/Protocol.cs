@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using AutoUsing.Models;
 
-namespace AutoUsing
+namespace AutoUsing.Models
 {
 
     

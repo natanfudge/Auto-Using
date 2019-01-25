@@ -5,6 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using System.Linq;
 using System.Collections.Generic;
+using AutoUsing.Analysis.DataTypes;
+using AutoUsing.Proxy;
 
 // using 
 
@@ -54,6 +56,7 @@ namespace AutoUsingTest
         [TestMethod]
         public void GetAllBaseExtensionMethods()
         {
+            Assert.AreEqual(1,1);
             //TODO
         }
 

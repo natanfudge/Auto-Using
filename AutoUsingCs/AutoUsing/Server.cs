@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using AutoUsing.Analysis;
 using AutoUsing.Analysis.Cache;
-using AutoUsing.DataTypes;
 using AutoUsing.Models;
+using AutoUsing.Proxy;
 using FireSharp.Extensions;
 
 

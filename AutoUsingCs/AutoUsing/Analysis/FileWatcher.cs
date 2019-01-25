@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace AutoUsing
+namespace AutoUsing.Analysis
 {
     /// <summary>
     ///     An abstraction over the <see cref"FileSystemWatcher"/> to watch
