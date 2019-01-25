@@ -58,10 +58,10 @@ namespace AutoUsing.Analysis
 
             // Package References
             LoadPackageReferences();
-            
+
             // Optional: Watch for changes.
             if (watch) Watch();
-            
+
             // Loads completion info from cache files
             LoadCache();
         }
@@ -76,13 +76,13 @@ namespace AutoUsing.Analysis
             if (Caches.Types.IsEmpty())
             {
                 var scanners = References.Select(reference => new AssemblyScanner(reference.Path));
-                Caches.LoadScanResults(scanners);         
+                Caches.LoadScanResults(scanners);
             }
         }
 
         // TODO: probably change this to somewhere more hidden
         private string GetCacheLocation() =>
-            Path.Combine(Directory.GetParent(FilePath).FullName, "_autousingcache", FileName);
+            Path.Combine(Directory.GetParent(FilePath).FullName, "_autousingcache", Path.ChangeExtension(FileName, ".json"));
 
         /// <summary>
         ///     Loads the basic info about the specified project file.
@@ -141,8 +141,8 @@ namespace AutoUsing.Analysis
             var targetLibs = targets.First().First();
 
             LibraryAssemblies = targetLibs
-                .ToDictionary(lib => ((JProperty) lib).Name,
-                    lib => { return lib.First()["compile"]?.Select(assembly => ((JProperty) assembly).Name).ToList(); })
+                .ToDictionary(lib => ((JProperty)lib).Name,
+                    lib => { return lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList(); })
                 .Where(kv => kv.Value != null).ToDictionary();
         }
 
@@ -176,7 +176,7 @@ namespace AutoUsing.Analysis
             }
         }
 
-        
+
         //TODO: Optimize to only update when a reference is added, and to only scan the reference added.
         private void UpdateCache()
         {
