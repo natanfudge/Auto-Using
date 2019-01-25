@@ -1,53 +1,53 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Collections.Immutable;
-using System.Xml.Linq;
-using System.Threading;
-using System.Collections;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-
 using AutoUsing.DataTypes;
 
-namespace AutoUsing
+namespace AutoUsing.Analysis
 {
     public class AssemblyScanner
     {
+
+        public AssemblyScanner(Assembly assembly)
+        {
+            Assembly = assembly;
+        }
+        
         // private IEnumerable<Assembly> assemblies;
 
-        // public AssemblyScanner()
-        // {
-        //     assemblies = GetAllAssemblies();
-        // }
+//        public AssemblyScanner()
+//        {
+//            assemblies = GetAllAssemblies();
+//        }
 
-        // public static FileInfo[] GetBinFiles()
-        // {
-        //     var dotnetDir = @"/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/bin/Debug/netcoreapp2.1/";
-        //     return new DirectoryInfo(dotnetDir).GetFiles("*.dll");
+        private static FileInfo[] GetBinFiles()
+        {
+            var dotnetDir = typeof(int).Assembly.Location;
+            return new DirectoryInfo(dotnetDir).GetFiles("*.dll");
 
-        // }
+        }
 
-        // private IEnumerable<Assembly> GetAllAssemblies()
-        // {
-        //     var bins = GetBinFiles();
-        //     return bins.Select(file =>
-        //     {
-        //         try
-        //         {
-        //             return Assembly.LoadFile(file.FullName);
-        //         }
-        //         catch (BadImageFormatException)
-        //         {
-        //             return null;
-        //         }
+        public static IEnumerable<Assembly> GetAllAssemblies()
+        {
+            var bins = GetBinFiles();
+            return bins.Select(file =>
+            {
+                try
+                {
+                    return Assembly.LoadFile(file.FullName);
+                }
+                catch (BadImageFormatException)
+                {
+                    return null;
+                }
 
-        //     }).Where(assembly => assembly != null).Append(typeof(int).Assembly);
+            }).Where(assembly => assembly != null).Append(typeof(int).Assembly);
 
-        // }
+        }
 
-        Assembly Assembly { get; set; }
+        private Assembly Assembly { get; set; }
 
         public bool LoadAssembly(string path)
         {

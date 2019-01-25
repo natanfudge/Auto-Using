@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 namespace AutoUsingTest
 {
     [TestClass]
-    public class ServerTest
+    public class ServerTestHell
     {
         private static Process Server;
         private static int Proccesing = 1;
@@ -72,19 +72,19 @@ namespace AutoUsingTest
             Assert.AreEqual("{\"Success\":true,\"Body\":null}", response);
         }
 
-        [TestMethod]
-        public void GetTypes()
-        {
-            AddProjects();
-            var request = new Request
-                {Command = "getAllReferences", Arguments = new GetAllReferencesRequest {projectName = "AutoUsing"}};
-            
-//            Program.Server.SendAllReferences(new GetAllReferencesRequest {projectName = "AutoUsing"});
-                
-            var response = Request(request);
-            var expectedResponse = JsonConvert.DeserializeObject<GetAllReferencesResponse>(response);
-//            Assert.AreEqual();
-        }
+//        [TestMethod]
+//        public void GetTypes()
+//        {
+//            AddProjects();
+//            var request = new Request
+//                {Command = "getAllReferences", Arguments = new GetAllReferencesRequest {projectName = "AutoUsing"}};
+//            
+////            Program.Server.SendAllReferences(new GetAllReferencesRequest {projectName = "AutoUsing"});
+//                
+//            var response = Request(request);
+//            var expectedResponse = JsonConvert.DeserializeObject<GetAllReferencesResponse>(response);
+////            Assert.AreEqual();
+//        }
 
 
         private static string Request(string req)

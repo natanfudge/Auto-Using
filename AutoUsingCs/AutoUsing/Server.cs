@@ -1,6 +1,8 @@
 using System.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using AutoUsing.Analysis;
 using AutoUsing.DataTypes;
 using AutoUsing.Proxy;
 using AutoUsing.Models;
@@ -19,43 +21,42 @@ namespace AutoUsing
 
         public void Pong(Request req)
         {
-            Proxy.WriteData(new SuccessResponse { Body = "pong" });
+            Proxy.WriteData(new SuccessResponse {Body = "pong"});
         }
 
         public void Error(string error)
         {
-            Proxy.WriteData(new ErrorResponse { Body = error });
+            Proxy.WriteData(new ErrorResponse {Body = error});
         }
 
         public void Listen()
         {
             while (true)
             {
-                Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
+                Proxy.ReadData(new MessageEventArgs {Data = Console.ReadLine()});
             }
         }
 
 
-        public void SendAllReferences(GetAllReferencesRequest req)
+        public Response<ErrorResponse> GetAllReferences(GetAllReferencesRequest req)
         {
             var projectName = req.projectName;
 
             if (projectName.IsNullOrEmpty())
             {
-                Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
-                return;
+//                Proxy.WriteData();
+                return new ErrorResponse {Body = Errors.ProjectNameIsRequired};
             }
 
             // Using C# 7.2 `is expression` to check for null, and assign variable
             if (Projects.Find(o => o.Name == projectName) is Project project)
             {
-                Proxy.WriteData(new GetAllReferencesResponse { References = Cache.References.Memory });
+                Proxy.WriteData(new GetAllReferencesResponse {References = GlobalCache.References.Memory});
             }
             else
             {
-                Proxy.WriteData(new ErrorResponse { Body = Errors.SpecifiedProjectWasNotFound });
+                Proxy.WriteData(new ErrorResponse {Body = Errors.SpecifiedProjectWasNotFound});
             }
-
         }
 
         public void AddProject(Request req)
@@ -96,16 +97,25 @@ namespace AutoUsing
                 Projects.Add(new Project(path, watch: true));
             }
         }
-        /**
-        {"Command":"addProjects","Arguments":{"projects":["Hello"]}}
-         */
 
         public void AddProjects(AddProjectsRequest req)
         {
+            if (req.Projects.Any(path => !File.Exists(path)))
+            {
+                Proxy.WriteData(new ErrorResponse {Body = Errors.NonExistentProject});
+                return;
+            }
+
+            const string csproj = ".csproj";
+
+            if (req.Projects.Any(path => Path.GetExtension(path) != csproj))
+            {
+                Proxy.WriteData(new ErrorResponse {Body = Errors.NonExistentProject});
+                return;
+            }
+
             Projects.AddRange(req.Projects.Select(path => new Project(path, watch: true)));
             Proxy.WriteData(new SuccessResponse());
         }
-
-
     }
 }

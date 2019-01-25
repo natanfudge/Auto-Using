@@ -12,7 +12,7 @@ namespace AutoUsing
     public class Response<T>
     {
         public bool Success { get; set; }
-        public object Body { get; set; }
+        public T Body { get; set; }
 
         public static implicit operator Response<T>(string json) => JsonConvert.DeserializeObject<Response<T>>(json, Serializer.Settings);
 

@@ -34,6 +34,7 @@
         <e p="Models" t="Include">
           <e p="ErrorResponse.cs" t="Include" />
           <e p="GetAllReferencesResponse.cs" t="Include" />
+          <e p="Json.cs" t="Include" />
           <e p="Protocol.cs" t="Include" />
           <e p="SuccessResponse.cs" t="Include" />
         </e>
@@ -46,7 +47,7 @@
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Proxy" t="Include">
-          <e p="Cache.cs" t="Include" />
+          <e p="GlobalCache.cs" t="Include" />
           <e p="IOProxy.cs" t="Include" />
           <e p="MessageEventArgs.cs" t="Include" />
           <e p="Request.cs" t="Include" />
@@ -69,7 +70,7 @@
           </e>
         </e>
         <e p="ServerTest.cs" t="Include" />
-        <e p="TestTest.cs" t="Include" />
+        <e p="ServerTestHell.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="TestProg" t="IncludeRecursive">

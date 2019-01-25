@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-
+using AutoUsing.Proxy;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -58,6 +58,7 @@ namespace AutoUsing
 
             // Optional: Watch for changes.
             if (watch) Watch();
+            
         }
 
         /// <summary>
@@ -102,6 +103,7 @@ namespace AutoUsing
             Document.Load(Path.Combine(RootDirectory, $"obj/{Name}.csproj.nuget.g.props"));
 
             NuGetPackageRoot = Document.SelectSingleNode("//x:NuGetPackageRoot", NamespaceManager)?.InnerText;
+
         }
 
         /// <summary>

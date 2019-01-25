@@ -6,15 +6,15 @@ using AutoUsing.DataTypes;
 
 namespace AutoUsing
 {
-    class Program
+    public class Program
     {
         // static IOProxy Proxy = new IOProxy();
         // static AssemblyScanner Scanner { get; set; }
         // static List<Project> Projects = new List<Project>();
 
-        static Server Server = new Server();
+        public static Server Server = new Server();
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             Console.WriteLine("Auto-Using server started.");
@@ -37,7 +37,7 @@ namespace AutoUsing
                 return;
             }
 
-            Server.AddCmdArgProjects(args);
+//            Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
             {
@@ -86,11 +86,17 @@ namespace AutoUsing
                     return;
                 }
 
+                if (req == null)
+                {
+                    Server.Error(Errors.InvalidRequestFormat);
+                    return;
+                }
+
 
                 switch (req.Command)
                 {
                     case EndPoints.GetAllReferences:
-                        Server.SendAllReferences(req.Specificly<GetAllReferencesRequest>());
+                        Server.GetAllReferences(req.Specificly<GetAllReferencesRequest>());
                         break;
                     case EndPoints.AddProject:
                         Server.AddProject(req);
