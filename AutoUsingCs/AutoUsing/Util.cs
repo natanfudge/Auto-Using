@@ -99,17 +99,13 @@ namespace AutoUsing
             return str;
         }
 
-        public static string ReadAll(this FileStream file)
-        {
-            string fileContents;
-            using (StreamReader reader = new StreamReader(file))
-            {
-                fileContents = reader.ReadToEnd();
-            }
 
-            return fileContents;
-        }
-
+        /// <summary>
+        /// Converts a path with environment variables into an actual path,
+        ///  for example "${UserProfile}/.nuget/amar" => "C:/users/natan/.nuget/amar"
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         public static string ParseEnvironmentVariables(this string path)
         {
             var directories = path.Split(Path.DirectorySeparatorChar);
@@ -128,6 +124,7 @@ namespace AutoUsing
             return joined;
         }
 
+        
         public static string ToIndentedJson(this object obj)
         {
             return JsonConvert.SerializeObject(obj, Formatting.Indented);

@@ -2,6 +2,7 @@ using System.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using AutoUsing.Analysis;
 using AutoUsing.Analysis.Cache;
 using AutoUsing.Models;
@@ -31,13 +32,22 @@ namespace AutoUsing
 
         public void Listen()
         {
-            while (true)
+//            Task.Run(() =>
             {
-                Proxy.ReadData(new MessageEventArgs {Data = Console.ReadLine()});
+                while (true)
+                {
+                    Proxy.ReadData(new MessageEventArgs {Data = Console.ReadLine()});
+                }
             }
+//            );
         }
 
 
+        /// <summary>
+        /// Returns the list of types in the .NET base class library + the types in the libraries of the
+        /// requested projected + the types in the requested project, as long as they start with the
+        /// "WordToComplete" field in the request
+        /// </summary>
         public Response GetAllReferences(GetAllReferencesRequest req)
         {
             var projectName = req.ProjectName;
@@ -105,6 +115,9 @@ namespace AutoUsing
             }
         }
 
+        /// <summary>
+        /// Adds .NET projects for the server to watch over and collect assembly info about.
+        /// </summary>
         public Response AddProjects(AddProjectsRequest req)
         {
             if (req.Projects.Any(path => !File.Exists(path)))

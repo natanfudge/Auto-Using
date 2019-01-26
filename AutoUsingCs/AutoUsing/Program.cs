@@ -9,9 +9,6 @@ namespace AutoUsing
 {
     public class Program
     {
-        // static IOProxy Proxy = new IOProxy();
-        // static AssemblyScanner Scanner { get; set; }
-        // static List<Project> Projects = new List<Project>();
 
         public static Server Server = new Server();
 
@@ -24,12 +21,12 @@ namespace AutoUsing
             // I just wanna see this working, a very rough version. 
             // then i'll write tests, refactor the code.
 
-            args = new[]
-            {
-                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
-                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
-               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/AutoUsing.csproj"
-            };
+//            args = new[]
+//            {
+//                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
+//                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+//               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/AutoUsing.csproj"
+//            };
 
 
             if (args.Length <= 0)
@@ -38,7 +35,7 @@ namespace AutoUsing
                 return;
             }
 
-            //            Server.AddCmdArgProjects(args);
+            Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
             {
@@ -91,7 +88,6 @@ namespace AutoUsing
                         break;
                 }
 
-                // JsonConvert.SerializeObject()
 
                 Server.Proxy.WriteData(response);
 
@@ -101,11 +97,5 @@ namespace AutoUsing
             Server.Listen();
         }
         
-        
-//        static void OnProcessExit (object sender, EventArgs e)
-//        {
-//            Console.WriteLine ("Server closing and saving");
-//            GlobalCache.References.Save();
-//        }
     }
 }

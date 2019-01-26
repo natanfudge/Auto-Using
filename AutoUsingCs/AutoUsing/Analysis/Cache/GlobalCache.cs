@@ -21,7 +21,7 @@ namespace AutoUsing.Analysis.Cache
 
         static GlobalCache()
         {
-            var scanners = GetBaseAssemblies();
+            var scanners = GetBaseAssemblyScans();
 
             if (Caches.Types.IsEmpty())
             {
@@ -30,6 +30,9 @@ namespace AutoUsing.Analysis.Cache
         }
 
 
+        /// <summary>
+        /// Gets location of the .NET base assemblies
+        /// </summary>
         private static string[] GetBinFiles()
         {
             var dotnetDir = Directory.GetParent(typeof(int).Assembly.Location);
@@ -37,7 +40,8 @@ namespace AutoUsing.Analysis.Cache
             return files;
         }
 
-        private static IEnumerable<AssemblyScanner> GetBaseAssemblies()
+        
+        private static IEnumerable<AssemblyScanner> GetBaseAssemblyScans()
         {
             var bins = GetBinFiles();
             return bins.Select(file => new AssemblyScanner(file)).Where(assembly => assembly.CouldNotLoad())

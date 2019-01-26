@@ -5,6 +5,9 @@ using AutoUsing.Analysis.DataTypes;
 
 namespace AutoUsing.Analysis.Cache
 {
+    /// <summary>
+    /// Caches for all the data that is required in the auto-using extension 
+    /// </summary>
     public class CompletionCaches
     {
         public Cache<ReferenceInfo> Types { get; set; }

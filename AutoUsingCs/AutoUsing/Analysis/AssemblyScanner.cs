@@ -13,9 +13,7 @@ namespace AutoUsing.Analysis
         {
             try
             {
-//                var env = Environment.GetEnvironmentVariable("UserProfile");
-                var fullPath = path.ParseEnvironmentVariables();
-                Assembly = Assembly.LoadFile(fullPath);
+                Assembly = Assembly.LoadFile(path.ParseEnvironmentVariables());
             }
             catch (Exception e)
             {
@@ -35,18 +33,6 @@ namespace AutoUsing.Analysis
 
         public bool CouldNotLoad() => Assembly == null;
 
-        public bool LoadAssembly(string path)
-        {
-            try
-            {
-                Assembly = Assembly.LoadFile(path);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
 
         public List<ReferenceInfo> GetAllTypes()
         {
@@ -54,18 +40,14 @@ namespace AutoUsing.Analysis
                 .Select(type => new ReferenceInfo(type.Name.NoTilde(), type.Namespace))
                 .ToList();
 
-//            var grouped = references
-//                .Distinct()
-//                .GroupBy(kv => kv.Key)
-//                .Select(group => new Reference(group.Key, group.Select(kv => kv.Value).ToList()))
-//                .ToList();
-
             return references;
         }
 
 
         
 
+        //TODO split this into a method that returns raw HierachiesInfo here, and another one that converts
+        // HierachiesInfo to Hierachies in CompletionCaches
         public List<Hierarchies> GetAllHierarchies()
         {
             var hierachies = Assembly.GetExportedTypes()
@@ -86,7 +68,7 @@ namespace AutoUsing.Analysis
 
                     if (type.IsGenericType) name += "<>";
 
-                    if (name.Equals("Array"))
+                    if (name.Equals("Array") && type.Namespace.Equals("System"))
                     {
                         fathers.AddRange(ArrayRuntimeImplementations);
                     }
@@ -113,6 +95,7 @@ namespace AutoUsing.Analysis
             "System.Collections.Generic.IEnumerable"
         };
 
+        //TODO same thing as in hierachies
         public List<ExtensionClass> GetAllExtensionMethods()
         {
             var allExtensionMethods = GetExtensionMethods(Assembly);
