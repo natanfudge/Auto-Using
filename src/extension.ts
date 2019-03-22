@@ -3,6 +3,9 @@
 import * as vscode from 'vscode';
 import { CompletionProvider, getStoredCompletions } from './CompletionProvider';
 import { SORT_CHEAT } from './Constants';
+import { execFileSync, spawn, execFile } from 'child_process';
+import { Benchmarker } from './Benchmarker';
+import { AutoUsingServer } from './server/AutoUsingServer';
 
 const CSHARP = "csharp";
 
@@ -37,8 +40,26 @@ class TestHelper {
 
 export let testHelper: TestHelper;
 
+const testServer = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\bin\\Debug\\netcoreapp2.1\\TestProg.dll";
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
+
+	let bench = new Benchmarker();
+	// let server = execFile(`dotnet`, [testServer]);
+	// server.stdout.on('data', (data) => {
+	// 	console.log(`stdout: ${data}`);
+	// });
+
+	// server.stdin.write("do shit!\n");
+	// server.stdin.write("do shit!\n");
+	// server.stdin.write("do shit!\n");
+
+
+	// server.on('close', (code) => {
+	// 	console.log(`child process exited with code ${code}`);
+	// });
+
+	let server = new AutoUsingServer();
 
 
 	testHelper = new TestHelper(context);
@@ -98,7 +119,7 @@ export async function addUsing(pick: string | undefined, context: vscode.Extensi
 
 }
 
-export function storeCompletion(context: vscode.ExtensionContext, completion: Completion) :void{
+export function storeCompletion(context: vscode.ExtensionContext, completion: Completion): void {
 	let completions = getStoredCompletions(context);
 	if (Array.isArray(completions) && completions[0] instanceof Completion) {
 		if (!completionCommon(completion, completions)) {

@@ -15,7 +15,7 @@ namespace AutoUsing
         public static void Main(string[] args)
         {
 
-            Console.WriteLine("Auto-Using server started.");
+            Console.WriteLine(" Best Auto-Using server started.");
 
             // TODO: Error Handling.. 👌
             // I just wanna see this working, a very rough version. 
@@ -29,13 +29,13 @@ namespace AutoUsing
 //            };
 
 
-            if (args.Length <= 0)
-            {
-                Server.Error(Errors.AtLeastOneProjectFileIsRequired);
-                return;
-            }
+            // if (args.Length <= 0)
+            // {
+            //     Server.WriteError(Errors.AtLeastOneProjectFileIsRequired);
+            //     return;
+            // }
 
-            Server.AddCmdArgProjects(args);
+            // Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
             {
@@ -50,13 +50,13 @@ namespace AutoUsing
                 catch (Exception ex)
                 {
                     if (ex is JsonSerializationException || ex is JsonReaderException)
-                        Server.Error(Errors.InvalidRequestFormat);
+                        Server.WriteError(Errors.InvalidRequestFormat);
                     return;
                 }
 
                 if (req == null)
                 {
-                    Server.Error(Errors.InvalidRequestFormat);
+                    Server.WriteError(Errors.InvalidRequestFormat);
                     return;
                 }
 

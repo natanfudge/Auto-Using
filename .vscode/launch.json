@@ -19,6 +19,19 @@
 			"preLaunchTask": "npm: watch"
 		},
 		{
+			"name": "Run Extension And Build Server",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "build"
+		},
+		{
 			"name": "Extension Tests",
 			"type": "extensionHost",
 			"request": "launch",
@@ -40,9 +53,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll",
+            "program": "${workspaceFolder}/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/AutoUsingCs",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "integratedTerminal",
             "stopAtEntry": false,

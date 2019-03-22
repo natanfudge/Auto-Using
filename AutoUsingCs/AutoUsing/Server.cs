@@ -30,6 +30,10 @@ namespace AutoUsing
             return new ErrorResponse {Body = error};
         }
 
+        public void WriteError(string error){
+            Proxy.WriteData(Error(error));
+        }
+
         public void Listen()
         {
 //            Task.Run(() =>

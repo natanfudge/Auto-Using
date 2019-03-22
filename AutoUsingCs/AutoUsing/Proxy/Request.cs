@@ -15,8 +15,12 @@ namespace AutoUsing.Proxy
 
         public static implicit operator string(Request request) => JsonConvert.SerializeObject(request, Serializer.Settings);
 
-        public T Specificly<T>(){
-            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject( Arguments), Serializer.Settings);
+        /// <summary>
+        /// Converts a request into a specific request class
+        /// </summary>
+        public T Specificly<T>()
+        {
+            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(Arguments), Serializer.Settings);
         }
 
     }

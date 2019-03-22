@@ -17,14 +17,14 @@
 			}
 		},
 		{
-            "label": "build",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/AutoUsing/AutoUsing.csproj"
-            ],
-            "problemMatcher": "$msCompile"
-        }
+			"label": "build",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/AutoUsingCs/AutoUsing/AutoUsing.csproj"
+			],
+			"problemMatcher": "$msCompile"
+		}
 	]
 }
