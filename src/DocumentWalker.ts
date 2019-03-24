@@ -10,6 +10,7 @@ export class DocumentWalker {
      * CompletionType.EXTENSION if the extension methods of a type should show, and CompletionType.NONE if no completions should appear.
      * 
      */
+    //TODO: ignore comments
     public async getCompletionType(completionPos: vscode.Position): Promise<CompletionType> {
         let currentPos = this.getPrev(completionPos);
 

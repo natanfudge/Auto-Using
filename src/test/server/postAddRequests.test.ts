@@ -33,10 +33,21 @@ suite("Server Responses Tests For After a project has been added", () =>{
 
 
     test("Should get all references", async () => {
-        await server.getAllReferences("TestProg", "");
+        let response = await server.getAllReferences("TestProg", "");
+        assert.notEqual(response,[]);
     });
 
-    test.only("Should get all references filtered by word to complete", async () => {
+    test("Should get all references", async () => {
+        let response = await server.getAllExtensionMethods("TestProg", "S");
+        assert.notEqual(response,[]);
+    });
+
+    test("Should get all references", async () => {
+        let response = await server.getAllHiearchies("TestProg");
+        assert.notEqual(response,[]);
+    });
+
+    test("Should get all references filtered by word to complete", async () => {
         let response = await server.getAllReferences("TestProg", "J");
         assert.notEqual(response,[]);
     });

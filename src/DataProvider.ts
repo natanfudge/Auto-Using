@@ -27,7 +27,7 @@ export class DataProvider {
             let namespaces = new Array<NamespaceHiearchy>(namespaceLen);
             for (let j = 0; j < namespaceLen; j++) {
                 let namespace = hierachy.namespaces[j];
-                namespaces[j] = { namespace: namespace.namespace, fathers: namespace.fathers.slice(0) };
+                namespaces[j] = { namespace: namespace.namespace, parents: namespace.parents.slice(0) };
             }
 
 

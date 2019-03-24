@@ -55,24 +55,24 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	// 	let x = 2;
 	// });
 
-	let workspaceRoot = vscode.workspace.rootPath;
-	if (!workspaceRoot) {
-		return;
-	}
-	let pattern = join(workspaceRoot, 'amar.csproj');
+	// let workspaceRoot = vscode.workspace.rootPath;
+	// if (!workspaceRoot) {
+	// 	return;
+	// }
+	// let pattern = join(workspaceRoot, 'amar.csproj');
 
-	let watcher = vscode.workspace.createFileSystemWatcher("**\\*.csproj");
-	watcher.onDidChange((file) => {
-		let x = 2;
-	});
+	// let watcher = vscode.workspace.createFileSystemWatcher("**\\*.csproj");
+	// watcher.onDidChange((file) => {
+	// 	let x = 2;
+	// });
 
-	watcher.onDidCreate(file => {
-		let x = 2;
-	});
+	// watcher.onDidCreate(file => {
+	// 	let x = 2;
+	// });
 
-	watcher.onDidDelete(file => {
-		let x = 2;
-	});
+	// watcher.onDidDelete(file => {
+	// 	let x = 2;
+	// });
 	
 
 

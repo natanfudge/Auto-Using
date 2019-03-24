@@ -31,7 +31,7 @@ namespace AutoUsing.Analysis.Cache
         }
 
         
-        public void Set(List<T> newMemory) => Memory = newMemory;
+        public void SetCache(List<T> newMemory) => Memory = newMemory;
 
         public List<T> Get() => Memory;
 

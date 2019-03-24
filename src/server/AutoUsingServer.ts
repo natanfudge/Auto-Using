@@ -1,6 +1,8 @@
 import { ChildProcess, execFile, spawn, execFileSync, exec } from "child_process";
-import {addProjects, AddProjectsRequest, Request, Response, GetAllReferencesRequest,
-     getAllReferences, GetAllReferencesResponse, EmptyResponse } from "./Protocol";
+import {
+    addProjects, AddProjectsRequest, Request, Response,
+    getAllReferences, GetAllReferencesResponse, EmptyResponse, GetCompletionDataRequest, GetAllExtensionMethodsResponse, ProjectSpecificRequest, GetAllHiearchiesResponse, getAllExtensions, getAllHiearchies
+} from "./Protocol";
 import { writeFileSync } from "fs";
 import { ReadLine, createInterface } from "readline";
 import { ServerError } from "./Errors";
@@ -41,15 +43,20 @@ export class AutoUsingServer {
     //     // this.process = null;
 
     // }
-    
+
 
 
 
 
 
     public getAllReferences(projectName: string, wordToComplete: string): Promise<GetAllReferencesResponse> {
-        let args: GetAllReferencesRequest = { projectName, wordToComplete };
-        return this.sendRequest({ command: getAllReferences, arguments: args });
+        return this.sendRequest({ command: getAllReferences, arguments: { projectName, wordToComplete } });
+    }
+    public getAllExtensionMethods(projectName: string, wordToComplete: string): Promise<GetAllExtensionMethodsResponse> {
+        return this.sendRequest({ command: getAllExtensions, arguments: { projectName, wordToComplete } });
+    }
+    public getAllHiearchies(projectName: string): Promise<GetAllHiearchiesResponse> {
+        return this.sendRequest({ command: getAllHiearchies, arguments: { projectName } });
     }
     public addProjects(projects: string[]): Promise<EmptyResponse> {
         let args: AddProjectsRequest = { projects };
@@ -65,7 +72,7 @@ export class AutoUsingServer {
         }
     }
 
-    private logRequest(request : string) : void{
+    private logRequest(request: string): void {
         if (logRequests) {
             let length = request.length;
             if (length > maxLogSize) request = request.slice(0, maxLogSize / 2) + " ... " + request.slice(-maxLogSize / 2);

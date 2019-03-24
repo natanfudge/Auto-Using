@@ -14,6 +14,7 @@ namespace AutoUsing
 
         public static void Main(string[] args)
         {
+            //  AppDomain.CurrentDomain.ProcessExit += new EventHandler (Util.OnProcessExit); 
 
             // Console.WriteLine(" Best Auto-Using server started.");
 
@@ -21,12 +22,12 @@ namespace AutoUsing
             // I just wanna see this working, a very rough version. 
             // then i'll write tests, refactor the code.
 
-//            args = new[]
-//            {
-//                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
-//                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
-//               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/AutoUsing.csproj"
-//            };
+            //            args = new[]
+            //            {
+            //                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
+            //                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
+            //               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/AutoUsing.csproj"
+            //            };
 
 
             // if (args.Length <= 0)
@@ -35,11 +36,13 @@ namespace AutoUsing
             //     return;
             // }
 
+            // {"command":"addProjects","arguments":{"projects":["c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsing\\AutoUsing.csproj"]}}
             // Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
             {
-         
+
+
 
 
                 Request req;
@@ -60,19 +63,29 @@ namespace AutoUsing
                     return;
                 }
 
+
+
                 Response response = new Response();
+                var switchTime = DateTime.Now;
                 switch (req.Command)
                 {
                     case EndPoints.GetAllReferences:
-                        response = Server.GetAllReferences(req.Specificly<GetAllReferencesRequest>());
+                        response = Server.GetAllReferences(req.Specificly<GetCompletionDataRequest>());
                         break;
-                    case EndPoints.AddProject:
+                    case EndPoints.getAllExtensions:
+                        response = Server.GetAllExtensionMethods(req.Specificly<GetCompletionDataRequest>());
+                        break;
+                    case EndPoints.getAllHiearchies:
+                        response = Server.GetAllHiearchies(req.Specificly<ProjectSpecificRequest>());
+                        break;
                         
+                    case EndPoints.AddProject:
+
                         /* response =*/
                         Server.AddProject(req);
                         break;
                     case EndPoints.RemoveProject:
-                        
+
                         /* response = */
                         Server.RemoveProject(req);
                         break;
@@ -80,6 +93,7 @@ namespace AutoUsing
                         response = Server.Pong(req);
                         break;
                     case EndPoints.AddProjects:
+                        var addProjectsStart = DateTime.Now;
                         response = Server.AddProjects(req.Specificly<AddProjectsRequest>());
                         break;
 
@@ -89,13 +103,15 @@ namespace AutoUsing
                 }
 
 
+
                 Server.Proxy.WriteData(response);
+
 
 
             };
 
             Server.Listen();
         }
-        
+
     }
 }

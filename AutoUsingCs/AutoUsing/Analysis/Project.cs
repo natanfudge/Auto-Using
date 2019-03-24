@@ -39,6 +39,8 @@ namespace AutoUsing.Analysis
         /// <param name="watch">Whether to watch for further file changes.</param>
         public Project(string filePath, bool watch)
         {
+            var startTime = DateTime.Now;
+
             Document = new XmlDocument();
             References = new List<PackageReference>();
 
@@ -55,7 +57,7 @@ namespace AutoUsing.Analysis
             LoadNuGetRootDirectory();
 
             // Loads the relative pathes to the dll files for each referenced package.
-            LoadLibraryAssemblies();
+            LoadLibraryAssemblyLocations();
 
             // Package References
             LoadPackageReferences();
@@ -65,16 +67,21 @@ namespace AutoUsing.Analysis
 
             // Loads completion info from cache files
             LoadCache();
+
+            startTime.LogTimePassed("Project Creation");
         }
 
         private void LoadCache()
         {
+            // var cacheLocation = ;
             Caches = new CompletionCaches
             {
-                Types = new Cache<ReferenceInfo>(GetCacheLocation())
+                Types = new Cache<ReferenceInfo>(GetCacheLocation("references")),
+                Extensions = new Cache<ExtensionMethodInfo>(GetCacheLocation("extensions")),
+                Hierachies = new Cache<HierarchyInfo>(GetCacheLocation("hiearchies"))
             };
 
-            if (Caches.Types.IsEmpty())
+            if (Caches.Types.IsEmpty() || Caches.Extensions.IsEmpty() || Caches.Hierachies.IsEmpty())
             {
                 var scanners = References.Select(reference => new AssemblyScan(reference.Path));
                 Caches.LoadScanResults(scanners);
@@ -82,8 +89,8 @@ namespace AutoUsing.Analysis
         }
 
         // TODO: probably change this to somewhere more hidden
-        private string GetCacheLocation() =>
-            Path.Combine(Directory.GetParent(FilePath).FullName, "_autousingcache", Path.ChangeExtension(FileName, ".json"));
+        private string GetCacheLocation(string type) =>
+            Path.Combine(Directory.GetParent(FilePath).FullName +"_"+ type, "_autousingcache", Path.ChangeExtension(FileName, ".json"));
 
         /// <summary>
         ///     Loads the basic info about the specified project file.
@@ -133,7 +140,7 @@ namespace AutoUsing.Analysis
         /// <summary>
         ///     Loads the relative dll paths of all the libraries of the project.
         /// </summary>
-        private void LoadLibraryAssemblies()
+        private void LoadLibraryAssemblyLocations()
         {
             var assets = JObject.Parse(File.ReadAllText(Path.Combine(RootDirectory, "obj/project.assets.json")));
 
@@ -191,7 +198,7 @@ namespace AutoUsing.Analysis
         //TODO: Optimize to only update when a reference is added, and to only scan the reference added.
         private void UpdateCache()
         {
-            var scanners = References.Select(reference => new AssemblyScan(reference.Path));
+            var scanners = References.Select(reference => new AssemblyScan(reference.Path)).Where(scanner => !scanner.CouldNotLoad());
             Caches.LoadScanResults(scanners);
         }
 

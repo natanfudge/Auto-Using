@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
@@ -15,20 +16,29 @@ namespace AutoUsingTest
     {
         private Response AddProjects()
         {
+            var start = DateTime.Now;
             var request = new AddProjectsRequest
             {
                 Projects = new List<string>
-                    {"C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\TestProg.csproj"}
+                    {"C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\AutoUsing.csproj"}
             };
             var response = Program.Server.AddProjects(request);
+            start.LogTimePassed("AddProjects");
             return response;
+        }
+
+        [TestMethod]
+        public void AddProjectsTest()
+        {
+            Program.Main(new[]{""});
+            AddProjects();
         }
 
         [TestInitialize]
         public void Init()
         {
-//            var response = AddProjects();
-//            Assert.IsInstanceOfType(response, typeof(SuccessResponse));
+            //            var response = AddProjects();
+            //            Assert.IsInstanceOfType(response, typeof(SuccessResponse));
         }
 
         const string dir = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\";
@@ -39,7 +49,7 @@ namespace AutoUsingTest
         //TODO: filewatcher event is not being triggered when moving using Move()... Need to figure out how to test this
         public void ProjectNameChanged()
         {
-            Program.Main(new[]{oldProj});
+            Program.Main(new[] { oldProj });
             File.Move(oldProj, newProj);
             var serverProjects = TestUtil.GetPrivateField<List<Project>>(Program.Server, "Projects");
             Assert.AreEqual("Amar.csproj", serverProjects[0].FileName);

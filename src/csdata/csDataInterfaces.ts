@@ -6,7 +6,7 @@ declare interface ClassHiearchies {
 
 declare interface NamespaceHiearchy {
     namespace: string;
-    fathers: Array<string>;
+    parents: Array<string>;
 }
 
 declare class Reference {

@@ -9,6 +9,8 @@ namespace AutoUsing
                             AddProjects = "addProjects",
                             RemoveProject = "removeProject",
                             GetAllReferences = "getAllReferences",
+    getAllHiearchies = "getAllHiearchies",
+    getAllExtensions = "getAllExtensions",
                             Ping = "ping";
 
 

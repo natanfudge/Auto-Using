@@ -146,12 +146,23 @@ namespace AutoUsing
         public static void WaitForFileToBeAccesible(string filename)
         {
             //This will lock the execution until the file is ready
-            while (!FileIsAccessible(filename));
+            while (!FileIsAccessible(filename)) ;
         }
 
         public static string ToIndentedJson(this object obj)
         {
             return JsonConvert.SerializeObject(obj, Formatting.Indented);
         }
+
+    
+        public static void LogTimePassed(this DateTime date, string benchmarkName)
+        {
+            if (writeLogs) File.AppendAllText(logLocation,
+             $"{DateTime.Now}: Executing {benchmarkName} took {(DateTime.Now.Millisecond - date.Millisecond)} milliseconds.\n");
+        }
+
+        const bool writeLogs = false;
+        const string logLocation = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\logs\\log.txt";
     }
+
 }

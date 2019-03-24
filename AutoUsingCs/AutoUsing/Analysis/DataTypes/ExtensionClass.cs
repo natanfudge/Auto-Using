@@ -1,3 +1,4 @@
+using System.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -9,23 +10,23 @@ namespace AutoUsing.Analysis.DataTypes
 
         public ExtensionClass(string extendedClass, List<ExtensionMethod> extensionMethods)
         {
-            this.Extends = extendedClass;
-            this.Methods = extensionMethods;
+            this.ExtendedClass = extendedClass;
+            this.ExtensionMethods = extensionMethods;
         }
 
-        public string Extends { get; set; }
-        public List<ExtensionMethod> Methods { get; set; }
+        public string ExtendedClass { get; set; }
+        public List<ExtensionMethod> ExtensionMethods { get; set; }
 
         public override bool Equals(object obj)
         {
             return obj is ExtensionClass @class &&
-                   Extends == @class.Extends &&
-                   EqualityComparer<List<ExtensionMethod>>.Default.Equals(Methods, @class.Methods);
+                   ExtendedClass == @class.ExtendedClass &&
+                  ExtensionMethods.SequenceEqual(@class.ExtensionMethods);
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Extends, Methods);
+            return HashCode.Combine(ExtendedClass, ExtensionMethods);
         }
     }
 }

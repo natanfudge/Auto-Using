@@ -12,7 +12,7 @@ suite(`CompletionProvider Extension Method Tests`, () => {
         await wait2;
     });
 
-    test("Should show extension methods", async () => {
+    test.only("Should show extension methods", async () => {
         let completionList = await complete("ShouldShowExtensions.cs", 3, 2);
         assertContains(completionList, "Select");
     });

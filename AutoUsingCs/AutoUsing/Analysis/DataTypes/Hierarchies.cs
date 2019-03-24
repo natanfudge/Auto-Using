@@ -9,23 +9,23 @@ namespace AutoUsing.Analysis.DataTypes
 
         public Hierarchies(string @class, List<Hierarchy> namespaces)
         {
-            this.Name = @class;
+            this.Class = @class;
             this.Namespaces = namespaces;
         }
 
-        public string Name { get; set; }
+        public string Class { get; set; }
         public List<Hierarchy> Namespaces { get; set; }
 
         public override bool Equals(object obj)
         {
             return obj is Hierarchies hiearchies &&
-                   Name == hiearchies.Name &&
+                   Class == hiearchies.Class &&
                    EqualityComparer<List<Hierarchy>>.Default.Equals(Namespaces, hiearchies.Namespaces);
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, Namespaces);
+            return HashCode.Combine(Class, Namespaces);
         }
     }
 }

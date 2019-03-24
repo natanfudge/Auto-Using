@@ -15,18 +15,22 @@ namespace AutoUsing.Analysis.Cache
         public static CompletionCaches Caches = new CompletionCaches
         {
             Types =
-                new Cache<ReferenceInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/references.json")
-            //TODO extensions, hierachies
+                new Cache<ReferenceInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/references.json"),
+            Extensions = new Cache<ExtensionMethodInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/extensions.json"),
+            Hierachies = new Cache<HierarchyInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/hierachies.json")
+
         };
 
         static GlobalCache()
         {
             var scanners = GetBaseAssemblyScans();
 
-            if (Caches.Types.IsEmpty())
+            if (Caches.Types.IsEmpty() || Caches.Hierachies.IsEmpty() || Caches.Extensions.IsEmpty())
             {
-                Caches.LoadScanResults(scanners); 
+                Caches.LoadScanResults(scanners);
             }
+
+
         }
 
 
@@ -40,11 +44,11 @@ namespace AutoUsing.Analysis.Cache
             return files;
         }
 
-        
+
         private static IEnumerable<AssemblyScan> GetBaseAssemblyScans()
         {
             var bins = GetBinFiles();
-            return bins.Select(file => new AssemblyScan(file)).Where(assembly => assembly.CouldNotLoad())
+            return bins.Select(file => new AssemblyScan(file)).Where(assembly => !assembly.CouldNotLoad())
                 .Append(new AssemblyScan(typeof(int).Assembly));
         }
     }

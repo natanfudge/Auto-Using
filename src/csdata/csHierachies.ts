@@ -4,7 +4,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16,7 +16,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30,7 +30,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -44,7 +44,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -58,7 +58,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -72,7 +72,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -86,7 +86,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -97,7 +97,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuthorizationRule"
         ]
       }
@@ -108,7 +108,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AccessRule"
         ]
       }
@@ -119,7 +119,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -131,7 +131,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -143,7 +143,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -157,7 +157,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -171,7 +171,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -185,7 +185,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -198,7 +198,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -206,7 +206,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -214,7 +214,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -222,7 +222,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -230,7 +230,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -238,7 +238,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -246,7 +246,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -254,7 +254,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -262,7 +262,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -270,7 +270,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -278,7 +278,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -286,7 +286,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -294,7 +294,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -302,7 +302,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -310,7 +310,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -318,7 +318,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -331,7 +331,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
           "System.Threading.Tasks.Dataflow.Internal.IDebuggerDisplay",
@@ -345,7 +345,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -356,7 +356,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -369,7 +369,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -380,7 +380,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -391,7 +391,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -404,7 +404,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -418,7 +418,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.Serialization.IDeserializationCallback",
@@ -432,7 +432,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -446,7 +446,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.SymmetricAlgorithm"
         ]
@@ -458,7 +458,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Internal.Cryptography.ICngSymmetricAlgorithm",
           "System.Security.Cryptography.Aes"
@@ -471,7 +471,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.Aes"
         ]
@@ -483,7 +483,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.Aes"
         ]
@@ -495,7 +495,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -507,7 +507,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -518,7 +518,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -529,7 +529,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Mail.AttachmentBase"
         ]
@@ -541,7 +541,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -561,7 +561,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -572,7 +572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -584,7 +584,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -595,7 +595,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -606,7 +606,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Pipes.PipeStream"
         ]
@@ -618,7 +618,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Pipes.PipeStream"
         ]
@@ -630,7 +630,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -644,7 +644,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.MarshalByRefObject"
         ]
       }
@@ -655,7 +655,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -667,7 +667,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -679,7 +679,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -690,7 +690,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -704,7 +704,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -715,7 +715,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -727,7 +727,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -739,7 +739,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -751,7 +751,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -763,7 +763,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IList",
           "System.Collections.ICollection",
@@ -781,7 +781,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.CollectionConverter"
         ]
       }
@@ -792,7 +792,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -807,7 +807,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -818,7 +818,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -835,7 +835,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -846,7 +846,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -857,7 +857,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -869,7 +869,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -880,7 +880,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Text.Encoding"
         ]
@@ -892,7 +892,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -903,7 +903,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -916,7 +916,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -928,7 +928,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -941,7 +941,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -952,7 +952,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Runtime.Serialization.ISerializable",
           "System.Reflection.Assembly"
@@ -965,7 +965,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -979,7 +979,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -990,7 +990,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1001,7 +1001,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1015,7 +1015,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1026,7 +1026,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1037,7 +1037,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1048,7 +1048,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1059,7 +1059,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -1071,7 +1071,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1082,7 +1082,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1093,7 +1093,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1104,7 +1104,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -1116,7 +1116,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -1130,7 +1130,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1141,7 +1141,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1155,7 +1155,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1166,7 +1166,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1175,7 +1175,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Configuration.Assemblies",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1189,7 +1189,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1200,7 +1200,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1211,7 +1211,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1222,7 +1222,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Loader",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1233,7 +1233,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -1244,7 +1244,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -1257,7 +1257,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1268,7 +1268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.Serialization.IDeserializationCallback",
@@ -1282,7 +1282,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1296,7 +1296,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.MarshalByRefObject"
         ]
       }
@@ -1307,7 +1307,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1318,7 +1318,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1329,7 +1329,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -1341,7 +1341,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -1355,7 +1355,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1369,7 +1369,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1380,7 +1380,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1391,7 +1391,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1402,7 +1402,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1413,7 +1413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1424,7 +1424,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Configuration.Assemblies",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1438,7 +1438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1449,7 +1449,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -1461,7 +1461,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1472,7 +1472,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1483,7 +1483,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1494,7 +1494,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1505,7 +1505,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -1518,7 +1518,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -1529,7 +1529,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -1542,7 +1542,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.ValueType"
         ]
@@ -1554,7 +1554,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Threading.IAsyncLocal",
           "System.Object"
         ]
@@ -1566,7 +1566,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1577,7 +1577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1588,7 +1588,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1599,7 +1599,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.StateMachineAttribute"
         ]
       }
@@ -1610,7 +1610,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1621,7 +1621,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1632,7 +1632,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1643,7 +1643,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1654,7 +1654,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1665,7 +1665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Mail.AttachmentBase"
         ]
@@ -1677,7 +1677,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -1689,7 +1689,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -1709,7 +1709,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1720,7 +1720,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -1733,7 +1733,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1744,7 +1744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -1755,7 +1755,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1766,7 +1766,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1780,7 +1780,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1791,7 +1791,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1805,7 +1805,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuthorizationRule"
         ]
       }
@@ -1816,7 +1816,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuditRule"
         ]
       }
@@ -1827,7 +1827,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -1839,7 +1839,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -1851,7 +1851,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -1863,7 +1863,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1877,7 +1877,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1888,7 +1888,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -1902,7 +1902,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -1915,7 +1915,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1926,7 +1926,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -1937,7 +1937,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.ReadOnlyCollectionBase"
@@ -1950,7 +1950,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -1961,7 +1961,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Threading.EventWaitHandle"
         ]
@@ -1973,7 +1973,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -1986,7 +1986,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -1998,7 +1998,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -2010,7 +2010,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -2022,7 +2022,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2036,7 +2036,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -2047,7 +2047,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IPropagatorBlock",
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -2064,7 +2064,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IReceivableSourceBlock",
           "System.Threading.Tasks.Dataflow.ISourceBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -2074,7 +2074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IReceivableSourceBlock",
           "System.Threading.Tasks.Dataflow.ISourceBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -2089,7 +2089,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -2100,7 +2100,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IFormattable",
           "System.IComparable",
           "System.IComparable",
@@ -2115,7 +2115,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -2126,7 +2126,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Formatters.Binary",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.IFormatter",
           "System.Object"
         ]
@@ -2138,7 +2138,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -2149,7 +2149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -2161,7 +2161,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -2173,7 +2173,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2184,7 +2184,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -2195,7 +2195,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2209,7 +2209,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2220,7 +2220,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2234,7 +2234,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2248,7 +2248,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -2270,7 +2270,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2281,7 +2281,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -2294,7 +2294,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2305,7 +2305,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.ICloneable",
@@ -2319,7 +2319,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2330,7 +2330,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2341,7 +2341,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2352,7 +2352,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -2364,7 +2364,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2375,7 +2375,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -2387,7 +2387,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2398,7 +2398,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Collections.Generic.IEnumerator",
@@ -2414,7 +2414,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2425,7 +2425,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -2436,7 +2436,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Collections.ICollection",
@@ -2452,7 +2452,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IComparable",
@@ -2467,7 +2467,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -2478,7 +2478,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Diagnostics.Switch"
         ]
       }
@@ -2489,7 +2489,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IPropagatorBlock",
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -2506,7 +2506,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.ValueType"
         ]
@@ -2518,7 +2518,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.ValueType"
         ]
@@ -2530,7 +2530,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -2542,7 +2542,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -2553,7 +2553,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2564,7 +2564,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IPropagatorBlock",
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -2581,7 +2581,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -2593,7 +2593,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -2604,7 +2604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -2616,7 +2616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -2630,7 +2630,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -2646,7 +2646,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -2660,7 +2660,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ISortKeyCollection",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -2678,7 +2678,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -2695,7 +2695,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpContent"
         ]
@@ -2707,7 +2707,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -2718,7 +2718,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Collections.Generic.EqualityComparer"
@@ -2731,7 +2731,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -2743,7 +2743,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -2755,7 +2755,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2769,7 +2769,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2783,7 +2783,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2797,7 +2797,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2808,7 +2808,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2819,7 +2819,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2830,7 +2830,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2841,7 +2841,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -2852,7 +2852,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -2863,7 +2863,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -2874,7 +2874,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2885,7 +2885,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2899,7 +2899,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2913,7 +2913,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2924,7 +2924,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.CallSite"
         ]
       }
@@ -2935,7 +2935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -2946,7 +2946,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -2960,7 +2960,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -2971,7 +2971,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -2984,7 +2984,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -2995,7 +2995,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.IDisposable",
           "System.ValueType"
@@ -3008,7 +3008,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -3020,7 +3020,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -3032,7 +3032,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3043,7 +3043,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -3062,7 +3062,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Object"
         ]
@@ -3074,7 +3074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IHashCodeProvider",
           "System.Object"
         ]
@@ -3086,7 +3086,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3100,7 +3100,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3111,7 +3111,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3122,7 +3122,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ConstrainedExecution",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3136,7 +3136,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3147,7 +3147,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -3159,7 +3159,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3173,7 +3173,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IComparable",
           "System.IEquatable",
@@ -3188,7 +3188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3202,7 +3202,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -3213,7 +3213,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
@@ -3228,7 +3228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3242,7 +3242,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.InteropServices.ExternalException"
         ]
@@ -3254,7 +3254,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -3268,7 +3268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.EastAsianLunisolarCalendar"
         ]
@@ -3280,7 +3280,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3294,7 +3294,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3308,7 +3308,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Claims",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3319,7 +3319,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Claims",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IIdentity",
           "System.Object"
         ]
@@ -3331,7 +3331,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Claims",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IPrincipal",
           "System.Object"
         ]
@@ -3343,7 +3343,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3354,7 +3354,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3368,7 +3368,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -3381,7 +3381,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3395,7 +3395,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.WebSockets.WebSocket"
         ]
@@ -3407,7 +3407,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3418,7 +3418,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3429,7 +3429,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3440,7 +3440,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -3452,7 +3452,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -3464,7 +3464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3478,7 +3478,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -3490,7 +3490,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -3502,7 +3502,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3516,7 +3516,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3527,7 +3527,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3541,7 +3541,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3555,7 +3555,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3569,7 +3569,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -3581,7 +3581,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -3600,7 +3600,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3614,7 +3614,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -3626,7 +3626,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3637,7 +3637,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3651,7 +3651,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3662,7 +3662,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Permissions",
-        "fathers": [
+        "parents": [
           "System.Security.Permissions.SecurityAttribute"
         ]
       }
@@ -3673,7 +3673,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3687,7 +3687,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3698,7 +3698,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3709,7 +3709,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -3720,7 +3720,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3731,7 +3731,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -3750,7 +3750,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -3764,7 +3764,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3778,7 +3778,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -3789,7 +3789,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -3802,7 +3802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -3813,7 +3813,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3824,7 +3824,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3835,7 +3835,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -3847,7 +3847,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -3858,7 +3858,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3869,7 +3869,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3880,7 +3880,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.EventInfo"
         ]
@@ -3892,7 +3892,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3903,7 +3903,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3914,7 +3914,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3925,7 +3925,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3936,7 +3936,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.InteropServices.ExternalException"
         ]
@@ -3948,7 +3948,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -3959,7 +3959,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3973,7 +3973,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -3987,7 +3987,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -3998,7 +3998,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4012,7 +4012,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4026,7 +4026,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.ISerializable",
           "System.IAsyncResult",
@@ -4040,7 +4040,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.QualifiedAce"
         ]
       }
@@ -4051,7 +4051,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Security.AccessControl.GenericAcl"
@@ -4064,7 +4064,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.ObjectSecurity"
         ]
       }
@@ -4075,7 +4075,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.GenericSecurityDescriptor"
         ]
       }
@@ -4086,7 +4086,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -4097,7 +4097,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.IDeserializationCallback",
           "System.Object"
         ]
@@ -4109,7 +4109,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4123,7 +4123,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -4136,7 +4136,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.Generic.IComparer",
           "System.Object"
@@ -4149,7 +4149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -4162,7 +4162,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4176,7 +4176,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4187,7 +4187,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4198,7 +4198,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4209,7 +4209,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.IFormattable",
           "System.ValueType"
@@ -4222,7 +4222,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4233,7 +4233,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4244,7 +4244,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.MarshalByRefObject"
@@ -4257,7 +4257,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -4268,7 +4268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -4281,7 +4281,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -4292,7 +4292,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -4305,7 +4305,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.ReadOnlyCollectionBase"
@@ -4318,7 +4318,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ReferenceConverter"
         ]
       }
@@ -4329,7 +4329,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -4340,7 +4340,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -4351,7 +4351,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -4364,7 +4364,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4375,7 +4375,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4389,7 +4389,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -4400,7 +4400,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -4413,7 +4413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Resources.ResourceManager"
         ]
       }
@@ -4424,7 +4424,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -4435,7 +4435,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.KnownAce"
         ]
       }
@@ -4446,7 +4446,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4460,7 +4460,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -4472,7 +4472,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4486,7 +4486,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4500,7 +4500,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4511,7 +4511,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4522,7 +4522,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4533,7 +4533,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4544,7 +4544,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4555,7 +4555,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Concurrent.IProducerConsumerCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -4571,7 +4571,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -4590,7 +4590,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -4601,7 +4601,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Concurrent.IProducerConsumerCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -4617,7 +4617,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Concurrent.IProducerConsumerCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -4633,7 +4633,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -4644,7 +4644,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -4655,7 +4655,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -4668,7 +4668,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4679,7 +4679,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4690,7 +4690,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IConfiguredTaskAwaiter",
@@ -4704,7 +4704,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IConfiguredTaskAwaiter",
@@ -4718,7 +4718,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4729,7 +4729,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4740,7 +4740,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IStateMachineBoxAwareAwaiter",
@@ -4754,7 +4754,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IStateMachineBoxAwareAwaiter",
@@ -4768,7 +4768,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4782,7 +4782,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4796,7 +4796,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4807,7 +4807,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4821,7 +4821,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ConstrainedExecution",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4835,7 +4835,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -4846,7 +4846,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -4859,7 +4859,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4873,7 +4873,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4887,7 +4887,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4898,7 +4898,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4912,7 +4912,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4926,7 +4926,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -4937,7 +4937,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -4948,7 +4948,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -4960,7 +4960,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -4971,7 +4971,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -4985,7 +4985,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -4996,7 +4996,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Data.InternalDataCollectionBase"
@@ -5009,7 +5009,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -5021,7 +5021,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.ConstructorInfo"
         ]
@@ -5033,7 +5033,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MethodBase"
         ]
@@ -5045,7 +5045,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IContainer",
           "System.IDisposable",
           "System.Object"
@@ -5058,7 +5058,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5069,7 +5069,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5080,7 +5080,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -5092,7 +5092,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5103,7 +5103,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5114,7 +5114,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -5126,7 +5126,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5137,7 +5137,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.MarshalByRefObject"
         ]
       }
@@ -5148,7 +5148,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -5161,7 +5161,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -5173,7 +5173,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5184,7 +5184,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5195,7 +5195,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5206,7 +5206,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5217,7 +5217,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5228,7 +5228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5239,7 +5239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -5251,7 +5251,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -5262,7 +5262,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5276,7 +5276,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5287,7 +5287,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5298,7 +5298,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5309,7 +5309,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5320,7 +5320,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5331,7 +5331,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5342,7 +5342,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -5353,7 +5353,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5367,7 +5367,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5378,7 +5378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5389,7 +5389,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -5400,7 +5400,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -5413,7 +5413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5424,7 +5424,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -5437,7 +5437,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5448,7 +5448,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.FormatException"
         ]
@@ -5460,7 +5460,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5474,7 +5474,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5488,7 +5488,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5499,7 +5499,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5510,7 +5510,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -5522,7 +5522,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -5533,7 +5533,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -5546,7 +5546,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Net.ICredentials",
           "System.Net.ICredentialsByHost",
           "System.Collections.IEnumerable",
@@ -5560,7 +5560,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.DataTypeAttribute"
         ]
       }
@@ -5571,7 +5571,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ConstrainedExecution",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5582,7 +5582,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.ConstrainedExecution.CriticalFinalizerObject"
         ]
@@ -5594,7 +5594,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.CriticalHandle"
         ]
@@ -5606,7 +5606,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.CriticalHandle"
         ]
@@ -5618,7 +5618,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5629,7 +5629,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -5641,7 +5641,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Security.Cryptography.CryptographicException"
         ]
@@ -5653,7 +5653,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -5665,7 +5665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5679,7 +5679,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.CSharp.RuntimeBinder",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5690,7 +5690,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.CSharp.RuntimeBinder",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5704,7 +5704,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.CSharp.RuntimeBinder",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5718,7 +5718,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5729,7 +5729,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5740,7 +5740,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5754,7 +5754,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IComparer",
@@ -5770,7 +5770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IFormatProvider",
           "System.ICloneable",
           "System.Object"
@@ -5783,7 +5783,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -5794,7 +5794,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -5806,7 +5806,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5820,7 +5820,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5831,7 +5831,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.GenericAce"
         ]
       }
@@ -5842,7 +5842,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5853,7 +5853,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5864,7 +5864,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5875,7 +5875,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -5886,7 +5886,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5897,7 +5897,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.FormatException"
         ]
@@ -5909,7 +5909,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -5921,7 +5921,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -5935,7 +5935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5946,7 +5946,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5957,7 +5957,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -5971,7 +5971,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5982,7 +5982,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -5993,7 +5993,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -6004,7 +6004,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -6015,7 +6015,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6026,7 +6026,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -6037,7 +6037,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -6049,7 +6049,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -6063,7 +6063,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -6074,7 +6074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6088,7 +6088,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6102,7 +6102,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ICustomTypeDescriptor",
           "System.Object"
         ]
@@ -6114,7 +6114,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -6125,7 +6125,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.Data.IDataAdapter",
@@ -6139,7 +6139,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6150,7 +6150,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6164,7 +6164,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.IServiceProvider",
@@ -6178,7 +6178,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -6189,7 +6189,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -6202,7 +6202,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Data.InternalDataCollectionBase"
@@ -6215,7 +6215,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.IColumnMapping",
           "System.ICloneable",
           "System.MarshalByRefObject"
@@ -6228,7 +6228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.IColumnMappingCollection",
           "System.Collections.IList",
           "System.Collections.ICollection",
@@ -6243,7 +6243,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6254,7 +6254,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Json",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.XmlObjectSerializer"
         ]
       }
@@ -6265,7 +6265,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Json",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6276,7 +6276,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6287,7 +6287,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.XmlObjectSerializer"
         ]
       }
@@ -6298,7 +6298,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6309,7 +6309,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6323,7 +6323,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -6334,7 +6334,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -6346,7 +6346,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6357,7 +6357,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6368,7 +6368,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -6380,7 +6380,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6394,7 +6394,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6405,7 +6405,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -6417,7 +6417,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6428,7 +6428,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6439,7 +6439,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -6450,7 +6450,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6464,7 +6464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -6475,7 +6475,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -6488,7 +6488,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6499,7 +6499,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Data.InternalDataCollectionBase"
@@ -6512,7 +6512,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6523,7 +6523,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6537,7 +6537,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6548,7 +6548,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -6559,7 +6559,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -6572,7 +6572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Data.InternalDataCollectionBase"
@@ -6585,7 +6585,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6599,7 +6599,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6613,7 +6613,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ICustomTypeDescriptor",
           "System.ComponentModel.IEditableObject",
           "System.ComponentModel.IDataErrorInfo",
@@ -6628,7 +6628,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.IServiceProvider",
@@ -6647,7 +6647,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6661,7 +6661,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DescriptionAttribute"
         ]
       }
@@ -6672,7 +6672,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.IServiceProvider",
@@ -6691,7 +6691,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -6702,7 +6702,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -6715,7 +6715,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Data.InternalDataCollectionBase"
@@ -6728,7 +6728,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.ITableMapping",
           "System.ICloneable",
           "System.MarshalByRefObject"
@@ -6741,7 +6741,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.ITableMappingCollection",
           "System.Collections.IList",
           "System.Collections.ICollection",
@@ -6756,7 +6756,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -6767,7 +6767,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -6780,7 +6780,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Data.IDataReader",
           "System.IDisposable",
           "System.Data.IDataRecord",
@@ -6795,7 +6795,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6809,7 +6809,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -6820,7 +6820,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.IServiceProvider",
@@ -6842,7 +6842,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.IServiceProvider",
@@ -6861,7 +6861,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6875,7 +6875,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6886,7 +6886,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -6899,7 +6899,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6917,7 +6917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.CustomConstantAttribute"
         ]
       }
@@ -6928,7 +6928,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -6939,7 +6939,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -6950,7 +6950,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IFormatProvider",
           "System.ICloneable",
           "System.Object"
@@ -6963,7 +6963,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -6977,7 +6977,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IComparable",
@@ -6995,7 +6995,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -7006,7 +7006,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7020,7 +7020,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7031,7 +7031,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7045,7 +7045,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7056,7 +7056,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.Data.IDbCommand",
@@ -7070,7 +7070,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -7083,7 +7083,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -7095,7 +7095,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.Data.IDbConnection",
@@ -7109,7 +7109,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -7124,7 +7124,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.Data.IDataAdapter",
@@ -7140,7 +7140,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.IDataReader",
           "System.IDisposable",
           "System.Data.IDataRecord",
@@ -7155,7 +7155,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ICustomTypeDescriptor",
           "System.Data.IDataRecord",
           "System.Object"
@@ -7168,7 +7168,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7179,7 +7179,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -7191,7 +7191,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.InteropServices.ExternalException"
         ]
@@ -7203,7 +7203,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IConvertible",
           "System.Object"
@@ -7216,7 +7216,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.IDbDataParameter",
           "System.Data.IDataParameter",
           "System.MarshalByRefObject"
@@ -7229,7 +7229,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.IDataParameterCollection",
           "System.Collections.IList",
           "System.Collections.ICollection",
@@ -7244,7 +7244,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7255,7 +7255,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7266,7 +7266,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Data.IDbTransaction",
           "System.IDisposable",
           "System.MarshalByRefObject"
@@ -7279,7 +7279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7293,7 +7293,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7304,7 +7304,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -7315,7 +7315,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7329,7 +7329,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7340,7 +7340,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7351,7 +7351,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7365,7 +7365,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7376,7 +7376,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7387,7 +7387,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7398,7 +7398,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7409,7 +7409,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7420,7 +7420,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7431,7 +7431,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7442,7 +7442,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7456,7 +7456,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -7467,7 +7467,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7478,7 +7478,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7489,7 +7489,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IFormattable",
           "System.IComparable",
           "System.IConvertible",
@@ -7507,7 +7507,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -7518,7 +7518,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7529,7 +7529,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -7540,7 +7540,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7554,7 +7554,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -7565,7 +7565,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -7577,7 +7577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -7591,7 +7591,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7602,7 +7602,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.DecoderFallback"
         ]
       }
@@ -7613,7 +7613,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.DecoderFallbackBuffer"
         ]
       }
@@ -7624,7 +7624,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7635,7 +7635,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -7646,7 +7646,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -7658,7 +7658,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.DecoderFallback"
         ]
       }
@@ -7669,7 +7669,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.DecoderFallbackBuffer"
         ]
       }
@@ -7680,7 +7680,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7694,7 +7694,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7705,7 +7705,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7716,7 +7716,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7727,7 +7727,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7738,7 +7738,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7749,7 +7749,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -7760,7 +7760,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7771,7 +7771,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7782,7 +7782,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7793,7 +7793,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7804,7 +7804,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7815,7 +7815,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Diagnostics.TraceListener"
         ]
@@ -7827,7 +7827,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7838,7 +7838,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -7850,7 +7850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -7863,7 +7863,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpMessageHandler"
         ]
@@ -7875,7 +7875,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -7887,7 +7887,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -7898,7 +7898,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -7909,7 +7909,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Diagnostics.TextWriterTraceListener"
         ]
@@ -7921,7 +7921,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7935,7 +7935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -7946,7 +7946,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -7960,7 +7960,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.ISerializable",
           "System.Transactions.Transaction"
@@ -7973,7 +7973,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -7985,7 +7985,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.SymmetricAlgorithm"
         ]
@@ -7997,7 +7997,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8008,7 +8008,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8019,7 +8019,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -8033,7 +8033,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8044,7 +8044,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.DES"
         ]
@@ -8056,13 +8056,13 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8073,7 +8073,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8084,7 +8084,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8095,7 +8095,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -8108,7 +8108,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -8119,7 +8119,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -8132,7 +8132,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8143,7 +8143,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -8154,7 +8154,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -8168,7 +8168,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.IDesignerOptionService",
           "System.Object"
         ]
@@ -8180,7 +8180,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -8194,7 +8194,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8205,7 +8205,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8216,7 +8216,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -8228,7 +8228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -8239,7 +8239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -8252,7 +8252,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.MenuCommand"
         ]
       }
@@ -8263,7 +8263,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -8277,7 +8277,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8288,7 +8288,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.ComponentModel.LicenseContext"
         ]
@@ -8300,7 +8300,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -8311,7 +8311,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8322,7 +8322,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IObservable",
           "System.IDisposable",
           "System.Diagnostics.DiagnosticSource"
@@ -8335,7 +8335,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -8346,7 +8346,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -8367,7 +8367,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -8381,7 +8381,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8392,7 +8392,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -8403,7 +8403,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8414,7 +8414,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -8428,7 +8428,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8439,7 +8439,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.FileSystemInfo"
         ]
@@ -8451,7 +8451,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]
@@ -8463,7 +8463,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.ObjectSecurity"
         ]
       }
@@ -8474,7 +8474,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.FileSystemSecurity"
         ]
       }
@@ -8485,7 +8485,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8496,7 +8496,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8507,7 +8507,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Security.AccessControl.CommonAcl"
@@ -8520,7 +8520,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -8531,7 +8531,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -8542,7 +8542,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8553,7 +8553,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8564,7 +8564,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8575,7 +8575,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8586,7 +8586,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8597,7 +8597,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8608,7 +8608,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArithmeticException"
         ]
@@ -8620,7 +8620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -8634,7 +8634,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -8645,7 +8645,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -8659,7 +8659,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.TypeLoadException"
         ]
@@ -8671,7 +8671,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Net.EndPoint"
         ]
       }
@@ -8682,7 +8682,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8693,7 +8693,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -8705,7 +8705,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -8719,7 +8719,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -8731,7 +8731,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8742,7 +8742,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -8759,7 +8759,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8770,7 +8770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -8781,7 +8781,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -8792,7 +8792,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -8805,7 +8805,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ProgressChangedEventArgs"
         ]
       }
@@ -8816,7 +8816,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -8829,7 +8829,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -8840,7 +8840,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -8853,7 +8853,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.CancelEventArgs"
         ]
       }
@@ -8864,7 +8864,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -8877,7 +8877,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -8889,7 +8889,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]
@@ -8901,7 +8901,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -8915,7 +8915,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.AsymmetricAlgorithm"
         ]
@@ -8927,7 +8927,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.DSA"
         ]
@@ -8939,7 +8939,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICspAsymmetricAlgorithm",
           "System.Security.Cryptography.DSA"
@@ -8952,7 +8952,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.DSA"
         ]
@@ -8964,7 +8964,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -8975,7 +8975,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricSignatureDeformatter"
         ]
       }
@@ -8986,7 +8986,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricSignatureFormatter"
         ]
       }
@@ -8997,7 +8997,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9011,7 +9011,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9025,7 +9025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -9037,7 +9037,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -9049,7 +9049,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9063,7 +9063,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -9074,7 +9074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IDynamicExpression",
           "System.Linq.Expressions.IArgumentProvider",
           "System.Linq.Expressions.Expression"
@@ -9087,7 +9087,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.ExpressionVisitor"
         ]
       }
@@ -9098,7 +9098,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9109,7 +9109,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.CallSiteBinder"
         ]
       }
@@ -9120,7 +9120,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MethodInfo"
         ]
@@ -9132,7 +9132,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.IDynamicMetaObjectProvider",
           "System.Object"
         ]
@@ -9144,7 +9144,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -9156,7 +9156,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -9167,7 +9167,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9181,7 +9181,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.AsymmetricAlgorithm"
         ]
@@ -9193,7 +9193,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ECDiffieHellman"
         ]
@@ -9205,7 +9205,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ECDiffieHellmanPublicKey"
         ]
@@ -9217,7 +9217,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9231,7 +9231,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ECDiffieHellman"
         ]
@@ -9243,7 +9243,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -9255,7 +9255,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.AsymmetricAlgorithm"
         ]
@@ -9267,7 +9267,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ECDsa"
         ]
@@ -9279,7 +9279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ECDsa"
         ]
@@ -9291,7 +9291,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9305,7 +9305,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -9316,7 +9316,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -9327,7 +9327,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -9338,7 +9338,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -9350,7 +9350,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9364,7 +9364,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -9375,7 +9375,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -9386,7 +9386,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9400,7 +9400,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Timers",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -9411,7 +9411,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Timers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -9424,7 +9424,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -9435,7 +9435,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -9446,7 +9446,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IArgumentProvider",
           "System.Object"
         ]
@@ -9458,7 +9458,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.DataTypeAttribute"
         ]
       }
@@ -9469,7 +9469,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9483,7 +9483,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9494,7 +9494,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.EncoderFallback"
         ]
       }
@@ -9505,7 +9505,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.EncoderFallbackBuffer"
         ]
       }
@@ -9516,7 +9516,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9527,7 +9527,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9538,7 +9538,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -9550,7 +9550,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.EncoderFallback"
         ]
       }
@@ -9561,7 +9561,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Text.EncoderFallbackBuffer"
         ]
       }
@@ -9572,7 +9572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -9584,7 +9584,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9595,7 +9595,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9606,7 +9606,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9620,7 +9620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]
@@ -9632,7 +9632,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9643,7 +9643,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9654,7 +9654,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9668,7 +9668,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9682,7 +9682,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -9694,7 +9694,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9708,7 +9708,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -9720,7 +9720,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.TypeLoadException"
         ]
@@ -9732,7 +9732,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9746,7 +9746,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.IReflect",
           "System.Reflection.IReflectableType",
@@ -9760,7 +9760,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -9771,7 +9771,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.DataTypeAttribute"
         ]
       }
@@ -9782,7 +9782,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Runtime.Serialization.ISerializable",
@@ -9796,7 +9796,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9807,7 +9807,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Linq.EnumerableExecutor"
         ]
       }
@@ -9818,7 +9818,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -9832,7 +9832,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9843,7 +9843,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Linq.IOrderedQueryable",
           "System.Linq.IQueryable",
           "System.Collections.Generic.IEnumerable",
@@ -9861,7 +9861,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -9872,7 +9872,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9881,7 +9881,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9890,7 +9890,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9899,7 +9899,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9908,7 +9908,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9917,7 +9917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9926,7 +9926,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9935,7 +9935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9944,7 +9944,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9953,7 +9953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9962,7 +9962,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9971,7 +9971,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9980,7 +9980,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9989,7 +9989,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -9998,7 +9998,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10007,7 +10007,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10016,7 +10016,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10025,7 +10025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10034,7 +10034,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10043,7 +10043,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10052,7 +10052,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10061,7 +10061,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10070,7 +10070,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10079,7 +10079,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10088,7 +10088,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10097,7 +10097,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10106,7 +10106,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10120,7 +10120,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10129,7 +10129,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10140,7 +10140,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10149,7 +10149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10159,7 +10159,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10168,7 +10168,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10177,7 +10177,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10188,7 +10188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10197,7 +10197,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10207,13 +10207,13 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10222,7 +10222,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10233,13 +10233,13 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10249,7 +10249,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10260,19 +10260,19 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10281,19 +10281,19 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10303,7 +10303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10312,7 +10312,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10321,7 +10321,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -10335,7 +10335,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -10346,7 +10346,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10360,7 +10360,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Object"
@@ -10373,7 +10373,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -10384,7 +10384,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -10397,7 +10397,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -10408,7 +10408,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.InvalidExpressionException"
         ]
@@ -10420,7 +10420,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -10431,7 +10431,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10445,7 +10445,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -10456,7 +10456,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -10467,7 +10467,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10481,7 +10481,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -10492,7 +10492,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10506,7 +10506,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10520,7 +10520,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -10531,7 +10531,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -10543,7 +10543,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -10554,7 +10554,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -10565,7 +10565,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -10577,7 +10577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -10591,7 +10591,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.MemberDescriptor"
         ]
       }
@@ -10602,7 +10602,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.IList",
@@ -10616,7 +10616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -10627,7 +10627,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10641,7 +10641,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10655,7 +10655,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -10668,7 +10668,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -10681,7 +10681,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -10693,7 +10693,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -10704,7 +10704,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MemberInfo"
         ]
@@ -10716,7 +10716,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10730,7 +10730,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10744,7 +10744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -10756,7 +10756,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10770,7 +10770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10784,7 +10784,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -10796,7 +10796,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -10807,7 +10807,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10821,7 +10821,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -10833,7 +10833,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -10844,7 +10844,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -10855,7 +10855,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -10867,7 +10867,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -10878,7 +10878,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10892,7 +10892,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10906,7 +10906,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -10920,7 +10920,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -10931,7 +10931,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Diagnostics.TraceFilter"
         ]
       }
@@ -10942,7 +10942,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Threading.WaitHandle"
         ]
@@ -10954,7 +10954,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -10965,7 +10965,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -10976,7 +10976,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -10988,7 +10988,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ExceptionServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -10999,7 +10999,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11010,7 +11010,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11024,7 +11024,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11035,7 +11035,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11046,7 +11046,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11060,7 +11060,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11074,7 +11074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.CodeAnalysis",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11085,7 +11085,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -11098,7 +11098,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.DataflowBlockOptions"
         ]
       }
@@ -11109,7 +11109,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -11121,7 +11121,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -11132,7 +11132,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.IDynamicMetaObjectProvider",
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
@@ -11149,7 +11149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11160,7 +11160,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -11172,7 +11172,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -11186,7 +11186,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11200,7 +11200,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11211,7 +11211,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11222,7 +11222,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IParameterProvider",
           "System.Linq.Expressions.LambdaExpression"
         ]
@@ -11234,7 +11234,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11248,7 +11248,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11259,7 +11259,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -11271,7 +11271,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -11282,7 +11282,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -11295,7 +11295,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11306,7 +11306,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11317,7 +11317,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11328,7 +11328,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -11340,7 +11340,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MemberAccessException"
         ]
@@ -11352,7 +11352,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11366,7 +11366,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.FieldInfo"
         ]
@@ -11378,7 +11378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11389,7 +11389,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -11401,7 +11401,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -11415,7 +11415,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MemberInfo"
         ]
@@ -11427,7 +11427,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11438,7 +11438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11449,7 +11449,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11463,7 +11463,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11477,7 +11477,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.DataTypeAttribute"
         ]
       }
@@ -11488,7 +11488,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.FileSystemInfo"
         ]
@@ -11500,7 +11500,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]
@@ -11512,7 +11512,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11526,7 +11526,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]
@@ -11538,7 +11538,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11552,7 +11552,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.FileSystemSecurity"
         ]
       }
@@ -11563,7 +11563,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11577,7 +11577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -11589,7 +11589,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -11600,7 +11600,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AccessRule"
         ]
       }
@@ -11611,7 +11611,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuditRule"
         ]
       }
@@ -11622,7 +11622,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Enumeration",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11633,7 +11633,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Enumeration",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -11646,7 +11646,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Enumeration",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -11660,7 +11660,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -11671,7 +11671,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -11684,7 +11684,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MarshalByRefObject"
         ]
@@ -11696,7 +11696,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11710,7 +11710,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.NativeObjectSecurity"
         ]
       }
@@ -11721,7 +11721,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.ISupportInitialize",
@@ -11735,7 +11735,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11746,7 +11746,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11757,7 +11757,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Net.WebRequest"
         ]
@@ -11769,7 +11769,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IDisposable",
           "System.Net.WebResponse"
@@ -11782,7 +11782,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -11793,7 +11793,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -11806,7 +11806,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11817,7 +11817,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Enumeration",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -11830,7 +11830,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Enumeration",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -11843,7 +11843,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ExceptionServices",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -11854,7 +11854,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11865,7 +11865,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11876,7 +11876,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11887,7 +11887,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11898,7 +11898,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11912,7 +11912,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -11926,7 +11926,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11937,7 +11937,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11948,7 +11948,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -11959,7 +11959,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Data.Constraint"
         ]
       }
@@ -11970,7 +11970,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -11981,7 +11981,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -11992,7 +11992,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -12004,7 +12004,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IFormattable",
           "System.Object"
         ]
@@ -12016,7 +12016,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.IFormatter",
           "System.Object"
         ]
@@ -12028,7 +12028,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Formatters",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12042,7 +12042,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.IFormatterConverter",
           "System.Object"
         ]
@@ -12054,7 +12054,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Formatters",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12068,7 +12068,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12082,7 +12082,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.ByteArrayContent"
         ]
@@ -12094,7 +12094,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -12106,7 +12106,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.ICryptoTransform",
           "System.IDisposable",
           "System.Object"
@@ -12119,7 +12119,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12133,7 +12133,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12147,7 +12147,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -12158,7 +12158,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Net.WebRequest"
         ]
@@ -12170,7 +12170,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IDisposable",
           "System.Net.WebResponse"
@@ -12183,7 +12183,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12191,7 +12191,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12199,7 +12199,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12207,7 +12207,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12215,7 +12215,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12223,7 +12223,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12231,7 +12231,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12239,7 +12239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12247,7 +12247,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12255,7 +12255,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12263,7 +12263,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12271,7 +12271,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12279,7 +12279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12287,7 +12287,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12295,7 +12295,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12303,7 +12303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12311,7 +12311,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -12324,7 +12324,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -12335,7 +12335,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12349,7 +12349,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12363,7 +12363,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12377,7 +12377,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -12388,7 +12388,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -12402,7 +12402,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12416,7 +12416,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -12427,7 +12427,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12441,7 +12441,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12455,7 +12455,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12469,7 +12469,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12483,7 +12483,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.CodeDom.Compiler",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -12494,7 +12494,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -12505,7 +12505,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -12518,7 +12518,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.Generic.IComparer",
           "System.Collections.Generic.Comparer"
@@ -12531,7 +12531,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Collections.Generic.EqualityComparer"
@@ -12544,7 +12544,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IIdentity",
           "System.Security.Claims.ClaimsIdentity"
         ]
@@ -12556,7 +12556,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -12567,7 +12567,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12581,7 +12581,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -12592,7 +12592,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -12604,7 +12604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyList",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -12619,7 +12619,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -12631,7 +12631,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyList",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -12646,7 +12646,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IPrincipal",
           "System.Security.Claims.ClaimsPrincipal"
         ]
@@ -12658,7 +12658,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -12669,7 +12669,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -12680,7 +12680,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.IReflect",
           "System.Reflection.IReflectableType",
@@ -12694,7 +12694,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -12705,7 +12705,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12719,7 +12719,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -12730,7 +12730,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -12741,7 +12741,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -12752,7 +12752,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -12763,7 +12763,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -12774,7 +12774,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12788,7 +12788,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -12800,7 +12800,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12814,7 +12814,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Text.RegularExpressions.Capture"
         ]
       }
@@ -12825,7 +12825,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -12839,7 +12839,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -12858,7 +12858,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Linq.IGrouping",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -12874,7 +12874,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.DataflowBlockOptions"
         ]
       }
@@ -12885,7 +12885,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IFormattable",
           "System.IComparable",
           "System.IComparable",
@@ -12901,7 +12901,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -12912,7 +12912,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -12923,7 +12923,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -12935,7 +12935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -12947,7 +12947,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -12959,7 +12959,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -12970,7 +12970,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEqualityComparer",
           "System.Collections.Generic.IComparer",
           "System.Collections.Generic.IEqualityComparer",
@@ -12985,7 +12985,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -12996,7 +12996,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -13009,7 +13009,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13023,7 +13023,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13037,7 +13037,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ExceptionServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -13048,7 +13048,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -13059,7 +13059,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -13070,7 +13070,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Object"
@@ -13083,7 +13083,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -13095,7 +13095,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13109,7 +13109,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -13120,7 +13120,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -13138,7 +13138,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -13155,7 +13155,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13169,7 +13169,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -13181,7 +13181,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13195,7 +13195,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -13206,7 +13206,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13220,7 +13220,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -13231,7 +13231,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -13243,7 +13243,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.KeyedHashAlgorithm"
@@ -13256,7 +13256,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HMAC"
@@ -13269,7 +13269,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HMAC"
@@ -13282,7 +13282,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HMAC"
@@ -13295,7 +13295,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HMAC"
@@ -13308,7 +13308,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HMAC"
@@ -13321,7 +13321,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -13334,7 +13334,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13346,7 +13346,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13357,7 +13357,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Cache",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13371,7 +13371,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpMessageInvoker"
         ]
@@ -13383,7 +13383,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpMessageHandler"
         ]
@@ -13395,7 +13395,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13409,7 +13409,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13421,7 +13421,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Net.Http.Headers.HttpHeaders"
@@ -13434,7 +13434,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -13447,7 +13447,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -13460,7 +13460,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -13474,7 +13474,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13486,7 +13486,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IIdentity",
           "System.Security.Principal.GenericIdentity"
         ]
@@ -13498,7 +13498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13509,7 +13509,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ComponentModel.Win32Exception"
         ]
@@ -13521,7 +13521,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -13535,7 +13535,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13546,7 +13546,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13558,7 +13558,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13569,7 +13569,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.Net.WebSockets.WebSocketContext"
         ]
       }
@@ -13580,7 +13580,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13592,7 +13592,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13604,7 +13604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -13616,7 +13616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Cache",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13630,7 +13630,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Cache",
-        "fathers": [
+        "parents": [
           "System.Net.Cache.RequestCachePolicy"
         ]
       }
@@ -13641,7 +13641,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -13653,7 +13653,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13667,7 +13667,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Net.Http.Headers.HttpHeaders"
@@ -13680,7 +13680,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13692,7 +13692,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13706,7 +13706,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Net.Http.Headers.HttpHeaders"
@@ -13719,7 +13719,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -13731,7 +13731,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -13745,7 +13745,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -13756,7 +13756,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Web",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13767,7 +13767,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Net.WebRequest"
         ]
@@ -13779,7 +13779,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IDisposable",
           "System.Net.WebResponse"
@@ -13792,7 +13792,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -13806,7 +13806,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13817,7 +13817,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13828,7 +13828,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13839,7 +13839,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13850,7 +13850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13861,7 +13861,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13872,7 +13872,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13883,7 +13883,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13894,7 +13894,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -13908,7 +13908,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IBindingList",
           "System.Collections.IList",
           "System.Collections.ICollection",
@@ -13923,7 +13923,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13934,7 +13934,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13945,7 +13945,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13956,7 +13956,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13967,7 +13967,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13978,7 +13978,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -13989,7 +13989,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14000,7 +14000,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Object"
         ]
@@ -14012,7 +14012,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -14025,7 +14025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14036,7 +14036,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -14050,7 +14050,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Windows.Input",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14061,7 +14061,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14072,7 +14072,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14083,7 +14083,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14094,7 +14094,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14105,7 +14105,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14116,7 +14116,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14128,7 +14128,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14139,7 +14139,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14150,7 +14150,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14161,7 +14161,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14172,7 +14172,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14183,7 +14183,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Reflection.Metadata.ISZArrayTypeProvider",
           "System.Object"
         ]
@@ -14195,7 +14195,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14207,7 +14207,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14218,7 +14218,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14229,7 +14229,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14240,7 +14240,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14251,7 +14251,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Object"
         ]
@@ -14263,7 +14263,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14275,7 +14275,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14286,7 +14286,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14297,7 +14297,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14308,7 +14308,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Reflection.Metadata.ISimpleTypeProvider",
           "System.Reflection.Metadata.ISZArrayTypeProvider",
           "System.Object"
@@ -14321,7 +14321,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14332,7 +14332,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14343,7 +14343,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14354,7 +14354,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14365,7 +14365,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14376,7 +14376,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14387,7 +14387,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14398,7 +14398,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14409,7 +14409,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14420,7 +14420,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14431,7 +14431,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -14445,7 +14445,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Data.IDataRecord",
           "System.Object"
@@ -14458,7 +14458,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14469,7 +14469,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14480,7 +14480,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14492,7 +14492,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14504,7 +14504,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Data.IDataAdapter",
           "System.Object"
         ]
@@ -14516,7 +14516,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Data.IDataParameter",
           "System.Object"
         ]
@@ -14528,7 +14528,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14540,7 +14540,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -14554,7 +14554,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -14566,7 +14566,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14577,7 +14577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -14591,7 +14591,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14602,7 +14602,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -14614,7 +14614,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14625,7 +14625,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14636,7 +14636,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.IServiceContainer",
           "System.IServiceProvider",
           "System.Object"
@@ -14649,7 +14649,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14660,7 +14660,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.IDesignerHost",
           "System.ComponentModel.Design.IServiceContainer",
           "System.IServiceProvider",
@@ -14674,7 +14674,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.Serialization.IDesignerLoaderHost",
           "System.ComponentModel.Design.IDesignerHost",
           "System.ComponentModel.Design.IServiceContainer",
@@ -14689,7 +14689,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14700,7 +14700,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14711,7 +14711,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.Object"
         ]
@@ -14723,7 +14723,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14734,7 +14734,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14745,7 +14745,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -14758,7 +14758,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -14772,7 +14772,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -14784,7 +14784,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14795,7 +14795,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -14806,7 +14806,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -14820,7 +14820,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14831,7 +14831,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -14842,7 +14842,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -14853,7 +14853,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -14867,7 +14867,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14878,7 +14878,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14889,7 +14889,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IArgumentProvider",
           "System.Object"
         ]
@@ -14901,7 +14901,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14912,7 +14912,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14923,7 +14923,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14934,7 +14934,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14945,7 +14945,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14956,7 +14956,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14967,7 +14967,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Object"
         ]
@@ -14979,7 +14979,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -14990,7 +14990,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Collections.IEnumerator",
           "System.Object"
@@ -15003,7 +15003,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15014,7 +15014,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15025,7 +15025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15036,7 +15036,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15047,7 +15047,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15058,7 +15058,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15069,7 +15069,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15080,7 +15080,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15091,7 +15091,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15102,7 +15102,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15113,7 +15113,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15124,7 +15124,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15135,7 +15135,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15146,7 +15146,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Formatters",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15157,7 +15157,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15168,7 +15168,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15179,7 +15179,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15190,7 +15190,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15201,7 +15201,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15212,7 +15212,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15223,7 +15223,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -15236,7 +15236,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15247,7 +15247,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15258,7 +15258,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15269,7 +15269,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15280,7 +15280,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyDictionary",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -15295,7 +15295,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyList",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -15310,7 +15310,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -15323,7 +15323,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -15337,7 +15337,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -15350,7 +15350,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15361,7 +15361,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15372,7 +15372,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15383,7 +15383,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15394,7 +15394,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -15407,7 +15407,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -15421,7 +15421,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15432,7 +15432,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -15445,7 +15445,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15459,7 +15459,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15473,7 +15473,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -15485,7 +15485,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -15497,7 +15497,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15508,7 +15508,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyList",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -15532,7 +15532,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableDictionary",
           "System.Collections.Generic.IReadOnlyDictionary",
           "System.Collections.Generic.IReadOnlyCollection",
@@ -15554,7 +15554,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableSet",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -15574,7 +15574,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableList",
           "System.Collections.Generic.IReadOnlyList",
           "System.Collections.Generic.IReadOnlyCollection",
@@ -15597,7 +15597,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15608,7 +15608,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableQueue",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -15622,7 +15622,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableDictionary",
           "System.Collections.Generic.IReadOnlyDictionary",
           "System.Collections.Generic.IReadOnlyCollection",
@@ -15643,7 +15643,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableSet",
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
@@ -15666,7 +15666,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Immutable",
-        "fathers": [
+        "parents": [
           "System.Collections.Immutable.IImmutableStack",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -15680,7 +15680,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15691,7 +15691,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15705,7 +15705,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15716,7 +15716,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -15727,7 +15727,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.ValueType"
@@ -15740,7 +15740,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15754,7 +15754,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15765,7 +15765,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -15776,7 +15776,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -15790,7 +15790,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -15802,7 +15802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15813,7 +15813,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15824,7 +15824,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -15836,7 +15836,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -15848,7 +15848,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.CodeDom.Compiler",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.TextWriter"
         ]
@@ -15860,7 +15860,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15871,7 +15871,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IArgumentProvider",
           "System.Linq.Expressions.Expression"
         ]
@@ -15883,7 +15883,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -15895,7 +15895,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IContainer",
           "System.IDisposable",
           "System.Object"
@@ -15908,7 +15908,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ISite",
           "System.IServiceProvider",
           "System.Object"
@@ -15921,7 +15921,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15935,7 +15935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15946,7 +15946,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15960,7 +15960,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -15974,7 +15974,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -15985,7 +15985,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.IsolatedStorage",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -15996,7 +15996,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16007,7 +16007,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16018,7 +16018,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16029,7 +16029,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16040,7 +16040,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16051,7 +16051,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -16063,7 +16063,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -16074,7 +16074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16085,7 +16085,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16096,7 +16096,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16107,7 +16107,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16119,7 +16119,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.OutOfMemoryException"
         ]
@@ -16131,7 +16131,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -16148,7 +16148,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -16159,7 +16159,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -16176,7 +16176,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16187,7 +16187,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -16198,7 +16198,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -16215,7 +16215,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16226,7 +16226,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -16237,7 +16237,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16248,7 +16248,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -16260,7 +16260,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -16274,7 +16274,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -16285,7 +16285,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16296,7 +16296,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -16307,7 +16307,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16319,7 +16319,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -16332,7 +16332,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -16343,7 +16343,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16354,7 +16354,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
@@ -16367,7 +16367,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16378,7 +16378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -16390,7 +16390,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16402,7 +16402,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16414,7 +16414,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -16426,7 +16426,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Security.Authentication.AuthenticationException"
         ]
@@ -16438,7 +16438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -16450,7 +16450,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16462,7 +16462,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArgumentException"
         ]
@@ -16474,7 +16474,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -16486,7 +16486,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ApplicationException"
         ]
@@ -16498,7 +16498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16510,7 +16510,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16522,7 +16522,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16534,7 +16534,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -16546,7 +16546,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -16557,7 +16557,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IArgumentProvider",
           "System.Linq.Expressions.Expression"
         ]
@@ -16569,7 +16569,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -16580,7 +16580,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -16594,7 +16594,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -16605,7 +16605,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16616,7 +16616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16627,7 +16627,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16638,7 +16638,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -16651,7 +16651,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -16665,7 +16665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -16677,7 +16677,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -16691,7 +16691,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -16704,7 +16704,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Linq.IQueryable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -16717,7 +16717,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Linq.IQueryable",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -16733,7 +16733,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16744,7 +16744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -16758,7 +16758,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16769,7 +16769,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -16783,7 +16783,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Net.EndPoint"
         ]
       }
@@ -16794,7 +16794,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Security.ISecurityEncodable",
           "System.Object"
         ]
@@ -16806,7 +16806,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16817,7 +16817,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16828,7 +16828,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16839,7 +16839,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16850,7 +16850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16861,7 +16861,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16872,7 +16872,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16883,7 +16883,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -16894,7 +16894,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -16908,7 +16908,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16919,7 +16919,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Collections.ICollection",
@@ -16933,7 +16933,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16944,7 +16944,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Transactions.ITransactionPromoter",
           "System.Object"
         ]
@@ -16956,7 +16956,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
           "System.Threading.Tasks.Dataflow.ISourceBlock",
@@ -16970,7 +16970,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -16984,7 +16984,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -16995,7 +16995,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17006,7 +17006,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17017,7 +17017,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17028,7 +17028,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Object"
         ]
@@ -17040,7 +17040,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Linq.IQueryable",
@@ -17054,7 +17054,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17065,7 +17065,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17076,7 +17076,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -17089,7 +17089,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -17103,7 +17103,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -17117,7 +17117,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.ISourceBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
           "System.Object"
@@ -17130,7 +17130,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17141,7 +17141,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17152,7 +17152,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17163,7 +17163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.IDisposable",
           "System.Object"
@@ -17176,7 +17176,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17187,7 +17187,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -17199,7 +17199,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IChangeTracking",
           "System.Object"
         ]
@@ -17211,7 +17211,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.IDesigner",
           "System.IDisposable",
           "System.Object"
@@ -17224,7 +17224,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17235,7 +17235,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17246,7 +17246,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17257,7 +17257,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -17268,7 +17268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17279,7 +17279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17290,7 +17290,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17301,7 +17301,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17312,7 +17312,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17323,7 +17323,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.Object"
         ]
@@ -17335,7 +17335,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17346,7 +17346,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -17360,7 +17360,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Reflection.Metadata.ISimpleTypeProvider",
           "System.Reflection.Metadata.IConstructedTypeProvider",
           "System.Reflection.Metadata.ISZArrayTypeProvider",
@@ -17374,7 +17374,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Transactions.ITransactionPromoter",
           "System.Object"
         ]
@@ -17386,7 +17386,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17397,7 +17397,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Transactions.IEnlistmentNotification",
           "System.Object"
         ]
@@ -17409,7 +17409,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.Object"
         ]
@@ -17421,7 +17421,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.IsolatedStorage",
-        "fathers": [
+        "parents": [
           "System.MarshalByRefObject"
         ]
       }
@@ -17432,7 +17432,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.IsolatedStorage",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -17444,7 +17444,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.IsolatedStorage",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.IsolatedStorage.IsolatedStorage"
         ]
@@ -17456,7 +17456,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.IsolatedStorage",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.FileStream"
         ]
@@ -17468,7 +17468,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.IsolatedStorage",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -17482,7 +17482,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -17491,7 +17491,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -17505,7 +17505,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
           "System.Object"
         ]
@@ -17517,7 +17517,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -17528,7 +17528,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17539,7 +17539,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17550,7 +17550,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17561,7 +17561,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17572,7 +17572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17583,7 +17583,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17594,7 +17594,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ISupportInitialize",
           "System.Object"
         ]
@@ -17606,7 +17606,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17617,7 +17617,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17628,7 +17628,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17639,7 +17639,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17650,7 +17650,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17661,7 +17661,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17672,7 +17672,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17683,7 +17683,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17694,7 +17694,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17705,7 +17705,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17716,7 +17716,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17727,7 +17727,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17738,7 +17738,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17749,7 +17749,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17760,7 +17760,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -17774,7 +17774,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
           "System.Object"
         ]
@@ -17786,7 +17786,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -17800,7 +17800,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.StateMachineAttribute"
         ]
       }
@@ -17811,7 +17811,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17822,7 +17822,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.IDesigner",
           "System.IDisposable",
           "System.Object"
@@ -17835,7 +17835,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17846,7 +17846,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17857,7 +17857,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.Object"
         ]
@@ -17869,7 +17869,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17880,7 +17880,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17891,7 +17891,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17902,7 +17902,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17913,7 +17913,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "System.Object"
         ]
@@ -17925,7 +17925,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17936,7 +17936,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "System.Object"
         ]
@@ -17948,7 +17948,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17959,7 +17959,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.CustomConstantAttribute"
         ]
       }
@@ -17970,7 +17970,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17981,7 +17981,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Sources",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -17992,7 +17992,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Sources",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18003,7 +18003,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18014,7 +18014,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18025,7 +18025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18036,7 +18036,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18047,7 +18047,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18058,7 +18058,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18069,7 +18069,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Json",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18080,7 +18080,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Json",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18091,7 +18091,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18102,7 +18102,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18113,7 +18113,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18124,7 +18124,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18135,7 +18135,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18146,7 +18146,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18157,7 +18157,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18168,7 +18168,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18179,7 +18179,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18190,7 +18190,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18201,7 +18201,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -18213,7 +18213,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.EastAsianLunisolarCalendar"
         ]
@@ -18225,7 +18225,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IReceivableSourceBlock",
           "System.Threading.Tasks.Dataflow.ISourceBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -18235,7 +18235,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IReceivableSourceBlock",
           "System.Threading.Tasks.Dataflow.ISourceBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -18250,7 +18250,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -18262,7 +18262,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -18273,7 +18273,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -18284,7 +18284,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -18295,7 +18295,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -18311,7 +18311,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -18330,7 +18330,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HashAlgorithm"
@@ -18343,7 +18343,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -18359,7 +18359,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -18371,7 +18371,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18385,7 +18385,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18399,7 +18399,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -18412,7 +18412,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18423,7 +18423,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -18434,7 +18434,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.Generic.IComparer",
           "System.Collections.Generic.Comparer"
@@ -18447,7 +18447,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.GenericAce"
         ]
       }
@@ -18458,7 +18458,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18472,7 +18472,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -18483,7 +18483,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -18495,7 +18495,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.EastAsianLunisolarCalendar"
         ]
@@ -18507,7 +18507,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -18518,7 +18518,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -18529,7 +18529,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -18541,7 +18541,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18552,7 +18552,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IParameterProvider",
           "System.Linq.Expressions.Expression"
         ]
@@ -18564,7 +18564,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18578,13 +18578,13 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Lazy"
         ]
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18595,7 +18595,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18609,7 +18609,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -18620,7 +18620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -18631,7 +18631,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18645,7 +18645,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -18657,7 +18657,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.Object"
         ]
@@ -18669,7 +18669,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -18681,7 +18681,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18692,7 +18692,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18703,7 +18703,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -18714,7 +18714,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18728,7 +18728,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.LicenseProvider"
         ]
       }
@@ -18739,7 +18739,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions.Interpreter",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18750,7 +18750,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18761,7 +18761,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -18779,7 +18779,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18790,7 +18790,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Mail.AttachmentBase"
         ]
@@ -18802,7 +18802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -18822,7 +18822,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -18841,7 +18841,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -18852,7 +18852,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -18863,7 +18863,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -18876,7 +18876,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18890,7 +18890,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -18904,7 +18904,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -18918,7 +18918,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -18929,7 +18929,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -18940,7 +18940,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -18954,7 +18954,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -18968,7 +18968,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -18979,7 +18979,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -18990,7 +18990,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19004,7 +19004,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -19015,7 +19015,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19029,7 +19029,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19043,7 +19043,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19057,7 +19057,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.LocalVariableInfo"
         ]
       }
@@ -19068,7 +19068,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -19081,7 +19081,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19092,7 +19092,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19104,7 +19104,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -19118,7 +19118,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19129,7 +19129,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -19140,7 +19140,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19151,7 +19151,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19163,7 +19163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -19177,7 +19177,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19188,7 +19188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19202,7 +19202,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19214,7 +19214,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -19228,7 +19228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19239,7 +19239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19250,7 +19250,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19261,7 +19261,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19272,7 +19272,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -19284,7 +19284,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19298,7 +19298,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Linq.ILookup",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -19313,7 +19313,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -19324,7 +19324,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -19335,7 +19335,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19349,7 +19349,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19360,7 +19360,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -19379,7 +19379,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -19391,7 +19391,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19405,7 +19405,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Reflection.PortableExecutable.PEBuilder"
         ]
       }
@@ -19416,7 +19416,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -19427,7 +19427,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19438,7 +19438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19452,7 +19452,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19464,7 +19464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -19478,7 +19478,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19489,7 +19489,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Threading.EventWaitHandle"
         ]
@@ -19501,7 +19501,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -19513,7 +19513,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19527,7 +19527,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -19538,7 +19538,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19549,7 +19549,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.IServiceProvider",
@@ -19563,7 +19563,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -19575,7 +19575,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -19587,7 +19587,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19601,7 +19601,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19612,7 +19612,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Text.RegularExpressions.Group"
         ]
       }
@@ -19623,7 +19623,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19637,7 +19637,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -19656,7 +19656,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -19669,7 +19669,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19683,7 +19683,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19695,7 +19695,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19707,7 +19707,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -19718,7 +19718,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HashAlgorithm"
@@ -19731,7 +19731,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.MD5"
@@ -19744,7 +19744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -19756,7 +19756,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Net.Http.Headers.MediaTypeHeaderValue"
         ]
@@ -19768,7 +19768,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -19780,7 +19780,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.MemberBinding"
         ]
       }
@@ -19791,7 +19791,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19802,7 +19802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19816,7 +19816,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19827,7 +19827,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -19838,7 +19838,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -19851,7 +19851,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Object"
         ]
@@ -19863,7 +19863,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -19874,7 +19874,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.MemberBinding"
         ]
       }
@@ -19885,7 +19885,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.MemberBinding"
         ]
       }
@@ -19896,7 +19896,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19907,7 +19907,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -19919,7 +19919,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -19933,7 +19933,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19947,7 +19947,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19958,7 +19958,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -19969,7 +19969,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -19983,7 +19983,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -19994,7 +19994,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.ConstrainedExecution.CriticalFinalizerObject"
         ]
@@ -20006,7 +20006,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.ValueType"
         ]
@@ -20018,7 +20018,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.Buffers.IMemoryOwner",
           "System.IDisposable",
           "System.Buffers.IPinnable",
@@ -20032,7 +20032,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.MemoryMappedFiles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -20044,7 +20044,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.MemoryMappedFiles",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20058,7 +20058,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.MemoryMappedFiles",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20072,7 +20072,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.MemoryMappedFiles",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20086,7 +20086,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.MemoryMappedFiles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.UnmanagedMemoryAccessor"
         ]
@@ -20098,7 +20098,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.MemoryMappedFiles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.UnmanagedMemoryStream"
         ]
@@ -20110,7 +20110,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -20122,7 +20122,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -20134,7 +20134,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20145,7 +20145,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -20156,7 +20156,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -20167,7 +20167,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -20180,7 +20180,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.DelegatingHandler"
         ]
@@ -20192,7 +20192,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20203,7 +20203,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20214,7 +20214,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20228,7 +20228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20239,7 +20239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20253,7 +20253,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -20265,7 +20265,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20276,7 +20276,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20287,7 +20287,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20301,7 +20301,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20312,7 +20312,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20323,7 +20323,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MemberAccessException"
         ]
@@ -20335,7 +20335,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20349,7 +20349,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MemberInfo"
         ]
@@ -20361,13 +20361,13 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       },
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20378,7 +20378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20392,7 +20392,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -20403,7 +20403,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20414,7 +20414,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MethodInfo"
         ]
@@ -20426,7 +20426,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IArgumentProvider",
           "System.Linq.Expressions.Expression"
         ]
@@ -20438,7 +20438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20452,7 +20452,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20463,7 +20463,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -20475,7 +20475,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -20489,7 +20489,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20500,7 +20500,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -20512,7 +20512,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -20526,7 +20526,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -20537,7 +20537,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20551,7 +20551,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20562,7 +20562,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -20574,7 +20574,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -20588,7 +20588,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20602,7 +20602,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20613,7 +20613,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20627,7 +20627,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MethodBase"
         ]
@@ -20639,7 +20639,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20653,7 +20653,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20664,7 +20664,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20675,7 +20675,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20686,7 +20686,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -20698,7 +20698,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20709,7 +20709,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20723,7 +20723,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -20734,7 +20734,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -20746,7 +20746,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MissingMemberException"
         ]
@@ -20758,7 +20758,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -20770,7 +20770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20784,7 +20784,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MemberAccessException"
         ]
@@ -20796,7 +20796,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MissingMemberException"
         ]
@@ -20808,7 +20808,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -20820,7 +20820,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -20832,7 +20832,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -20846,7 +20846,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -20859,7 +20859,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Runtime.Serialization.ISerializable",
           "System.Reflection.Module"
@@ -20872,7 +20872,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20883,7 +20883,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -20895,7 +20895,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20906,7 +20906,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -20917,7 +20917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -20929,7 +20929,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -20942,7 +20942,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DescriptionAttribute"
         ]
       }
@@ -20953,7 +20953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -20964,7 +20964,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.Delegate"
@@ -20977,7 +20977,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Net.NetworkInformation.IPAddressInformation"
         ]
       }
@@ -20988,7 +20988,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -21002,7 +21002,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -21014,7 +21014,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21025,7 +21025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -21036,7 +21036,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -21050,7 +21050,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -21064,7 +21064,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Threading.WaitHandle"
         ]
@@ -21076,7 +21076,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21087,7 +21087,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21098,7 +21098,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Pipes.PipeStream"
         ]
@@ -21110,7 +21110,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Pipes.PipeStream"
         ]
@@ -21122,7 +21122,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21133,7 +21133,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Runtime.Serialization.ISerializable",
@@ -21148,7 +21148,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21159,7 +21159,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -21171,7 +21171,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21185,7 +21185,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21196,7 +21196,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Xml.XmlNameTable"
         ]
       }
@@ -21207,7 +21207,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Runtime.Serialization.ISerializable",
@@ -21222,7 +21222,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -21234,7 +21234,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Net.Http.Headers.NameValueHeaderValue"
         ]
@@ -21246,7 +21246,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21257,7 +21257,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21268,7 +21268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.CommonObjectSecurity"
         ]
       }
@@ -21279,7 +21279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21290,7 +21290,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Security.AuthenticatedStream"
         ]
@@ -21302,7 +21302,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IContainer",
           "System.IDisposable",
           "System.ComponentModel.INestedContainer",
@@ -21316,7 +21316,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21330,7 +21330,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -21341,7 +21341,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -21352,7 +21352,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -21365,7 +21365,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -21378,7 +21378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -21389,7 +21389,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21400,7 +21400,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Net.ICredentials",
           "System.Net.ICredentialsByHost",
           "System.Object"
@@ -21413,7 +21413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ComponentModel.Win32Exception"
         ]
@@ -21425,7 +21425,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21436,7 +21436,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21450,7 +21450,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21464,7 +21464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -21476,7 +21476,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21487,7 +21487,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -21498,7 +21498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.IArgumentProvider",
           "System.Linq.Expressions.Expression"
         ]
@@ -21510,7 +21510,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21521,7 +21521,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21535,7 +21535,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.UriParser"
         ]
       }
@@ -21546,7 +21546,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21557,7 +21557,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21568,7 +21568,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21579,7 +21579,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Runtime.Serialization.ISerializable",
@@ -21593,7 +21593,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21604,7 +21604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -21616,7 +21616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21630,7 +21630,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArithmeticException"
         ]
@@ -21642,7 +21642,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21656,7 +21656,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -21667,7 +21667,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -21680,7 +21680,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21694,7 +21694,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21705,7 +21705,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -21717,7 +21717,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21728,7 +21728,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -21740,7 +21740,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IdentityReference"
         ]
       }
@@ -21751,7 +21751,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -21762,7 +21762,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.Generic.IComparer",
           "System.Collections.Generic.Comparer"
@@ -21775,7 +21775,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -21786,7 +21786,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Collections.Generic.EqualityComparer"
@@ -21799,7 +21799,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -21811,7 +21811,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IFormatProvider",
           "System.ICloneable",
           "System.Object"
@@ -21824,7 +21824,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21838,7 +21838,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21849,7 +21849,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -21860,7 +21860,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21871,7 +21871,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AccessRule"
         ]
       }
@@ -21882,7 +21882,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.QualifiedAce"
         ]
       }
@@ -21893,7 +21893,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -21907,7 +21907,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuditRule"
         ]
       }
@@ -21918,7 +21918,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.Generic.IComparer",
           "System.Collections.Generic.Comparer"
@@ -21931,7 +21931,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.InvalidOperationException"
         ]
@@ -21943,7 +21943,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Collections.Generic.EqualityComparer"
@@ -21956,7 +21956,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21967,7 +21967,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21978,7 +21978,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -21989,7 +21989,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22000,7 +22000,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.NativeObjectSecurity"
         ]
       }
@@ -22011,7 +22011,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -22032,7 +22032,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22043,7 +22043,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22054,7 +22054,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -22067,7 +22067,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -22079,7 +22079,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22093,7 +22093,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22104,7 +22104,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22115,7 +22115,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22126,7 +22126,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22137,7 +22137,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -22150,7 +22150,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22161,7 +22161,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22172,7 +22172,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22186,7 +22186,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22200,7 +22200,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -22211,7 +22211,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -22224,7 +22224,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -22235,7 +22235,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -22248,7 +22248,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22262,7 +22262,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ICloneable",
           "System.Object"
@@ -22275,7 +22275,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22289,7 +22289,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -22301,7 +22301,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22315,7 +22315,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22326,7 +22326,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22337,7 +22337,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22348,7 +22348,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22359,7 +22359,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22370,7 +22370,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Collections.Concurrent.Partitioner"
         ]
       }
@@ -22381,7 +22381,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.Specialized.IOrderedDictionary",
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
@@ -22398,7 +22398,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Collections.Generic.IEnumerable",
           "System.Linq.ParallelQuery"
@@ -22411,7 +22411,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IComparer",
@@ -22426,7 +22426,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -22438,7 +22438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22449,7 +22449,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -22461,7 +22461,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ArithmeticException"
         ]
@@ -22473,7 +22473,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22484,7 +22484,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22498,7 +22498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22512,7 +22512,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22526,7 +22526,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22537,7 +22537,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22548,7 +22548,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22562,7 +22562,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22573,7 +22573,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Object"
         ]
@@ -22585,7 +22585,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Collections.Generic.IEnumerable",
           "System.Linq.ParallelQuery"
@@ -22598,7 +22598,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22609,7 +22609,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22620,7 +22620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22631,7 +22631,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22645,7 +22645,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22656,7 +22656,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22670,7 +22670,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -22681,7 +22681,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -22693,7 +22693,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -22707,7 +22707,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Runtime.Serialization.IObjectReference",
           "System.Object"
@@ -22720,7 +22720,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -22733,7 +22733,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22744,7 +22744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22755,7 +22755,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22766,7 +22766,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22777,7 +22777,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22791,7 +22791,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22802,7 +22802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22813,7 +22813,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22827,7 +22827,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Concurrent",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22838,7 +22838,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.DeriveBytes"
         ]
@@ -22850,7 +22850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -22861,7 +22861,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22872,7 +22872,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]
@@ -22884,7 +22884,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22895,7 +22895,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22906,7 +22906,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22917,7 +22917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22931,7 +22931,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22942,7 +22942,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22953,7 +22953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -22964,7 +22964,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -22978,7 +22978,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -22989,7 +22989,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -23001,7 +23001,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23012,7 +23012,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -23024,7 +23024,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23038,7 +23038,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.DataTypeAttribute"
         ]
       }
@@ -23049,7 +23049,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -23060,7 +23060,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -23073,7 +23073,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -23084,7 +23084,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -23097,7 +23097,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.InvalidOperationException"
         ]
@@ -23109,7 +23109,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -23120,7 +23120,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -23131,7 +23131,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23145,7 +23145,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AccessRule"
         ]
       }
@@ -23156,7 +23156,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuditRule"
         ]
       }
@@ -23167,7 +23167,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23181,7 +23181,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23195,7 +23195,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.NativeObjectSecurity"
         ]
       }
@@ -23206,7 +23206,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -23218,7 +23218,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -23231,7 +23231,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Pipes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23245,7 +23245,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.MaskGenerationMethod"
         ]
       }
@@ -23256,7 +23256,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -23268,7 +23268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23282,7 +23282,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.NotSupportedException"
         ]
@@ -23294,7 +23294,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -23306,7 +23306,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -23317,7 +23317,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -23329,7 +23329,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -23341,7 +23341,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23355,7 +23355,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23369,7 +23369,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -23380,7 +23380,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Threading.IDeferredDisposable",
           "System.Object"
@@ -23393,7 +23393,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23404,7 +23404,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23415,7 +23415,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23426,7 +23426,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -23439,7 +23439,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23453,7 +23453,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Transactions.Enlistment"
         ]
       }
@@ -23464,7 +23464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ConstrainedExecution",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -23475,7 +23475,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -23486,7 +23486,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -23497,7 +23497,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23511,7 +23511,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23525,7 +23525,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23539,7 +23539,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.UnauthorizedAccessException"
         ]
@@ -23551,7 +23551,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -23564,7 +23564,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -23577,7 +23577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.ReadOnlyCollectionBase"
@@ -23590,7 +23590,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23604,7 +23604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23618,7 +23618,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -23629,7 +23629,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -23642,7 +23642,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.ReadOnlyCollectionBase"
@@ -23655,7 +23655,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23669,7 +23669,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -23681,7 +23681,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -23693,7 +23693,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -23704,7 +23704,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IProgress",
           "System.Object"
         ]
@@ -23716,7 +23716,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -23727,7 +23727,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -23740,7 +23740,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -23751,7 +23751,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23765,7 +23765,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23776,7 +23776,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23790,7 +23790,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.PropertyInfo"
         ]
@@ -23802,7 +23802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -23813,7 +23813,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -23826,7 +23826,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -23837,7 +23837,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -23850,7 +23850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -23867,7 +23867,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23878,7 +23878,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -23890,7 +23890,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -23904,7 +23904,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.MemberDescriptor"
         ]
       }
@@ -23915,7 +23915,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.IList",
@@ -23930,7 +23930,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.MemberInfo"
         ]
@@ -23942,7 +23942,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -23953,7 +23953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23967,7 +23967,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -23978,7 +23978,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -23992,7 +23992,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24006,7 +24006,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Internals",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24015,7 +24015,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24029,7 +24029,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Internals",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24038,7 +24038,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24052,7 +24052,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.InvalidOperationException"
         ]
@@ -24064,7 +24064,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24075,7 +24075,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24086,7 +24086,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Contracts",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24097,7 +24097,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.KnownAce"
         ]
       }
@@ -24108,7 +24108,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -24120,7 +24120,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.ICloneable",
@@ -24134,7 +24134,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Collections.ICollection",
@@ -24149,7 +24149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24160,7 +24160,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -24172,7 +24172,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -24183,7 +24183,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -24195,7 +24195,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -24207,7 +24207,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -24219,7 +24219,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -24231,7 +24231,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Security.AccessControl.GenericAcl"
@@ -24244,7 +24244,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.GenericSecurityDescriptor"
         ]
       }
@@ -24255,7 +24255,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.SymmetricAlgorithm"
         ]
@@ -24267,7 +24267,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.RC2"
         ]
@@ -24279,7 +24279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24293,7 +24293,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.ConstrainedExecution.CriticalFinalizerObject"
         ]
       }
@@ -24304,7 +24304,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -24316,7 +24316,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24327,7 +24327,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24338,7 +24338,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -24357,7 +24357,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -24370,7 +24370,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -24387,7 +24387,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -24406,7 +24406,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -24418,7 +24418,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -24429,7 +24429,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpContent"
         ]
@@ -24441,7 +24441,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -24462,7 +24462,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -24473,7 +24473,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24484,7 +24484,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -24495,7 +24495,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -24508,7 +24508,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24522,7 +24522,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24533,7 +24533,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -24545,7 +24545,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -24556,7 +24556,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -24568,7 +24568,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24579,7 +24579,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -24590,7 +24590,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24601,7 +24601,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -24613,7 +24613,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -24624,7 +24624,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -24637,7 +24637,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24651,7 +24651,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24662,7 +24662,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -24674,7 +24674,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24685,7 +24685,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.TimeoutException"
         ]
@@ -24697,7 +24697,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24711,7 +24711,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24722,7 +24722,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text.RegularExpressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24733,7 +24733,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -24744,7 +24744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.MarshalByRefObject"
         ]
       }
@@ -24755,7 +24755,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24769,7 +24769,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24783,7 +24783,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AccessRule"
         ]
       }
@@ -24794,7 +24794,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.AuditRule"
         ]
       }
@@ -24805,7 +24805,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24819,7 +24819,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -24831,7 +24831,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24845,7 +24845,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24859,7 +24859,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24873,7 +24873,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Security.AccessControl.NativeObjectSecurity"
         ]
       }
@@ -24884,7 +24884,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24898,7 +24898,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24912,7 +24912,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24926,7 +24926,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -24937,7 +24937,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.ConstrainedExecution",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -24948,7 +24948,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -24961,7 +24961,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IO.FileSystemEventArgs"
         ]
       }
@@ -24972,7 +24972,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -24985,7 +24985,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Cache",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -24999,7 +24999,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Cache",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -25010,7 +25010,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -25021,7 +25021,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25032,7 +25032,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -25043,7 +25043,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -25054,7 +25054,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -25067,7 +25067,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -25078,7 +25078,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -25091,7 +25091,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25105,7 +25105,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25116,7 +25116,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25127,7 +25127,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25141,7 +25141,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -25152,7 +25152,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Resources.IResourceReader",
           "System.Collections.IEnumerable",
           "System.IDisposable",
@@ -25166,7 +25166,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25180,7 +25180,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -25191,7 +25191,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -25204,7 +25204,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25218,7 +25218,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Resources.IResourceWriter",
           "System.IDisposable",
           "System.Object"
@@ -25231,7 +25231,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25245,7 +25245,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -25257,7 +25257,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -25268,7 +25268,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25279,7 +25279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.DeriveBytes"
         ]
@@ -25291,7 +25291,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.SymmetricAlgorithm"
         ]
@@ -25303,7 +25303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.Rijndael"
         ]
@@ -25315,7 +25315,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.RandomNumberGenerator"
         ]
@@ -25327,7 +25327,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25338,7 +25338,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -25350,7 +25350,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -25361,7 +25361,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -25372,7 +25372,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.AsymmetricAlgorithm"
         ]
@@ -25384,7 +25384,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.RSA"
         ]
@@ -25396,7 +25396,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICspAsymmetricAlgorithm",
           "System.Security.Cryptography.RSA"
@@ -25409,7 +25409,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -25421,7 +25421,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25435,7 +25435,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricKeyExchangeDeformatter"
         ]
       }
@@ -25446,7 +25446,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricKeyExchangeFormatter"
         ]
       }
@@ -25457,7 +25457,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.RSA"
         ]
@@ -25469,7 +25469,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -25480,7 +25480,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricKeyExchangeDeformatter"
         ]
       }
@@ -25491,7 +25491,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricKeyExchangeFormatter"
         ]
       }
@@ -25502,7 +25502,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricSignatureDeformatter"
         ]
       }
@@ -25513,7 +25513,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsymmetricSignatureFormatter"
         ]
       }
@@ -25524,7 +25524,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -25536,7 +25536,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25550,7 +25550,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -25564,7 +25564,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -25575,7 +25575,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25586,7 +25586,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -25597,7 +25597,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.CSharp.RuntimeBinder",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -25609,7 +25609,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.CSharp.RuntimeBinder",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -25621,7 +25621,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25632,7 +25632,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
         ]
@@ -25644,7 +25644,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -25655,7 +25655,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
         ]
@@ -25667,7 +25667,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Internal.Runtime.Augments",
-        "fathers": [
+        "parents": [
           "System.Runtime.ConstrainedExecution.CriticalFinalizerObject"
         ]
       }
@@ -25678,7 +25678,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
         ]
@@ -25690,7 +25690,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -25701,7 +25701,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -25713,7 +25713,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -25724,7 +25724,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -25737,7 +25737,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.SafeHandle"
         ]
@@ -25749,7 +25749,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -25761,7 +25761,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -25773,7 +25773,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25785,7 +25785,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.SafeHandle"
         ]
@@ -25797,7 +25797,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25809,7 +25809,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.ConstrainedExecution.CriticalFinalizerObject"
         ]
@@ -25821,7 +25821,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.SafeHandle"
         ]
@@ -25833,7 +25833,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.SafeHandle"
         ]
@@ -25845,7 +25845,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25857,7 +25857,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.InteropServices.SafeBuffer"
         ]
@@ -25869,7 +25869,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25881,7 +25881,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeNCryptHandle"
         ]
@@ -25893,7 +25893,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeNCryptHandle"
         ]
@@ -25905,7 +25905,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeNCryptHandle"
         ]
@@ -25917,7 +25917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25929,7 +25929,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25941,7 +25941,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25953,7 +25953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -25964,7 +25964,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25976,7 +25976,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.Win32.SafeHandles",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid"
         ]
@@ -25988,7 +25988,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -25999,7 +25999,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26013,7 +26013,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -26030,7 +26030,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -26041,7 +26041,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26052,7 +26052,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -26063,7 +26063,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26074,7 +26074,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26088,7 +26088,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26102,7 +26102,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26113,7 +26113,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26127,7 +26127,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26141,7 +26141,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -26152,7 +26152,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26166,7 +26166,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -26177,7 +26177,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -26188,7 +26188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -26200,7 +26200,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Permissions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26214,7 +26214,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Permissions",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26225,7 +26225,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26236,7 +26236,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26250,7 +26250,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Security.ISecurityElementFactory",
           "System.Object"
         ]
@@ -26262,7 +26262,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -26274,7 +26274,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.Security.Principal.IdentityReference"
         ]
@@ -26286,7 +26286,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26300,7 +26300,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Permissions",
-        "fathers": [
+        "parents": [
           "System.Security.Permissions.CodeAccessSecurityAttribute"
         ]
       }
@@ -26311,7 +26311,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Permissions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26325,7 +26325,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26339,7 +26339,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26350,7 +26350,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26364,7 +26364,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26375,7 +26375,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26386,7 +26386,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26397,7 +26397,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26411,7 +26411,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.InteropServices.ExternalException"
         ]
@@ -26423,7 +26423,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26437,7 +26437,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26451,7 +26451,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Threading.WaitHandle"
         ]
@@ -26463,7 +26463,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -26475,7 +26475,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -26487,7 +26487,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -26500,7 +26500,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -26513,7 +26513,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26524,7 +26524,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -26536,7 +26536,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.ValueType"
@@ -26549,7 +26549,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -26561,7 +26561,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26572,7 +26572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26583,7 +26583,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -26594,7 +26594,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -26607,7 +26607,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -26619,7 +26619,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26633,7 +26633,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26644,7 +26644,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -26656,7 +26656,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26667,7 +26667,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design.Serialization",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -26679,7 +26679,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26693,7 +26693,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -26706,7 +26706,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.Design.IServiceContainer",
           "System.IServiceProvider",
           "System.IDisposable",
@@ -26720,7 +26720,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -26733,7 +26733,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication.ExtendedProtection",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Collections.ReadOnlyCollectionBase"
@@ -26746,7 +26746,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26757,7 +26757,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -26768,7 +26768,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -26779,7 +26779,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -26793,7 +26793,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -26804,7 +26804,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -26817,7 +26817,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26828,7 +26828,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -26839,7 +26839,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HashAlgorithm"
@@ -26852,7 +26852,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA1"
@@ -26865,7 +26865,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA1"
@@ -26878,7 +26878,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HashAlgorithm"
@@ -26891,7 +26891,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA256"
@@ -26904,7 +26904,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA256"
@@ -26917,7 +26917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HashAlgorithm"
@@ -26930,7 +26930,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA384"
@@ -26943,7 +26943,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA384"
@@ -26956,7 +26956,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.HashAlgorithm"
@@ -26969,7 +26969,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA512"
@@ -26982,7 +26982,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.ICryptoTransform",
           "System.Security.Cryptography.SHA512"
@@ -26995,7 +26995,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27009,7 +27009,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27023,7 +27023,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27034,7 +27034,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27045,7 +27045,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -27057,7 +27057,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27068,7 +27068,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27082,7 +27082,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27093,7 +27093,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27107,7 +27107,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27118,7 +27118,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27132,7 +27132,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -27149,7 +27149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -27160,7 +27160,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Transactions.Enlistment"
         ]
       }
@@ -27171,7 +27171,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27184,7 +27184,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27197,7 +27197,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27210,7 +27210,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27223,7 +27223,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27236,7 +27236,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27249,7 +27249,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27262,7 +27262,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27275,7 +27275,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -27287,7 +27287,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -27298,7 +27298,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -27310,7 +27310,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Drawing",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -27321,7 +27321,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -27333,7 +27333,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27347,7 +27347,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27361,7 +27361,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -27373,7 +27373,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Net.Mail.SmtpException"
         ]
@@ -27385,7 +27385,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Net.Mail.SmtpFailedRecipientException"
         ]
@@ -27397,7 +27397,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mail",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27411,7 +27411,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27422,7 +27422,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27433,7 +27433,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27444,7 +27444,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27455,7 +27455,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27466,7 +27466,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27477,7 +27477,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27488,7 +27488,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27499,7 +27499,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27510,7 +27510,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27521,7 +27521,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -27533,7 +27533,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27544,7 +27544,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.EventArgs"
         ]
@@ -27556,7 +27556,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27570,7 +27570,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27584,7 +27584,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ComponentModel.Win32Exception"
         ]
@@ -27596,7 +27596,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27610,7 +27610,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27621,7 +27621,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27635,7 +27635,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27649,7 +27649,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27663,7 +27663,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27674,7 +27674,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27685,7 +27685,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpMessageHandler"
         ]
@@ -27697,7 +27697,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27711,7 +27711,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27725,7 +27725,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -27744,7 +27744,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.IDictionary",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -27759,7 +27759,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IDictionary",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -27778,7 +27778,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ISet",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -27797,7 +27797,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -27808,7 +27808,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Object"
         ]
@@ -27820,7 +27820,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Diagnostics.TraceFilter"
         ]
       }
@@ -27831,7 +27831,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27845,7 +27845,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Diagnostics.Switch"
         ]
       }
@@ -27856,7 +27856,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27867,7 +27867,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -27880,7 +27880,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27894,7 +27894,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -27908,7 +27908,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -27919,7 +27919,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27930,7 +27930,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -27941,7 +27941,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.SqlTypes.SqlTypeException"
         ]
@@ -27953,7 +27953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -27967,7 +27967,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -27981,7 +27981,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -27995,7 +27995,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.Xml.Serialization.IXmlSerializable",
           "System.Runtime.Serialization.ISerializable",
@@ -28009,7 +28009,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.Xml.Serialization.IXmlSerializable",
           "System.Runtime.Serialization.ISerializable",
@@ -28023,7 +28023,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28037,7 +28037,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28051,7 +28051,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28065,7 +28065,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28079,7 +28079,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28093,7 +28093,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28107,7 +28107,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28121,7 +28121,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28135,7 +28135,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28149,7 +28149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28163,7 +28163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.SqlTypes.SqlTypeException"
         ]
@@ -28175,7 +28175,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.SqlTypes.SqlTypeException"
         ]
@@ -28187,7 +28187,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28201,7 +28201,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.IComparable",
           "System.Xml.Serialization.IXmlSerializable",
@@ -28215,7 +28215,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.SqlTypes.SqlTypeException"
         ]
@@ -28227,7 +28227,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -28239,7 +28239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.Data.SqlTypes.INullable",
           "System.Xml.Serialization.IXmlSerializable",
           "System.Object"
@@ -28252,7 +28252,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -28264,7 +28264,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28275,7 +28275,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28289,7 +28289,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Authentication",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28303,7 +28303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28314,7 +28314,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Security",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Security.AuthenticatedStream"
         ]
@@ -28326,7 +28326,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.ICloneable",
@@ -28340,7 +28340,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
           "System.Collections.ICollection",
@@ -28355,7 +28355,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28369,7 +28369,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28380,7 +28380,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -28392,7 +28392,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28403,7 +28403,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28414,7 +28414,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -28426,7 +28426,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28440,7 +28440,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28451,7 +28451,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Buffers",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -28463,7 +28463,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -28474,7 +28474,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28485,7 +28485,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -28498,7 +28498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28509,7 +28509,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -28520,7 +28520,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -28533,7 +28533,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -28544,7 +28544,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -28555,7 +28555,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -28568,7 +28568,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28582,7 +28582,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -28593,7 +28593,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28604,7 +28604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28615,7 +28615,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28626,7 +28626,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28637,7 +28637,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.SqlTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28651,7 +28651,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28665,7 +28665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28679,7 +28679,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -28691,7 +28691,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.HttpContent"
         ]
@@ -28703,7 +28703,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28714,7 +28714,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28728,7 +28728,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.TextReader"
         ]
@@ -28740,7 +28740,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.TextWriter"
         ]
@@ -28752,7 +28752,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.Collections.IEnumerable",
           "System.Collections.Generic.IEnumerable",
@@ -28770,7 +28770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -28782,7 +28782,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -28796,7 +28796,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IComparer",
@@ -28811,7 +28811,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28825,7 +28825,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Intrinsics.X86",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28839,7 +28839,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28850,7 +28850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Net.Http.ByteArrayContent"
         ]
@@ -28862,7 +28862,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -28873,7 +28873,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Object"
         ]
@@ -28885,7 +28885,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Specialized",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28896,7 +28896,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -28907,7 +28907,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -28919,7 +28919,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28930,7 +28930,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.ValidationAttribute"
         ]
       }
@@ -28941,7 +28941,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.TextReader"
         ]
@@ -28953,7 +28953,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -28964,7 +28964,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -28978,7 +28978,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -28989,7 +28989,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -29001,7 +29001,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.TextWriter"
         ]
@@ -29013,7 +29013,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.IStrongBox",
           "System.Object"
         ]
@@ -29025,7 +29025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.IDeserializationCallback",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -29038,7 +29038,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -29050,7 +29050,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29061,7 +29061,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29072,7 +29072,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.ISerializable",
           "System.Transactions.Transaction"
@@ -29085,7 +29085,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.PortableExecutable",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29099,7 +29099,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29113,7 +29113,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data.Common",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29127,7 +29127,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29138,7 +29138,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.CodeAnalysis",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29149,7 +29149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29160,7 +29160,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISurrogateSelector",
           "System.Object"
         ]
@@ -29172,7 +29172,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29183,7 +29183,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29194,7 +29194,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29205,7 +29205,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -29216,7 +29216,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29227,7 +29227,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29241,7 +29241,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29252,7 +29252,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -29263,7 +29263,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29274,7 +29274,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29285,7 +29285,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.SymbolStore",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29296,7 +29296,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -29308,7 +29308,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29319,7 +29319,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -29331,7 +29331,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.InvalidExpressionException"
         ]
@@ -29343,7 +29343,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29357,7 +29357,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.AccessControl",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Security.AccessControl.CommonAcl"
@@ -29370,7 +29370,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -29382,7 +29382,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations.Schema",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29393,7 +29393,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29407,7 +29407,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -29419,7 +29419,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.EastAsianLunisolarCalendar"
         ]
@@ -29431,7 +29431,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29442,7 +29442,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ApplicationException"
         ]
@@ -29454,7 +29454,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Versioning",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29465,7 +29465,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ApplicationException"
         ]
@@ -29477,7 +29477,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ApplicationException"
         ]
@@ -29489,7 +29489,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Threading.IThreadPoolWorkItem",
           "System.IAsyncResult",
           "System.IDisposable",
@@ -29503,7 +29503,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Threading.IThreadPoolWorkItem",
           "System.IAsyncResult",
           "System.IDisposable",
@@ -29517,7 +29517,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.ITaskAwaiter",
@@ -29531,7 +29531,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.ITaskAwaiter",
@@ -29545,7 +29545,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.OperationCanceledException"
         ]
@@ -29557,7 +29557,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29568,7 +29568,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29582,7 +29582,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29596,7 +29596,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29607,7 +29607,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29618,7 +29618,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29629,7 +29629,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -29641,7 +29641,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29655,7 +29655,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -29667,7 +29667,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29678,7 +29678,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29689,7 +29689,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29703,7 +29703,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -29714,7 +29714,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -29726,7 +29726,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.IDeserializationCallback",
           "System.Object"
@@ -29739,7 +29739,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -29751,7 +29751,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -29763,7 +29763,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Diagnostics.TraceListener"
         ]
@@ -29775,7 +29775,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -29787,7 +29787,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.ConstrainedExecution.CriticalFinalizerObject"
         ]
       }
@@ -29798,7 +29798,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -29810,7 +29810,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -29821,7 +29821,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -29834,7 +29834,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -29846,7 +29846,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -29858,7 +29858,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -29870,7 +29870,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29884,7 +29884,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29898,7 +29898,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -29911,7 +29911,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -29923,7 +29923,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29932,7 +29932,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29946,7 +29946,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -29958,7 +29958,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -29969,7 +29969,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -29983,7 +29983,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -29995,7 +29995,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Timers",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.ISupportInitialize",
@@ -30004,7 +30004,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -30016,7 +30016,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -30029,7 +30029,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Timers",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DescriptionAttribute"
         ]
       }
@@ -30040,7 +30040,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IComparable",
           "System.IEquatable",
@@ -30056,7 +30056,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -30067,7 +30067,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30081,7 +30081,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -30092,7 +30092,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30103,7 +30103,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.Serialization.IDeserializationCallback",
@@ -30117,7 +30117,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -30129,7 +30129,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.ICryptoTransform",
           "System.IDisposable",
           "System.Object"
@@ -30142,7 +30142,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30156,7 +30156,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30170,7 +30170,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -30181,7 +30181,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -30192,7 +30192,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30206,7 +30206,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30217,7 +30217,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30228,7 +30228,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30242,7 +30242,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30253,7 +30253,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30267,7 +30267,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -30279,7 +30279,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -30293,7 +30293,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics.Tracing",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30304,7 +30304,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30318,7 +30318,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30329,7 +30329,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Diagnostics",
-        "fathers": [
+        "parents": [
           "System.Diagnostics.Switch"
         ]
       }
@@ -30340,7 +30340,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -30353,7 +30353,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Transactions.TransactionException"
         ]
@@ -30365,7 +30365,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -30378,7 +30378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -30389,7 +30389,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -30401,7 +30401,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Transactions.TransactionException"
         ]
@@ -30413,7 +30413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30424,7 +30424,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Transactions.TransactionException"
         ]
@@ -30436,7 +30436,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -30447,7 +30447,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Transactions.TransactionException"
         ]
@@ -30459,7 +30459,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -30471,7 +30471,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30485,7 +30485,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30499,7 +30499,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -30512,7 +30512,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Transactions",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30526,7 +30526,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -30538,7 +30538,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Net.Http.Headers.TransferCodingHeaderValue"
         ]
@@ -30550,7 +30550,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Mime",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30564,7 +30564,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IPropagatorBlock",
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -30581,7 +30581,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IPropagatorBlock",
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -30598,7 +30598,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.Serialization.IDeserializationCallback",
@@ -30612,7 +30612,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30626,7 +30626,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30637,7 +30637,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ISet",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -30656,7 +30656,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.SymmetricAlgorithm"
         ]
@@ -30668,7 +30668,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "Internal.Cryptography.ICngSymmetricAlgorithm",
           "System.Security.Cryptography.TripleDES"
@@ -30681,7 +30681,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Security.Cryptography.TripleDES"
         ]
@@ -30693,7 +30693,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -30706,7 +30706,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -30717,7 +30717,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30728,7 +30728,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30739,7 +30739,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30750,7 +30750,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30761,7 +30761,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30772,7 +30772,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30783,7 +30783,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30794,7 +30794,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
           "System.IComparable",
@@ -30810,7 +30810,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -30821,7 +30821,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30835,7 +30835,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.IReflect",
           "System.Reflection.MemberInfo"
@@ -30848,7 +30848,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.TypeLoadException"
         ]
@@ -30860,7 +30860,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -30871,7 +30871,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30885,7 +30885,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -30896,7 +30896,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.IReflect",
           "System.Reflection.IReflectableType",
@@ -30910,7 +30910,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -30924,7 +30924,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -30935,7 +30935,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -30946,7 +30946,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -30957,7 +30957,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -30969,7 +30969,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -30983,7 +30983,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.IReflect",
           "System.Reflection.IReflectableType",
@@ -30997,7 +30997,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31008,7 +31008,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31019,7 +31019,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31030,7 +31030,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31041,7 +31041,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31052,7 +31052,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31063,7 +31063,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31076,7 +31076,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization.Formatters",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31090,7 +31090,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31104,7 +31104,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31115,7 +31115,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31126,7 +31126,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31137,7 +31137,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection",
-        "fathers": [
+        "parents": [
           "System.Reflection.ICustomAttributeProvider",
           "System.Reflection.IReflect",
           "System.Reflection.IReflectableType",
@@ -31151,7 +31151,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -31163,7 +31163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31177,7 +31177,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31188,7 +31188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31199,7 +31199,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31210,7 +31210,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31224,7 +31224,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31235,7 +31235,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31246,7 +31246,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31260,7 +31260,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31271,7 +31271,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31285,7 +31285,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31296,7 +31296,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -31307,7 +31307,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -31319,7 +31319,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31330,7 +31330,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31341,7 +31341,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -31353,7 +31353,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IReadOnlyCollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -31367,7 +31367,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31378,7 +31378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -31390,7 +31390,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Emit",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31401,7 +31401,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -31413,7 +31413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -31425,7 +31425,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -31437,7 +31437,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31448,7 +31448,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31459,7 +31459,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -31476,7 +31476,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -31487,7 +31487,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -31504,7 +31504,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -31515,7 +31515,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IConvertible",
           "System.IFormattable",
@@ -31532,7 +31532,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.BaseNumberConverter"
         ]
       }
@@ -31543,7 +31543,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.ValueType"
@@ -31556,7 +31556,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Resources",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31570,7 +31570,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Globalization.Calendar"
         ]
@@ -31582,7 +31582,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Linq.Expressions",
-        "fathers": [
+        "parents": [
           "System.Linq.Expressions.Expression"
         ]
       }
@@ -31593,7 +31593,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Dynamic",
-        "fathers": [
+        "parents": [
           "System.Dynamic.DynamicMetaObjectBinder"
         ]
       }
@@ -31604,7 +31604,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -31616,7 +31616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -31627,7 +31627,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31640,7 +31640,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Net.NetworkInformation.IPAddressInformation"
         ]
       }
@@ -31651,7 +31651,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.NetworkInformation",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -31665,7 +31665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Globalization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31679,7 +31679,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Text.Encoding"
         ]
@@ -31691,7 +31691,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -31702,7 +31702,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Data.Constraint"
         ]
       }
@@ -31713,7 +31713,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31724,7 +31724,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.Serialization.IObjectReference",
           "System.Object"
@@ -31737,7 +31737,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Sockets",
-        "fathers": [
+        "parents": [
           "System.Net.EndPoint"
         ]
       }
@@ -31748,7 +31748,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -31759,7 +31759,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31770,7 +31770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -31782,7 +31782,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.IO.Stream"
         ]
@@ -31794,7 +31794,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31808,7 +31808,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -31819,7 +31819,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -31830,7 +31830,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31843,7 +31843,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31854,7 +31854,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -31865,7 +31865,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31879,7 +31879,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -31893,7 +31893,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -31904,7 +31904,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31917,7 +31917,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -31928,7 +31928,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31941,7 +31941,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.ProgressChangedEventArgs"
         ]
       }
@@ -31952,7 +31952,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31965,7 +31965,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -31976,7 +31976,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -31989,7 +31989,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.AsyncCompletedEventArgs"
         ]
       }
@@ -32000,7 +32000,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -32013,7 +32013,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -32025,7 +32025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -32036,7 +32036,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32050,7 +32050,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32064,7 +32064,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.FormatException"
         ]
@@ -32076,7 +32076,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32090,7 +32090,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32104,7 +32104,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -32115,7 +32115,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32129,7 +32129,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.TypeConverter"
         ]
       }
@@ -32140,7 +32140,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.DataAnnotations.DataTypeAttribute"
         ]
       }
@@ -32151,7 +32151,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -32163,7 +32163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Text.Encoding"
         ]
@@ -32175,7 +32175,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Text.Encoding"
         ]
@@ -32187,7 +32187,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Text",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Text.Encoding"
         ]
@@ -32199,7 +32199,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "Microsoft.VisualBasic.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -32210,7 +32210,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -32221,7 +32221,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.IServiceProvider",
           "System.Object"
         ]
@@ -32233,7 +32233,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -32244,7 +32244,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -32257,7 +32257,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Exception"
         ]
@@ -32269,7 +32269,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.DataAnnotations",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -32280,7 +32280,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32294,7 +32294,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -32305,7 +32305,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.ObjectModel",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -32316,7 +32316,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
           "System.Collections.IEnumerable",
@@ -32332,7 +32332,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Collections.Generic",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -32348,7 +32348,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -32360,7 +32360,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.ValueType"
         ]
@@ -32372,7 +32372,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IStateMachineBoxAwareAwaiter",
@@ -32386,7 +32386,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IStateMachineBoxAwareAwaiter",
@@ -32400,7 +32400,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Sources",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32414,7 +32414,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Sources",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32428,7 +32428,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32446,7 +32446,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32459,7 +32459,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32472,7 +32472,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32485,7 +32485,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32498,7 +32498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32511,7 +32511,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32524,7 +32524,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32537,7 +32537,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
       },
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Collections.IStructuralEquatable",
           "System.Collections.IStructuralComparable",
@@ -32555,7 +32555,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -32566,7 +32566,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32577,7 +32577,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32588,7 +32588,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32602,7 +32602,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32616,7 +32616,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -32627,7 +32627,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.ComTypes",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32641,7 +32641,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.IFormattable",
           "System.ValueType"
@@ -32654,7 +32654,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Intrinsics",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32665,7 +32665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.IFormattable",
           "System.ValueType"
@@ -32678,7 +32678,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Intrinsics",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32689,7 +32689,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.IFormattable",
           "System.ValueType"
@@ -32702,7 +32702,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Numerics",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.IFormattable",
           "System.ValueType"
@@ -32715,7 +32715,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Intrinsics",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32726,7 +32726,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Reflection.Metadata.Ecma335",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32737,7 +32737,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -32749,7 +32749,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.IComparable",
           "System.IComparable",
@@ -32765,7 +32765,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Data.DataException"
         ]
@@ -32777,7 +32777,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -32789,7 +32789,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel.Design",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32803,7 +32803,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32814,7 +32814,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -32827,7 +32827,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -32838,7 +32838,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.MarshalByRefObject"
         ]
@@ -32850,7 +32850,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ApplicationException"
         ]
@@ -32862,7 +32862,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -32875,7 +32875,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -32887,7 +32887,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.Http.Headers",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Object"
         ]
@@ -32899,7 +32899,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32913,7 +32913,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -32925,7 +32925,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
         ]
@@ -32937,7 +32937,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ComponentModel.IComponent",
           "System.IDisposable",
           "System.ComponentModel.Component"
@@ -32950,7 +32950,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.InvalidOperationException"
         ]
@@ -32962,7 +32962,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -32976,7 +32976,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Runtime.Serialization.ISerializable",
@@ -32991,7 +32991,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Net.IWebProxy",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -33004,7 +33004,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.MarshalByRefObject"
         ]
@@ -33016,7 +33016,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IDisposable",
           "System.MarshalByRefObject"
@@ -33029,7 +33029,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -33041,7 +33041,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33055,7 +33055,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33066,7 +33066,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33080,7 +33080,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.ComponentModel.Win32Exception"
         ]
@@ -33092,7 +33092,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33106,7 +33106,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33117,7 +33117,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net.WebSockets",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33131,7 +33131,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33145,7 +33145,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33159,7 +33159,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.ComponentModel",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Runtime.InteropServices.ExternalException"
         ]
@@ -33171,7 +33171,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33185,7 +33185,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IIdentity",
           "System.IDisposable",
           "System.Runtime.Serialization.ISerializable",
@@ -33200,7 +33200,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Principal",
-        "fathers": [
+        "parents": [
           "System.Security.Principal.IPrincipal",
           "System.Security.Claims.ClaimsPrincipal"
         ]
@@ -33212,7 +33212,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Threading.Tasks.Dataflow",
-        "fathers": [
+        "parents": [
           "System.Threading.Tasks.Dataflow.IPropagatorBlock",
           "System.Threading.Tasks.Dataflow.ITargetBlock",
           "System.Threading.Tasks.Dataflow.IDataflowBlock",
@@ -33229,7 +33229,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.InteropServices.WindowsRuntime",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -33240,7 +33240,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33254,7 +33254,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -33265,7 +33265,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Net",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -33278,7 +33278,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsnEncodedData"
         ]
       }
@@ -33289,7 +33289,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33303,7 +33303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.X509Certificates.X509Extension"
         ]
       }
@@ -33314,7 +33314,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.IDeserializationCallback",
           "System.Runtime.Serialization.ISerializable",
@@ -33328,7 +33328,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Runtime.Serialization.IDeserializationCallback",
           "System.Runtime.Serialization.ISerializable",
@@ -33342,7 +33342,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -33356,7 +33356,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -33368,7 +33368,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -33382,7 +33382,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -33394,7 +33394,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -33406,7 +33406,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33417,7 +33417,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -33430,7 +33430,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -33442,7 +33442,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33453,7 +33453,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -33464,7 +33464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33478,7 +33478,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33492,7 +33492,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.X509Certificates.X509Extension"
         ]
       }
@@ -33503,7 +33503,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.AsnEncodedData"
         ]
       }
@@ -33514,7 +33514,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -33527,7 +33527,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -33539,7 +33539,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33553,7 +33553,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33567,7 +33567,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33581,7 +33581,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.X509Certificates.X509Extension"
         ]
       }
@@ -33592,7 +33592,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33606,7 +33606,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33620,7 +33620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33634,7 +33634,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33648,7 +33648,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33659,7 +33659,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -33671,7 +33671,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.Security.Cryptography.X509Certificates.X509Extension"
         ]
       }
@@ -33682,7 +33682,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33696,7 +33696,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Security.Cryptography.X509Certificates",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -33710,7 +33710,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XObject"
         ]
@@ -33722,7 +33722,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XText"
         ]
@@ -33734,7 +33734,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XNode"
         ]
@@ -33746,7 +33746,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XNode"
         ]
@@ -33758,7 +33758,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33769,7 +33769,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XContainer"
         ]
@@ -33781,7 +33781,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XNode"
         ]
@@ -33793,7 +33793,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Serialization.IXmlSerializable",
           "System.Xml.Linq.XContainer"
@@ -33806,7 +33806,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -33817,7 +33817,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -33828,7 +33828,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -33842,7 +33842,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -33853,7 +33853,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -33864,7 +33864,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -33878,7 +33878,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Xml.XPath.XPathItem"
         ]
@@ -33890,7 +33890,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -33904,7 +33904,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -33915,7 +33915,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Collections.ICollection",
           "System.Xml.XmlNamedNodeMap"
@@ -33928,7 +33928,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -33939,7 +33939,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -33952,7 +33952,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33963,7 +33963,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33974,7 +33974,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlDictionary",
           "System.Object"
         ]
@@ -33986,7 +33986,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -33997,7 +33997,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34011,7 +34011,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34025,7 +34025,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34039,7 +34039,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34050,7 +34050,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34061,7 +34061,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34075,7 +34075,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34086,7 +34086,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34100,7 +34100,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34114,7 +34114,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34128,7 +34128,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -34139,7 +34139,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlDictionary",
           "System.Object"
         ]
@@ -34151,7 +34151,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.XmlReader"
         ]
@@ -34163,7 +34163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34174,7 +34174,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34188,7 +34188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34199,7 +34199,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.XmlWriter"
         ]
@@ -34211,7 +34211,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34225,7 +34225,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34239,7 +34239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34253,7 +34253,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34267,7 +34267,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34278,7 +34278,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -34292,7 +34292,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -34303,7 +34303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -34316,7 +34316,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34330,7 +34330,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34344,7 +34344,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34355,7 +34355,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -34367,7 +34367,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34378,7 +34378,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34389,7 +34389,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34400,7 +34400,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34411,7 +34411,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Resolvers",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34425,7 +34425,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34439,7 +34439,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34450,7 +34450,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34464,7 +34464,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34475,7 +34475,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Xml.Serialization.XmlMapping"
         ]
       }
@@ -34486,7 +34486,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.Object"
         ]
@@ -34498,7 +34498,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34509,7 +34509,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlNamespaceResolver",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -34522,7 +34522,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34536,7 +34536,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34547,7 +34547,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34558,7 +34558,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34572,7 +34572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34586,7 +34586,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -34597,7 +34597,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -34610,7 +34610,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -34621,7 +34621,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -34634,7 +34634,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerable",
           "System.IDisposable",
           "System.Object"
@@ -34647,7 +34647,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34661,7 +34661,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.IXmlNamespaceResolver",
           "System.Xml.XmlReader"
@@ -34674,7 +34674,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34688,7 +34688,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34702,7 +34702,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34713,7 +34713,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34727,7 +34727,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34738,7 +34738,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Resolvers",
-        "fathers": [
+        "parents": [
           "System.Xml.XmlResolver"
         ]
       }
@@ -34749,7 +34749,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -34763,7 +34763,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34774,7 +34774,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34785,7 +34785,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -34802,7 +34802,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -34822,7 +34822,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.XmlWriter"
         ]
@@ -34834,7 +34834,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34845,7 +34845,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IList",
           "System.Collections.Generic.ICollection",
           "System.Collections.Generic.IEnumerable",
@@ -34862,7 +34862,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -34874,7 +34874,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34885,7 +34885,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -34899,7 +34899,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34910,7 +34910,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34921,7 +34921,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -34932,7 +34932,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -34943,7 +34943,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaObject"
         ]
       }
@@ -34954,7 +34954,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaGroupBase"
         ]
       }
@@ -34965,7 +34965,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaObject"
         ]
       }
@@ -34976,7 +34976,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaObject"
         ]
       }
@@ -34987,7 +34987,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaParticle"
         ]
       }
@@ -34998,7 +34998,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35009,7 +35009,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaObject"
         ]
       }
@@ -35020,7 +35020,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35031,7 +35031,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35042,7 +35042,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35053,7 +35053,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaGroupBase"
         ]
       }
@@ -35064,7 +35064,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -35077,7 +35077,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -35089,7 +35089,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35100,7 +35100,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaContentModel"
         ]
       }
@@ -35111,7 +35111,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaContent"
         ]
       }
@@ -35122,7 +35122,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaContent"
         ]
       }
@@ -35133,7 +35133,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaType"
         ]
       }
@@ -35144,7 +35144,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35155,7 +35155,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35166,7 +35166,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35180,7 +35180,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35194,7 +35194,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35205,7 +35205,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35219,7 +35219,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35233,7 +35233,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaObject"
         ]
       }
@@ -35244,7 +35244,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaParticle"
         ]
       }
@@ -35255,7 +35255,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35266,7 +35266,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Collections.Generic.IEnumerator",
           "System.IDisposable",
           "System.Collections.IEnumerator",
@@ -35280,7 +35280,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -35292,7 +35292,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35303,7 +35303,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaObject"
         ]
       }
@@ -35314,7 +35314,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35325,7 +35325,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35339,7 +35339,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaNumericFacet"
         ]
       }
@@ -35350,7 +35350,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35361,7 +35361,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaParticle"
         ]
       }
@@ -35372,7 +35372,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaParticle"
         ]
       }
@@ -35383,7 +35383,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35394,7 +35394,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaExternal"
         ]
       }
@@ -35405,7 +35405,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Xml.Serialization.SchemaImporter"
         ]
       }
@@ -35416,7 +35416,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaExternal"
         ]
       }
@@ -35427,7 +35427,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35438,7 +35438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Xml.Schema.XmlSchemaException"
         ]
@@ -35450,7 +35450,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.IXmlSchemaInfo",
           "System.Object"
         ]
@@ -35462,7 +35462,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaIdentityConstraint"
         ]
       }
@@ -35473,7 +35473,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaIdentityConstraint"
         ]
       }
@@ -35484,7 +35484,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaNumericFacet"
         ]
       }
@@ -35495,7 +35495,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35506,7 +35506,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35517,7 +35517,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaNumericFacet"
         ]
       }
@@ -35528,7 +35528,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35539,7 +35539,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35550,7 +35550,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaNumericFacet"
         ]
       }
@@ -35561,7 +35561,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35572,7 +35572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35583,7 +35583,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35594,7 +35594,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -35608,7 +35608,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Collections.IEnumerator",
           "System.Object"
         ]
@@ -35620,7 +35620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35631,7 +35631,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35642,7 +35642,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35653,7 +35653,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -35664,7 +35664,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaExternal"
         ]
       }
@@ -35675,7 +35675,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Collections.IList",
           "System.Collections.ICollection",
           "System.Collections.IEnumerable",
@@ -35690,7 +35690,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaGroupBase"
         ]
       }
@@ -35701,7 +35701,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35712,7 +35712,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaContentModel"
         ]
       }
@@ -35723,7 +35723,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaContent"
         ]
       }
@@ -35734,7 +35734,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaContent"
         ]
       }
@@ -35745,7 +35745,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaType"
         ]
       }
@@ -35756,7 +35756,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35767,7 +35767,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaSimpleTypeContent"
         ]
       }
@@ -35778,7 +35778,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaSimpleTypeContent"
         ]
       }
@@ -35789,7 +35789,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaSimpleTypeContent"
         ]
       }
@@ -35800,7 +35800,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaNumericFacet"
         ]
       }
@@ -35811,7 +35811,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35822,7 +35822,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaIdentityConstraint"
         ]
       }
@@ -35833,7 +35833,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35847,7 +35847,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Xml.Schema.XmlSchemaException"
         ]
@@ -35859,7 +35859,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35873,7 +35873,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35884,7 +35884,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -35898,7 +35898,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaFacet"
         ]
       }
@@ -35909,7 +35909,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.Xml.Schema.XmlSchemaAnnotated"
         ]
       }
@@ -35920,7 +35920,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Xml.XmlResolver"
         ]
       }
@@ -35931,7 +35931,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -35944,7 +35944,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -35957,7 +35957,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -35968,7 +35968,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -35981,7 +35981,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Xml.Serialization.XmlSerializationGeneratedCode"
         ]
       }
@@ -35992,7 +35992,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -36005,7 +36005,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Xml.Serialization.XmlSerializationGeneratedCode"
         ]
       }
@@ -36016,7 +36016,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36027,7 +36027,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -36038,7 +36038,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36049,7 +36049,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36060,7 +36060,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36071,7 +36071,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -36082,7 +36082,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36096,7 +36096,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -36110,7 +36110,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36121,7 +36121,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36135,7 +36135,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36149,7 +36149,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -36163,7 +36163,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -36174,7 +36174,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.IXmlLineInfo",
           "System.Xml.IXmlNamespaceResolver",
@@ -36188,7 +36188,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.XmlWriter"
         ]
@@ -36200,7 +36200,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36214,7 +36214,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Attribute"
         ]
       }
@@ -36225,7 +36225,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36239,7 +36239,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Serialization",
-        "fathers": [
+        "parents": [
           "System.Xml.Serialization.XmlMapping"
         ]
       }
@@ -36250,7 +36250,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Xml.XmlResolver"
         ]
       }
@@ -36261,7 +36261,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Xml.IXmlLineInfo",
           "System.Xml.IXmlNamespaceResolver",
@@ -36275,7 +36275,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Schema",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -36288,7 +36288,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Xml.XPath.IXPathNavigable",
@@ -36302,7 +36302,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Data",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36316,7 +36316,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -36328,7 +36328,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36339,7 +36339,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.IEquatable",
           "System.Runtime.Serialization.ISerializable",
           "System.Object"
@@ -36352,7 +36352,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36363,7 +36363,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XObject"
         ]
@@ -36375,7 +36375,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.IComparer",
           "System.Collections.Generic.IComparer",
           "System.Object"
@@ -36388,7 +36388,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Collections.IEqualityComparer",
           "System.Collections.Generic.IEqualityComparer",
           "System.Object"
@@ -36401,7 +36401,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Object"
         ]
@@ -36413,7 +36413,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36427,7 +36427,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -36438,7 +36438,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.Xml.XPath.IXPathNavigable",
           "System.Object"
         ]
@@ -36450,7 +36450,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -36462,7 +36462,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36473,7 +36473,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36484,7 +36484,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36495,7 +36495,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36506,7 +36506,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36520,7 +36520,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Xml.XPath.IXPathNavigable",
           "System.Xml.IXmlNamespaceResolver",
@@ -36534,7 +36534,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Collections.IEnumerable",
           "System.Object"
@@ -36547,7 +36547,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36561,7 +36561,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36572,7 +36572,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36583,7 +36583,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36594,7 +36594,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.XPath",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36608,7 +36608,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XNode"
         ]
@@ -36620,7 +36620,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.Serialization",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36631,7 +36631,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36642,7 +36642,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36653,7 +36653,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.Xml.Xsl.XsltException"
         ]
@@ -36665,7 +36665,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlNamespaceResolver",
           "System.Collections.IEnumerable",
           "System.Xml.XmlNamespaceManager"
@@ -36678,7 +36678,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.SystemException"
         ]
@@ -36690,7 +36690,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl.Runtime",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36701,7 +36701,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.EventArgs"
         ]
       }
@@ -36712,7 +36712,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.ICloneable",
           "System.Runtime.Serialization.ISerializable",
           "System.MulticastDelegate"
@@ -36725,7 +36725,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36736,7 +36736,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Xsl",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36747,7 +36747,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36758,7 +36758,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Xml.Linq",
-        "fathers": [
+        "parents": [
           "System.Xml.IXmlLineInfo",
           "System.Xml.Linq.XNode"
         ]
@@ -36770,7 +36770,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.ValueType"
         ]
       }
@@ -36781,7 +36781,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.Runtime.CompilerServices",
-        "fathers": [
+        "parents": [
           "System.Runtime.CompilerServices.ICriticalNotifyCompletion",
           "System.Runtime.CompilerServices.INotifyCompletion",
           "System.Runtime.CompilerServices.IStateMachineBoxAwareAwaiter",
@@ -36795,7 +36795,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IDisposable",
           "System.Object"
         ]
@@ -36807,7 +36807,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.Object"
         ]
       }
@@ -36818,7 +36818,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.IComparable",
           "System.IFormattable",
           "System.IConvertible",
@@ -36832,7 +36832,7 @@ export const _CSHARP_CLASS_HIEARCHIES : ClassHiearchies[] = [
     "namespaces": [
       {
         "namespace": "System.IO.Compression",
-        "fathers": [
+        "parents": [
           "System.Runtime.Serialization.ISerializable",
           "System.IO.IOException"
         ]

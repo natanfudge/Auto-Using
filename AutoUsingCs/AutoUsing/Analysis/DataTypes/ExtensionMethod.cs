@@ -1,3 +1,4 @@
+using System.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -20,7 +21,7 @@ namespace AutoUsing.Analysis.DataTypes
         {
             return obj is ExtensionMethod method &&
                    Name == method.Name &&
-                   EqualityComparer<List<string>>.Default.Equals(Namespaces, method.Namespaces);
+                   Namespaces.SequenceEqual( method.Namespaces);
         }
 
         public override int GetHashCode()

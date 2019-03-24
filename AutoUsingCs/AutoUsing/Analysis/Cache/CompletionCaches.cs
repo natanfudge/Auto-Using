@@ -16,16 +16,17 @@ namespace AutoUsing.Analysis.Cache
 
         public void LoadScanResults(IEnumerable<AssemblyScan> scanners)
         {
-            Types.Set(scanners.SelectMany(scanner => scanner.GetAllTypes()).ToList());
-            //TODO: extensions,hierachies
-            
-            
+            Types.SetCache(scanners.SelectMany(scanner => scanner.GetAllTypes()).ToList());
+            Hierachies.SetCache(scanners.SelectMany(scanner => scanner.GetAllHierarchies()).ToList());
+            Extensions.SetCache(scanners.SelectMany(scanner => scanner.GetAllExtensionMethods()).ToList());
+
+
             Types.Save();
-            //TODO save extensions,hierachies
-//            Types.Set();
+            Hierachies.Save();
+            Extensions.Save();
         }
-        
-        
+
+
         /// <summary>
         /// Converts a list of raw reference info into data that is more easily interpreted as a completion
         /// </summary>
@@ -33,7 +34,6 @@ namespace AutoUsing.Analysis.Cache
         /// <returns></returns>
         public static List<Reference> ToCompletionFormat(List<ReferenceInfo> referenceInfos)
         {
-            
             return referenceInfos
                 .Distinct()
                 .GroupBy(info => info.Name)
@@ -42,16 +42,31 @@ namespace AutoUsing.Analysis.Cache
         }
 
 
-        //TODO (these are commented out in AssemblyScanner.cs)
-        public static List<ExtensionMethod> ToCompletionFormat(List<ExtensionMethodInfo> extensionMethodInfos)
+        public static List<ExtensionClass> ToCompletionFormat(List<ExtensionMethodInfo> extensionMethodInfos)
         {
-            return null;
+            var grouped = extensionMethodInfos
+                .GroupBy(ExtendedClassName)
+                .Select(extensionMethods => extensionMethods.GroupBy(extensionMethod => extensionMethod.Method));
+
+            return grouped
+                .Select(extendedClass => new ExtensionClass(extendedClass.First().First().Class,
+                    extendedClass.Select(extensionMethod => new ExtensionMethod(extensionMethod.First().Method,
+                        extensionMethod.Select(info => info.Namespace).Distinct().ToList())).Distinct().ToList()))
+                .ToList()
+                .OrderBy(extendedClass => extendedClass.ExtendedClass)
+                .ToList();
         }
-        
-        //TODO
+
+        private static string ExtendedClassName(ExtensionMethodInfo info) => (info.Class).NoTilde();
+
         public static List<Hierarchies> ToCompletionFormat(List<HierarchyInfo> extensionMethodInfos)
         {
-            return null;
+            return extensionMethodInfos
+                 .GroupBy(hierachy => hierachy.Name)
+                 .Select(group => new Hierarchies(group.Key,
+                     group.Select(info => new Hierarchy(info.Namespace, info.Parents)).ToList()))
+                 .OrderBy(classHierachies => classHierachies.Class)
+                 .ToList();
         }
     }
 }
