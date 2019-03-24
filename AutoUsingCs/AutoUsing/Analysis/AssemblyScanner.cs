@@ -7,9 +7,9 @@ using AutoUsing.Analysis.DataTypes;
 
 namespace AutoUsing.Analysis
 {
-    public class AssemblyScanner
+    public class AssemblyScan
     {
-        public AssemblyScanner(string path)
+        public AssemblyScan(string path)
         {
             try
             {
@@ -22,7 +22,7 @@ namespace AutoUsing.Analysis
             }
         }
 
-        public AssemblyScanner(Assembly assembly)
+        public AssemblyScan(Assembly assembly)
         {
             Assembly = assembly;
         }

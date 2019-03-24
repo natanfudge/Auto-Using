@@ -25,6 +25,16 @@
 				"${workspaceFolder}/AutoUsingCs/AutoUsing/AutoUsing.csproj"
 			],
 			"problemMatcher": "$msCompile"
+		},
+		{
+			"label": "buildTest",
+			"command": "dotnet",
+			"type": "process",
+			"args": [
+				"build",
+				"${workspaceFolder}/AutoUsingCs/TestProg/TestProg.csproj"
+			],
+			"problemMatcher": []
 		}
 	]
 }

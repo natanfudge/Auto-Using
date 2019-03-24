@@ -3,7 +3,7 @@ using AutoUsing.Proxy;
 
 namespace AutoUsing.Models
 {
-    public class SuccessResponse : Response
+    public abstract class SuccessResponse : Response
     {
         public SuccessResponse()
         {

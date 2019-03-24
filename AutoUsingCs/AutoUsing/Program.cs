@@ -15,7 +15,7 @@ namespace AutoUsing
         public static void Main(string[] args)
         {
 
-            Console.WriteLine(" Best Auto-Using server started.");
+            // Console.WriteLine(" Best Auto-Using server started.");
 
             // TODO: Error Handling.. 👌
             // I just wanna see this working, a very rough version. 

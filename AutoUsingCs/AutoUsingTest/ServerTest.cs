@@ -40,7 +40,7 @@ namespace AutoUsingTest
             var request = new GetAllReferencesRequest {ProjectName = "AutoUsing", WordToComplete = "F"};
             var response = Program.Server.GetAllReferences(request) as GetAllReferencesResponse;
             Assert.IsNotNull(response);
-            response.References.AssertContains(new Reference("File", new List<string> {"System.IO", "System.Net"}));
+            (response.Body as List<Reference>).AssertContains(new Reference("File", new List<string> {"System.IO", "System.Net"}));
         }
         
         
@@ -50,7 +50,7 @@ namespace AutoUsingTest
             var request = new GetAllReferencesRequest {ProjectName = "AutoUsing", WordToComplete = "J"};
             var response = Program.Server.GetAllReferences(request) as GetAllReferencesResponse;
             Assert.IsNotNull(response);
-            response.References.AssertContains(new Reference("JsonConvert", new List<string> {"Newtonsoft.Json"}));
+            (response.Body as List<Reference>).AssertContains(new Reference("JsonConvert", new List<string> {"Newtonsoft.Json"}));
         }
 
         [TestMethod]

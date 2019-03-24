@@ -124,7 +124,31 @@ namespace AutoUsing
             return joined;
         }
 
-        
+
+        /// <summary>
+        /// Checks if a file at a location is not being used by another process and therefore it is accessible.
+        /// </summary>
+        public static bool FileIsAccessible(string filename)
+        {
+            // If the file can be opened for exclusive access it means that the file
+            // is no longer locked by another process.
+            try
+            {
+                using (FileStream inputStream = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.None))
+                    return inputStream.Length > 0;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static void WaitForFileToBeAccesible(string filename)
+        {
+            //This will lock the execution until the file is ready
+            while (!FileIsAccessible(filename));
+        }
+
         public static string ToIndentedJson(this object obj)
         {
             return JsonConvert.SerializeObject(obj, Formatting.Indented);

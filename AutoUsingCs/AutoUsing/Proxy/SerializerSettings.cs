@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace AutoUsing.Proxy
 {
@@ -11,6 +12,7 @@ namespace AutoUsing.Proxy
         {
             MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
     }
 }

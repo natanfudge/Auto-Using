@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Threading;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -75,7 +76,7 @@ namespace AutoUsing.Analysis
 
             if (Caches.Types.IsEmpty())
             {
-                var scanners = References.Select(reference => new AssemblyScanner(reference.Path));
+                var scanners = References.Select(reference => new AssemblyScan(reference.Path));
                 Caches.LoadScanResults(scanners);
             }
         }
@@ -151,7 +152,17 @@ namespace AutoUsing.Analysis
         /// </summary>
         private void LoadPackageReferences()
         {
-            Document.Load(FilePath);
+            try
+            {
+                Util.WaitForFileToBeAccesible(FilePath);
+                Document.Load(FilePath);
+            }
+            catch (XmlException e)
+            {
+                throw new Exception($@"Error parsing the xml file located at ${FilePath}:
+                 Call stack: ${e}");
+            }
+
 
             References = new List<PackageReference>();
 
@@ -180,7 +191,7 @@ namespace AutoUsing.Analysis
         //TODO: Optimize to only update when a reference is added, and to only scan the reference added.
         private void UpdateCache()
         {
-            var scanners = References.Select(reference => new AssemblyScanner(reference.Path));
+            var scanners = References.Select(reference => new AssemblyScan(reference.Path));
             Caches.LoadScanResults(scanners);
         }
 

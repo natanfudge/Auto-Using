@@ -22,20 +22,26 @@ export async function activateCSharpExtension() {
 
 }
 
+class AssertionError extends Error {
+    constructor(str: string) {
+        super("Assertion Error:\n" + str + ".");
+    }
+}
+
 export function assertContains<T>(arr: Array<T>, element: T): void {
     if (!arr.includes(element)) {
-        let str = "Assertion Error:\n Expected array to contain: "
+        let str = "Expected array to contain: "
             + colors.green(JSON.stringify(element)) + "\n But actually contains: " + colors.red(JSON.stringify(arr));
 
-        throw new Error(str);
+        throw new AssertionError(str);
     }
 }
 
 export function assertStringContains(str: string, substring: string): void {
     if (!str.includes(substring)) {
-        let error = "Assertion Error: \n Expected string to contain : " + colors.green(str) +
+        let error = "Expected string to contain : " + colors.green(str) +
             "But is actually " + substring;
-        throw new Error(error);
+        throw new AssertionError(error);
     }
 }
 
@@ -43,38 +49,52 @@ export function assertInFirst<T>(amount: number, arr: Array<T>, element: T) {
     let subArray = arr.slice(0, amount);
 
     if (!subArray.includes(element)) {
-        let error = `Assertion Error : \n Expected first one of the first ${amount} elements in array to be ${JSON.stringify(element).green}, \n
+        let error = `Expected first one of the first ${amount} elements in array to be ${JSON.stringify(element).green}, \n
         But they are actually ${JSON.stringify(subArray).red} 
         `;
 
-        throw new Error(error);
+        throw new AssertionError(error);
     }
 
 
 }
 
 export function assertSize<T>(arr: Array<T>, size: number): void {
-    if (arr.length !== size) throw new Error(`Assertion Error:\n Array size is ${arr.length}, expected: ${size}`);
+    if (arr.length !== size) throw new AssertionError(`Array size is ${arr.length}, expected: ${size}`);
 }
 
 export function assertNotContains<T>(arr: Array<T>, element: T): void {
     for (let i = 0; i < arr.length; i++) {
         const el = arr[i];
         if (el === element) {
-            throw new Error(`Assertion Error: \n Expected array to not contain '${element}' but it contains it in index ${i}`);
+            throw new AssertionError(`Expected array to not contain '${element}' but it contains it in index ${i}`);
         }
+    }
+}
+
+export function assertFalse(bool: boolean): void {
+    assertBool(bool, false);
+}
+
+export function assertTrue(bool: boolean): void {
+    assertBool(bool, true);
+}
+
+function assertBool(checking: boolean, trueOrFalse: boolean) :void{
+    if (checking !== trueOrFalse) {
+        throw new AssertionError(`Expected value to be ${JSON.stringify(trueOrFalse).green} but is actually ${JSON.stringify(!trueOrFalse).red}`);
     }
 }
 
 /**
  * Asserts that none of the elements in the array return true to the specified attribute
  */
-export function assertNone<T>(arr: Array<T>, attribute: (element: T) => boolean){
+export function assertNone<T>(arr: Array<T>, attribute: (element: T) => boolean) {
     for (let i = 0; i < arr.length; i++) {
         const el = arr[i];
         if (attribute(el)) {
-            throw new Error(`Assertion Error: \n Expected none of the elements to return true to ${attribute.toString().green},
-             but the element ${JSON.stringify(el).red} at index ${i.toString().red} does return true.`);
+            throw new AssertionError(`Expected none of the elements to return true to ${attribute.toString().green},
+             but the element ${JSON.stringify(el).red} at index ${i.toString().red} does return true`);
         }
     }
 }

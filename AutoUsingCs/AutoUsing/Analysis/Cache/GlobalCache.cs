@@ -41,11 +41,11 @@ namespace AutoUsing.Analysis.Cache
         }
 
         
-        private static IEnumerable<AssemblyScanner> GetBaseAssemblyScans()
+        private static IEnumerable<AssemblyScan> GetBaseAssemblyScans()
         {
             var bins = GetBinFiles();
-            return bins.Select(file => new AssemblyScanner(file)).Where(assembly => assembly.CouldNotLoad())
-                .Append(new AssemblyScanner(typeof(int).Assembly));
+            return bins.Select(file => new AssemblyScan(file)).Where(assembly => assembly.CouldNotLoad())
+                .Append(new AssemblyScan(typeof(int).Assembly));
         }
     }
 }

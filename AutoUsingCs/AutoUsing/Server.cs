@@ -22,28 +22,29 @@ namespace AutoUsing
 
         public Response Pong(Request req)
         {
-            return new SuccessResponse {Body = "pong"};
+            return new PingResponse();
         }
 
         public Response Error(string error)
         {
-            return new ErrorResponse {Body = error};
+            return new ErrorResponse { Body = error };
         }
 
-        public void WriteError(string error){
+        public void WriteError(string error)
+        {
             Proxy.WriteData(Error(error));
         }
 
         public void Listen()
         {
-//            Task.Run(() =>
+            //            Task.Run(() =>
             {
                 while (true)
                 {
-                    Proxy.ReadData(new MessageEventArgs {Data = Console.ReadLine()});
+                    Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
                 }
             }
-//            );
+            //            );
         }
 
 
@@ -58,7 +59,7 @@ namespace AutoUsing
 
             if (projectName.IsNullOrEmpty())
             {
-                return new ErrorResponse {Body = Errors.ProjectNameIsRequired};
+                return new ErrorResponse { Body = Errors.ProjectNameIsRequired };
             }
 
             // Using C# 7.2 `is expression` to check for null, and assign variable
@@ -67,14 +68,18 @@ namespace AutoUsing
                 var referenceInfo = GlobalCache.Caches.Types.Get();
                 referenceInfo.AddRange(project.Caches.Types.Get());
                 return new GetAllReferencesResponse
-                {
-                    References = CompletionCaches.ToCompletionFormat(referenceInfo)
-                        .Where(reference => reference.Name.StartsWith(req.WordToComplete)).ToList()
-                };
+                (
+                    CompletionCaches.ToCompletionFormat(referenceInfo)
+                        .Where(reference => reference.Name.ToLower().Contains(req.WordToComplete.ToLower())).ToList()
+                );
             }
             else
             {
-                return new ErrorResponse {Body = Errors.SpecifiedProjectWasNotFound};
+                return new ErrorResponse
+                {
+                    Body = Errors.SpecifiedProjectWasNotFound +
+                $"\nRequested project {projectName} is not in this list: {String.Join(",", Projects.Select(proj => proj.Name))}"
+                };
             }
         }
 
@@ -126,18 +131,18 @@ namespace AutoUsing
         {
             if (req.Projects.Any(path => !File.Exists(path)))
             {
-                return new ErrorResponse {Body = Errors.NonExistentProject};
+                return new ErrorResponse { Body = Errors.NonExistentProject };
             }
 
             const string csproj = ".csproj";
 
             if (req.Projects.Any(path => Path.GetExtension(path) != csproj))
             {
-                return new ErrorResponse {Body = Errors.NonExistentProject};
+                return new ErrorResponse { Body = Errors.NonExistentProject };
             }
 
             Projects.AddRange(req.Projects.Select(path => new Project(path, watch: true)));
-            return new SuccessResponse();
+            return new EmptyResponse();
         }
     }
 }

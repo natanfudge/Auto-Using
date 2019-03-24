@@ -25,7 +25,7 @@
 			"Thenable"
 		],
 		"no-duplicate-switch-case":true,
-		"no-floating-promises":true,
+		// "no-floating-promises":true,
 		"no-for-in-array":true,
 		"no-shadowed-variable":true,
 		"prefer-object-spread":true,

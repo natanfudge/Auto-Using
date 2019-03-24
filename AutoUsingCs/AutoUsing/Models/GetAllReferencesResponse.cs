@@ -4,8 +4,10 @@ using AutoUsing.Proxy;
 
 namespace AutoUsing.Models
 {
-    public class GetAllReferencesResponse : Response
+    public class GetAllReferencesResponse : SuccessResponse
     {
-        public List<Reference> References;
+        public GetAllReferencesResponse(List<Reference> References){
+            this.Body = References;
+        }
     }
 }

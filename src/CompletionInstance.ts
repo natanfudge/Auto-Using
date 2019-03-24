@@ -2,18 +2,19 @@ import * as vscode from "vscode";
 import { DataProvider } from "./DataProvider";
 
 import { HANDLE_COMPLETION } from './extension';
-import { flatten, AUDebug } from './util';
+import { flatten, AUDebug, getProjectRootDirOfFilePath, getFullPathToProjectOfFile, getProjectName } from './util';
 import { DocumentWalker, CompletionType } from "./DocumentWalker";
 import { SORT_CHEAT, primitives } from "./Constants";
 import { getStoredCompletions } from "./CompletionProvider";
 import { debug } from "util";
 import { Benchmarker } from "./Benchmarker";
 import { binSearch, binarySearch } from "./speedutil";
+import { AutoUsingServer } from "./server/AutoUsingServer";
 
 
-export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
-	 token: vscode.CancellationToken, context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext): Promise<vscode.CompletionItem[]> {
-	let completionInstance = new CompletionInstance(extensionContext, new DocumentWalker(document));
+export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken,
+	context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext, server: AutoUsingServer): Promise<vscode.CompletionItem[]> {
+	let completionInstance = new CompletionInstance(extensionContext, new DocumentWalker(document), server);
 	return completionInstance.provideCompletionItems(document, position, token, context);
 }
 
@@ -24,12 +25,15 @@ class CompletionInstance {
 
 	constructor(
 		private context: vscode.ExtensionContext,
-		private documentWalker: DocumentWalker) { }
+		private documentWalker: DocumentWalker,
+		private server: AutoUsingServer
+
+	) { }
 
 
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
-		 token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
+		token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 		let completionType = await this.documentWalker.getCompletionType(position);
 
 		let completions: vscode.CompletionItem[];
@@ -53,7 +57,18 @@ class CompletionInstance {
 				}
 
 			} else if (completionType === CompletionType.REFERENCE) {
-				completionData = await this.documentWalker.filterByTypedWord(position, this.data.getReferences());
+				let wordToComplete = this.documentWalker.getWordToComplete(position);
+				// completionData = await this.documentWalker.filterByTypedWord(position, await this.server.getAllReferences());
+
+				// const projectPath = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\TestProg.csproj";
+				// const projectName = "TestProg";
+				// let projectFolder = getProjectRootDirOfFilePath(document.fileName);
+				// let projectPath = getFullPathToProjectOfFile(projectFolder);
+				let projectName = getProjectName(document.fileName);
+				// IMPORTANT TODO: move this to the start to only execute once.
+				// await this.server.addProjects([projectPath]);
+
+				completionData = await this.server.getAllReferences(projectName, wordToComplete);
 			}
 
 			completions = this.completionDataToCompletions(completionData!, usings);
@@ -61,6 +76,10 @@ class CompletionInstance {
 
 		return completions!;
 	}
+
+
+
+
 
 
 
@@ -195,31 +214,39 @@ const usingEdit = (namespace: string) => vscode.TextEdit.insert(new vscode.Posit
 function filterOutAlreadyUsing(references: Reference[], usings: string[]): number {
 	usings.sort();
 
-	let n = references.length;
+	let referenceAmount = references.length;
 
-	for (let i = 0; i < n; i++) {
+	for (let i = 0; i < referenceAmount; i++) {
+		let namespaceAmount = 0;
+		try {
+			// console.log(i);
+			// console.log(JSON.stringify(references[i]));
+			namespaceAmount = references[i].namespaces.length;
+			
+		} catch{
+			let x = 2;
+		}
 
-		let m = references[i].namespaces.length;
-		for (let j = 0; j < m; j++) {
+		for (let j = 0; j < namespaceAmount; j++) {
 			// Get rid of references that their usings exist
 			if (binarySearch<string>(usings, references[i].namespaces[j]) !== -1) {
-				references[i].namespaces[j] = references[i].namespaces[m - 1];
+				references[i].namespaces[j] = references[i].namespaces[namespaceAmount - 1];
 				references[i].namespaces.length -= 1;
 				j--;
-				m--;
+				namespaceAmount--;
 			}
 		}
 
 		// Get rid of empty references
 		if (references[i].namespaces.length === 0) {
-			references[i] = references[n - 1];
+			references[i] = references[referenceAmount - 1];
 			references.length -= 1;
 			i--;
-			n--;
+			referenceAmount--;
 		}
 	}
 
-	return n;
+	return referenceAmount;
 
 }
 

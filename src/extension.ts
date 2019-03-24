@@ -6,6 +6,10 @@ import { SORT_CHEAT } from './Constants';
 import { execFileSync, spawn, execFile } from 'child_process';
 import { Benchmarker } from './Benchmarker';
 import { AutoUsingServer } from './server/AutoUsingServer';
+import { getAllProjectFiles } from './util';
+import { watch } from 'fs';
+import { join } from 'path';
+// const fsWatcher = require("fs.")
 
 const CSHARP = "csharp";
 
@@ -31,7 +35,7 @@ class TestHelper {
 
 	constructor(private context: vscode.ExtensionContext) {
 		if (this.context === undefined) {
-			console.log(this.context);
+			// console.log(this.context);
 		}
 	}
 
@@ -40,26 +44,36 @@ class TestHelper {
 
 export let testHelper: TestHelper;
 
-const testServer = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\bin\\Debug\\netcoreapp2.1\\TestProg.dll";
+// const testServer = ;
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
-	let bench = new Benchmarker();
-	// let server = execFile(`dotnet`, [testServer]);
-	// server.stdout.on('data', (data) => {
-	// 	console.log(`stdout: ${data}`);
+	const path = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\src\\server\\test.txt";
+	const path2 = "C:\\Users\\natan\\Desktop\\Auto-Using\\src\\test\\playground\\amar.csproj";
+	// watch(, (event,fileName) =>{
+	// 	console.log(event);
+	// 	let x = 2;
 	// });
 
-	// server.stdin.write("do shit!\n");
-	// server.stdin.write("do shit!\n");
-	// server.stdin.write("do shit!\n");
+	let workspaceRoot = vscode.workspace.rootPath;
+	if (!workspaceRoot) {
+		return;
+	}
+	let pattern = join(workspaceRoot, 'amar.csproj');
 
+	let watcher = vscode.workspace.createFileSystemWatcher("**\\*.csproj");
+	watcher.onDidChange((file) => {
+		let x = 2;
+	});
 
-	// server.on('close', (code) => {
-	// 	console.log(`child process exited with code ${code}`);
-	// });
+	watcher.onDidCreate(file => {
+		let x = 2;
+	});
 
-	let server = new AutoUsingServer();
+	watcher.onDidDelete(file => {
+		let x = 2;
+	});
+	
 
 
 	testHelper = new TestHelper(context);
@@ -91,10 +105,14 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	// Remove all stored completions
 	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => wipeStoredCompletions(context));
 
-	//TODO add this to test helper
-	let autoUsingProvider = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP }, new CompletionProvider(context), ".");
+	let server = new AutoUsingServer();
+
+	server.addProjects(getAllProjectFiles()); 
+	let autoUsingProvider = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP },
+	 new CompletionProvider(context,server), ".");
 
 	context.subscriptions.push(autoUsingProvider, handleCompletionCommand, wipeStorageCommand);
+	
 }
 
 export function wipeStoredCompletions(context: vscode.ExtensionContext): void {

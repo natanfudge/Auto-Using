@@ -145,12 +145,21 @@ export class DocumentWalker {
         return this.document.positionAt(this.document.offsetAt(pos) - 1);
     }
 
-    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]) :Promise<Reference[]>{
+    public getWordToComplete(completionPosition: vscode.Position) : string{
         let wordToComplete = '';
         let range = this.document.getWordRangeAtPosition(completionPosition);
         if (range) {
             wordToComplete = this.document.getText(new vscode.Range(range.start, completionPosition)).toLowerCase();
         }
+        return wordToComplete;
+    }
+
+    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]) :Promise<Reference[]>{
+        let wordToComplete = this.getWordToComplete(completionPosition);
+        // let range = this.document.getWordRangeAtPosition(completionPosition);
+        // if (range) {
+        //     wordToComplete = this.document.getText(new vscode.Range(range.start, completionPosition)).toLowerCase();
+        // }
         let matcher = (f: Reference) => f.name.toLowerCase().indexOf(wordToComplete) > -1;
         let found = references.filter(matcher);
         return found;

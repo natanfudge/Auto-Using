@@ -14,7 +14,7 @@ namespace AutoUsing.Analysis.Cache
         public Cache<ExtensionMethodInfo> Extensions { get; set; }
         public Cache<HierarchyInfo> Hierachies { get; set; }
 
-        public void LoadScanResults(IEnumerable<AssemblyScanner> scanners)
+        public void LoadScanResults(IEnumerable<AssemblyScan> scanners)
         {
             Types.Set(scanners.SelectMany(scanner => scanner.GetAllTypes()).ToList());
             //TODO: extensions,hierachies

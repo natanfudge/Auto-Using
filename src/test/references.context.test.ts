@@ -28,7 +28,8 @@ suite("CompletionProvider References Context Tests", function () {
         await activateExtension();
         //@ts-ignore
         context = testHelper.context;
-        helper = new DirectCompletionTestHelper(new CompletionProvider(context));
+        //TODO replace null with a server instance
+        helper = new DirectCompletionTestHelper(new CompletionProvider(context,null!));
     });
 
     test("Should add using expression", async () => {
