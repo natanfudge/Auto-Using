@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections.Generic;
 using AutoUsing.Analysis.DataTypes;
 
@@ -42,6 +43,15 @@ namespace AutoUsing.Models
         public GetAllHierachiesResponse(List<Hierarchies> References)
         {
             this.Body = References;
+        }
+
+        override public bool Equals(object obj){
+            var otherResponse = obj as GetAllHierachiesResponse;
+            if(otherResponse == null) return false;
+
+            var otherReferences = otherResponse.Body as List<Hierarchies>;
+            var thisReferences = this.Body as List<Hierarchies>;
+            return thisReferences.SequenceEqual(otherReferences) && otherResponse.Success == this.Success;
         }
     }
 

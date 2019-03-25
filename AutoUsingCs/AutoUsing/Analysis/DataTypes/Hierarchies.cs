@@ -1,3 +1,4 @@
+using System.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -20,7 +21,7 @@ namespace AutoUsing.Analysis.DataTypes
         {
             return obj is Hierarchies hiearchies &&
                    Class == hiearchies.Class &&
-                   EqualityComparer<List<Hierarchy>>.Default.Equals(Namespaces, hiearchies.Namespaces);
+                   Namespaces.SequenceEqual(hiearchies.Namespaces);
         }
 
         public override int GetHashCode()

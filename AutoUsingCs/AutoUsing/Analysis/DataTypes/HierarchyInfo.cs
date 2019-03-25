@@ -1,3 +1,5 @@
+using System.Linq;
+using System;
 using System.Collections.Generic;
 
 namespace AutoUsing.Analysis.DataTypes
@@ -15,5 +17,19 @@ namespace AutoUsing.Analysis.DataTypes
         public string Namespace { get; set; }
 
         public List<string> Parents { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            var info = obj as HierarchyInfo;
+            return info != null &&
+                   Name == info.Name &&
+                   Namespace == info.Namespace &&
+                  Parents.SequenceEqual( info.Parents);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Name, Namespace, Parents);
+        }
     }
 }

@@ -125,8 +125,8 @@ namespace AutoUsing
         /// <param name="filename"></param>
         public static void WaitForFileToBeAccessible(string filename)
         {
-            
-            while (!FileIsAccessible(filename));
+
+            while (!FileIsAccessible(filename)) ;
         }
 
         public static string ToIndentedJson(this object obj)
@@ -134,18 +134,24 @@ namespace AutoUsing
             return JsonConvert.SerializeObject(obj, Formatting.Indented);
         }
 
-    
+
         /// <summary>
         /// Logs to a file how much time has passed since a certain date.
         /// </summary>
         /// <param name="benchmarkName">Benchmark identifier</param>
         public static void LogTimePassed(this DateTime date, string benchmarkName)
         {
-            if (writeLogs) File.AppendAllText(logLocation,
-             $"{DateTime.Now}: Executing {benchmarkName} took {(DateTime.Now.Millisecond - date.Millisecond)} milliseconds.\n");
+            if (writeBenchmarks) Log(
+              $"Executing {benchmarkName} took {(DateTime.Now.Millisecond - date.Millisecond)} milliseconds.");
         }
 
-        const bool writeLogs = false;
+        public static void Log(string text)
+        {
+            if (writeLogs) File.AppendAllText(logLocation, $"{DateTime.Now}: {text}\n");
+        }
+
+        const bool writeLogs = true;
+        const bool writeBenchmarks = false;
         const string logLocation = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\logs\\log.txt";
     }
 

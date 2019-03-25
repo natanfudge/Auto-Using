@@ -1,3 +1,4 @@
+using System.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -6,7 +7,7 @@ namespace AutoUsing.Analysis.DataTypes
     public class Hierarchy
     {
         public Hierarchy() { }
-        
+
         public Hierarchy(string @namespace, List<string> fathers)
         {
             this.Namespace = @namespace;
@@ -21,7 +22,7 @@ namespace AutoUsing.Analysis.DataTypes
             var hiearchies = obj as Hierarchy;
             return hiearchies != null &&
                    Namespace == hiearchies.Namespace &&
-                   EqualityComparer<List<string>>.Default.Equals(Parents, hiearchies.Parents);
+                   Parents.SequenceEqual(hiearchies.Parents);
         }
 
         public override int GetHashCode()

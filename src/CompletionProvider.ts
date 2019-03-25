@@ -4,7 +4,7 @@ import { Completion, COMPLETION_STORAGE } from "./extension";
 import { AutoUsingServer } from "./server/AutoUsingServer";
 
 const shouldLogTotalPerformance = true;
-const maxCompletionAmount = 100;
+export const maxCompletionAmount = 100;
 export class CompletionProvider implements vscode.CompletionItemProvider {
 
 
@@ -16,9 +16,9 @@ export class CompletionProvider implements vscode.CompletionItemProvider {
 			let startTime = Date.now();
 			let result = await provideCompletionItems(document, position, token, context, this.extensionContext, this.server);
 			logTotalPerformance(startTime);
-			let incomplete = result.length > maxCompletionAmount;
-			let items = incomplete ? result.slice(0, maxCompletionAmount) : result;
-			return { items: items, isIncomplete: incomplete };
+			// let incomplete = result.length > maxCompletionAmount;
+			// // let items = incomplete ? result.slice(0, maxCompletionAmount) : result;
+			return result;
 		} catch (e) {
 			console.log(e.stack);
 			throw new Error(e);
@@ -40,3 +40,5 @@ export function getStoredCompletions(context: vscode.ExtensionContext): Completi
 	if (typeof completions === "undefined") return [];
 	return completions;
 }
+
+

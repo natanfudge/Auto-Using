@@ -57,7 +57,7 @@ namespace AutoUsingTest
         [TestMethod]
         public void GetAllProjectExtensions()
         {
-            var request = new GetCompletionDataRequest { ProjectName = "AutoUsing", WordToComplete = "R" };
+            var request = new GetCompletionDataRequest { ProjectName = "AutoUsing", WordToComplete = "RE" };
             var response = Program.Server.GetAllExtensionMethods(request) as GetAllExtensionMethodsResponse;
             Assert.IsNotNull(response);
             (response.Body as List<ExtensionClass>).AssertContains(new ExtensionClass("System.Collections.Generic.IDictionary",
@@ -70,11 +70,12 @@ namespace AutoUsingTest
         {
             var request = new ProjectSpecificRequest { ProjectName = "AutoUsing" };
             var response = Program.Server.GetAllHierarchies(request) as GetAllHierachiesResponse;
+            var response2 = Program.Server.GetAllHierarchies(request) as GetAllHierachiesResponse;
             Assert.IsNotNull(response);
-            // (response.Body as List<Reference>).AssertContains(new Reference("JsonConvert", new List<string> { "Newtonsoft.Json" }));
+            Assert.AreEqual(response, response2);
         }
 
-       
+
 
         [TestMethod]
         public void GetAllProjectExtensionMethods()

@@ -78,3 +78,292 @@ Executing Project Creation took -943 milliseconds.$3/24/2019 12:45:29 PM: Execut
 3/24/2019 1:44:17 PM: Executing Error handling took 1 milliseconds.
 3/24/2019 1:44:17 PM: Executing Project Creation took 2 milliseconds.
 3/24/2019 1:44:17 PM: Executing Entire Request took 4 milliseconds.
+DELETE PACKAGES: 
+[
+  {
+    "Name": "Newtonsoft.Json",
+    "Version": "12.0.1",
+    "Path": "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+  },
+  {
+    "Name": "FireSharp",
+    "Version": "2.0.4",
+    "Path": "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+  }
+]DELETE PACKAGES: 
+[
+  {
+    "Name": "Newtonsoft.Json",
+    "Version": "12.0.1",
+    "Path": "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+  },
+  {
+    "Name": "FireSharp",
+    "Version": "2.0.4",
+    "Path": "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+  },
+  {
+    "Name": "Melanchall.DryWetMidi",
+    "Version": "4.0.0",
+    "Path": "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+  }
+]3/25/2019 11:29:13 PM: text3/25/2019 11:29:13 PM: text3/25/2019 11:30:04 PM: DELETED PACKAGES: 
+[
+  {
+    "Name": "FireSharp",
+    "Version": "2.0.4",
+    "Path": "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+  }
+]3/25/2019 11:30:04 PM: DELETED PACKAGES: 
+[]3/25/2019 11:30:16 PM: DELETED PACKAGES: 
+[]3/25/2019 11:30:16 PM: DELETED PACKAGES: 
+[]3/25/2019 11:30:59 PM: DELETED PACKAGES: 
+[
+  {
+    "Name": "FireSharp",
+    "Version": "2.0.4",
+    "Path": "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+  }
+]3/25/2019 11:30:59 PM: DELETED PACKAGES: 
+[]3/25/2019 11:31:06 PM: DELETED PACKAGES: 
+[]3/25/2019 11:31:06 PM: DELETED PACKAGES: 
+[]3/25/2019 11:33:01 PM: DELETED PACKAGES: 
+[
+  {
+    "Name": "Newtonsoft.Json",
+    "Version": "12.0.1",
+    "Path": "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+  }
+]3/25/2019 11:33:01 PM: DELETED PACKAGES: 
+[]3/25/2019 11:46:39 PM: Removing packages : 
+[
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]3/25/2019 11:46:39 PM: The Type cache is now just: 
+ {}3/25/2019 11:48:32 PM: Removing packages : []
+3/25/2019 11:48:32 PM: The Type cache is now just:  {}
+3/25/2019 11:51:33 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:51:33 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:51:33 PM: Removing packages : []
+3/25/2019 11:51:33 PM: The Type cache is now just:  {}
+3/25/2019 11:53:18 PM: Old packages : []
+3/25/2019 11:53:18 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:53:18 PM: Removing packages : []
+3/25/2019 11:53:18 PM: The Type cache is now just:  {}
+3/25/2019 11:54:43 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:54:43 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:54:43 PM: Removing packages : []
+3/25/2019 11:54:43 PM: The Type cache is now just:  {}
+3/25/2019 11:54:43 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:54:43 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:54:43 PM: Removing packages : []
+3/25/2019 11:54:43 PM: The Type cache is now just:  {}
+3/25/2019 11:56:02 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:56:02 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:56:02 PM: Adding packages: []
+3/25/2019 11:56:02 PM: Removing packages : [
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:56:02 PM: The Type cache is now just:  {}
+
+
+
+3/25/2019 11:57:02 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:57:02 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:57:02 PM: Adding packages: [
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:57:02 PM: Removing packages : []
+3/25/2019 11:57:02 PM: The Type cache is now just:  {}
+3/25/2019 11:57:02 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:57:02 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:57:02 PM: Adding packages: []
+3/25/2019 11:57:02 PM: Removing packages : []
+3/25/2019 11:57:02 PM: The Type cache is now just:  {}
+3/25/2019 11:58:10 PM: Old packages : []
+3/25/2019 11:58:10 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:58:10 PM: Adding packages: [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:58:10 PM: Removing packages : []
+3/25/2019 11:58:10 PM: The Type cache is now just:  {}
+3/25/2019 11:58:41 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:58:41 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:58:41 PM: Adding packages: []
+3/25/2019 11:58:41 PM: Removing packages : [
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:58:41 PM: The Type cache is now just:  {}
+3/25/2019 11:58:41 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:58:41 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:58:41 PM: Adding packages: []
+3/25/2019 11:58:41 PM: Removing packages : []
+3/25/2019 11:58:41 PM: The Type cache is now just:  {}
+3/25/2019 11:59:51 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+3/25/2019 11:59:51 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:59:51 PM: Adding packages: [
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:59:51 PM: Removing packages : []
+3/25/2019 11:59:51 PM: The Type cache is now just:  {}
+3/25/2019 11:59:51 PM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:59:51 PM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/25/2019 11:59:51 PM: Adding packages: []
+3/25/2019 11:59:51 PM: Removing packages : []
+3/25/2019 11:59:51 PM: The Type cache is now just:  {}
+3/26/2019 12:03:19 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/26/2019 12:03:19 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:19 AM: Adding packages: [
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:19 AM: Removing packages : []
+3/26/2019 12:03:19 AM: The Type cache is now just:  {}
+3/26/2019 12:03:19 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:19 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:19 AM: Adding packages: []
+3/26/2019 12:03:19 AM: Removing packages : []
+3/26/2019 12:03:19 AM: The Type cache is now just:  {}
+3/26/2019 12:03:55 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:55 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:55 AM: Adding packages: []
+3/26/2019 12:03:55 AM: Removing packages : []
+3/26/2019 12:03:55 AM: The Type cache is now just:  {}
+3/26/2019 12:03:55 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:55 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:55 AM: Adding packages: []
+3/26/2019 12:03:55 AM: Removing packages : [
+  "$(UserProfile)\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+3/26/2019 12:03:55 AM: The Type cache is now just:  {}
+3/26/2019 12:03:55 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:55 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:03:55 AM: Adding packages: []
+3/26/2019 12:03:55 AM: Removing packages : []
+3/26/2019 12:03:55 AM: The Type cache is now just:  {}
+3/26/2019 12:04:25 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:04:25 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:04:25 AM: Adding packages: []
+3/26/2019 12:04:25 AM: Removing packages : []
+3/26/2019 12:04:25 AM: The Type cache is now just:  {}
+3/26/2019 12:04:25 AM: Old packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:04:25 AM: New packages : [
+  "$(UserProfile)\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll",
+  "$(UserProfile)\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+3/26/2019 12:04:25 AM: Adding packages: []
+3/26/2019 12:04:25 AM: Removing packages : []
+3/26/2019 12:04:25 AM: The Type cache is now just:  {}

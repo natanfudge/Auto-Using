@@ -13,13 +13,76 @@ namespace AutoUsing.Analysis.Cache
         public Cache<ExtensionMethodInfo> Extensions { get; set; }
         public Cache<HierarchyInfo> Hierachies { get; set; }
 
-        public void LoadScanResults(IEnumerable<AssemblyScan> scanners)
+        public void LoadScanResults(IEnumerable<AssemblyScan> scans)
         {
-            Types.SetCache(scanners.SelectMany(scanner => scanner.GetAllTypes()).ToList());
-            Hierachies.SetCache(scanners.SelectMany(scanner => scanner.GetAllHierarchies()).ToList());
-            Extensions.SetCache(scanners.SelectMany(scanner => scanner.GetAllExtensionMethods()).ToList());
+            // var newReferences = new List<PackageReference>();
+            // var scans = newReferences.Select(reference => new AssemblyScan(reference.Path)).Where(scanner => !scanner.CouldNotLoad());
+
+            Types.SetCache(ScansReferenceInfo(scans));
+            Hierachies.SetCache(ScansHierarchyInfo(scans));
+            Extensions.SetCache(ScansExtensionsInfo(scans));
+
+            Save();
+
+        }
+
+        private List<CachedObject<ReferenceInfo>> ScansReferenceInfo(IEnumerable<AssemblyScan> scans)
+        {
+            return scans.Select(scan => new CachedObject<ReferenceInfo>(scan.GetAllTypes(), scan.Path)).ToList();
+        }
+
+        private List<CachedObject<HierarchyInfo>> ScansHierarchyInfo(IEnumerable<AssemblyScan> scans)
+        {
+            return scans.Select(scan => new CachedObject<HierarchyInfo>(scan.GetAllHierarchies(), scan.Path)).ToList();
+        }
+        private List<CachedObject<ExtensionMethodInfo>> ScansExtensionsInfo(IEnumerable<AssemblyScan> scans)
+        {
+            return scans.Select(scan => new CachedObject<ExtensionMethodInfo>(scan.GetAllExtensionMethods(), scan.Path)).ToList();
+        }
+
+        /// <summary>
+        /// Adds to the cache all of the data gathered in the scans
+        /// </summary>
+        public void AppendScanResults(IEnumerable<AssemblyScan> scans)
+        {
+
+            Types.AddCache(ScansReferenceInfo(scans));
+            Hierachies.AddCache(ScansHierarchyInfo(scans));
+            Extensions.AddCache(ScansExtensionsInfo(scans));
+
+            Save();
+        }
+
+        public void DeletePackages(IEnumerable<string> packages)
+        {
+            Util.Log("Removing packages : " + packages.ToIndentedJson());
+            Types.RemoveCache(packages);
+            Util.Log("The Type cache is now just:  " + Types.ToIndentedJson());
+            Hierachies.RemoveCache(packages);
+            Extensions.RemoveCache(packages);
+
+            Save();
+        }
+
+        // private void DeletePackagesFromSpecificCache<T>(Cache<T> cache, IEnumerable<PackageReference> packages)
+        // {
+        //     cache.RemoveCache(packages.Select(package => package.Path));
+        // }
+
+        // public void AppendScanResults(IEnumerable<AssemblyScan> scanners)
+        // {
+        //     Types.AddCache(scanners.SelectMany(scanner => scanner.GetAllTypes()));
+        //     Hierachies.AddCache(scanners.SelectMany(scanner => scanner.GetAllHierarchies()));
+        //     Extensions.AddCache(scanners.SelectMany(scanner => scanner.GetAllExtensionMethods()));
+
+        //     Save();
+        // }
 
 
+
+
+        private void Save()
+        {
             Types.Save();
             Hierachies.Save();
             Extensions.Save();

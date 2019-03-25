@@ -85,6 +85,7 @@ namespace AutoUsing.Analysis
 
         private void LoadCache()
         {
+
             Caches = new CompletionCaches
             {
                 Types = new Cache<ReferenceInfo>(GetCacheLocation("references")),
@@ -92,16 +93,20 @@ namespace AutoUsing.Analysis
                 Hierachies = new Cache<HierarchyInfo>(GetCacheLocation("hierarchies"))
             };
 
-            if (Caches.Types.IsEmpty() || Caches.Extensions.IsEmpty() || Caches.Hierachies.IsEmpty())
-            {
-                var scanners = References.Select(reference => new AssemblyScan(reference.Path));
-                Caches.LoadScanResults(scanners);
-            }
+            // if (Caches.Types.IsEmpty() || Caches.Extensions.IsEmpty() || Caches.Hierachies.IsEmpty())
+            // {
+            //     var scanners = References.Select(reference => new AssemblyScan(reference.Path));
+            //     Caches.LoadScanResults(scanners);
+            // }else{
+
+            // }
+
+            UpdateCache();
         }
 
         // TODO: probably change this to somewhere more hidden
         private string GetCacheLocation(string type) =>
-            Path.Combine(Directory.GetParent(FilePath).FullName , "_autousingcache", $"{Name}_{type}.json");
+            Path.Combine(Directory.GetParent(FilePath).FullName, "_autousingcache", $"{Name}_{type}.json");
 
         /// <summary>
         ///     Loads the basic info about the specified project file.
@@ -130,6 +135,8 @@ namespace AutoUsing.Analysis
                     Dispose();
                     return;
                 }
+
+                // var oldReferences = References;
 
                 LoadPackageReferences();
                 UpdateCache();
@@ -206,11 +213,38 @@ namespace AutoUsing.Analysis
         }
 
 
-        //TODO: Optimize to only update when a reference is added, and to only scan the reference added.
+        /// <summary>
+        /// Adds all of the new data about the references to the cache
+        /// </summary>
+        /// <param name="oldReferences"></param>
+        //TODO: this is getting called twice for some reason. FIX IT!!
         private void UpdateCache()
         {
-            var scanners = References.Select(reference => new AssemblyScan(reference.Path)).Where(scanner => !scanner.CouldNotLoad());
-            Caches.LoadScanResults(scanners);
+            // The identifiers are identical so it doesn't matter where we get this list from.
+            // Either way it gets all of the packages from before changes were made. 
+            var oldPackages = Caches.Types.GetIdentifiers();
+            var newPackages = this.References.Select(reference => reference.Path);
+
+            Util.Log("Old packages : " + oldPackages.ToIndentedJson());
+            Util.Log("New packages : " + newPackages.ToIndentedJson());
+
+            // Add new packages to cache
+            var addedPackages = newPackages.Except(oldPackages);
+            Util.Log("Adding packages: " + addedPackages.ToIndentedJson());
+            if (newPackages.Count() > 0)
+            {
+                var scans = addedPackages.Select(package => new AssemblyScan(package)).Where(scanner => !scanner.CouldNotLoad());
+                Caches.AppendScanResults(scans);
+            }
+
+            // Delete packages that no longer exist from the cache
+            var deletedPackages = oldPackages.Except(newPackages);
+            // Util.Log("DELETED PACKAGES: \n" + deletedPackages.ToIndentedJson());
+            if (newPackages.Count() > 0)
+            {
+                Caches.DeletePackages(deletedPackages);
+            }
+
         }
 
         /// <summary>

@@ -5,7 +5,7 @@ import { HANDLE_COMPLETION } from './extension';
 import { flatten, AUDebug, getProjectRootDirOfFilePath, getFullPathToProjectOfFile, getProjectName } from './util';
 import { DocumentWalker, CompletionType } from "./DocumentWalker";
 import { SORT_CHEAT, primitives } from "./Constants";
-import { getStoredCompletions } from "./CompletionProvider";
+import { getStoredCompletions, maxCompletionAmount } from "./CompletionProvider";
 import { debug } from "util";
 import { Benchmarker } from "./Benchmarker";
 import { binSearch, binarySearch } from "./speedutil";
@@ -13,12 +13,13 @@ import { AutoUsingServer } from "./server/AutoUsingServer";
 
 
 export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken,
-	context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext, server: AutoUsingServer): Promise<vscode.CompletionItem[]> {
+	context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext, server: AutoUsingServer): Promise<vscode.CompletionList> {
 	let documentWalker = new DocumentWalker(document);
 	let completionInstance = new CompletionInstance(extensionContext, documentWalker, server,
 		getProjectName(document.fileName), documentWalker.getWordToComplete(position));
 	return completionInstance.provideCompletionItems(document, position, token, context);
 }
+
 
 
 class CompletionInstance {
@@ -37,13 +38,13 @@ class CompletionInstance {
 
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
-		token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
+		token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionList> {
 		let completionType = await this.documentWalker.getCompletionType(position);
 
-		let completions: vscode.CompletionItem[];
+		
 
 		if (completionType === CompletionType.NONE) {
-			completions = [];
+			return {items:[]};
 		} else {
 			let usings = await this.documentWalker.getUsings();
 			let completionData: Reference[];
@@ -61,23 +62,11 @@ class CompletionInstance {
 				}
 
 			} else if (completionType === CompletionType.REFERENCE) {
-				// let wordToComplete = this.documentWalker.getWordToComplete(position);
-				// completionData = await this.documentWalker.filterByTypedWord(position, await this.server.getAllReferences());
-
-				// const projectPath = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\TestProg.csproj";
-				// const projectName = "TestProg";
-				// let projectFolder = getProjectRootDirOfFilePath(document.fileName);
-				// let projectPath = getFullPathToProjectOfFile(projectFolder);
-				// let projectName = getProjectName(document.fileName);
-
-
 				completionData = await this.server.getAllReferences(this.projectName, this.wordToComplete);
 			}
 
-			completions = this.completionDataToCompletions(completionData!, usings);
+			return this.completionDataToCompletions(completionData!, usings);
 		}
-
-		return completions!;
 	}
 
 
@@ -138,17 +127,18 @@ class CompletionInstance {
 	private async getExtensionMethods(callerType: Type): Promise<Reference[]> {
 		let hierachiesPromise = this.server.getAllHiearchies(this.projectName);
 
-		let hierachies = await hierachiesPromise;
+		const hierachies = await hierachiesPromise;
 
 		let classPos = binSearch(hierachies, callerType.class, ((h1, h2) => h1.localeCompare(h2.class)));
 		if (classPos === - 1) return [];
 
-		let extensibleClasses = hierachies[classPos];
+		// The list of classes that we are looking for extension methods for. Usually this is only one class. 
+		const extendedClass = hierachies[classPos];
 
-		if (extensibleClasses.namespaces.length === 1) {
-			let baseclasses = extensibleClasses.namespaces[0].parents;
+		if (extendedClass.namespaces.length === 1) {
+			const baseclasses = extendedClass.namespaces[0].parents;
 			// Add the class itself to the list of classes that we will get extension methods for.
-			let classItselfStr = extensibleClasses.namespaces[0].namespace + "." + callerType.class;
+			let classItselfStr = extendedClass.namespaces[0].namespace + "." + callerType.class;
 			// Remove generic marker '<>'
 			if (classItselfStr[classItselfStr.length - 1] === ">") classItselfStr = classItselfStr.substr(0, classItselfStr.length - 2);
 			baseclasses.push(classItselfStr);
@@ -160,13 +150,14 @@ class CompletionInstance {
 			// 	.map(extendedClass => extendedClass.extensionMethods));
 
 
-			return this.findExtensionMethodsOfAllBaseClasses(baseclasses);
-
+			let result = this.findExtensionMethodsOfAllBaseClasses(baseclasses);
+			return result;
 		} else {
 			throw new Error("Auto Using does not support ambigous references yet.");
 		}
 	}
 
+	//TODO: for some reason extension methods are not showing and it's because a request is not even being sent for them.
 	private async findExtensionMethodsOfAllBaseClasses(baseclasses: string[]): Promise<Reference[]> {
 		// Request extensions from server
 		let extensionMethods = await this.server.getAllExtensionMethods(this.projectName, this.wordToComplete);
@@ -183,11 +174,16 @@ class CompletionInstance {
 	 * Map pure completion data to vscode's CompletionItem[] format
 	 * @param usings A list of the using directive in the file. All already imported references will be removed from the array.
 	 */
-	private completionDataToCompletions(references: Reference[], usings: string[]): vscode.CompletionItem[] {
-		let completionAmount = filterOutAlreadyUsing(references, usings);
+	//TODO: typing midifile normally doesn't complete it, test out why. Same thing as Jtoken.
+	private completionDataToCompletions(references: Reference[], usings: string[]): vscode.CompletionList {
+		let completionAmount = Math.min(filterOutAlreadyUsing(references, usings), maxCompletionAmount);
+		let takingOnlySomeCompletions = completionAmount > maxCompletionAmount;
+		// Take only a limited amount of the completions
+		if (takingOnlySomeCompletions) references = references.slice(0, maxCompletionAmount);
 
 		// All references the user has imported before. They will gain a higher priority. 
-		let commonNames = getStoredCompletions(this.context).map(completion => completion.label);
+		let commonNames = getStoredCompletions(this.context).map(completion => completion.label)
+			.filter(name => references.some(reference => reference.name === name));
 		let commonCompletionAmount = commonNames.length;
 		commonNames.sort();
 
@@ -195,8 +191,7 @@ class CompletionInstance {
 
 		let commonCompletionsPassed = 0;
 		// Start from the length of the common names to leave space to put the common ones at the start
-		for (let i = 0
-			; i < completionAmount; i++) {
+		for (let i = 0; i < completionAmount; i++) {
 
 			let reference = references[i];
 			let name = reference.name;
@@ -227,8 +222,9 @@ class CompletionInstance {
 				completions[i + commonCompletionAmount - commonCompletionsPassed] = completion;
 			}
 
+
 		}
-		return completions;
+		return { isIncomplete: takingOnlySomeCompletions, items: completions };
 
 	}
 
@@ -236,12 +232,13 @@ class CompletionInstance {
 }
 
 
+
 const usingEdit = (namespace: string) => vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
 
 
 /**
- * Removes all namespaces that already have a using statement
- */
+* Removes all namespaces that already have a using statement
+*/
 function filterOutAlreadyUsing(references: Reference[], usings: string[]): number {
 	usings.sort();
 
@@ -280,5 +277,22 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 	return referenceAmount;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

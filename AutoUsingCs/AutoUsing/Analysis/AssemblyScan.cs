@@ -9,8 +9,10 @@ namespace AutoUsing.Analysis
 {
     public class AssemblyScan
     {
+        
         public AssemblyScan(string path)
         {
+            this.Path = path;
             try
             {
                 Assembly = Assembly.LoadFile(path.ParseEnvironmentVariables());
@@ -30,6 +32,8 @@ namespace AutoUsing.Analysis
 
 
         private Assembly Assembly { get; set; }
+
+        public string Path{get;set;}
 
         public bool CouldNotLoad() => Assembly == null;
 

@@ -58,8 +58,7 @@ namespace AutoUsing
             var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
-            var referenceInfo = GlobalCache.Caches.Types.Get();
-            referenceInfo.AddRange(project.Caches.Types.Get());
+            var referenceInfo = GlobalCache.Caches.Types.GetCache().Concat(project.Caches.Types.GetCache()).ToList();
             var refinedReferenceData = FilterUnnecessaryData(CompletionCaches.ToCompletionFormat(referenceInfo),
                 req.WordToComplete, (reference) => reference.Name);
 
@@ -87,8 +86,7 @@ namespace AutoUsing
             var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
-            var extensionInfo = GlobalCache.Caches.Extensions.Get();
-            extensionInfo.AddRange(project.Caches.Extensions.Get());
+            var extensionInfo = GlobalCache.Caches.Extensions.GetCache().Concat(project.Caches.Extensions.GetCache()).ToList();
             var refinedExtensionData = CompletionCaches.ToCompletionFormat(extensionInfo);
 
             // Remove all extension methods that have been filtered by the word to complete
@@ -105,8 +103,7 @@ namespace AutoUsing
             var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
-            var hierarchyInfo = GlobalCache.Caches.Hierachies.Get();
-            hierarchyInfo.AddRange(project.Caches.Hierachies.Get());
+            var hierarchyInfo = GlobalCache.Caches.Hierachies.GetCache().Concat(project.Caches.Hierachies.GetCache()).ToList();
             return new GetAllHierachiesResponse(CompletionCaches.ToCompletionFormat(hierarchyInfo));
         }
 
