@@ -154,10 +154,10 @@ class CompletionInstance {
 			baseclasses.push(classItselfStr);
 
 			// let extensions = flatten(
-				// baseclasses.map(baseclass =>
-				// 	extensionMethods[binSearch(extensionMethods, baseclass, (str, ext) => str.localeCompare(ext.extendedClass))])
-				// 	.filter(obj => typeof obj !== "undefined")
-				// 	.map(extendedClass => extendedClass.extensionMethods));
+			// baseclasses.map(baseclass =>
+			// 	extensionMethods[binSearch(extensionMethods, baseclass, (str, ext) => str.localeCompare(ext.extendedClass))])
+			// 	.filter(obj => typeof obj !== "undefined")
+			// 	.map(extendedClass => extendedClass.extensionMethods));
 
 
 			return this.findExtensionMethodsOfAllBaseClasses(baseclasses);
@@ -188,11 +188,15 @@ class CompletionInstance {
 
 		// All references the user has imported before. They will gain a higher priority. 
 		let commonNames = getStoredCompletions(this.context).map(completion => completion.label);
+		let commonCompletionAmount = commonNames.length;
 		commonNames.sort();
 
 		let completions = new Array<vscode.CompletionItem>(completionAmount);
 
-		for (let i = 0; i < completionAmount; i++) {
+		let commonCompletionsPassed = 0;
+		// Start from the length of the common names to leave space to put the common ones at the start
+		for (let i = 0
+			; i < completionAmount; i++) {
 
 			let reference = references[i];
 			let name = reference.name;
@@ -214,10 +218,18 @@ class CompletionInstance {
 				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" }
 			};
 
-			completions[i] = completion;
-		}
+			// Put common completions at the start
+			if (isCommon) {
+				completions[commonCompletionsPassed] = completion;
+				commonCompletionsPassed++;
+			} else {
+				// Put uncommon completions at the end. 
+				completions[i + commonCompletionAmount - commonCompletionsPassed] = completion;
+			}
 
+		}
 		return completions;
+
 	}
 
 

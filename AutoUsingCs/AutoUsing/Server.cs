@@ -27,7 +27,7 @@ namespace AutoUsing
 
         public Response Error(string error)
         {
-            return new ErrorResponse { Body = error };
+            return new ErrorResponse {Body = error};
         }
 
         public void WriteError(string error)
@@ -41,7 +41,7 @@ namespace AutoUsing
             {
                 while (true)
                 {
-                    Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
+                    Proxy.ReadData(new MessageEventArgs {Data = Console.ReadLine()});
                 }
             }
             //            );
@@ -55,17 +55,15 @@ namespace AutoUsing
         /// </summary>
         public Response GetAllReferences(GetCompletionDataRequest req)
         {
-            Response errorResponse;
-            var project = FindProject(req.ProjectName, out errorResponse);
+            var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
             var referenceInfo = GlobalCache.Caches.Types.Get();
             referenceInfo.AddRange(project.Caches.Types.Get());
             var refinedReferenceData = FilterUnnecessaryData(CompletionCaches.ToCompletionFormat(referenceInfo),
-            req.WordToComplete, (reference) => reference.Name);
+                req.WordToComplete, (reference) => reference.Name);
 
             return new GetAllReferencesResponse(refinedReferenceData);
-
         }
 
         /// <summary>
@@ -76,16 +74,17 @@ namespace AutoUsing
         /// <param name="identifierOfElements">A function that returns what is shown as the actual completion for a specific data element</param>
         /// <typeparam name="T">The type of completion data</typeparam>
         /// <returns>The data list filitered</returns>
-        private static List<T> FilterUnnecessaryData<T>(List<T> dataList, string wordToComplete, Func<T, string> identifierOfElements)
+        private static List<T> FilterUnnecessaryData<T>(List<T> dataList, string wordToComplete,
+            Func<T, string> identifierOfElements)
         {
-            return dataList.Where(element => identifierOfElements(element).ToLower().Contains(wordToComplete.ToLower())).ToList();
+            return dataList.Where(element => identifierOfElements(element).ToLower().Contains(wordToComplete.ToLower()))
+                .ToList();
         }
 
 
         public Response GetAllExtensionMethods(GetCompletionDataRequest req)
         {
-            Response errorResponse;
-            var project = FindProject(req.ProjectName, out errorResponse);
+            var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
             var extensionInfo = GlobalCache.Caches.Extensions.Get();
@@ -94,31 +93,34 @@ namespace AutoUsing
 
             // Remove all extension methods that have been filtered by the word to complete
             refinedExtensionData = refinedExtensionData
-            .Select(extendedClass => new ExtensionClass(extendedClass.ExtendedClass,extendedClass.ExtensionMethods
-            .Where(extensionMethod => extensionMethod.Name.Contains(req.WordToComplete)).ToList()))
-            .Where(extendedClass => extendedClass.ExtensionMethods.Count > 0).ToList();
-            //  req.WordToComplete, (reference) => reference.ExtendedClass);
+                .Select(extendedClass => new ExtensionClass(extendedClass.ExtendedClass, extendedClass.ExtensionMethods
+                    .Where(extensionMethod => extensionMethod.Name.ToLower().Contains(req.WordToComplete.ToLower())).ToList()))
+                .Where(extendedClass => extendedClass.ExtensionMethods.Count > 0).ToList();
 
             return new GetAllExtensionMethodsResponse(refinedExtensionData);
-
         }
 
-        public Response GetAllHiearchies(ProjectSpecificRequest req)
+        public Response GetAllHierarchies(ProjectSpecificRequest req)
         {
-            Response errorResponse;
-            var project = FindProject(req.ProjectName, out errorResponse);
+            var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
-            var hiearchyInfo = GlobalCache.Caches.Hierachies.Get();
-            hiearchyInfo.AddRange(project.Caches.Hierachies.Get());
-            return new GetAllHierachiesResponse( CompletionCaches.ToCompletionFormat(hiearchyInfo));
+            var hierarchyInfo = GlobalCache.Caches.Hierachies.Get();
+            hierarchyInfo.AddRange(project.Caches.Hierachies.Get());
+            return new GetAllHierachiesResponse(CompletionCaches.ToCompletionFormat(hierarchyInfo));
         }
 
+        /// <summary>
+        /// Retrieves the Project object out of the list of projects that were added. 
+        /// </summary>
+        /// <param name="projectName">The file name of the project without the .csproj extension</param>
+        /// <param name="errorResponse">An error response will be outputted if the project was not found</param>
+        /// <returns>The project if the project was added before, and null otherwise.</returns>
         private Project FindProject(string projectName, out Response errorResponse)
         {
             if (projectName.IsNullOrEmpty())
             {
-                errorResponse = new ErrorResponse { Body = Errors.ProjectNameIsRequired };
+                errorResponse = new ErrorResponse {Body = Errors.ProjectNameIsRequired};
             }
 
             // Using C# 7.2 `is expression` to check for null, and assign variable
@@ -132,12 +134,11 @@ namespace AutoUsing
                 errorResponse = new ErrorResponse
                 {
                     Body = Errors.SpecifiedProjectWasNotFound +
-                                $"\nRequested project {projectName} is not in this list: {String.Join(",", Projects.Select(proj => proj.Name))}"
+                           $"\nRequested project {projectName} is not in this list: {String.Join(",", Projects.Select(proj => proj.Name))}"
                 };
             }
 
             return null;
-
         }
 
 
@@ -189,14 +190,14 @@ namespace AutoUsing
         {
             if (req.Projects.Any(path => !File.Exists(path)))
             {
-                return new ErrorResponse { Body = Errors.NonExistentProject };
+                return new ErrorResponse {Body = Errors.NonExistentProject};
             }
 
             const string csproj = ".csproj";
 
             if (req.Projects.Any(path => Path.GetExtension(path) != csproj))
             {
-                return new ErrorResponse { Body = Errors.NonExistentProject };
+                return new ErrorResponse {Body = Errors.NonExistentProject};
             }
 
             Projects.AddRange(req.Projects.Select(path => new Project(path, watch: true)));

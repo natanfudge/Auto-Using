@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoUsing.Analysis.DataTypes;
@@ -62,11 +61,11 @@ namespace AutoUsing.Analysis.Cache
         public static List<Hierarchies> ToCompletionFormat(List<HierarchyInfo> extensionMethodInfos)
         {
             return extensionMethodInfos
-                 .GroupBy(hierachy => hierachy.Name)
-                 .Select(group => new Hierarchies(group.Key,
-                     group.Select(info => new Hierarchy(info.Namespace, info.Parents)).ToList()))
-                 .OrderBy(classHierachies => classHierachies.Class)
-                 .ToList();
+                .GroupBy(hierarchy => hierarchy.Name)
+                .Select(group => new Hierarchies(group.Key,
+                    group.Select(info => new Hierarchy(info.Namespace, info.Parents)).ToList()))
+                .OrderBy(classHierarchies => classHierarchies.Class)
+                .ToList();
         }
     }
 }

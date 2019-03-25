@@ -9,7 +9,6 @@ namespace AutoUsing
 {
     public class Program
     {
-
         public static Server Server = new Server();
 
         public static void Main(string[] args)
@@ -40,11 +39,7 @@ namespace AutoUsing
             // Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
-            {
-
-
-
-
+            {    
                 Request req;
                 try
                 {
@@ -64,9 +59,7 @@ namespace AutoUsing
                 }
 
 
-
-                Response response = new Response();
-                var switchTime = DateTime.Now;
+                var response = new Response();
                 switch (req.Command)
                 {
                     case EndPoints.GetAllReferences:
@@ -76,9 +69,9 @@ namespace AutoUsing
                         response = Server.GetAllExtensionMethods(req.Specificly<GetCompletionDataRequest>());
                         break;
                     case EndPoints.getAllHiearchies:
-                        response = Server.GetAllHiearchies(req.Specificly<ProjectSpecificRequest>());
+                        response = Server.GetAllHierarchies(req.Specificly<ProjectSpecificRequest>());
                         break;
-                        
+
                     case EndPoints.AddProject:
 
                         /* response =*/
@@ -93,7 +86,6 @@ namespace AutoUsing
                         response = Server.Pong(req);
                         break;
                     case EndPoints.AddProjects:
-                        var addProjectsStart = DateTime.Now;
                         response = Server.AddProjects(req.Specificly<AddProjectsRequest>());
                         break;
 
@@ -103,15 +95,10 @@ namespace AutoUsing
                 }
 
 
-
                 Server.Proxy.WriteData(response);
-
-
-
             };
 
             Server.Listen();
         }
-
     }
 }

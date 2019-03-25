@@ -19,23 +19,6 @@ namespace AutoUsing.Models
     public class GetCompletionDataRequest : ProjectSpecificRequest{
         public string WordToComplete { get; set; }
     }
-
-
-  
-    
-
-    // public class GetAllReferencesRequest
-    // {
-    //     public string ProjectName { get; set; }
-    //     public string WordToComplete { get; set; }
-    // }
-
-    // public class GetAllExtensionMethods{
-    //      public string ProjectName { get; set; }
-    //     public string WordToComplete { get; set; }
-    // }
-
-    // public class 
     
 
 

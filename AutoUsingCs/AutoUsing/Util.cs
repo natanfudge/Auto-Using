@@ -21,42 +21,19 @@ namespace AutoUsing
             return string.IsNullOrEmpty(value);
         }
 
+
         /// <summary>
-        ///     Returns a `camelCase` representation of the specified
-        ///     value.
-        /// 
-        /// Remarks:
-        ///     I implemented this method to aid in converting c# pascal case convetions
-        ///     to typescript friendly camelCase. It's not used currently though.
+        /// Gets all the extension methods defined in a class.
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static string ToCamelCase(this string value)
-        {
-            string result = string.Empty;
-
-            for (int i = 0; i < value.Length; i++)
-            {
-                char c = value[i];
-                char p = i == 0 ? char.MinValue : value[i - 1];
-
-                result += ((p is ' ') || p is char.MinValue) ? $"{char.ToLower(c)}" : $"{c}";
-            }
-
-            return result;
-        }
-
-        public static string GetParentDir(string dir)
-        {
-            return Path.GetFullPath(Path.Combine(dir, @"..\"));
-        }
-
         public static List<MethodInfo> GetExtensionMethods(this Type @class)
         {
             return @class.GetMethods(BindingFlags.Static | BindingFlags.Public)
                 .Where(method => method.IsDefined(typeof(ExtensionAttribute), false)).ToList();
         }
 
+        /// <summary>
+        /// Returns whether or not a type is a static class
+        /// </summary>
         public static bool IsStatic(this Type @class)
         {
             return @class.IsAbstract && @class.IsSealed;
@@ -65,7 +42,6 @@ namespace AutoUsing
         /// <summary>
         ///     Extension method info.
         /// </summary>
-        /// <param name="method "></param>
         /// <returns>The class the method is extending</returns>
         public static Type GetExtendedClass(this MethodInfo method)
         {
@@ -143,10 +119,14 @@ namespace AutoUsing
             }
         }
 
-        public static void WaitForFileToBeAccesible(string filename)
+        /// <summary>
+        /// Locks execution until the file is accessible
+        /// </summary>
+        /// <param name="filename"></param>
+        public static void WaitForFileToBeAccessible(string filename)
         {
-            //This will lock the execution until the file is ready
-            while (!FileIsAccessible(filename)) ;
+            
+            while (!FileIsAccessible(filename));
         }
 
         public static string ToIndentedJson(this object obj)
@@ -155,6 +135,10 @@ namespace AutoUsing
         }
 
     
+        /// <summary>
+        /// Logs to a file how much time has passed since a certain date.
+        /// </summary>
+        /// <param name="benchmarkName">Benchmark identifier</param>
         public static void LogTimePassed(this DateTime date, string benchmarkName)
         {
             if (writeLogs) File.AppendAllText(logLocation,

@@ -20,12 +20,24 @@ namespace AutoUsing.Analysis
         private XmlNamespaceManager NamespaceManager { get; set; }
         private FileWatcher FileWatcher { get; set; }
 
+        /// <summary>
+        /// The list of library classes that are referenced by the .csproj file 
+        /// </summary>
         public List<PackageReference> References { get; set; }
         public Dictionary<string, List<string>> LibraryAssemblies { get; set; }
         public string RootDirectory { get; private set; }
+        /// <summary>
+        /// The file name of the .csproj file NOT including the extension
+        /// </summary>
         public string Name { get; private set; }
         public string NuGetPackageRoot { get; private set; }
+        /// <summary>
+        /// The full path to the .csproj file
+        /// </summary>
         public string FilePath { get; private set; }
+        /// <summary>
+        /// The file name of the .csproj file including the extension
+        /// </summary>
         public string FileName { get; private set; }
 
         public CompletionCaches Caches { get; private set; }
@@ -73,12 +85,11 @@ namespace AutoUsing.Analysis
 
         private void LoadCache()
         {
-            // var cacheLocation = ;
             Caches = new CompletionCaches
             {
                 Types = new Cache<ReferenceInfo>(GetCacheLocation("references")),
                 Extensions = new Cache<ExtensionMethodInfo>(GetCacheLocation("extensions")),
-                Hierachies = new Cache<HierarchyInfo>(GetCacheLocation("hiearchies"))
+                Hierachies = new Cache<HierarchyInfo>(GetCacheLocation("hierarchies"))
             };
 
             if (Caches.Types.IsEmpty() || Caches.Extensions.IsEmpty() || Caches.Hierachies.IsEmpty())
@@ -90,7 +101,7 @@ namespace AutoUsing.Analysis
 
         // TODO: probably change this to somewhere more hidden
         private string GetCacheLocation(string type) =>
-            Path.Combine(Directory.GetParent(FilePath).FullName +"_"+ type, "_autousingcache", Path.ChangeExtension(FileName, ".json"));
+            Path.Combine(Directory.GetParent(FilePath).FullName , "_autousingcache", $"{Name}_{type}.json");
 
         /// <summary>
         ///     Loads the basic info about the specified project file.
@@ -161,7 +172,7 @@ namespace AutoUsing.Analysis
         {
             try
             {
-                Util.WaitForFileToBeAccesible(FilePath);
+                Util.WaitForFileToBeAccessible(FilePath);
                 Document.Load(FilePath);
             }
             catch (XmlException e)

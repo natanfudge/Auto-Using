@@ -69,7 +69,7 @@ namespace AutoUsingTest
         public void GetAllProjectHiearchies()
         {
             var request = new ProjectSpecificRequest { ProjectName = "AutoUsing" };
-            var response = Program.Server.GetAllHiearchies(request) as GetAllHierachiesResponse;
+            var response = Program.Server.GetAllHierarchies(request) as GetAllHierachiesResponse;
             Assert.IsNotNull(response);
             // (response.Body as List<Reference>).AssertContains(new Reference("JsonConvert", new List<string> { "Newtonsoft.Json" }));
         }

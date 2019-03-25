@@ -33,7 +33,7 @@ export function completionCommon(completion: Completion, completions: Completion
 
 class TestHelper {
 
-	constructor(private context: vscode.ExtensionContext) {
+	constructor(private context: vscode.ExtensionContext, private server : AutoUsingServer) {
 		if (this.context === undefined) {
 			// console.log(this.context);
 		}
@@ -76,7 +76,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	
 
 
-	testHelper = new TestHelper(context);
+	
 
 
 	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
@@ -106,6 +106,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => wipeStoredCompletions(context));
 
 	let server = new AutoUsingServer();
+	testHelper = new TestHelper(context,server);
 
 	server.addProjects(getAllProjectFiles()); 
 	let autoUsingProvider = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP },

@@ -12,7 +12,7 @@ suite(`CompletionProvider Extension Method Tests`, () => {
         await wait2;
     });
 
-    test.only("Should show extension methods", async () => {
+    test("Should show extension methods", async () => {
         let completionList = await complete("ShouldShowExtensions.cs", 3, 2);
         assertContains(completionList, "Select");
     });
@@ -61,5 +61,12 @@ suite(`CompletionProvider Extension Method Tests`, () => {
         let completionList = await complete("ShouldShowExtensionsForArray.cs", 6, 14);
         assertContains(completionList, "Select");
     });
+
+    test("Should show filtered extension methods after typing the start of the word", async() =>{
+        let completionList = await complete("ShouldShowExtensionAfterTyping.cs", 8, 17);
+        assertContains(completionList, "Select");
+    });
+
+    //TODO: library tests
 
 });
