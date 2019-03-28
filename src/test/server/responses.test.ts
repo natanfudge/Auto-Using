@@ -31,7 +31,8 @@ suite("Server Responses Tests", function () {
     });
 
     test("Should accept add projects request", async () => {
-        let response = await server.setupWorkspace([testLocation], "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\.vscode", extensionLocation);
+        let response = await server.setupWorkspace([testLocation],
+             "C:\\Users\\natan\\AppData\\Roaming\\Code\\User\\workspaceStorage\\15b109ca16b14796e52e6c96faa130db", extensionLocation);
         // assertTrue(response.Success);
     });
 
