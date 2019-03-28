@@ -24,12 +24,6 @@ namespace AutoUsing.Analysis.DataTypes
             return HashCode.Combine(Name, Version, Path);
         }
 
-        // public PackageReference(PackageReference toClone){
-        //     Name = toClone.Name;
-        //     Version = toClone.Version;
-        //     Path = toClone.Path;
-        // }
-
 
     }
 }

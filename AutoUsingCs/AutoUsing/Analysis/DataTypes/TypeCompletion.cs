@@ -4,12 +4,23 @@ using System.Linq;
 
 namespace AutoUsing.Analysis.DataTypes
 {
-    public class Reference
+    /// <summary>
+    /// Represents classes of the same name 
+    /// </summary>
+    public class TypeCompletion
     {
+        /// <summary>
+        /// The name of the classes
+        /// </summary>
+        /// <value></value>
         public string Name { get; set; }
+        /// <summary>
+        /// The namespace of each class
+        /// </summary>
+        /// <value></value>
         public List<string> Namespaces { get; set; }
 
-        public Reference(string name, List<string> namespaces)
+        public TypeCompletion(string name, List<string> namespaces)
         {
             this.Name = name;
             this.Namespaces = namespaces;
@@ -17,7 +28,7 @@ namespace AutoUsing.Analysis.DataTypes
 
         public override bool Equals(object obj)
         {
-            return obj is Reference reference &&
+            return obj is TypeCompletion reference &&
                    Name == reference.Name &&
                    Namespaces.SequenceEqual(reference.Namespaces);
         }

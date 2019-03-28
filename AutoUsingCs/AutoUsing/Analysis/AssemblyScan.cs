@@ -9,21 +9,26 @@ namespace AutoUsing.Analysis
 {
     public class AssemblyScan
     {
-        
+
+        /// <summary>
+        /// Loads assembly from path 
+        /// </summary>
         public AssemblyScan(string path)
         {
-            this.Path = path;
+            this.Path = path.ParseEnvironmentVariables();
             try
             {
-                Assembly = Assembly.LoadFile(path.ParseEnvironmentVariables());
+                Assembly = Assembly.LoadFile(this.Path);
             }
             catch (Exception e)
             {
                 if (e is BadImageFormatException || e is FileLoadException) Assembly = null;
-                // throw;
             }
         }
 
+        /// <summary>
+        /// Does not load an assembly but rather takes in an already loaded assembly so data could be extracted from it.
+        /// </summary>
         public AssemblyScan(Assembly assembly)
         {
             Assembly = assembly;
@@ -33,52 +38,77 @@ namespace AutoUsing.Analysis
 
         private Assembly Assembly { get; set; }
 
-        public string Path{get;set;}
+        public string Path { get; set; }
 
+        /// <summary>
+        /// Returns true if loading the assembly threw an exception so that assembly cannot be parsed
+        /// </summary>
         public bool CouldNotLoad() => Assembly == null;
 
 
-        public List<ReferenceInfo> GetAllTypes()
+        public List<TypeCompletionInfo> GetTypeInfo()
         {
             var references = Assembly.GetExportedTypes()
-                .Select(type => new ReferenceInfo(type.Name.NoTilde(), type.Namespace))
+                .Select(type => new TypeCompletionInfo(type.Name.NoTilde(), type.Namespace))
                 .ToList();
 
             return references;
         }
 
-        public List<HierarchyInfo> GetAllHierarchies()
+        public List<HierarchyInfo> GetHierarchyInfo()
         {
             return Assembly.GetExportedTypes()
                             .Select(type =>
                             {
                                 if (type.IsStatic()) return null;
 
-                                var baseClass = type.BaseType;
-                                var baseClassStr = baseClass != null
-                                    ? baseClass.Namespace + "." + baseClass.Name.NoTilde()
-                                    : "System.Object";
                                 var fathers = type
+                                    // Add in the interfaces of the class
                                     .GetInterfaces()
                                     .Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
-                                    .Append(baseClassStr)
+                                    // Add in the baseclass of the class
+                                    .Append(GetBaseClassAsString(type))
                                     .ToList();
                                 var name = type.Name.NoTilde();
 
                                 if (type.IsGenericType) name += "<>";
 
-                                if (name.Equals("Array") && type.Namespace.Equals("System"))
-                                {
-                                    fathers.AddRange(ArrayRuntimeImplementations);
-                                }
+                                AddRuntimeOnlyHierarchies(fathers, type);
 
 
                                 return new HierarchyInfo(name, type.Namespace, fathers);
                             })
                             .Where(info => info != null).ToList();
+
+
         }
 
-        public List<ExtensionMethodInfo> GetAllExtensionMethods()
+        /// <summary>
+        /// Most types have their baseclasses defined at runtime. HOWEVER. The fact that arrays implement IEnumerable and such is a runtime-only thing and 
+        /// we need to add it in manually.
+        /// </summary>
+        private void AddRuntimeOnlyHierarchies(List<string> hierarchies, Type type)
+        {
+            if (type.Name.NoTilde().Equals("Array") && type.Namespace.Equals("System"))
+            {
+                hierarchies.AddRange(ArrayRuntimeImplementations);
+            }
+        }
+
+        readonly List<string> ArrayRuntimeImplementations = new List<string>
+        {
+            "System.Collections.Generic.IList", "System.Collections.Generic.ICollection",
+            "System.Collections.Generic.IEnumerable"
+        };
+
+        private string GetBaseClassAsString(Type type)
+        {
+            var baseClass = type.BaseType;
+            if (baseClass == null) return "System.Object";
+            else return baseClass.Namespace + "." + baseClass.Name.NoTilde();
+        }
+
+        public List<ExtensionMethodInfo> GetExtensionMethodInfo()
         {
             var extendingClasses = Assembly
                 .GetExportedTypes()
@@ -88,58 +118,20 @@ namespace AutoUsing.Analysis
                 extendingClass => extendingClass.GetExtensionMethods()
                     .Select(extendingMethod =>
                     {
-                        var extendedClass = extendingMethod.GetExtendedClass().Namespace + "." +
-                                            extendingMethod.GetExtendedClass().Name.NoTilde();
+                        var extendedClassName = extendingMethod.GetExtendedClass().Namespace + "." + extendingMethod.GetExtendedClass().Name.NoTilde();
 
                         return new ExtensionMethodInfo(
                             extendingClass.Namespace,
                             extendingMethod.Name,
-                            extendedClass
-                        );
-                    })).ToList();
-
-            return extensionMethods;
-        }
-        
-        readonly List<string> ArrayRuntimeImplementations = new List<string>
-        {
-            "System.Collections.Generic.IList", "System.Collections.Generic.ICollection",
-            "System.Collections.Generic.IEnumerable"
-        };
-
-       
-
-        private static bool ClassCanHaveExtensionMethods(Type @class) =>
-            @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
-
-       
-
-        public static List<ExtensionMethodInfo> GetExtensionMethods(Assembly assembly)
-        {
-            var extendingClasses = assembly
-                .GetExportedTypes()
-                .Where(ClassCanHaveExtensionMethods);
-
-            var extensionMethods = extendingClasses.SelectMany(
-                extendingClass => extendingClass.GetExtensionMethods()
-                    .Select(extendingMethod =>
-                    {
-                        var extendedClass = extendingMethod.GetExtendedClass().Namespace + "." +
-                                            extendingMethod.GetExtendedClass().Name.NoTilde();
-
-                        return new ExtensionMethodInfo(
-                            extendingClass.Namespace,
-                            extendingMethod.Name,
-                            extendedClass
+                            extendedClassName
                         );
                     })).ToList();
 
             return extensionMethods;
         }
 
-        public static Type TargetType(MethodInfo method)
-        {
-            return method.GetParameters()[0].ParameterType;
-        }
+        private static bool ClassCanHaveExtensionMethods(System.Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
+
+
     }
 }

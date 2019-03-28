@@ -1,19 +1,22 @@
 namespace AutoUsing.Analysis.DataTypes
 {
-    public class ReferenceInfo
+    /// <summary>
+    /// Information about a class that is stored and then used to produce completions for classes
+    /// </summary>
+    public class TypeCompletionInfo
     {
         public string Name { get; set; }
         public string Namespace { get; set; }
 
-        public ReferenceInfo(string name, string ns)
+        public TypeCompletionInfo(string name, string ns)
         {
             Name = name;
             Namespace = ns;
         }
-        
-        
 
-        protected bool Equals(ReferenceInfo other)
+
+
+        protected bool Equals(TypeCompletionInfo other)
         {
             return string.Equals(Name, other.Name) && string.Equals(Namespace, other.Namespace);
         }
@@ -23,7 +26,7 @@ namespace AutoUsing.Analysis.DataTypes
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
-            return Equals((ReferenceInfo) obj);
+            return Equals((TypeCompletionInfo)obj);
         }
 
         public override int GetHashCode()

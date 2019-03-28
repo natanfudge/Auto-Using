@@ -18,8 +18,15 @@ export interface Request {
 }
 
 
-export interface AddProjectsRequest extends RequestArguments{
+export interface SetupWorkspaceRequest extends RequestArguments {
     projects: string[];
+    workspaceStorageDir: string;
+    extensionDir : string;
+
+}
+
+export interface SetupRequest extends RequestArguments{
+    globalStoragePath : string;
 }
 
 
@@ -31,9 +38,8 @@ export interface GetCompletionDataRequest extends ProjectSpecificRequest {
     wordToComplete: string;
 }
 
-export const addProject = "addProject",
-    addProjects = "addProjects",
-    removeProject = "removeProject",
+export const 
+    setupWorkspace = "setupWorkspace",
     getAllReferences = "getAllReferences",
 
     getAllHiearchies = "getAllHiearchies",

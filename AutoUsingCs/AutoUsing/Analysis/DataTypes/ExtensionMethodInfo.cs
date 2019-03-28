@@ -2,6 +2,9 @@ using System;
 
 namespace AutoUsing.Analysis.DataTypes
 {
+    /// <summary>
+    /// Information about an extension method that is stored and then later used to produce extension method completinos
+    /// </summary>
     public class ExtensionMethodInfo
     {
         public ExtensionMethodInfo(string extendingNamespace, string extendingMethod, string extendedClass)

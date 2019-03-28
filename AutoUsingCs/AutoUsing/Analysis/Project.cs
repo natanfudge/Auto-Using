@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Threading.Tasks;
+using System.Threading;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,13 +44,15 @@ namespace AutoUsing.Analysis
         public CompletionCaches Caches { get; private set; }
 
 
+
         /// <summary>
         ///     Loads and keeps `.csproj` file's data.
         ///     Optional: Watch the `.csproj` file for changes.
         /// </summary>
         /// <param name="filePath">The path to the `.csproj` file to laod.</param>
         /// <param name="watch">Whether to watch for further file changes.</param>
-        public Project(string filePath, bool watch)
+        /// <param name= "vscodeDir">The location of the .vscode directory of the VS Code project</param>
+        public Project(string filePath, string vscodeDir, bool watch)
         {
             var startTime = DateTime.Now;
 
@@ -78,19 +81,19 @@ namespace AutoUsing.Analysis
             if (watch) Watch();
 
             // Loads completion info from cache files
-            LoadCache();
+            LoadCache(vscodeDir);
 
             startTime.LogTimePassed("Project Creation");
         }
 
-        private void LoadCache()
+        private void LoadCache(string vscodeDir)
         {
 
             Caches = new CompletionCaches
             {
-                Types = new Cache<ReferenceInfo>(GetCacheLocation("references")),
-                Extensions = new Cache<ExtensionMethodInfo>(GetCacheLocation("extensions")),
-                Hierachies = new Cache<HierarchyInfo>(GetCacheLocation("hierarchies"))
+                Types = new Cache<TypeCompletionInfo>(GetCacheLocation("references", vscodeDir)),
+                Extensions = new Cache<ExtensionMethodInfo>(GetCacheLocation("extensions", vscodeDir)),
+                Hierachies = new Cache<HierarchyInfo>(GetCacheLocation("hierarchies", vscodeDir))
             };
 
             // if (Caches.Types.IsEmpty() || Caches.Extensions.IsEmpty() || Caches.Hierachies.IsEmpty())
@@ -104,9 +107,11 @@ namespace AutoUsing.Analysis
             UpdateCache();
         }
 
-        // TODO: probably change this to somewhere more hidden
-        private string GetCacheLocation(string type) =>
-            Path.Combine(Directory.GetParent(FilePath).FullName, "_autousingcache", $"{Name}_{type}.json");
+        private string GetCacheLocation(string type, string storageDir)
+        {
+            return Path.Combine(storageDir, "cache", Name, $"{type}.json");
+        }
+
 
         /// <summary>
         ///     Loads the basic info about the specified project file.
@@ -120,6 +125,10 @@ namespace AutoUsing.Analysis
             FilePath = filePath;
         }
 
+        const int watchBuffer = 300;
+
+        private bool fileChangedRecently = false;
+
         /// <summary>
         ///     Starts watching the project file for changes.
         /// </summary>
@@ -128,18 +137,32 @@ namespace AutoUsing.Analysis
             FileWatcher = new FileWatcher(FilePath);
             FileWatcher.Changed += (s, e) =>
             {
-                if (e.ChangeType is WatcherChangeTypes.Renamed) LoadBasicInfo(e.Name);
+                // Util.Log("Project file change detected.");
 
-                if (e.ChangeType is WatcherChangeTypes.Deleted)
+                // Prevent the event getting triggered twice
+                if (fileChangedRecently) return;
+                fileChangedRecently = true;
+                Task.Delay(watchBuffer).ContinueWith((t) =>
                 {
-                    Dispose();
-                    return;
-                }
+                    fileChangedRecently = false;
 
-                // var oldReferences = References;
+                    if (e.ChangeType is WatcherChangeTypes.Renamed) LoadBasicInfo(e.Name);
 
-                LoadPackageReferences();
-                UpdateCache();
+                    if (e.ChangeType is WatcherChangeTypes.Deleted)
+                    {
+                        Dispose();
+                        return;
+                    }
+
+                    if (e.ChangeType is WatcherChangeTypes.Changed)
+                    {
+                        LoadPackageReferences();
+                        UpdateCache();
+                    }
+
+                    // var oldReferences = References;
+
+                });
             };
             FileWatcher.EnableRaisingEvents = true;
         }
@@ -200,7 +223,16 @@ namespace AutoUsing.Analysis
 
                 var packagePath = Path.Combine(NuGetPackageRoot, $"{packageName}/{packageVersion}/");
 
-                foreach (var assemblyPath in LibraryAssemblies[packageName + "/" + packageVersion])
+                var assemblyPathIdentifier = packageName + "/" + packageVersion;
+                if (!LibraryAssemblies.ContainsKey(assemblyPathIdentifier))
+                {
+                    Util.Log(@"Could not find the assembly path of a newly added library in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.");
+                    return;
+                    //TODO: run the scanning again once dependencies are restored. 
+                }
+
+                foreach (var assemblyPath in LibraryAssemblies[assemblyPathIdentifier])
                 {
                     References.Add(new PackageReference
                     {
@@ -212,38 +244,55 @@ namespace AutoUsing.Analysis
             }
         }
 
+        private IEnumerable<string> GetOldCacheIntersection()
+        {
+            // Util.Log("types : " + Caches.Types.GetIdentifiers());
+            // Util.Log("Hierachies : " + Caches.Hierachies.GetIdentifiers());
+            // Util.Log("Extensions : " + Caches.Extensions.GetIdentifiers());
+            return Caches.Types.GetIdentifiers().Intersect(Caches.Hierachies.GetIdentifiers()).Intersect(Caches.Extensions.GetIdentifiers());
+
+            // var typesIdentifiers = 
+            // if (typesIdentifiers.SequenceEqual(Caches.Extensions.GetIdentifiers()) && typesIdentifiers.SequenceEqual(Caches.Hierachies.GetIdentifiers()))
+            // {
+            //     // Normal case: all of the caches have the same list of identifiers
+            //     return typesIdentifiers;
+            // }
+            // else
+            // {
+            //     // Edge case: one cache doesn't gave the right identifier list, so we just wipe the cache. 
+            //     return new List<string>();
+            // }
+        }
+
 
         /// <summary>
         /// Adds all of the new data about the references to the cache
         /// </summary>
         /// <param name="oldReferences"></param>
-        //TODO: this is getting called twice for some reason. FIX IT!!
         private void UpdateCache()
         {
             // The identifiers are identical so it doesn't matter where we get this list from.
             // Either way it gets all of the packages from before changes were made. 
-            var oldPackages = Caches.Types.GetIdentifiers();
-            var newPackages = this.References.Select(reference => reference.Path);
+            var oldPackages = GetOldCacheIntersection();
+            var newPackages = this.References.Select(reference => reference.Path.ParseEnvironmentVariables());
 
-            Util.Log("Old packages : " + oldPackages.ToIndentedJson());
-            Util.Log("New packages : " + newPackages.ToIndentedJson());
+            if (oldPackages.Count() != newPackages.Count())
+            {
+                Util.Log("Old packages : " + oldPackages.ToIndentedJson());
+                Util.Log("New packages : " + newPackages.ToIndentedJson());
+            }
+
 
             // Add new packages to cache
             var addedPackages = newPackages.Except(oldPackages);
-            Util.Log("Adding packages: " + addedPackages.ToIndentedJson());
-            if (newPackages.Count() > 0)
-            {
-                var scans = addedPackages.Select(package => new AssemblyScan(package)).Where(scanner => !scanner.CouldNotLoad());
-                Caches.AppendScanResults(scans);
-            }
+            var scans = addedPackages.Select(package => new AssemblyScan(package)).Where(scanner => !scanner.CouldNotLoad());
+            Caches.AppendScanResults(scans);
+            if (addedPackages.Count() > 0) Util.Log("Adding packages: " + addedPackages.ToIndentedJson());
 
             // Delete packages that no longer exist from the cache
             var deletedPackages = oldPackages.Except(newPackages);
-            // Util.Log("DELETED PACKAGES: \n" + deletedPackages.ToIndentedJson());
-            if (newPackages.Count() > 0)
-            {
-                Caches.DeletePackages(deletedPackages);
-            }
+            Caches.DeletePackages(deletedPackages);
+
 
         }
 

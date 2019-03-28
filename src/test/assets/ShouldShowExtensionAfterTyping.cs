@@ -4,7 +4,7 @@ namespace playground
     public class ShouldShowExtensionAfterTyping
     {
         IEnumerable<string> x;
-        f()
+        void f()
         {
             x.sel();
         }
@@ -13,8 +13,8 @@ namespace playground
     }
 
 
-    static class TestHelper{
-        static void sel(this IEnumerable<string> ien){
+    public static class TestHelper{
+       public static void sel(this IEnumerable<string> ien){
 
         }
     }

@@ -10,9 +10,15 @@ namespace AutoUsing.Proxy
         /// </summary>
         public event EventHandler<MessageEventArgs> EditorDataReceived;
 
+        // private int count = 0;
         public void WriteData(Response response)
         {
-            Console.WriteLine(JsonConvert.SerializeObject(response, Serializer.Settings));
+            // count++;
+            // Util.Log("WRITE DATA NUMBER " + count);
+            // Util.Log("Sending response OBJECT = " + response.ToIndentedJson());
+            var str = JsonConvert.SerializeObject(response, Serializer.Settings);
+            Console.WriteLine(str);
+            // Util.Log("Sending response STRING = " + str);
         }
 
         /// <summary>

@@ -1,11 +1,11 @@
 import * as vscode from "vscode";
 import { DataProvider } from "./DataProvider";
 
-import { HANDLE_COMPLETION } from './extension';
+import { HANDLE_COMPLETION, Completion } from './extension';
 import { flatten, AUDebug, getProjectRootDirOfFilePath, getFullPathToProjectOfFile, getProjectName } from './util';
 import { DocumentWalker, CompletionType } from "./DocumentWalker";
 import { SORT_CHEAT, primitives } from "./Constants";
-import { getStoredCompletions, maxCompletionAmount } from "./CompletionProvider";
+import { getStoredCompletions, maxCompletionAmount } from "./CompletionProviderFUCK";
 import { debug } from "util";
 import { Benchmarker } from "./Benchmarker";
 import { binSearch, binarySearch } from "./speedutil";
@@ -41,10 +41,8 @@ class CompletionInstance {
 		token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionList> {
 		let completionType = await this.documentWalker.getCompletionType(position);
 
-		
-
 		if (completionType === CompletionType.NONE) {
-			return {items:[]};
+			return { items: [] };
 		} else {
 			let usings = await this.documentWalker.getUsings();
 			let completionData: Reference[];
@@ -157,7 +155,6 @@ class CompletionInstance {
 		}
 	}
 
-	//TODO: for some reason extension methods are not showing and it's because a request is not even being sent for them.
 	private async findExtensionMethodsOfAllBaseClasses(baseclasses: string[]): Promise<Reference[]> {
 		// Request extensions from server
 		let extensionMethods = await this.server.getAllExtensionMethods(this.projectName, this.wordToComplete);
@@ -174,22 +171,20 @@ class CompletionInstance {
 	 * Map pure completion data to vscode's CompletionItem[] format
 	 * @param usings A list of the using directive in the file. All already imported references will be removed from the array.
 	 */
-	//TODO: typing midifile normally doesn't complete it, test out why. Same thing as Jtoken.
 	private completionDataToCompletions(references: Reference[], usings: string[]): vscode.CompletionList {
-		let completionAmount = Math.min(filterOutAlreadyUsing(references, usings), maxCompletionAmount);
-		let takingOnlySomeCompletions = completionAmount > maxCompletionAmount;
-		// Take only a limited amount of the completions
-		if (takingOnlySomeCompletions) references = references.slice(0, maxCompletionAmount);
+		let totalCompletionAmount = filterOutAlreadyUsing(references, usings);
+		let completionAmount = Math.min(totalCompletionAmount, maxCompletionAmount);
+		let takingOnlySomeCompletions = totalCompletionAmount > maxCompletionAmount;
 
-		// All references the user has imported before. They will gain a higher priority. 
-		let commonNames = getStoredCompletions(this.context).map(completion => completion.label)
-			.filter(name => references.some(reference => reference.name === name));
-		let commonCompletionAmount = commonNames.length;
-		commonNames.sort();
+		let commonCompletions = getStoredCompletions(this.context);
+		let commonReferences = convertStoredCompletionsToReferences(commonCompletions);
+		// Take only a limited amount of the completions
+		if (takingOnlySomeCompletions) references = references.slice(0, maxCompletionAmount - commonReferences.length).concat(commonReferences);
+
+		let commonNames = commonCompletions.map(completion => completion.label).sort();
 
 		let completions = new Array<vscode.CompletionItem>(completionAmount);
 
-		let commonCompletionsPassed = 0;
 		// Start from the length of the common names to leave space to put the common ones at the start
 		for (let i = 0; i < completionAmount; i++) {
 
@@ -212,16 +207,7 @@ class CompletionInstance {
 				detail: reference.namespaces.join("\n"),
 				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" }
 			};
-
-			// Put common completions at the start
-			if (isCommon) {
-				completions[commonCompletionsPassed] = completion;
-				commonCompletionsPassed++;
-			} else {
-				// Put uncommon completions at the end. 
-				completions[i + commonCompletionAmount - commonCompletionsPassed] = completion;
-			}
-
+			completions[i] = completion;
 
 		}
 		return { isIncomplete: takingOnlySomeCompletions, items: completions };
@@ -235,6 +221,18 @@ class CompletionInstance {
 
 const usingEdit = (namespace: string) => vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
 
+
+function convertStoredCompletionsToReferences(commonNames: Completion[]): Reference[] {
+	let refs: Reference[] = [];
+	for (let commonName of commonNames) {
+		let refWithSameName = refs.find(ref => ref.name === commonName.label);
+		// If one exists with the same name we combine their namespaces 
+		if (refWithSameName !== undefined) refWithSameName.namespaces.push(commonName.namespace);
+		else refs.push({ name: commonName.label, namespaces: [commonName.namespace] });
+
+	}
+	return refs;
+}
 
 /**
 * Removes all namespaces that already have a using statement
@@ -277,6 +275,48 @@ function filterOutAlreadyUsing(references: Reference[], usings: string[]): numbe
 	return referenceAmount;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

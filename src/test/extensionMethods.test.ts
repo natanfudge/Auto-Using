@@ -67,6 +67,10 @@ suite(`CompletionProvider Extension Method Tests`, () => {
         assertContains(completionList, "Select");
     });
 
-    //TODO: library tests
+    test("Should show extension methods for library classes", async() =>{
+        let completionList = await complete("ShouldShowExtensionsForLibrary.cs", 7, 17);
+        assertContains(completionList, "Validate");
+    });
+
 
 });

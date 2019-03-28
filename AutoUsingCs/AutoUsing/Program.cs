@@ -11,35 +11,17 @@ namespace AutoUsing
     {
         public static Server Server = new Server();
 
+        // private static int sentCounter
+        //TODO: optimize the first addProjects
+        //TODO: properly structured performance tests using the special .NET class
         public static void Main(string[] args)
         {
-            //  AppDomain.CurrentDomain.ProcessExit += new EventHandler (Util.OnProcessExit); 
-
-            // Console.WriteLine(" Best Auto-Using server started.");
-
-            // TODO: Error Handling.. 👌
-            // I just wanna see this working, a very rough version. 
-            // then i'll write tests, refactor the code.
-
-            //            args = new[]
-            //            {
-            //                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsing/AutoUsing.csproj",
-            //                // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
-            //               "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/AutoUsing.csproj"
-            //            };
-
-
-            // if (args.Length <= 0)
-            // {
-            //     Server.WriteError(Errors.AtLeastOneProjectFileIsRequired);
-            //     return;
-            // }
 
             // {"command":"addProjects","arguments":{"projects":["c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsing\\AutoUsing.csproj"]}}
             // Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
-            {    
+            {
                 Request req;
                 try
                 {
@@ -62,6 +44,7 @@ namespace AutoUsing
                 var response = new Response();
                 switch (req.Command)
                 {
+                    //TODO: convert specificly to cast
                     case EndPoints.GetAllReferences:
                         response = Server.GetAllReferences(req.Specificly<GetCompletionDataRequest>());
                         break;
@@ -72,29 +55,19 @@ namespace AutoUsing
                         response = Server.GetAllHierarchies(req.Specificly<ProjectSpecificRequest>());
                         break;
 
-                    case EndPoints.AddProject:
-
-                        /* response =*/
-                        Server.AddProject(req);
-                        break;
-                    case EndPoints.RemoveProject:
-
-                        /* response = */
-                        Server.RemoveProject(req);
-                        break;
                     case EndPoints.Ping:
                         response = Server.Pong(req);
                         break;
-                    case EndPoints.AddProjects:
-                        response = Server.AddProjects(req.Specificly<AddProjectsRequest>());
+                    case EndPoints.SetupWorkspace:
+                        response = Server.AddProjects(req.Specificly<SetupWorkspaceRequest>());
                         break;
 
                     default:
-                        response = Server.Error(Errors.UndefinedRequest);
+                        response = Server.Error($"{Errors.UndefinedRequest} '{req.Command}'");
                         break;
                 }
 
-
+                // Util.Log("Sending response!");
                 Server.Proxy.WriteData(response);
             };
 

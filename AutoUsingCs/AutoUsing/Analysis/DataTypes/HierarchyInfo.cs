@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace AutoUsing.Analysis.DataTypes
 {
+     /// <summary>
+    /// Information about the superclasses of a class that is stored and then later used to produce extension method completinos
+    /// </summary>
     public class HierarchyInfo
     {
         public HierarchyInfo(string className, string @namespace, List<string> fathers)

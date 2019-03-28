@@ -6,7 +6,8 @@ namespace AutoUsing
     public class EndPoints
     {
         public const string AddProject = "addProject",
-                            AddProjects = "addProjects",
+                            SetupWorkspace = "setupWorkspace",
+                            // Setup="setup",
                             RemoveProject = "removeProject",
                             GetAllReferences = "getAllReferences",
     getAllHiearchies = "getAllHiearchies",

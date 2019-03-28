@@ -8,30 +8,31 @@ using AutoUsing.Analysis.DataTypes;
 namespace AutoUsing.Analysis.Cache
 {
     /// <summary>
-    /// Completion cache of all of the base c# libraries
+    /// Completion cache of all of the base C# libraries
     /// </summary>
     public static class GlobalCache
     {
-        public static CompletionCaches Caches = new CompletionCaches
-        {
-            Types =
-                new Cache<ReferenceInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/references.json"),
-            Extensions = new Cache<ExtensionMethodInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/extensions.json"),
-            Hierachies = new Cache<HierarchyInfo>("C:/Users/natan/Desktop/Auto-Using-Git/out/cache/hierachies.json")
+        public static CompletionCaches Caches;
 
-        };
-
-        static GlobalCache()
+        public static void SetupGlobalCache(string location)
         {
-            var scanners = GetBaseAssemblyScans();
+            // Util.Log("Location = " + location);
+            Caches = new CompletionCaches
+            {
+                Types = new Cache<DataTypes.TypeCompletionInfo>(Path.Combine(location, "cache", "references.json")),
+                Extensions = new Cache<ExtensionMethodInfo>(Path.Combine(location, "cache", "extensions.json")),
+                Hierachies = new Cache<HierarchyInfo>(Path.Combine(location, "cache", "hierachies.json"))
+            };
 
             if (Caches.Types.IsEmpty() || Caches.Hierachies.IsEmpty() || Caches.Extensions.IsEmpty())
             {
+                // Scan .NET libraries
+                var scanners = GetBaseAssemblyScans();
+                Util.Log("Global cache reloading");
                 Caches.LoadScanResults(scanners);
             }
-
-
         }
+
 
 
         /// <summary>
@@ -48,8 +49,13 @@ namespace AutoUsing.Analysis.Cache
         private static IEnumerable<AssemblyScan> GetBaseAssemblyScans()
         {
             var bins = GetBinFiles();
-            return bins.Select(file => new AssemblyScan(file)).Where(assembly => !assembly.CouldNotLoad())
+            var scans = bins.Select(file =>
+            {
+                return new AssemblyScan(file);
+            }).Where(assembly => !assembly.CouldNotLoad())
                 .Append(new AssemblyScan(typeof(int).Assembly));
+            ;
+            return scans;
         }
     }
 }

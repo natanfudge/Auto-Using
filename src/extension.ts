@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vscode from 'vscode';
-import { CompletionProvider, getStoredCompletions } from './CompletionProvider';
+import { CompletionProvider, getStoredCompletions } from './CompletionProviderFUCK';
 import { SORT_CHEAT } from './Constants';
 import { execFileSync, spawn, execFile } from 'child_process';
 import { Benchmarker } from './Benchmarker';
@@ -33,7 +33,7 @@ export function completionCommon(completion: Completion, completions: Completion
 
 class TestHelper {
 
-	constructor(private context: vscode.ExtensionContext, private server : AutoUsingServer) {
+	constructor(private context: vscode.ExtensionContext, private server: AutoUsingServer) {
 		if (this.context === undefined) {
 			// console.log(this.context);
 		}
@@ -47,37 +47,6 @@ export let testHelper: TestHelper;
 // const testServer = ;
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
-
-	const path = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\src\\server\\test.txt";
-	const path2 = "C:\\Users\\natan\\Desktop\\Auto-Using\\src\\test\\playground\\amar.csproj";
-	// watch(, (event,fileName) =>{
-	// 	console.log(event);
-	// 	let x = 2;
-	// });
-
-	// let workspaceRoot = vscode.workspace.rootPath;
-	// if (!workspaceRoot) {
-	// 	return;
-	// }
-	// let pattern = join(workspaceRoot, 'amar.csproj');
-
-	// let watcher = vscode.workspace.createFileSystemWatcher("**\\*.csproj");
-	// watcher.onDidChange((file) => {
-	// 	let x = 2;
-	// });
-
-	// watcher.onDidCreate(file => {
-	// 	let x = 2;
-	// });
-
-	// watcher.onDidDelete(file => {
-	// 	let x = 2;
-	// });
-	
-
-
-	
-
 
 	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
 		if (reference.namespaces.length > 1) {
@@ -106,14 +75,17 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	let wipeStorageCommand = vscode.commands.registerCommand(WIPE_STORAGE_COMMAND, () => wipeStoredCompletions(context));
 
 	let server = new AutoUsingServer();
-	testHelper = new TestHelper(context,server);
+	testHelper = new TestHelper(context, server);
 
-	server.addProjects(getAllProjectFiles()); 
+	context.subscriptions.push(new vscode.Disposable(() => server.stop()));
+
+
+	server.setupWorkspace(getAllProjectFiles(), context.storagePath!,context.extensionPath);
 	let autoUsingProvider = vscode.languages.registerCompletionItemProvider({ scheme: "file", language: CSHARP },
-	 new CompletionProvider(context,server), ".");
+		new CompletionProvider(context, server), ".");
 
 	context.subscriptions.push(autoUsingProvider, handleCompletionCommand, wipeStorageCommand);
-	
+
 }
 
 export function wipeStoredCompletions(context: vscode.ExtensionContext): void {

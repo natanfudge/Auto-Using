@@ -1,6 +1,9 @@
 import * as vscode from "vscode";
 import * as colors from "colors";
 import { writeFileSync, readFileSync } from "fs";
+import { testHelper } from "../extension";
+
+export const extensionLocation = "C:\\Users\\natan\\Desktop\\Auto-Using-Git";
 
 export async function activateExtension(): Promise<void> {
     const ext = vscode.extensions.getExtension("Fudge.auto-using")!;
@@ -11,7 +14,7 @@ export async function activateExtension(): Promise<void> {
 
 }
 
-export async function activateCSharpExtension() {
+export async function activateCSharpExtension(): Promise<void> {
     const csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;
 
     if (!csharpExtension.isActive) {
@@ -20,6 +23,13 @@ export async function activateCSharpExtension() {
 
     await csharpExtension.exports.initializationFinished();
 
+}
+
+export async function forServerToBeReady(): Promise<void> {
+    //@ts-ignore
+    let server = testHelper.server;
+    if (server.isReady()) return;
+    else await server.serverReady();
 }
 
 class AssertionError extends Error {
@@ -45,7 +55,7 @@ export function assertStringContains(str: string, substring: string): void {
     }
 }
 
-export function assertInFirst<T>(amount: number, arr: Array<T>, element: T) {
+export function assertInFirst<T>(amount: number, arr: Array<T>, element: T): void {
     let subArray = arr.slice(0, amount);
 
     if (!subArray.includes(element)) {
@@ -80,7 +90,7 @@ export function assertTrue(bool: boolean): void {
     assertBool(bool, true);
 }
 
-function assertBool(checking: boolean, trueOrFalse: boolean) :void{
+function assertBool(checking: boolean, trueOrFalse: boolean): void {
     if (checking !== trueOrFalse) {
         throw new AssertionError(`Expected value to be ${JSON.stringify(trueOrFalse).green} but is actually ${JSON.stringify(!trueOrFalse).red}`);
     }

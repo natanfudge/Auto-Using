@@ -17,11 +17,15 @@ namespace AutoUsingTest
         private Response AddProjects()
         {
             var start = DateTime.Now;
-            var request = new AddProjectsRequest
-            {
-                Projects = new List<string>
-                    {"C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\AutoUsing.csproj"}
-            };
+            // var request = new SetupWorkspaceRequest
+            
+            // (
+            //     projects: new List<string>
+            //         {"C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\AutoUsing.csproj"},
+            //         workspaceStorageDir:""
+            // );
+            //TODO: specify arguments of request
+            var request = new SetupWorkspaceRequest();
             var response = Program.Server.AddProjects(request);
             start.LogTimePassed("AddProjects");
             return response;

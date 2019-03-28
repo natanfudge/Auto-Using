@@ -25,7 +25,7 @@ namespace AutoUsing.Models
 
     public class GetAllReferencesResponse : SuccessResponse
     {
-        public GetAllReferencesResponse(List<Reference> References)
+        public GetAllReferencesResponse(List<TypeCompletion> References)
         {
             this.Body = References;
         }
@@ -54,6 +54,7 @@ namespace AutoUsing.Models
             return thisReferences.SequenceEqual(otherReferences) && otherResponse.Success == this.Success;
         }
     }
+    
 
 
 }

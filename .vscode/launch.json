@@ -105,5 +105,6 @@
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
 		}
+		
 	]
 }

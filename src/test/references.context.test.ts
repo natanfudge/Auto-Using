@@ -5,18 +5,18 @@
 
 // The module 'assert' provides assertion methods from node
 
-import { activateExtension, assertInFirst, openTest, assertContains } from './testUtil';
+import { activateExtension, assertInFirst, openTest, assertContains, forServerToBeReady } from './testUtil';
 import * as vscode from "vscode";
 // import { testHelper, COMPLETION_STORAGE, Completion } from '../extension';
 import * as assert from "assert";
 import { Completion, COMPLETION_STORAGE, testHelper, addUsing, storeCompletion } from '../extension';
 import * as extension from "../extension";
 import { completeWithData, complete, DirectCompletionTestHelper } from './TestCompletionUtil';
-import { CompletionProvider } from '../CompletionProvider';
+import { CompletionProvider } from '../CompletionProviderFUCK';
 
 
 // Defines a Mocha test suite to group tests of similar kind together
-suite("CompletionProvider References Context Tests", function () {
+suite("CompletionProvider References Context Tests",  ()=> {
 
     
 
@@ -31,6 +31,8 @@ suite("CompletionProvider References Context Tests", function () {
         //TODO replace null with a server instance
         //@ts-ignore
         helper = new DirectCompletionTestHelper(new CompletionProvider(context,testHelper.server));
+
+        await forServerToBeReady();
     });
 
     test("Should add using expression", async () => {
@@ -44,14 +46,11 @@ suite("CompletionProvider References Context Tests", function () {
     test("Provides priority to completions that were chosen before", async () => {
         extension.wipeStoredCompletions(context);
         storeCompletion(context, new Completion("ApartmentState", "System.Threading"));
-        let list = await complete("ShouldPrioritize.cs", 1, 3);
+        let list = await complete("ShouldPrioritize.cs", 1, 4);
         assertInFirst(5, list, "ApartmentState");
     });
 
-    // test.only("Should show completions", async () => {
-    //     let completionList = await helper.directlyComplete("ShouldShow.cs", 1, 5);
-    //     assertContains(completionList, "File");
-    // });
+
 
 
 

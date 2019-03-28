@@ -27,7 +27,7 @@ namespace AutoUsing
 
         public Response Error(string error)
         {
-            return new ErrorResponse {Body = error};
+            return new ErrorResponse { Body = error };
         }
 
         public void WriteError(string error)
@@ -41,7 +41,7 @@ namespace AutoUsing
             {
                 while (true)
                 {
-                    Proxy.ReadData(new MessageEventArgs {Data = Console.ReadLine()});
+                    Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
                 }
             }
             //            );
@@ -87,6 +87,7 @@ namespace AutoUsing
             if (project == null) return errorResponse;
 
             var extensionInfo = GlobalCache.Caches.Extensions.GetCache().Concat(project.Caches.Extensions.GetCache()).ToList();
+            // Util.Log("Extension info = " + extensionInfo);
             var refinedExtensionData = CompletionCaches.ToCompletionFormat(extensionInfo);
 
             // Remove all extension methods that have been filtered by the word to complete
@@ -117,7 +118,7 @@ namespace AutoUsing
         {
             if (projectName.IsNullOrEmpty())
             {
-                errorResponse = new ErrorResponse {Body = Errors.ProjectNameIsRequired};
+                errorResponse = new ErrorResponse { Body = Errors.ProjectNameIsRequired };
             }
 
             // Using C# 7.2 `is expression` to check for null, and assign variable
@@ -153,52 +154,33 @@ namespace AutoUsing
             // Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectFilePathIsRequired });
         }
 
-        //TODO
-        public void RemoveProject(Request req)
-        {
-            // var projectName = req.Arguments;
 
-            // if (!projectName.IsNullOrEmpty())
-            // {
-            //     // One line torture :D
-            //     foreach (var project in Projects.Select(o => { if (o.Name != projectName) return null; o.Dispose(); return o; }))
-            //     {
-            //         Projects.Remove(project);
-            //     }
-
-            //     return;
-            // }
-
-            // Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectNameIsRequired });
-        }
-
-        public void AddCmdArgProjects(string[] projects)
-        {
-            foreach (var path in projects)
-            {
-                Projects.Add(new Project(path, watch: true));
-            }
-        }
 
         /// <summary>
         /// Adds .NET projects for the server to watch over and collect assembly info about.
         /// </summary>
-        public Response AddProjects(AddProjectsRequest req)
+        public Response AddProjects(SetupWorkspaceRequest req)
         {
+            GlobalCache.SetupGlobalCache(req.ExtensionDir);
             if (req.Projects.Any(path => !File.Exists(path)))
             {
-                return new ErrorResponse {Body = Errors.NonExistentProject};
+                return new ErrorResponse { Body = Errors.NonExistentProject };
             }
 
             const string csproj = ".csproj";
 
             if (req.Projects.Any(path => Path.GetExtension(path) != csproj))
             {
-                return new ErrorResponse {Body = Errors.NonExistentProject};
+                return new ErrorResponse { Body = Errors.NonExistentProject };
             }
 
-            Projects.AddRange(req.Projects.Select(path => new Project(path, watch: true)));
+            Projects.AddRange(req.Projects.Select(path => new Project(path, req.WorkspaceStorageDir, watch: true)));
             return new EmptyResponse();
         }
+
+        // public Response Setup(SetupWorkspaceRequest req){
+        //     GlobalCache.SetupGlobalCache(req.GlobalStoragePath);
+        //     return new EmptyResponse();
+        // }
     }
 }

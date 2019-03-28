@@ -9,77 +9,66 @@ namespace AutoUsing.Analysis.Cache
     /// </summary>
     public class CompletionCaches
     {
-        public Cache<ReferenceInfo> Types { get; set; }
+        public Cache<TypeCompletionInfo> Types { get; set; }
         public Cache<ExtensionMethodInfo> Extensions { get; set; }
         public Cache<HierarchyInfo> Hierachies { get; set; }
 
+        /// <summary>
+        /// Replaces the caches with the data gathered in assembly scans
+        /// </summary>
         public void LoadScanResults(IEnumerable<AssemblyScan> scans)
         {
-            // var newReferences = new List<PackageReference>();
-            // var scans = newReferences.Select(reference => new AssemblyScan(reference.Path)).Where(scanner => !scanner.CouldNotLoad());
-
-            Types.SetCache(ScansReferenceInfo(scans));
-            Hierachies.SetCache(ScansHierarchyInfo(scans));
-            Extensions.SetCache(ScansExtensionsInfo(scans));
+            Types.SetCache(GetReferenceInfoOfScans(scans));
+            Hierachies.SetCache(GetHierarchyInfoOfScans(scans));
+            Extensions.SetCache(GetExtensionsInfoOfScans(scans));
 
             Save();
 
         }
 
-        private List<CachedObject<ReferenceInfo>> ScansReferenceInfo(IEnumerable<AssemblyScan> scans)
-        {
-            return scans.Select(scan => new CachedObject<ReferenceInfo>(scan.GetAllTypes(), scan.Path)).ToList();
-        }
-
-        private List<CachedObject<HierarchyInfo>> ScansHierarchyInfo(IEnumerable<AssemblyScan> scans)
-        {
-            return scans.Select(scan => new CachedObject<HierarchyInfo>(scan.GetAllHierarchies(), scan.Path)).ToList();
-        }
-        private List<CachedObject<ExtensionMethodInfo>> ScansExtensionsInfo(IEnumerable<AssemblyScan> scans)
-        {
-            return scans.Select(scan => new CachedObject<ExtensionMethodInfo>(scan.GetAllExtensionMethods(), scan.Path)).ToList();
-        }
 
         /// <summary>
-        /// Adds to the cache all of the data gathered in the scans
+        /// Adds to the cache all of the data gathered in assembly scans
         /// </summary>
         public void AppendScanResults(IEnumerable<AssemblyScan> scans)
         {
-
-            Types.AddCache(ScansReferenceInfo(scans));
-            Hierachies.AddCache(ScansHierarchyInfo(scans));
-            Extensions.AddCache(ScansExtensionsInfo(scans));
+            if (scans.Count() == 0) return;
+            Types.AddCache(GetReferenceInfoOfScans(scans));
+            Hierachies.AddCache(GetHierarchyInfoOfScans(scans));
+            Extensions.AddCache(GetExtensionsInfoOfScans(scans));
 
             Save();
         }
 
-        public void DeletePackages(IEnumerable<string> packages)
+        private List<CachedObject<TypeCompletionInfo>> GetReferenceInfoOfScans(IEnumerable<AssemblyScan> scans)
         {
-            Util.Log("Removing packages : " + packages.ToIndentedJson());
-            Types.RemoveCache(packages);
-            Util.Log("The Type cache is now just:  " + Types.ToIndentedJson());
-            Hierachies.RemoveCache(packages);
-            Extensions.RemoveCache(packages);
+            return scans.Select(scan => new CachedObject<TypeCompletionInfo>(scan.GetTypeInfo(), scan.Path)).ToList();
+        }
+
+        private List<CachedObject<HierarchyInfo>> GetHierarchyInfoOfScans(IEnumerable<AssemblyScan> scans)
+        {
+            return scans.Select(scan => new CachedObject<HierarchyInfo>(scan.GetHierarchyInfo(), scan.Path)).ToList();
+        }
+        private List<CachedObject<ExtensionMethodInfo>> GetExtensionsInfoOfScans(IEnumerable<AssemblyScan> scans)
+        {
+            return scans.Select(scan => new CachedObject<ExtensionMethodInfo>(scan.GetExtensionMethodInfo(), scan.Path)).ToList();
+        }
+
+
+        /// <summary>
+        /// Removes from the caches the data of the specified packages.
+        /// </summary>
+        /// <param name="packageIdentifiers">The string that were used to identify the packages</param>
+        public void DeletePackages(IEnumerable<string> packageIdentifiers)
+        {
+            if (packageIdentifiers.Count() == 0) return;
+            Util.Log("Removing packages : " + packageIdentifiers.ToIndentedJson());
+            Types.RemoveCache(packageIdentifiers);
+            Hierachies.RemoveCache(packageIdentifiers);
+            Extensions.RemoveCache(packageIdentifiers);
 
             Save();
         }
-
-        // private void DeletePackagesFromSpecificCache<T>(Cache<T> cache, IEnumerable<PackageReference> packages)
-        // {
-        //     cache.RemoveCache(packages.Select(package => package.Path));
-        // }
-
-        // public void AppendScanResults(IEnumerable<AssemblyScan> scanners)
-        // {
-        //     Types.AddCache(scanners.SelectMany(scanner => scanner.GetAllTypes()));
-        //     Hierachies.AddCache(scanners.SelectMany(scanner => scanner.GetAllHierarchies()));
-        //     Extensions.AddCache(scanners.SelectMany(scanner => scanner.GetAllExtensionMethods()));
-
-        //     Save();
-        // }
-
-
-
 
         private void Save()
         {
@@ -92,22 +81,22 @@ namespace AutoUsing.Analysis.Cache
         /// <summary>
         /// Converts a list of raw reference info into data that is more easily interpreted as a completion
         /// </summary>
-        /// <param name="referenceInfos"></param>
-        /// <returns></returns>
-        public static List<Reference> ToCompletionFormat(List<ReferenceInfo> referenceInfos)
+        public static List<TypeCompletion> ToCompletionFormat(List<TypeCompletionInfo> referenceInfos)
         {
             return referenceInfos
                 .Distinct()
                 .GroupBy(info => info.Name)
-                .Select(group => new Reference(group.Key, group.Select(info => info.Namespace).ToList()))
+                .Select(group => new TypeCompletion(group.Key, group.Select(info => info.Namespace).ToList()))
                 .ToList();
         }
 
-
+        /// <summary>
+        /// Converts a list of raw extension method info into data that is more easily interpreted as a completion
+        /// </summary>
         public static List<ExtensionClass> ToCompletionFormat(List<ExtensionMethodInfo> extensionMethodInfos)
         {
             var grouped = extensionMethodInfos
-                .GroupBy(ExtendedClassName)
+                .GroupBy(TheNameOfTheExtendedClass)
                 .Select(extensionMethods => extensionMethods.GroupBy(extensionMethod => extensionMethod.Method));
 
             return grouped
@@ -119,8 +108,11 @@ namespace AutoUsing.Analysis.Cache
                 .ToList();
         }
 
-        private static string ExtendedClassName(ExtensionMethodInfo info) => (info.Class).NoTilde();
+        private static string TheNameOfTheExtendedClass(ExtensionMethodInfo info) => (info.Class).NoTilde();
 
+        /// <summary>
+        /// Converts a list of raw class hierarchy info into data that is more easily interpreted as a completion
+        /// </summary>
         public static List<Hierarchies> ToCompletionFormat(List<HierarchyInfo> extensionMethodInfos)
         {
             return extensionMethodInfos

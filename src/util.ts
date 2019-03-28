@@ -4,6 +4,8 @@ const parentfinder = require('find-parent-dir');
 const findupglob = require('find-up-glob');
 const glob = require("glob");
 import * as vscode from "vscode";
+import * as cp from "child_process";
+import * as os from "os";
 
 export function flatten<T>(arr: T[][]): T[] {
     return arr.reduce((acc, val) => acc.concat(val), []);
@@ -78,4 +80,41 @@ function recFindByExtLogic(folder: string, extension: string, files: string[] | 
         }
     );
     return result;
+}
+
+
+// Function from omnisharp to get the ids of the child process to kill it when the extension is deactivated. 
+export async function getUnixChildProcessIds(pid: number): Promise<number[]> {
+    return new Promise<number[]>((resolve, reject) => {
+        let ps = cp.exec('ps -A -o ppid,pid', (error, stdout, stderr) =>
+        {
+            if (error) {
+                return reject(error);
+            }
+
+            if (stderr) {
+                return reject(stderr);
+            }
+
+            if (!stdout) {
+                return resolve([]);
+            }
+
+            let lines = stdout.split(os.EOL);
+            let pairs = lines.map(line => line.trim().split(/\s+/));
+
+            let children = [];
+
+            for (let pair of pairs) {
+                let ppid = parseInt(pair[0]);
+                if (ppid === pid) {
+                    children.push(parseInt(pair[1]));
+                }
+            }
+
+            resolve(children);
+        });
+
+        ps.on('error', reject);
+    });
 }

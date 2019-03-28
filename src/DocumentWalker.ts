@@ -1,16 +1,14 @@
 import * as vscode from "vscode";
 import { isWhitespace, syntaxChars, showSuggestFor } from "./Constants";
 export class DocumentWalker {
-    public constructor(private document: vscode.TextDocument) {}
+    public constructor(private document: vscode.TextDocument) { }
 
     /**
      * @param completionPos The position at which the user is currently typing
      * Travels through the document to see what type of completion should appear right now.
      * @returns CompletionType.REFERENCE if a list of references should show,
      * CompletionType.EXTENSION if the extension methods of a type should show, and CompletionType.NONE if no completions should appear.
-     * 
      */
-    //TODO: ignore comments
     public async getCompletionType(completionPos: vscode.Position): Promise<CompletionType> {
         let currentPos = this.getPrev(completionPos);
 
@@ -26,7 +24,7 @@ export class DocumentWalker {
             currentChar = this.getChar(currentPos);
         }
 
-        currentPos = this.walkBackWhile(currentPos, isWhitespace);
+        currentPos = this.walkBackWhile(currentPos, this.shouldKeepSearchingForCompletionIdentifier.bind(this));
         if (this.getChar(currentPos) === ".") return CompletionType.EXTENSION;
 
         let wordRegex = /([^\s]+)/;
@@ -37,6 +35,36 @@ export class DocumentWalker {
         if (syntaxChars.includes(lastCharOfWordBefore)) return CompletionType.REFERENCE;
         else if (showSuggestFor.includes(wordBefore)) return CompletionType.REFERENCE;
         return CompletionType.NONE;
+    }
+
+    private shouldKeepSearchingForCompletionIdentifier(currentChar: string, newLineIncoming: boolean, currentPos: vscode.Position): boolean {
+        // Look one char further back so the walkBackWhile function will return the line AFTER the comment line in case a comment was found.
+        let nextPos = this.getPrev(currentPos);
+        // let nextChar = this.getChar(nextPos);
+
+        // Ignore comment lines
+        if (newLineIncoming) {
+            let slashLastPos = false;
+            let shouldKeepSearching = true;
+            this.walkBackWhile(nextPos, (char, newLine) => {
+                if (char === "/") {
+                    if (slashLastPos) {
+                        // Comment line
+                        shouldKeepSearching = false;
+                        return false;
+                    } else {
+                        slashLastPos = true;
+                    }
+                } else {
+                    slashLastPos = false;
+                }
+                // Continue while on the same line
+                return !newLine;
+            });
+
+            return shouldKeepSearching;
+        }
+        return isWhitespace(currentChar);
     }
 
     /**
@@ -60,7 +88,7 @@ export class DocumentWalker {
     private async getTypeInfoPosition(completionPos: vscode.Position): Promise<vscode.Position> {
         let startOfCaller = this.walkBackWhile(completionPos, isWhitespace);
         let dotPos = this.walkBackWhile(startOfCaller, char => char !== ".");
-        let endOfWordBefore = this.getPrev( this.walkBackWhile(dotPos, isWhitespace));
+        let endOfWordBefore = this.getPrev(this.walkBackWhile(dotPos, isWhitespace));
 
         // If there are brackets we need to check if it's because of a chained method call or because of redundant parentheses
         if (this.getChar(endOfWordBefore) === ")") {
@@ -82,7 +110,7 @@ export class DocumentWalker {
                 return variablePos;
             }
 
-            
+
 
 
 
@@ -100,11 +128,13 @@ export class DocumentWalker {
     /**
      * Reduces the position of startingPosition (walks back) as long the condition is met.
      */
-    private walkBackWhile(startingPosition: vscode.Position, condition: (char: string) => boolean): vscode.Position {
+    private walkBackWhile(startingPosition: vscode.Position,
+        condition: (char: string, newLineIncoming: boolean, pos: vscode.Position) => boolean): vscode.Position {
         let currentPos = startingPosition;
         let currentChar = this.getChar(currentPos);
-        while (condition(currentChar)) {
-            currentPos = this.getPrev(currentPos);
+        let newLineIncoming = false;
+        while (condition(currentChar, newLineIncoming, currentPos)) {
+            [currentPos, newLineIncoming] = this.getPrevCheckNewline(currentPos);
             currentChar = this.getChar(currentPos);
         }
 
@@ -146,7 +176,16 @@ export class DocumentWalker {
         return this.document.positionAt(this.document.offsetAt(pos) - 1);
     }
 
-    public getWordToComplete(completionPosition: vscode.Position) : string{
+    /**
+    * Returns the position before another position in the document AND whether or not the next previous character will reach a new line.
+    */
+    private getPrevCheckNewline(pos: vscode.Position): [vscode.Position, boolean] {
+        let newPos = this.getPrev(pos);
+        let newLine =  newPos.line !== this.getPrev(newPos).line;
+        return [newPos, newLine];
+    }
+
+    public getWordToComplete(completionPosition: vscode.Position): string {
         let wordToComplete = '';
         let range = this.document.getWordRangeAtPosition(completionPosition);
         if (range) {
@@ -155,11 +194,11 @@ export class DocumentWalker {
         return wordToComplete;
     }
 
-    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]) :Promise<Reference[]>{
+    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]): Promise<Reference[]> {
         let wordToComplete = this.getWordToComplete(completionPosition);
         // let range = this.document.getWordRangeAtPosition(completionPosition);
         // if (range) {
-        //     wordToComplete = this.document.getText(new vscode.Range(range.start, completionPosition)).toLowerCase();
+        //     wordToComplete = this.document.getText(newLine vscode.Range(range.start, completionPosition)).toLowerCase();
         // }
         let matcher = (f: Reference) => f.name.toLowerCase().indexOf(wordToComplete) > -1;
         let found = references.filter(matcher);

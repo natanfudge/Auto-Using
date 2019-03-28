@@ -10,7 +10,7 @@ import * as vscode from "vscode";
 import * as assert from "assert";
 
 import { AutoUsingServer } from '../../server/AutoUsingServer';
-import { assertFalse, assertTrue, assertContains } from "../testUtil";
+import { assertFalse, assertTrue, assertContains, extensionLocation } from "../testUtil";
 import { invalidRequestFormat } from "../../server/Errors";
 
 
@@ -28,7 +28,8 @@ suite("Server Responses Tests For After a project has been added", () =>{
     suiteSetup(async () => {
         // await activateExtension();
         server = new AutoUsingServer();
-        await server.addProjects([testLocation]);
+        await server.setupWorkspace([testLocation],
+            "C:\\Users\\natan\\AppData\\Roaming\\Code\\User\\workspaceStorage\\15b109ca16b14796e52e6c96faa130db",extensionLocation);
     });
 
 
@@ -37,12 +38,12 @@ suite("Server Responses Tests For After a project has been added", () =>{
         assert.notEqual(response,[]);
     });
 
-    test("Should get all references", async () => {
+    test("Should get all Extension methods", async () => {
         let response = await server.getAllExtensionMethods("TestProg", "S");
         assert.notEqual(response,[]);
     });
 
-    test("Should get all references", async () => {
+    test("Should get all hierarchies", async () => {
         let response = await server.getAllHiearchies("TestProg");
         assert.notEqual(response,[]);
     });

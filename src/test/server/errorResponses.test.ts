@@ -16,7 +16,7 @@ import { Response } from "../../server/Protocol";
 
 
 // Defines a Mocha test suite to group tests of similar kind together
-suite("Server Error Responses Tests", function () {
+suite("Server Error Responses Tests", () => {
 
 
     let server: AutoUsingServer;

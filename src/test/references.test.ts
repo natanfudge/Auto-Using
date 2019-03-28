@@ -1,18 +1,21 @@
-import { activateExtension, assertNotContains, assertSize, assertStringContains, assertContains, assertNone } from './testUtil';
+import { activateExtension, assertNotContains, assertSize, assertStringContains, assertContains, assertNone, forServerToBeReady } from './testUtil';
 import { complete, completeWithData, removeCheat } from './TestCompletionUtil';
 import { test, suite, suiteSetup } from 'mocha';
 import * as vscode from "vscode";
+import { testHelper } from '../extension';
 
 suite(`CompletionProvider References Tests`, () => {
-    //TODO add space tests
+
 
     suiteSetup(async () => {
         await activateExtension();
+        await forServerToBeReady();
     });
 
     test("Should show completions", async () => {
         let completionList = await complete("ShouldShow.cs", 1, 5);
         assertContains(completionList, "File");
+
     });
 
     test("Should not show completions when not needed", async () => {
@@ -35,6 +38,21 @@ suite(`CompletionProvider References Tests`, () => {
 
         assertStringContains(enumerable.detail!, "System.Collections");
         assertStringContains(enumerable.detail!, "System.Collections.Generic");
+    });
+
+    test("Should show references of a library", async () => {
+        let completionList = await complete("ShouldShowLibraryReference.cs", 4, 12);
+        assertContains(completionList, "JsonConvert");
+    });
+
+    test("Should not show references of a not imported library", async () => {
+        let completionList = await complete("ShouldNotShowOtherLibraryReference.cs", 4, 12);
+        assertNotContains(completionList, "MidiFile");
+    });
+
+    test("Should work despite being after a comment dot", async () => {
+        let completionList = await complete("ShouldIgnoreComment.cs", 7, 8);
+        assertContains(completionList,"Binder");
     });
 
 
