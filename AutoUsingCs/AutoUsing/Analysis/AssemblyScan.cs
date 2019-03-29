@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using AutoUsing.Analysis.DataTypes;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Analysis
 {
@@ -48,11 +49,11 @@ namespace AutoUsing.Analysis
 
         public List<TypeCompletionInfo> GetTypeInfo()
         {
-            var references = Assembly.GetExportedTypes()
+            var types = Assembly.GetExportedTypes()
                 .Select(type => new TypeCompletionInfo(type.Name.NoTilde(), type.Namespace))
                 .ToList();
 
-            return references;
+            return types;
         }
 
         public List<HierarchyInfo> GetHierarchyInfo()

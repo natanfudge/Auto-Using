@@ -37,13 +37,6 @@ suite("Server Responses Tests", function () {
     });
 
 
-    const addProject = "addProject",
-        addProjects = "addProjects",
-        removeProject = "removeProject",
-        getAllReferences = "getAllReferences",
-        ping = "ping";
-
-    // test("Should return ")
 
 
 

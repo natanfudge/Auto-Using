@@ -1,7 +1,7 @@
 import { ChildProcess, execFile, spawn, execFileSync, exec } from "child_process";
 import {
     Request, Response,
-    getAllReferences, GetAllReferencesResponse, EmptyResponse, GetCompletionDataRequest, GetAllExtensionMethodsResponse,
+    getAllTypes, GetAllTypesResponse, EmptyResponse, GetCompletionDataRequest, GetAllExtensionMethodsResponse,
     ProjectSpecificRequest, GetAllHiearchiesResponse, getAllExtensions, getAllHiearchies, SetupRequest, SetupWorkspaceRequest, setupWorkspace
 } from "./Protocol";
 import { writeFileSync } from "fs";
@@ -19,7 +19,7 @@ const location = useTest ? testLocation : serverLocation;
 const logResponses = false;
 const logRequests = false;
 const maxLogSize = 1000;
-const logServerPerformance = false;
+const logServerPerformance = true;
 
 export class AutoUsingServer {
     private process: ChildProcess;
@@ -88,8 +88,8 @@ export class AutoUsingServer {
 
 
 
-    public getAllReferences(projectName: string, wordToComplete: string): Promise<GetAllReferencesResponse> {
-        return this.sendRequest({ command: getAllReferences, arguments: { projectName, wordToComplete } });
+    public getAllTypes(projectName: string, wordToComplete: string): Promise<GetAllTypesResponse> {
+        return this.sendRequest({ command: getAllTypes, arguments: { projectName, wordToComplete } });
     }
     public getAllExtensionMethods(projectName: string, wordToComplete: string): Promise<GetAllExtensionMethodsResponse> {
         return this.sendRequest({ command: getAllExtensions, arguments: { projectName, wordToComplete } });

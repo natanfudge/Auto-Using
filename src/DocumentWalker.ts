@@ -1,12 +1,13 @@
 import * as vscode from "vscode";
 import { isWhitespace, syntaxChars, showSuggestFor } from "./Constants";
+import { Completion } from "./server/Protocol";
 export class DocumentWalker {
     public constructor(private document: vscode.TextDocument) { }
 
     /**
      * @param completionPos The position at which the user is currently typing
      * Travels through the document to see what type of completion should appear right now.
-     * @returns CompletionType.REFERENCE if a list of references should show,
+     * @returns CompletionType.TYPE if a list of types should show,
      * CompletionType.EXTENSION if the extension methods of a type should show, and CompletionType.NONE if no completions should appear.
      */
     public async getCompletionType(completionPos: vscode.Position): Promise<CompletionType> {
@@ -19,7 +20,7 @@ export class DocumentWalker {
             if (currentChar === ".") {
                 return CompletionType.EXTENSION;
             }
-            if (syntaxChars.includes(currentChar)) return CompletionType.REFERENCE;
+            if (syntaxChars.includes(currentChar)) return CompletionType.TYPE;
             currentPos = this.getPrev(currentPos);
             currentChar = this.getChar(currentPos);
         }
@@ -32,8 +33,8 @@ export class DocumentWalker {
         let wordBefore = this.document.getText(this.document.getWordRangeAtPosition(currentPos, wordRegex));
         let lastCharOfWordBefore = wordBefore.slice(-1);
 
-        if (syntaxChars.includes(lastCharOfWordBefore)) return CompletionType.REFERENCE;
-        else if (showSuggestFor.includes(wordBefore)) return CompletionType.REFERENCE;
+        if (syntaxChars.includes(lastCharOfWordBefore)) return CompletionType.TYPE;
+        else if (showSuggestFor.includes(wordBefore)) return CompletionType.TYPE;
         return CompletionType.NONE;
     }
 
@@ -194,14 +195,14 @@ export class DocumentWalker {
         return wordToComplete;
     }
 
-    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]): Promise<Reference[]> {
+    public async filterByTypedWord(completionPosition: vscode.Position, completions: Completion[]): Promise<Completion[]> {
         let wordToComplete = this.getWordToComplete(completionPosition);
         // let range = this.document.getWordRangeAtPosition(completionPosition);
         // if (range) {
         //     wordToComplete = this.document.getText(newLine vscode.Range(range.start, completionPosition)).toLowerCase();
         // }
-        let matcher = (f: Reference) => f.name.toLowerCase().indexOf(wordToComplete) > -1;
-        let found = references.filter(matcher);
+        let matcher = (f: Completion) => f.name.toLowerCase().indexOf(wordToComplete) > -1;
+        let found = completions.filter(matcher);
         return found;
     }
 
@@ -223,6 +224,6 @@ export class DocumentWalker {
 
 export enum CompletionType {
     NONE,
-    REFERENCE,
+    TYPE,
     EXTENSION
 }

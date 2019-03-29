@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Analysis.Cache
 {

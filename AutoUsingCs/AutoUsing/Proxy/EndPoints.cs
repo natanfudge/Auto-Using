@@ -9,7 +9,7 @@ namespace AutoUsing
                             SetupWorkspace = "setupWorkspace",
                             // Setup="setup",
                             RemoveProject = "removeProject",
-                            GetAllReferences = "getAllReferences",
+                            GetAllTypes = "getAllTypes",
     getAllHiearchies = "getAllHiearchies",
     getAllExtensions = "getAllExtensions",
                             Ping = "ping";

@@ -27,15 +27,15 @@ namespace AutoUsingTest
 
 
         [TestMethod]
-        public void GetAllBaseReferences()
+        public void GetAllBaseTypes()
         {
-            Tests.GetAllBaseReferences();
+            Tests.GetAllBaseTypes();
         }
 
         [TestMethod]
-        public void GetAllProjectReferences()
+        public void GetAllProjectTypes()
         {
-            Tests.GetAllProjectReferences();
+            Tests.GetAllProjectTypes();
         }
 
         [TestMethod]

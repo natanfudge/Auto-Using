@@ -9,14 +9,14 @@ import { activateExtension, assertInFirst, openTest, assertContains, forServerTo
 import * as vscode from "vscode";
 // import { testHelper, COMPLETION_STORAGE, Completion } from '../extension';
 import * as assert from "assert";
-import { Completion, COMPLETION_STORAGE, testHelper, addUsing, storeCompletion } from '../extension';
+import { StoredCompletion, COMPLETION_STORAGE, testHelper, addUsing, storeCompletion } from '../extension';
 import * as extension from "../extension";
 import { completeWithData, complete, DirectCompletionTestHelper } from './TestCompletionUtil';
 import { CompletionProvider } from '../CompletionProviderFUCK';
 
 
 // Defines a Mocha test suite to group tests of similar kind together
-suite("CompletionProvider References Context Tests",  ()=> {
+suite("CompletionProvider Type Context Tests",  ()=> {
 
     
 
@@ -45,7 +45,7 @@ suite("CompletionProvider References Context Tests",  ()=> {
 
     test("Provides priority to completions that were chosen before", async () => {
         extension.wipeStoredCompletions(context);
-        storeCompletion(context, new Completion("ApartmentState", "System.Threading"));
+        storeCompletion(context, new StoredCompletion("ApartmentState", "System.Threading"));
         let list = await complete("ShouldPrioritize.cs", 1, 4);
         assertInFirst(5, list, "ApartmentState");
     });

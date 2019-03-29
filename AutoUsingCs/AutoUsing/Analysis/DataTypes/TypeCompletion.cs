@@ -28,9 +28,9 @@ namespace AutoUsing.Analysis.DataTypes
 
         public override bool Equals(object obj)
         {
-            return obj is TypeCompletion reference &&
-                   Name == reference.Name &&
-                   Namespaces.SequenceEqual(reference.Namespaces);
+            return obj is TypeCompletion typeCompletion &&
+                   Name == typeCompletion.Name &&
+                   Namespaces.SequenceEqual(typeCompletion.Namespaces);
         }
 
         public override int GetHashCode()

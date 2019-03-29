@@ -1,6 +1,6 @@
 namespace assets
 {
-    public class ShouldShowLibraryReference
+    public class ShouldShowLibraryType
     {
         JSON x;
     }

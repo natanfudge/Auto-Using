@@ -1,9 +1,9 @@
 import * as vscode from "vscode";
 import { provideCompletionItems } from "./CompletionInstanceFUCK";
-import { Completion, COMPLETION_STORAGE } from "./extension";
+import { StoredCompletion, COMPLETION_STORAGE } from "./extension";
 import { AutoUsingServer } from "./server/AutoUsingServer";
 
-const shouldLogTotalPerformance = false;
+const shouldLogTotalPerformance = true;
 export const maxCompletionAmount = 100;
 export class CompletionProvider implements vscode.CompletionItemProvider {
 
@@ -42,8 +42,8 @@ function logTotalPerformance(startTime: number) {
 /**
  * Get the list of completions that are commonly used by the user and are therefore stored in the system.
  */
-export function getStoredCompletions(context: vscode.ExtensionContext): Completion[] {
-	let completions = context.globalState.get<Completion[]>(COMPLETION_STORAGE);
+export function getStoredCompletions(context: vscode.ExtensionContext): StoredCompletion[] {
+	let completions = context.globalState.get<StoredCompletion[]>(COMPLETION_STORAGE);
 
 	if (typeof completions === "undefined") return [];
 	return completions;

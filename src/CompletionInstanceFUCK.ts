@@ -1,7 +1,5 @@
 import * as vscode from "vscode";
-import { DataProvider } from "./DataProvider";
 
-import { HANDLE_COMPLETION, Completion } from './extension';
 import { flatten, AUDebug, getProjectRootDirOfFilePath, getFullPathToProjectOfFile, getProjectName } from './util';
 import { DocumentWalker, CompletionType } from "./DocumentWalker";
 import { SORT_CHEAT, primitives } from "./Constants";
@@ -10,6 +8,8 @@ import { debug } from "util";
 import { Benchmarker } from "./Benchmarker";
 import { binSearch, binarySearch } from "./speedutil";
 import { AutoUsingServer } from "./server/AutoUsingServer";
+import { Completion } from "./server/Protocol";
+import { StoredCompletion, HANDLE_COMPLETION } from "./extension";
 
 
 export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken,
@@ -24,7 +24,6 @@ export async function provideCompletionItems(document: vscode.TextDocument, posi
 
 class CompletionInstance {
 
-	private data = new DataProvider();
 
 	constructor(
 		private context: vscode.ExtensionContext,
@@ -45,7 +44,7 @@ class CompletionInstance {
 			return { items: [] };
 		} else {
 			let usings = await this.documentWalker.getUsings();
-			let completionData: Reference[];
+			let completionData: Completion[];
 
 			if (completionType === CompletionType.EXTENSION) {
 
@@ -59,11 +58,11 @@ class CompletionInstance {
 					completionData = [];
 				}
 
-			} else if (completionType === CompletionType.REFERENCE) {
-				completionData = await this.server.getAllReferences(this.projectName, this.wordToComplete);
+			} else if (completionType === CompletionType.TYPE) {
+				completionData = await this.server.getAllTypes(this.projectName, this.wordToComplete);
 			}
 
-			return this.completionDataToCompletions(completionData!, usings);
+			return this.completionDataToVscodeCompletions(completionData!, usings);
 		}
 	}
 
@@ -122,7 +121,7 @@ class CompletionInstance {
 	/**
 	 * Get all extension methods of a type
 	 */
-	private async getExtensionMethods(callerType: Type): Promise<Reference[]> {
+	private async getExtensionMethods(callerType: Type): Promise<Completion[]> {
 		let hierachiesPromise = this.server.getAllHiearchies(this.projectName);
 
 		const hierachies = await hierachiesPromise;
@@ -151,66 +150,66 @@ class CompletionInstance {
 			let result = this.findExtensionMethodsOfAllBaseClasses(baseclasses);
 			return result;
 		} else {
-			throw new Error("Auto Using does not support ambigous references yet.");
+			throw new Error("Auto Using does not support ambigous types yet.");
 		}
 	}
 
-	private async findExtensionMethodsOfAllBaseClasses(baseclasses: string[]): Promise<Reference[]> {
+	private async findExtensionMethodsOfAllBaseClasses(baseclasses: string[]): Promise<Completion[]> {
 		// Request extensions from server
 		let extensionMethods = await this.server.getAllExtensionMethods(this.projectName, this.wordToComplete);
 		// Get the extension methods we need for our base classes
 		let extensionMethodsOfBaseClasses = baseclasses.map(baseclass =>
 			extensionMethods[binSearch(extensionMethods, baseclass, (str, ext) => str.localeCompare(ext.extendedClass))]);
-		// Convert the extension method objects into references object which we can insert as completions
-		let references = extensionMethodsOfBaseClasses.filter(obj => typeof obj !== "undefined")
+		// Convert the extension method objects into completions object which we can insert as completions
+		let completions = extensionMethodsOfBaseClasses.filter(obj => typeof obj !== "undefined")
 			.map(extendedClass => extendedClass.extensionMethods);
-		return flatten(references);
+		return flatten(completions);
 	}
 
 	/**
 	 * Map pure completion data to vscode's CompletionItem[] format
-	 * @param usings A list of the using directive in the file. All already imported references will be removed from the array.
+	 * @param usings A list of the using directive in the file. All already imported namespaces will be removed from the array.
 	 */
-	private completionDataToCompletions(references: Reference[], usings: string[]): vscode.CompletionList {
-		let totalCompletionAmount = filterOutAlreadyUsing(references, usings);
+	private completionDataToVscodeCompletions(completions: Completion[], usings: string[]): vscode.CompletionList {
+		let totalCompletionAmount = filterOutAlreadyUsing(completions, usings);
 		let completionAmount = Math.min(totalCompletionAmount, maxCompletionAmount);
 		let takingOnlySomeCompletions = totalCompletionAmount > maxCompletionAmount;
 
-		let commonCompletions = getStoredCompletions(this.context);
-		let commonReferences = convertStoredCompletionsToReferences(commonCompletions);
+		let storedCommonCompletions = getStoredCompletions(this.context);
+		let commonCompletions = convertStoredCompletionsToCompletions(storedCommonCompletions);
 		// Take only a limited amount of the completions
-		if (takingOnlySomeCompletions) references = references.slice(0, maxCompletionAmount - commonReferences.length).concat(commonReferences);
+		if (takingOnlySomeCompletions) completions = completions.slice(0, maxCompletionAmount - commonCompletions.length).concat(commonCompletions);
 
-		let commonNames = commonCompletions.map(completion => completion.label).sort();
+		let commonNames = storedCommonCompletions.map(completion => completion.label).sort();
 
-		let completions = new Array<vscode.CompletionItem>(completionAmount);
+		let vscodeCompletions = new Array<vscode.CompletionItem>(completionAmount);
 
 		// Start from the length of the common names to leave space to put the common ones at the start
 		for (let i = 0; i < completionAmount; i++) {
 
-			let reference = references[i];
-			let name = reference.name;
+			let completion = completions[i];
+			let name = completion.name;
 			let isCommon = binarySearch(commonNames, name) !== -1;
 
-			let thereIsOnlyOneClassWithThatName = reference.namespaces.length === 1;
+			let thereIsOnlyOneClassWithThatName = completion.namespaces.length === 1;
 
 			// We instantly put the using statement only if there is only one option
-			let usingStatementEdit = thereIsOnlyOneClassWithThatName ? [usingEdit(reference.namespaces[0])] : undefined;
+			let usingStatementEdit = thereIsOnlyOneClassWithThatName ? [usingEdit(completion.namespaces[0])] : undefined;
 
-			let completion: vscode.CompletionItem = {
+			let vscodeCompletion: vscode.CompletionItem = {
 				label: isCommon ? name : SORT_CHEAT + name,
 				insertText: name,
 				filterText: name,
 				kind: vscode.CompletionItemKind.Reference,
 				additionalTextEdits: usingStatementEdit,
 				commitCharacters: ["."],
-				detail: reference.namespaces.join("\n"),
-				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" }
+				detail: completion.namespaces.join("\n"),
+				command: { command: HANDLE_COMPLETION, arguments: [completion], title: "handles completion" }
 			};
-			completions[i] = completion;
+			vscodeCompletions[i] = vscodeCompletion;
 
 		}
-		return { isIncomplete: takingOnlySomeCompletions, items: completions };
+		return { isIncomplete: takingOnlySomeCompletions, items: vscodeCompletions };
 
 	}
 
@@ -222,8 +221,8 @@ class CompletionInstance {
 const usingEdit = (namespace: string) => vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
 
 
-function convertStoredCompletionsToReferences(commonNames: Completion[]): Reference[] {
-	let refs: Reference[] = [];
+function convertStoredCompletionsToCompletions(commonNames: StoredCompletion[]): Completion[] {
+	let refs: Completion[] = [];
 	for (let commonName of commonNames) {
 		let refWithSameName = refs.find(ref => ref.name === commonName.label);
 		// If one exists with the same name we combine their namespaces 
@@ -237,42 +236,40 @@ function convertStoredCompletionsToReferences(commonNames: Completion[]): Refere
 /**
 * Removes all namespaces that already have a using statement
 */
-function filterOutAlreadyUsing(references: Reference[], usings: string[]): number {
+function filterOutAlreadyUsing(completions: Completion[], usings: string[]): number {
 	usings.sort();
 
-	let referenceAmount = references.length;
+	let completionAmount = completions.length;
 
-	for (let i = 0; i < referenceAmount; i++) {
+	for (let i = 0; i < completionAmount; i++) {
 		let namespaceAmount = 0;
 		try {
-			// console.log(i);
-			// console.log(JSON.stringify(references[i]));
-			namespaceAmount = references[i].namespaces.length;
+			namespaceAmount = completions[i].namespaces.length;
 
 		} catch{
 			let x = 2;
 		}
 
 		for (let j = 0; j < namespaceAmount; j++) {
-			// Get rid of references that their usings exist
-			if (binarySearch<string>(usings, references[i].namespaces[j]) !== -1) {
-				references[i].namespaces[j] = references[i].namespaces[namespaceAmount - 1];
-				references[i].namespaces.length -= 1;
+			// Get rid of completions that their usings exist
+			if (binarySearch<string>(usings, completions[i].namespaces[j]) !== -1) {
+				completions[i].namespaces[j] = completions[i].namespaces[namespaceAmount - 1];
+				completions[i].namespaces.length -= 1;
 				j--;
 				namespaceAmount--;
 			}
 		}
 
-		// Get rid of empty references
-		if (references[i].namespaces.length === 0) {
-			references[i] = references[referenceAmount - 1];
-			references.length -= 1;
+		// Get rid of empty completions
+		if (completions[i].namespaces.length === 0) {
+			completions[i] = completions[completionAmount - 1];
+			completions.length -= 1;
 			i--;
-			referenceAmount--;
+			completionAmount--;
 		}
 	}
 
-	return referenceAmount;
+	return completionAmount;
 
 }
 

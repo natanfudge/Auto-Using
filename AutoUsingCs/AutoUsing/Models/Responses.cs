@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using AutoUsing.Analysis.DataTypes;
@@ -23,38 +24,46 @@ namespace AutoUsing.Models
 
     }
 
-    public class GetAllReferencesResponse : SuccessResponse
+    public class GetAllTypesResponse : SuccessResponse
     {
-        public GetAllReferencesResponse(List<TypeCompletion> References)
+        public GetAllTypesResponse(List<TypeCompletion> Types)
         {
-            this.Body = References;
+            this.Body = Types;
         }
     }
 
     public class GetAllExtensionMethodsResponse : SuccessResponse
     {
-        public GetAllExtensionMethodsResponse(List<ExtensionClass> References)
+        public GetAllExtensionMethodsResponse(List<ExtensionClass> Extensions)
         {
-            this.Body = References;
+            this.Body = Extensions;
         }
     }
     public class GetAllHierachiesResponse : SuccessResponse
     {
-        public GetAllHierachiesResponse(List<Hierarchies> References)
+        public GetAllHierachiesResponse(List<Hierarchies> Hierarchies)
         {
-            this.Body = References;
+            this.Body = Hierarchies;
         }
 
-        override public bool Equals(object obj){
+        override public bool Equals(object obj)
+        {
             var otherResponse = obj as GetAllHierachiesResponse;
-            if(otherResponse == null) return false;
+            if (otherResponse == null) return false;
 
-            var otherReferences = otherResponse.Body as List<Hierarchies>;
-            var thisReferences = this.Body as List<Hierarchies>;
-            return thisReferences.SequenceEqual(otherReferences) && otherResponse.Success == this.Success;
+            var otherHierarchies = otherResponse.Body as List<Hierarchies>;
+            var thisHierarchies = this.Body as List<Hierarchies>;
+            return thisHierarchies.SequenceEqual(otherHierarchies) && otherResponse.Success == this.Success;
         }
+
+        override public int GetHashCode()
+        {
+            return HashCode.Combine(this.Body, this.Success);
+        }
+
+
     }
-    
+
 
 
 }

@@ -21,7 +21,7 @@ namespace AutoUsingTest
         public string Name { get; set; }
         private Response AddProjects()
         {
-            var start = DateTime.Now;
+            // var start = DateTime.Now;
             var request = new SetupWorkspaceRequest
             {
                 Projects =  new List<string> {Location},
@@ -29,7 +29,7 @@ namespace AutoUsingTest
                 ExtensionDir = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\.vscode"
             };
             var response = Program.Server.AddProjects(request);
-            start.LogTimePassed("AddProjects");
+            // start.LogTimePassed("AddProjects");
             return response;
         }
 
@@ -40,25 +40,25 @@ namespace AutoUsingTest
         }
 
 
-        public void GetAllBaseReferences()
+        public void GetAllBaseTypes()
         {
             var request = new GetCompletionDataRequest { ProjectName = Name, WordToComplete = "F" };
-            var response = Program.Server.GetAllReferences(request) as GetAllReferencesResponse;
+            var response = Program.Server.GetAllTypes(request) as GetAllTypesResponse;
             Assert.IsNotNull(response);
             var shouldContain = new AutoUsing.Analysis.DataTypes.TypeCompletion("File", new List<string> { "System.IO", "System.Net" });
             (response.Body as List<AutoUsing.Analysis.DataTypes.TypeCompletion>).AssertContains(shouldContain);
         }
 
 
-        public void GetAllProjectReferences()
+        public void GetAllProjectTypes()
         {
             var request = new GetCompletionDataRequest { ProjectName = Name, WordToComplete = "J" };
-            var response = Program.Server.GetAllReferences(request) as GetAllReferencesResponse;
+            var response = Program.Server.GetAllTypes(request) as GetAllTypesResponse;
             Assert.IsNotNull(response);
             var shouldContain = new AutoUsing.Analysis.DataTypes.TypeCompletion("JsonConvert", new List<string> { "Newtonsoft.Json" });
             (response.Body as List<AutoUsing.Analysis.DataTypes.TypeCompletion>).AssertContains(shouldContain);
 
-            var response2 = Program.Server.GetAllReferences(request) as GetAllReferencesResponse;
+            var response2 = Program.Server.GetAllTypes(request) as GetAllTypesResponse;
             Assert.IsNotNull(response2);
             (response2.Body as List<AutoUsing.Analysis.DataTypes.TypeCompletion>).AssertContains(shouldContain);
         }

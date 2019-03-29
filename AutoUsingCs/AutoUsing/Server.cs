@@ -9,6 +9,7 @@ using AutoUsing.Models;
 using AutoUsing.Proxy;
 using FireSharp.Extensions;
 using AutoUsing.Analysis.DataTypes;
+using AutoUsing.Utils;
 
 namespace AutoUsing
 {
@@ -53,16 +54,16 @@ namespace AutoUsing
         /// requested projected + the types in the requested project, as long as they start with the
         /// "WordToComplete" field in the request
         /// </summary>
-        public Response GetAllReferences(GetCompletionDataRequest req)
+        public Response GetAllTypes(GetCompletionDataRequest req)
         {
             var project = FindProject(req.ProjectName, out var errorResponse);
             if (project == null) return errorResponse;
 
-            var referenceInfo = GlobalCache.Caches.Types.GetCache().Concat(project.Caches.Types.GetCache()).ToList();
-            var refinedReferenceData = FilterUnnecessaryData(CompletionCaches.ToCompletionFormat(referenceInfo),
-                req.WordToComplete, (reference) => reference.Name);
+            var typeInfo = GlobalCache.Caches.Types.GetCache().Concat(project.Caches.Types.GetCache()).ToList();
+            var refinedTypeData = FilterUnnecessaryData(CompletionCaches.ToCompletionFormat(typeInfo),
+                req.WordToComplete, (type) => type.Name);
 
-            return new GetAllReferencesResponse(refinedReferenceData);
+            return new GetAllTypesResponse(refinedTypeData);
         }
 
         /// <summary>

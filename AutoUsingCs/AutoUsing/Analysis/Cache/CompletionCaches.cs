@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoUsing.Analysis.DataTypes;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Analysis.Cache
 {
@@ -18,7 +19,7 @@ namespace AutoUsing.Analysis.Cache
         /// </summary>
         public void LoadScanResults(IEnumerable<AssemblyScan> scans)
         {
-            Types.SetCache(GetReferenceInfoOfScans(scans));
+            Types.SetCache(GetTypeInfoOfScans(scans));
             Hierachies.SetCache(GetHierarchyInfoOfScans(scans));
             Extensions.SetCache(GetExtensionsInfoOfScans(scans));
 
@@ -33,14 +34,14 @@ namespace AutoUsing.Analysis.Cache
         public void AppendScanResults(IEnumerable<AssemblyScan> scans)
         {
             if (scans.Count() == 0) return;
-            Types.AddCache(GetReferenceInfoOfScans(scans));
+            Types.AddCache(GetTypeInfoOfScans(scans));
             Hierachies.AddCache(GetHierarchyInfoOfScans(scans));
             Extensions.AddCache(GetExtensionsInfoOfScans(scans));
 
             Save();
         }
 
-        private List<CachedObject<TypeCompletionInfo>> GetReferenceInfoOfScans(IEnumerable<AssemblyScan> scans)
+        private List<CachedObject<TypeCompletionInfo>> GetTypeInfoOfScans(IEnumerable<AssemblyScan> scans)
         {
             return scans.Select(scan => new CachedObject<TypeCompletionInfo>(scan.GetTypeInfo(), scan.Path)).ToList();
         }
@@ -62,7 +63,6 @@ namespace AutoUsing.Analysis.Cache
         public void DeletePackages(IEnumerable<string> packageIdentifiers)
         {
             if (packageIdentifiers.Count() == 0) return;
-            Util.Log("Removing packages : " + packageIdentifiers.ToIndentedJson());
             Types.RemoveCache(packageIdentifiers);
             Hierachies.RemoveCache(packageIdentifiers);
             Extensions.RemoveCache(packageIdentifiers);
@@ -79,11 +79,11 @@ namespace AutoUsing.Analysis.Cache
 
 
         /// <summary>
-        /// Converts a list of raw reference info into data that is more easily interpreted as a completion
+        /// Converts a list of raw type info into data that is more easily interpreted as a completion
         /// </summary>
-        public static List<TypeCompletion> ToCompletionFormat(List<TypeCompletionInfo> referenceInfos)
+        public static List<TypeCompletion> ToCompletionFormat(List<TypeCompletionInfo> typeInfos)
         {
-            return referenceInfos
+            return typeInfos
                 .Distinct()
                 .GroupBy(info => info.Name)
                 .Select(group => new TypeCompletion(group.Key, group.Select(info => info.Namespace).ToList()))

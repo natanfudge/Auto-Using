@@ -9,25 +9,24 @@ import { AutoUsingServer } from './server/AutoUsingServer';
 import { getAllProjectFiles } from './util';
 import { watch } from 'fs';
 import { join } from 'path';
+import { Completion } from './server/Protocol';
 // const fsWatcher = require("fs.")
 
 const CSHARP = "csharp";
 
-export const PROJECT_NAME = "auto-using";
 export const HANDLE_COMPLETION = "extension.handleCompletion";
 export const WIPE_STORAGE_COMMAND = "extension.wipeCommon";
 export const COMPLETION_STORAGE = "commonwords";
 
-export const PROJECT_ID = "fudge.auto-using";
-export const PREFERENCE_RECIEVED = "preferenceRecieved";
 
 
 
-export class Completion {
+
+export class StoredCompletion {
 	constructor(public label: string, public namespace: string) { }
 }
 
-export function completionCommon(completion: Completion, completions: Completion[]): boolean {
+export function completionCommon(completion: StoredCompletion, completions: StoredCompletion[]): boolean {
 	return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
 }
 
@@ -49,15 +48,15 @@ export let testHelper: TestHelper;
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
 
-	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
-		if (reference.namespaces.length > 1) {
+	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (completion: Completion) => {
+		if (completion.namespaces.length > 1) {
 
 			let completions = getStoredCompletions(context);
 
 
-			let namespacesSorted = await Promise.all(reference.namespaces.sort((n1, n2) => {
-				let firstPrio = completionCommon(new Completion(reference.name, n1), completions);
-				let secondPrio = completionCommon(new Completion(reference.name, n2), completions);
+			let namespacesSorted = await Promise.all(completion.namespaces.sort((n1, n2) => {
+				let firstPrio = completionCommon(new StoredCompletion(completion.name, n1), completions);
+				let secondPrio = completionCommon(new StoredCompletion(completion.name, n2), completions);
 
 				if (firstPrio && !secondPrio) return -1;
 				if (!firstPrio && secondPrio) return 1;
@@ -66,9 +65,9 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 			}));
 
 
-			vscode.window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, reference));
+			vscode.window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, completion));
 		} else {
-			storeCompletion(context, new Completion(reference.name, reference.namespaces[0]));
+			storeCompletion(context, new StoredCompletion(completion.name, completion.namespaces[0]));
 		}
 	});
 
@@ -91,16 +90,16 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 
 export function wipeStoredCompletions(context: vscode.ExtensionContext): void {
 	let amount = getStoredCompletions(context).length;
-	vscode.window.showInformationMessage(`Wiped memories of ${amount} references`);
+	vscode.window.showInformationMessage(`Wiped memories of ${amount} completions`);
 	context.globalState.update(COMPLETION_STORAGE, []);
 }
 
-export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, reference: Reference): Promise<void> {
+export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, completion: Completion): Promise<void> {
 	if (typeof pick === "undefined") return;
 	// Remove invisible unicode char
 	if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
 
-	storeCompletion(context, new Completion(reference.name, pick));
+	storeCompletion(context, new StoredCompletion(completion.name, pick));
 
 	let editBuilder = (textEdit: any) => {
 		textEdit.insert(new vscode.Position(0, 0), `using ${pick};\n`);
@@ -111,9 +110,9 @@ export async function addUsing(pick: string | undefined, context: vscode.Extensi
 
 }
 
-export function storeCompletion(context: vscode.ExtensionContext, completion: Completion): void {
+export function storeCompletion(context: vscode.ExtensionContext, completion: StoredCompletion): void {
 	let completions = getStoredCompletions(context);
-	if (Array.isArray(completions) && completions[0] instanceof Completion) {
+	if (Array.isArray(completions) && completions[0] instanceof StoredCompletion) {
 		if (!completionCommon(completion, completions)) {
 			completions.push(completion);
 			context.globalState.update(COMPLETION_STORAGE, completions);

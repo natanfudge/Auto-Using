@@ -37,7 +37,7 @@
 		"commands": [
 			{
 				"command": "extension.wipeCommon",
-				"title": "Wipe Memory Of Commonly Used References"
+				"title": "Wipe Memory Of Commonly Used Completions"
 			}
 		],
 		"keybindings": [

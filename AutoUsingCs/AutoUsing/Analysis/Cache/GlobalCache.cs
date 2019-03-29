@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using AutoUsing.Analysis.DataTypes;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Analysis.Cache
 {
@@ -16,10 +17,9 @@ namespace AutoUsing.Analysis.Cache
 
         public static void SetupGlobalCache(string location)
         {
-            // Util.Log("Location = " + location);
             Caches = new CompletionCaches
             {
-                Types = new Cache<DataTypes.TypeCompletionInfo>(Path.Combine(location, "cache", "references.json")),
+                Types = new Cache<DataTypes.TypeCompletionInfo>(Path.Combine(location, "cache", "types.json")),
                 Extensions = new Cache<ExtensionMethodInfo>(Path.Combine(location, "cache", "extensions.json")),
                 Hierachies = new Cache<HierarchyInfo>(Path.Combine(location, "cache", "hierachies.json"))
             };

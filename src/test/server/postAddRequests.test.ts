@@ -33,8 +33,8 @@ suite("Server Responses Tests For After a project has been added", () =>{
     });
 
 
-    test("Should get all references", async () => {
-        let response = await server.getAllReferences("TestProg", "");
+    test("Should get all types", async () => {
+        let response = await server.getAllTypes("TestProg", "");
         assert.notEqual(response,[]);
     });
 
@@ -48,18 +48,11 @@ suite("Server Responses Tests For After a project has been added", () =>{
         assert.notEqual(response,[]);
     });
 
-    test("Should get all references filtered by word to complete", async () => {
-        let response = await server.getAllReferences("TestProg", "J");
+    test("Should get all types filtered by word to complete", async () => {
+        let response = await server.getAllTypes("TestProg", "J");
         assert.notEqual(response,[]);
     });
 
-    const addProject = "addProject",
-        addProjects = "addProjects",
-        removeProject = "removeProject",
-        getAllReferences = "getAllReferences",
-        ping = "ping";
-
-    // test("Should return ")
 
 
 

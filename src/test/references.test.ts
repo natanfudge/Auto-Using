@@ -4,7 +4,7 @@ import { test, suite, suiteSetup } from 'mocha';
 import * as vscode from "vscode";
 import { testHelper } from '../extension';
 
-suite(`CompletionProvider References Tests`, () => {
+suite(`CompletionProvider Types Tests`, () => {
 
 
     suiteSetup(async () => {
@@ -28,7 +28,7 @@ suite(`CompletionProvider References Tests`, () => {
         assertNotContains(completionList, "File");
     });
 
-    test("Should combine references of the same name", async () => {
+    test("Should combine types of the same name", async () => {
         let [completionList] = await completeWithData("ShouldCombine.cs", 1, 6);
         completionList.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
         let enumerables = completionList.items.filter(c => removeCheat(c.label) === "IEnumerable");
@@ -40,13 +40,13 @@ suite(`CompletionProvider References Tests`, () => {
         assertStringContains(enumerable.detail!, "System.Collections.Generic");
     });
 
-    test("Should show references of a library", async () => {
-        let completionList = await complete("ShouldShowLibraryReference.cs", 4, 12);
+    test("Should show types of a library", async () => {
+        let completionList = await complete("ShouldShowLibraryType.cs", 4, 12);
         assertContains(completionList, "JsonConvert");
     });
 
-    test("Should not show references of a not imported library", async () => {
-        let completionList = await complete("ShouldNotShowOtherLibraryReference.cs", 4, 12);
+    test("Should not show types of a not imported library", async () => {
+        let completionList = await complete("ShouldNotShowOtherLibraryType.cs", 4, 12);
         assertNotContains(completionList, "MidiFile");
     });
 

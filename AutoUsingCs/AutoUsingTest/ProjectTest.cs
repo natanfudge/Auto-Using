@@ -16,7 +16,7 @@ namespace AutoUsingTest
     {
         private Response AddProjects()
         {
-            var start = DateTime.Now;
+            // var start = DateTime.Now;
             // var request = new SetupWorkspaceRequest
             
             // (
@@ -27,7 +27,7 @@ namespace AutoUsingTest
             //TODO: specify arguments of request
             var request = new SetupWorkspaceRequest();
             var response = Program.Server.AddProjects(request);
-            start.LogTimePassed("AddProjects");
+            // start.LogTimePassed("AddProjects");
             return response;
         }
 

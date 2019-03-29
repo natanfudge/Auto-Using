@@ -1,6 +1,6 @@
 namespace assets
 {
-    public class ShouldNotShowOtherLibraryReference
+    public class ShouldNotShowOtherLibraryType
     {
         Midi x;
     }

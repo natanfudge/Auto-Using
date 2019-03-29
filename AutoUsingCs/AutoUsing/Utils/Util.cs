@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 
-namespace AutoUsing
+namespace AutoUsing.Utils
 {
     public static class Util
     {
@@ -139,10 +140,11 @@ namespace AutoUsing
         /// Logs to a file how much time has passed since a certain date.
         /// </summary>
         /// <param name="benchmarkName">Benchmark identifier</param>
-        public static void LogTimePassed(this DateTime date, string benchmarkName)
+        public static void LogTimePassed(this Stopwatch watch, string benchmarkName)
         {
+            // watch.Stop();
             if (writeBenchmarks) Log(
-              $"Executing {benchmarkName} took {(DateTime.Now.Millisecond - date.Millisecond)} milliseconds.");
+              $"Executing {benchmarkName} took {(watch.ElapsedMilliseconds)} milliseconds.");
         }
 
         public static void Log(string text)
@@ -151,7 +153,7 @@ namespace AutoUsing
         }
 
         const bool writeLogs = true;
-        const bool writeBenchmarks = false;
+        const bool writeBenchmarks = true;
         const string logLocation = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\logs\\log.txt";
     }
 
