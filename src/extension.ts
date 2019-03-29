@@ -48,6 +48,7 @@ export let testHelper: TestHelper;
 
 export async function activate(context: vscode.ExtensionContext): Promise<void> {
 
+
 	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
 		if (reference.namespaces.length > 1) {
 

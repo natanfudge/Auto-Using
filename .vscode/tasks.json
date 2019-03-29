@@ -35,6 +35,13 @@
 				"${workspaceFolder}/AutoUsingCs/TestProg/TestProg.csproj"
 			],
 			"problemMatcher": []
+		},
+		{
+			"label": "buildServerClient",
+			"dependsOn":[
+				"npm:watch",
+				"build"
+			]
 		}
 	]
 }

@@ -16,10 +16,11 @@
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
 			],
-			"preLaunchTask": "npm: watch"
-		},
+			"preLaunchTask": "buildServerClient",
+		}
+		,
 		{
-			"name": "Run Extension And Build Server",
+			"name": "Extension No Server Build",
 			"type": "extensionHost",
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
@@ -29,20 +30,7 @@
 			"outFiles": [
 				"${workspaceFolder}/out/**/*.js"
 			],
-			"preLaunchTask": "build"
-		},
-		{
-			"name": "Run Extension And Build Test Server",
-			"type": "extensionHost",
-			"request": "launch",
-			"runtimeExecutable": "${execPath}",
-			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
-			],
-			"outFiles": [
-				"${workspaceFolder}/out/**/*.js"
-			],
-			"preLaunchTask": "buildTest"
+			"preLaunchTask": "npm: watch",
 		},
 		{
 			"name": "Extension Tests",
@@ -59,52 +47,16 @@
 			],
 			"preLaunchTask": "npm: watch"
 		},
-
 		{
-			"name": "Extension Tests And Build Server",
-			"type": "extensionHost",
-			"request": "launch",
-			"runtimeExecutable": "${execPath}",
-			"args": [
-				"${workspaceFolder}/src/test/playground/",
-				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/out/test"
-			],
-			"outFiles": [
-				"${workspaceFolder}/out/test/**/*.js"
-			],
-			"preLaunchTask": "build"
-		},
-		{
-			"name": "Extension Tests And Build Test Server",
-			"type": "extensionHost",
-			"request": "launch",
-			"runtimeExecutable": "${execPath}",
-			"args": [
-				"${workspaceFolder}/src/test/playground/",
-				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/out/test"
-			],
-			"outFiles": [
-				"${workspaceFolder}/out/test/**/*.js"
-			],
-			"preLaunchTask": "buildTest"
+			"name": "Attach debugger to server",
+			"type": "coreclr",
+			"request": "attach",
+			"processId": "${command:pickProcess}",
+			
 		},
 
-		{
-            "name": "Run C#",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/AutoUsingCs",
-            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
-            "console": "integratedTerminal",
-            "stopAtEntry": false,
-            "internalConsoleOptions": "openOnSessionStart"
-		}
 		
 	]
+	
+	
 }
