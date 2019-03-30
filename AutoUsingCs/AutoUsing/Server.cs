@@ -160,7 +160,7 @@ namespace AutoUsing
         /// <summary>
         /// Adds .NET projects for the server to watch over and collect assembly info about.
         /// </summary>
-        public Response AddProjects(SetupWorkspaceRequest req)
+        public Response SetupWorkspace(SetupWorkspaceRequest req)
         {
             GlobalCache.SetupGlobalCache(req.ExtensionDir);
             if (req.Projects.Any(path => !File.Exists(path)))

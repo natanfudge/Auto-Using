@@ -28,7 +28,7 @@ namespace AutoUsingTest
                 WorkspaceStorageDir  = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsingTest\\storagedir",
                 ExtensionDir = "C:\\Users\\natan\\Desktop\\Auto-Using-Git\\.vscode"
             };
-            var response = Program.Server.AddProjects(request);
+            var response = Program.Server.SetupWorkspace(request);
             // start.LogTimePassed("AddProjects");
             return response;
         }

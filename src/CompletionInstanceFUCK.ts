@@ -140,11 +140,6 @@ class CompletionInstance {
 			if (classItselfStr[classItselfStr.length - 1] === ">") classItselfStr = classItselfStr.substr(0, classItselfStr.length - 2);
 			baseclasses.push(classItselfStr);
 
-			// let extensions = flatten(
-			// baseclasses.map(baseclass =>
-			// 	extensionMethods[binSearch(extensionMethods, baseclass, (str, ext) => str.localeCompare(ext.extendedClass))])
-			// 	.filter(obj => typeof obj !== "undefined")
-			// 	.map(extendedClass => extendedClass.extensionMethods));
 
 
 			let result = this.findExtensionMethodsOfAllBaseClasses(baseclasses);

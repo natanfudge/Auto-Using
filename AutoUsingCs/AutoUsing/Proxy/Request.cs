@@ -1,6 +1,3 @@
-using AutoUsing.Utils;
-using Newtonsoft.Json;
-
 namespace AutoUsing.Proxy
 {
     /// <summary>
@@ -8,28 +5,16 @@ namespace AutoUsing.Proxy
     /// </summary>
     public class Request
     {
+        /// <summary>
+        /// The operation to be performed by the server
+        /// </summary>
         public string Command { get; set; }
 
+        /// <summary>
+        /// Data required to perform the operation 
+        /// </summary>
         public object Arguments { get; set; }
 
-        public static implicit operator Request(string json) => JSON.Parse<Request>(json);
-
-        public static implicit operator string(Request request) => JsonConvert.SerializeObject(request, Serializer.Settings);
-
-        /// <summary>
-        /// Converts a request into a specific request class
-        /// </summary>
-        /// //TODO: optimize this method (not that important)
-        public T Specificly<T>()
-        {
-            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(Arguments), Serializer.Settings);
-        }
 
     }
-
-    // public class RequestArgs<T>
-    // {
-    // }
-
-
 }

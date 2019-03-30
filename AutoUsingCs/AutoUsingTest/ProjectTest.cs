@@ -26,7 +26,7 @@ namespace AutoUsingTest
             // );
             //TODO: specify arguments of request
             var request = new SetupWorkspaceRequest();
-            var response = Program.Server.AddProjects(request);
+            var response = Program.Server.SetupWorkspace(request);
             // start.LogTimePassed("AddProjects");
             return response;
         }
@@ -34,7 +34,7 @@ namespace AutoUsingTest
         [TestMethod]
         public void AddProjectsTest()
         {
-            Program.Main(new[]{""});
+            Program.Main();
             AddProjects();
         }
 
@@ -53,7 +53,7 @@ namespace AutoUsingTest
         //TODO: filewatcher event is not being triggered when moving using Move()... Need to figure out how to test this
         public void ProjectNameChanged()
         {
-            Program.Main(new[] { oldProj });
+            Program.Main();
             File.Move(oldProj, newProj);
             var serverProjects = TestUtil.GetPrivateField<List<Project>>(Program.Server, "Projects");
             Assert.AreEqual("Amar.csproj", serverProjects[0].FileName);

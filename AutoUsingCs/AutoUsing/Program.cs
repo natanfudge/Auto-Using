@@ -6,6 +6,7 @@ using AutoUsing.Models;
 using AutoUsing.Proxy;
 using Newtonsoft.Json;
 using AutoUsing.Utils;
+using Newtonsoft.Json.Linq;
 
 namespace AutoUsing
 {
@@ -13,24 +14,18 @@ namespace AutoUsing
     {
         public static Server Server = new Server();
 
-        // private static int sentCounter
-        public static void Main(string[] args)
+        public static void Main()
         {
 
-            // var test = "{\"command\":\"setupWorkspace\",\"arguments\":{\"projects\":[\"c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsing\\AutoUsing.csproj\"]}}";
-            // JSON.Parse<GetCompletionDataRequest>(test);
-
-            // {"command":"addProjects","arguments":{"projects":["c:\\Users\\natan\\Desktop\\Auto-Using\\AutoUsing\\AutoUsing.csproj"]}}
-            // Server.AddCmdArgProjects(args);
 
             Server.Proxy.EditorDataReceived += (s, e) =>
             {
-                // var watch = Stopwatch.StartNew();
-                Request req;
+                string req = e.Data;
+                Util.Log("Got request: " + req);
+                Request requestObject;
                 try
                 {
-                    req = e.Data;
-                    // Util.LogTimePassed(watch,"parse request");
+                    requestObject = JSON.Parse<Request>(e.Data);
                 }
                 catch (Exception ex)
                 {
@@ -45,42 +40,44 @@ namespace AutoUsing
                     return;
                 }
 
+                var args = requestObject.Arguments as JToken;
+
+               
 
                 var response = new Response();
-                switch (req.Command)
+                switch (requestObject.Command)
                 {
-                    //TODO: convert specificly to cast
                     case EndPoints.GetAllTypes:
-                        response = Server.GetAllTypes(req.Specificly<GetCompletionDataRequest>());
+                    //TODO: Figure out a way to deserialize the request without specifying the type as a generic argument
+                        response = Server.GetAllTypes(args.ToObject<GetCompletionDataRequest>());
                         break;
                     case EndPoints.getAllExtensions:
-                        response = Server.GetAllExtensionMethods(req.Specificly<GetCompletionDataRequest>());
+                        response = Server.GetAllExtensionMethods(args.ToObject<GetCompletionDataRequest>());
                         break;
                     case EndPoints.getAllHiearchies:
-                        response = Server.GetAllHierarchies(req.Specificly<ProjectSpecificRequest>());
+                        response = Server.GetAllHierarchies(args.ToObject<ProjectSpecificRequest>());
                         break;
                     case EndPoints.Ping:
-                        response = Server.Pong(req);
+                        response = Server.Pong(requestObject);
                         break;
                     case EndPoints.SetupWorkspace:
-                        response = Server.AddProjects(req.Specificly<SetupWorkspaceRequest>());
+                        response = Server.SetupWorkspace(args.ToObject<SetupWorkspaceRequest>());
                         break;
 
                     default:
-                        response = Server.Error($"{Errors.UndefinedRequest} '{req.Command}'");
+                        response = Server.Error($"{Errors.UndefinedRequest} '{requestObject.Command}'");
                         break;
                 }
 
-                // Util.Log("Sending response!");
                 Server.Proxy.WriteData(response);
 
-                // Util.
-        
-
-                // Util.LogTimePassed(watch, req.Command);
             };
 
             Server.Listen();
+        }
+
+        private static T ParseRequest<T>(string req){
+            return JSON.Parse<T>(req);
         }
     }
 }

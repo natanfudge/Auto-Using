@@ -47,6 +47,9 @@ namespace AutoUsing.Analysis
         public bool CouldNotLoad() => Assembly == null;
 
 
+        /// <summary>
+        /// Extracts type information from the loaded assembly
+        /// </summary>
         public List<TypeCompletionInfo> GetTypeInfo()
         {
             var types = Assembly.GetExportedTypes()
@@ -56,6 +59,9 @@ namespace AutoUsing.Analysis
             return types;
         }
 
+        /// <summary>
+        /// Extracts hierarchy information from the loaded assembly
+        /// </summary>
         public List<HierarchyInfo> GetHierarchyInfo()
         {
             return Assembly.GetExportedTypes()
@@ -108,6 +114,10 @@ namespace AutoUsing.Analysis
             if (baseClass == null) return "System.Object";
             else return baseClass.Namespace + "." + baseClass.Name.NoTilde();
         }
+
+        /// <summary>
+        /// Extracts extension method information from the loaded assembly
+        /// </summary>
 
         public List<ExtensionMethodInfo> GetExtensionMethodInfo()
         {

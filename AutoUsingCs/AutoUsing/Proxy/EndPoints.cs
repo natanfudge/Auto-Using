@@ -7,11 +7,10 @@ namespace AutoUsing
     {
         public const string AddProject = "addProject",
                             SetupWorkspace = "setupWorkspace",
-                            // Setup="setup",
                             RemoveProject = "removeProject",
                             GetAllTypes = "getAllTypes",
-    getAllHiearchies = "getAllHiearchies",
-    getAllExtensions = "getAllExtensions",
+                            getAllHiearchies = "getAllHiearchies",
+                            getAllExtensions = "getAllExtensions",
                             Ping = "ping";
 
 

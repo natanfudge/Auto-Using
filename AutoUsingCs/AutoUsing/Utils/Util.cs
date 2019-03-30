@@ -130,10 +130,7 @@ namespace AutoUsing.Utils
             while (!FileIsAccessible(filename)) ;
         }
 
-        public static string ToIndentedJson(this object obj)
-        {
-            return JsonConvert.SerializeObject(obj, Formatting.Indented);
-        }
+        
 
 
         /// <summary>

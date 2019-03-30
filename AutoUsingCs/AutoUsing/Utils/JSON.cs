@@ -6,7 +6,7 @@ using Utf8Json.Resolvers;
 
 namespace AutoUsing.Utils
 {
-    public class JSON
+    public static class JSON
     {
 
         // private static 
@@ -17,5 +17,21 @@ namespace AutoUsing.Utils
             return JsonConvert.DeserializeObject<T>(json, Serializer.Settings);
             // IJsonFormatterResolver
         }
+
+        public static string Stringify<T>(T obj)
+        {
+            return JsonConvert.SerializeObject(obj, Serializer.Settings);
+        }
+
+        public static string ToIndentedJson(this object obj)
+        {
+            return JsonConvert.SerializeObject(obj, Formatting.Indented);
+        }
+
+        // public static T To<T>(this Jtokeb str)
+        // {
+            
+        //     return JsonConvert.DeserializeObject<T>(str,Serializer.Settings);
+        // }
     }
 }
