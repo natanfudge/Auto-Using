@@ -47,3 +47,24 @@
 3/30/2019 8:08:30 PM: Got request: {"command":"getAllHiearchies","arguments":{"projectName":"TestProg"}}
 3/30/2019 8:08:30 PM: Got request: {"command":"getAllTypes","arguments":{"projectName":"TestProg","wordToComplete":"J"}}
 3/30/2019 8:08:30 PM: Got request: {"command":"setupWorkspace","arguments":{"projects":["C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\TestProg\\TestProg.csproj"],"workspaceStorageDir":"C:\\Users\\natan\\AppData\\Roaming\\Code\\User\\workspaceStorage\\15b109ca16b14796e52e6c96faa130db","extensionDir":"C:\\Users\\natan\\Desktop\\Auto-Using-Git"}}
+3/30/2019 8:54:50 PM: Got request: {"command":"setupWorkspace","arguments":{"projects":["c:\\Users\\natan\\Desktop\\playground\\playground.csproj"],"workspaceStorageDir":"c:\\Users\\natan\\AppData\\Roaming\\Code\\User\\workspaceStorage\\44a45910d53bd355d10616cae3fed39d\\Fudge.auto-using","extensionDir":"c:\\Users\\natan\\Desktop\\Auto-Using-Git"}}
+3/30/2019 8:59:41 PM: Got request: Content-Length: 2711
+3/30/2019 8:59:41 PM: Got request: 
+3/30/2019 8:59:41 PM: Got request: Content-Length: 2711
+3/30/2019 8:59:41 PM: Got request: 
+3/30/2019 8:59:42 PM: Got request: Content-Length: 2711
+3/30/2019 8:59:42 PM: Got request: 
+3/30/2019 8:59:42 PM: Got request: Content-Length: 2711
+3/30/2019 8:59:42 PM: Got request: 
+3/30/2019 8:59:42 PM: Got request: Content-Length: 2711
+3/30/2019 8:59:42 PM: Got request: 
+3/30/2019 9:13:04 PM: Got request: Content-Length: 2710
+3/30/2019 9:13:04 PM: Got request: 
+3/30/2019 9:13:04 PM: Got request: Content-Length: 2710
+3/30/2019 9:13:05 PM: Got request: 
+3/30/2019 9:13:05 PM: Got request: Content-Length: 2710
+3/30/2019 9:13:05 PM: Got request: 
+3/30/2019 9:13:05 PM: Got request: Content-Length: 2710
+3/30/2019 9:13:05 PM: Got request: 
+3/30/2019 9:13:05 PM: Got request: Content-Length: 2710
+3/30/2019 9:13:06 PM: Got request: 
