@@ -20,6 +20,7 @@ namespace AutoUsing.Utils
 
         public static string Stringify<T>(T obj)
         {
+            //test
             return JsonConvert.SerializeObject(obj, Serializer.Settings);
         }
 
