@@ -33,7 +33,9 @@ namespace AutoUsing
         public static async Task Main()
         {
             var server = await CreateLanguageServer();
+            var x = server.Workspace;
             await server.WaitForExit;
+
 
 
             // Server.Proxy.EditorDataReceived += (s, e) =>
