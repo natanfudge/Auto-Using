@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -78,6 +79,8 @@ namespace AutoUsing.Lsp
 
         /// <summary>
         /// Reduces the position of startingPosition (walks back) as long the condition is met.
+        /// The condition takes 3 arguments the method caller can use:
+        ///  The char at the current position, Whether or not this is the last char before a new line, The current position.
         /// </summary>
         private Position WalkBackWhile(Position startingPosition, Func<string, bool, Position, bool> condition)
         {
@@ -94,6 +97,17 @@ namespace AutoUsing.Lsp
             }
 
             return currentPos;
+        }
+
+        /// <summary>
+        /// Reduces the position of startingPosition (walks back) as long the condition is met.
+        /// The condition takes 1 argument the method caller can use:
+        ///  The char at the current position
+        /// </summary>
+
+        private Position WalkBackWhile(Position startingPosition, Func<string, bool> condition)
+        {
+            return WalkBackWhile(startingPosition, (currentChar, newLine, pos) => condition(currentChar));
         }
 
         private bool ShouldKeepSearchingForCompletionIdentifier(string currentChar, bool newLineIncoming, Position currentPos)
@@ -135,25 +149,135 @@ namespace AutoUsing.Lsp
             return string.IsNullOrWhiteSpace(currentChar);
         }
 
-        /**
-        * Returns the position before another position in the document AND whether or not the next previous character will reach a new line.
-        */
+
+        /// <summary>
+        /// Returns the position before another position in the document AND whether or not the next previous character will reach a new line.
+        /// </summary>
         private Tuple<Position, bool> GetPrevCheckNewline(Position pos)
         {
             var newPos = this.GetPrev(pos);
             var newLine = newPos.Line != this.GetPrev(newPos).Line;
             return new Tuple<Position, bool>(newPos, newLine);
         }
+
+        /// <summary>
+        /// Returns a list of the namespaces being used in the text document
+        /// </summary>
+        /// <returns></returns>
+        public List<string> GetUsings()
+        {
+            var regExp = new Regex(@"^using.*;");
+            var matches = this.document.getText().match(regExp);
+            if (matches == null) return new List<string>();
+            var usings = matches.Select(match =>
+            {
+                // Get namespace
+                var namespaceWithSemicolon = match.Split(" ")[1];
+                // Remove semicolon
+                return namespaceWithSemicolon.Remove(namespaceWithSemicolon.Length - 1);
+            });
+
+            return usings;
+
+        }
+
+
+
+
+
+
+        /// <summary>
+        /// Travels through the document to see where exactly is the variable that is trying to invoker a method.
+        /// This could also be a method call. Examples:
+        /// x.F   <==== completionPos is after f, we are looking for x.
+        ///  x.Foo(bar).b <==== completionPos is after b, we are looking for Foo.
+        /// </summary>
+        /// <param name="completionPos"> The position in which the user is typing</param>
+        /// <returns>The position of the method or variable that is trying to invoke a method</returns>
+        private async Task<Position> GetTypeInfoPosition(Position completionPos)
+        {
+            var startOfCaller = this.WalkBackWhile(completionPos, string.IsNullOrWhiteSpace);
+            var dotPos = this.WalkBackWhile(startOfCaller, c => c != ".");
+            var endOfWordBefore = this.GetPrev(this.WalkBackWhile(dotPos, string.IsNullOrWhiteSpace));
+
+            // If there are brackets we need to check if it's because of a chained method call or because of redundant parentheses
+            if (this.GetChar(endOfWordBefore) == ")")
+            {
+                var bracketsThatNeedToBeClosed = 1;
+                var methodCallPos = this.WalkBackWhile(this.GetPrev(endOfWordBefore), (c) =>
+                {
+                    if (c == ")") bracketsThatNeedToBeClosed++;
+                    if (c == "(") bracketsThatNeedToBeClosed--;
+
+                    return bracketsThatNeedToBeClosed > 0;
+                });
+
+                // Chained method call. In this case get the type of the method
+                if ((await this.GetHover(methodCallPos)).Count > 0)
+                {
+                    return methodCallPos;
+                }
+                // Redundant parentheses. In this case we get the position of the variable who invoked the '.'
+                else
+                {
+                    var variablePos = this.WalkBackWhile(endOfWordBefore, c => c == ")");
+                    return variablePos;
+                }
+            }
+            else
+            {
+                return endOfWordBefore;
+            }
+        }
+
+
+        /// Returns the hover string of the type that should be extended
+        /// </summary>
+        /// <param name="completionPos">The position at which the user is currently typing</param>
+        public async Task<string> GetMethodCallerHoverString(Position completionPos)
+        {
+            var typePos = await this.GetTypeInfoPosition(completionPos);
+            var hoverString = await this.GetHoverString(typePos);
+            return hoverString;
+        }
+
+
+        /// <summary>
+        /// Returns the actual string of the hover information in a position. Will return null if no hover information is provided by the editor.
+        /// </summary>
+        private async Task<string> GetHoverString(Position position)
+        {
+            // Get the hover info of the variable from the C# extension
+            var hover = await this.GetHover(position);
+            if (hover.Count() == 0) return null;
+
+            var wantedMessage = hover[0];
+            //TODO: the first() statement should probably be Second() of some sort. This needs to be investigated furthe.r 
+            var wantedContent = wantedMessage.Contents.MarkedStrings.First().Value;
+            return wantedContent;
+        }
+
+
+        /// <summary>
+        /// Returns All hover info in a position that is provided by vscode and its extensions
+        /// </summary>
+        /// <param name="vscode.Position"></param>
+        /// <returns></returns>
+        private async Task<List<Hover>> GetHover(Position position)
+        {
+            //TODO: request from client to perform this
+            // return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
+        }
+
+        public enum CompletionType
+        {
+            NONE,
+            TYPE,
+            EXTENSION
+        }
+
     }
 
-    public enum CompletionType
-    {
-        NONE,
-        TYPE,
-        EXTENSION
-    }
-
-}
 
 
 
@@ -161,48 +285,8 @@ namespace AutoUsing.Lsp
 
 
 
-//     /**
-//      * @param completionPos The position at which the user is currently typing
-//      * @returns The hover string of the type that should be extended
-//      */
-//     public async getMethodCallerHoverString(completionPos: vscode.Position): Promise<string | undefined> {
-//         let typePos = await this.getTypeInfoPosition(completionPos);
-//         let hoverString = this.getHoverString(typePos);
-//         return hoverString;
-//     }
 
-//     /**
-//      * Travels through the document to see where exactly is the variable that is trying to invoker a method.
-//      * This could also be a method call. Examples:
-//      * x.F   <--- completionPos is after f, we are looking for x.
-//      * x.Foo(bar).b <--- completionPos is after b, we are looking for Foo.
-//      * @param completionPos The position in which the user is typing
-//      * @returns The position of the method or variable that is trying to invoke a method
-//      */
-//     private async getTypeInfoPosition(completionPos: vscode.Position): Promise<vscode.Position> {
-//         let startOfCaller = this.walkBackWhile(completionPos, isWhitespace);
-//         let dotPos = this.walkBackWhile(startOfCaller, char => char !== ".");
-//         let endOfWordBefore = this.getPrev(this.walkBackWhile(dotPos, isWhitespace));
 
-//         // If there are brackets we need to check if it's because of a chained method call or because of redundant parentheses
-//         if (this.getChar(endOfWordBefore) === ")") {
-//             let bracketsThatNeedToBeClosed = 1;
-//             let methodCallPos = this.walkBackWhile(this.getPrev(endOfWordBefore), (char) => {
-//                 if (char === ")") bracketsThatNeedToBeClosed++;
-//                 if (char === "(") bracketsThatNeedToBeClosed--;
-
-//                 return bracketsThatNeedToBeClosed > 0;
-//             });
-
-//             // Chained method call
-//             if ((await this.getHover(methodCallPos)).length > 0) {
-//                 return methodCallPos;
-//             }
-//             // Redundant parentheses
-//             else {
-//                 let variablePos = this.walkBackWhile(endOfWordBefore, char => char === ")");
-//                 return variablePos;
-//             }
 
 
 
@@ -219,41 +303,10 @@ namespace AutoUsing.Lsp
 
 
 
-//     /**
-//      * Reduces the position of startingPosition (walks back) as long the condition is met.
-//      */
-//     private walkBackWhile(startingPosition: vscode.Position,
-//         condition: (char: string, newLineIncoming: boolean, pos: vscode.Position) => boolean): vscode.Position {
-//         let currentPos = startingPosition;
-//         let currentChar = this.getChar(currentPos);
-//         let newLineIncoming = false;
-//         while (condition(currentChar, newLineIncoming, currentPos)) {
-//             [currentPos, newLineIncoming] = this.getPrevCheckNewline(currentPos);
-//             currentChar = this.getChar(currentPos);
-//         }
-
-//         return currentPos;
-//     }
-
-//     /**
-//      * @returns The hover string in a position
-//      */
-//     private async getHoverString(position: vscode.Position): Promise<string | undefined> {
-//         // Get the hover info of the variable from the C# extension
-//         let hover = await this.getHover(position);
-//         if (hover.length === 0) return undefined;
-
-//         return (<{ language: string; value: string }>hover[0].contents[1]).value;
 
 
-//     }
 
-//     /**
-//      * @returns All hover info in a position
-//      */
-//     private async getHover(position: vscode.Position): Promise<vscode.Hover[]> {
-//         return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
-//     }
+
 
 
 
@@ -275,20 +328,7 @@ namespace AutoUsing.Lsp
 //         return found;
 //     }
 
-//     /**
-// 	 * @param document The text document to search usings of
-// 	 * @returns A list of the namespaces being used in the text document
-// 	 */
-//     public async getUsings(): Promise<string[]> {
-//         let regExp = /^using.*;/gm;
-//         let matches = this.document.getText().match(regExp);
-//         if (matches === null) return [];
-//         return Promise.all(matches.map(async using => {
-//             let usingWithSC = using.split(" ")[1];
-//             return usingWithSC.substring(0, usingWithSC.length - 1);
-//         }));
 
-//     }
 // }
 
 // export enum CompletionType {

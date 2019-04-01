@@ -4,7 +4,7 @@ import { Trace } from 'vscode-jsonrpc';
 
 export function activate(context: ExtensionContext) {
 
-    console.log("activate!");
+    console.log("adsfasdf!");
 
     // The server is implemented in node
     let serverExe = 'dotnet';
@@ -21,6 +21,16 @@ export function activate(context: ExtensionContext) {
 
     // Create the language client and start the client.
     const client = new LanguageClient('languageServerExample', 'Language Server Example', serverOptions, {});
+    // client.onReady().then(() =>{
+    //     client.onRequest("custom/data",(reqargs) =>{
+    //         console.log("Got request with args " + reqargs);
+    //         return "op response";
+    //     });
+    //     client.onNotification("custom/data",(args) =>{
+    //         console.log("Got notif with args " + args);
+    //         return "op response";
+    //     });
+    // });
     client.trace = Trace.Verbose;
     let disposable = client.start();
 

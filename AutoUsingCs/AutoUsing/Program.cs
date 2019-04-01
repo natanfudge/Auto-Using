@@ -30,10 +30,26 @@ namespace AutoUsing
                         .WithHandler<CompletionProvider>()
                      );
         }
+
+        class test
+        {
+            string field1;
+
+            public test(string field1)
+            {
+                this.field1 = field1;
+            }
+        }
         public static async Task Main()
         {
             var server = await CreateLanguageServer();
             var x = server.Workspace;
+            Stopwatch watch = Stopwatch.StartNew();
+            var response = await server.SendRequest<test, string>("custom/data", new test("asdf"));
+            Util.Log("Got response: " + response + "time = " + watch.ElapsedMilliseconds);
+            //   server.SendNotification<test>("custom/data", new test("asdf"));
+
+            // server.Client.SendRequest()
             await server.WaitForExit;
 
 

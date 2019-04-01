@@ -2,9 +2,11 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
+using static AutoUsing.Lsp.DocumentWalker;
 
 namespace AutoUsing.Lsp
 {
+
     class CompletionInstance
     {
 
@@ -18,13 +20,11 @@ namespace AutoUsing.Lsp
             return completionInstance.provideCompletionItems(request);
         }
 
-        readonly IEnumerable<string> x;
 
         public async Task<CompletionList> provideCompletionItems(CompletionParams request)
         {
             var completionType =  this.DocumentWalker.GetCompletionType(request.Position);
 
-            x.Append("asdf");
 
             if (completionType == CompletionType.NONE)
             {
@@ -32,18 +32,19 @@ namespace AutoUsing.Lsp
             }
             else
             {
-                var usings = await this.DocumentWalker.getUsings();
+                var usings = this.DocumentWalker.GetUsings();
                 var completionData = new List<Completion>();
 
                 if (completionType == CompletionType.EXTENSION)
                 {
 
-                    var methodCallerHover = await this.DocumentWalker.getMethodCallerHoverString(request.Position);
+                    // Get the hover string that is provided by omnisharp to get the type information. 
+                    var methodCallerHover = await this.DocumentWalker.GetMethodCallerHoverString(request.Position);
                     if (methodCallerHover != null)
                     {
+                        // Parse the type information from the string.
                         var methodCallerType = this.parseType(methodCallerHover);
                         completionData = await this.getExtensionMethods(methodCallerType);
-
                     }
                     else
                     {

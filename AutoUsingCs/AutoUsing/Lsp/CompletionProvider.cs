@@ -36,6 +36,7 @@ namespace AutoUsing.Lsp
 
         public async Task<CompletionList> Handle(CompletionParams request, CancellationToken cancellationToken)
         {
+            var x = new CompletionItem();
             return new CompletionList(new CompletionItem { Label = "serverop" });
         }
 

@@ -11,7 +11,6 @@ namespace AutoUsing.Lsp
     class CompletionProviderNew : ICompletionHandler
     {
 
-        // private Server 
         const int maxCompletionAmount = 100;
 
         public CompletionRegistrationOptions GetRegistrationOptions()

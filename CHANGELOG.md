@@ -2,9 +2,10 @@
 ## Changelog
 
 ### 0.8.0
-- Fixed completions sometimes not showing working near comments. 
 - Completions will now appear for libraries you have added to your project. 
-- Completions should now be much faster in cases in which there are many completions. 
+- Completions should now be much faster in cases in which there are many completions.
+- Fixed completions sometimes not showing working near comments.
+- Fixed the extension hanging when there is no project file
 
 ### 0.7.4 
 - Fixed extension methods not appearing for arrays.
