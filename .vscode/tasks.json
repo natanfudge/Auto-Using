@@ -47,13 +47,13 @@
 			],
 			"problemMatcher": []
 		},
-		{
-			"label": "buildServerClient",
-			"dependsOn":[
-				"build",
-				"npm: build",
+		// {
+		// 	"label": "buildServerClient",
+		// 	"dependsOn":[
+		// 		"build",
+		// 		"npm: build",
 				
-			]
-		}
+		// 	]
+		// }
     ]
 }
