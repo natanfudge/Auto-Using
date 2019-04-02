@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoUsing.Utils;
 using OmniSharp.Extensions.Embedded.MediatR;
 using OmniSharp.Extensions.LanguageServer.Protocol;
 using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
@@ -13,20 +14,20 @@ using OmniSharp.Extensions.LanguageServer.Protocol.Server.Capabilities;
 
 namespace AutoUsing.Lsp
 {
-   
+
     public class DocumentWalker
     {
-        private TextDocumentIdentifier document;
+        private InteractableTextDocument document;
+        // public DocumentWalker(TextDocumentIdentifier textDocument, FileManager manager)
         public DocumentWalker(TextDocumentIdentifier textDocument)
         {
-            TextDocument x;
-            
-            this.document = textDocument;
+            // this.document = new InteractableTextDocument(textDocument, manager);
+            this.document = new InteractableTextDocument(textDocument);
         }
 
         public string GetWordToComplete(Position completionPosition)
         {
-            return document.getWordAtPosition(completionPosition);
+            return document.GetWordAtPosition(completionPosition);
         }
 
         /// <summary>
@@ -58,8 +59,9 @@ namespace AutoUsing.Lsp
 
             var wordRegex = new Regex(@"([^\s]+)");
 
-            var wordBefore = this.document.getText(this.document.getWordRangeAtPosition(currentPos, wordRegex));
-            var lastCharOfWordBefore = wordBefore.slice(-1);
+            //TODO: double check this is right
+            var wordBefore = this.document.GetWordAtPosition(currentPos);
+            var lastCharOfWordBefore = wordBefore.LastChar();
 
             if (Constants.SyntaxChars.Contains(lastCharOfWordBefore)) return CompletionType.TYPE;
             else if (Constants.ShowSuggestFor.Contains(wordBefore)) return CompletionType.TYPE;
@@ -72,7 +74,7 @@ namespace AutoUsing.Lsp
         ///  </summary>
         private Position GetPrev(Position pos)
         {
-            return this.document.positionAt(this.document.offsetAt(pos) - 1);
+            return this.document.GetPreviousPosition(pos);
         }
 
         /// <summary>
@@ -81,7 +83,7 @@ namespace AutoUsing.Lsp
         /// <param name="vscode.Position"></param>
         private string GetChar(Position pos)
         {
-            return this.document.getText(new vscode.Range(pos, pos.translate(0, 1)));
+            return this.document.GetCharAt(pos);
         }
 
 
@@ -176,7 +178,7 @@ namespace AutoUsing.Lsp
         public string[] GetUsings()
         {
             var regExp = new Regex(@"^using.*;");
-            var matches = this.document.getText().match(regExp);
+            var matches = this.document.Match(regExp);
             if (matches == null) return null;
             var usings = matches.Select(match =>
             {
@@ -186,7 +188,7 @@ namespace AutoUsing.Lsp
                 return namespaceWithSemicolon.Remove(namespaceWithSemicolon.Length - 1);
             });
 
-            return usings;
+            return usings.ToArray();
 
         }
 
@@ -273,6 +275,7 @@ namespace AutoUsing.Lsp
         /// <param name="vscode.Position"></param>
         private async Task<List<Hover>> GetHover(Position position)
         {
+            return new List<Hover>();
             //TODO: request from client to perform this
             // return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
         }
@@ -285,6 +288,7 @@ namespace AutoUsing.Lsp
         }
 
     }
+}
 
 
 

@@ -16,8 +16,10 @@ namespace AutoUsing.Lsp
     class CompletionInstance
     {
 
+        // public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server, FileManager fileManager)
         public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server)
         {
+            // var documentWalker = new DocumentWalker(request.TextDocument,fileManager);
             var documentWalker = new DocumentWalker(request.TextDocument);
             var wordToComplete = documentWalker.GetWordToComplete(request.Position);
             var projectName = VscodeUtil.GetProjectName(request.TextDocument.Uri.LocalPath);

@@ -9,13 +9,15 @@ namespace AutoUsing.Lsp
         const string projectExtension = ".csproj";
         public static string GetProjectName(string filePath)
         {
-            var projectDir = getProjectRootDirOfFilePath(filePath);
-            var files = Directory.GetFiles(projectDir, $"*{projectExtension}");
-            if (files.Count() > 1) throw new InvalidOperationException("Did not expect more than 1 project file in directory!");
-            return Path.GetFileNameWithoutExtension(files[0]);
+            // var projectDir = GetProjectFile(filePath);
+            // var files = Directory.GetFiles(projectDir, $"*{projectExtension}");
+            // if (files.Count() > 1) throw new InvalidOperationException("Did not expect more than 1 project file in directory!");
+
+            var projectFile = GetProjectFile(filePath);
+            return Path.GetFileNameWithoutExtension(projectFile);
         }
 
-        public static string getProjectRootDirOfFilePath(string filePath)
+        public static string GetProjectFile(string filePath)
         {            
             return FindInParentDirectories(filePath, $"*{projectExtension}");
         }
@@ -26,7 +28,8 @@ namespace AutoUsing.Lsp
         /// </summary>
         public static string FindInParentDirectories(string path, string pattern)
         {
-            var currentDir = Path.GetDirectoryName(path);
+            // Substring(1) because the path has too many slashes at the start.
+            var currentDir =  Path.GetDirectoryName(path).Substring(1);
             while (currentDir != null)
             {
                 var files = Directory.GetFiles(currentDir, pattern);

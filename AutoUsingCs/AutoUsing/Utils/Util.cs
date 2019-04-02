@@ -131,6 +131,10 @@ namespace AutoUsing.Utils
         }
 
 
+        public static string LastChar(this string str){
+            return str[str.Length - 1].ToString();
+        }
+
 
 
         /// <summary>

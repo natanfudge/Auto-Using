@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using OmniSharp.Extensions.LanguageServer.Server;
 using AutoUsing.Lsp;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AutoUsing
 {
@@ -27,26 +28,23 @@ namespace AutoUsing
                         .WithLoggerFactory(new LoggerFactory())
                         .AddDefaultLoggingProvider()
                         .WithMinimumLogLevel(LogLevel.Trace)
+                        // .WithServices(ConfigureServices)
                         .WithHandler<CompletionProvider>()
+                        .WithHandler<TextDocumentHandler>()
                      );
         }
 
-        class test
-        {
-            string field1;
-
-            public test(string field1)
-            {
-                this.field1 = field1;
-            }
-        }
+        // private static void ConfigureServices(IServiceCollection services)
+        // {
+        //     services.AddSingleton<FileManager>();
+        // }
         public static async Task Main()
         {
             var server = await CreateLanguageServer();
             var x = server.Workspace;
-            Stopwatch watch = Stopwatch.StartNew();
-            var response = await server.SendRequest<test, string>("custom/data", new test("asdf"));
-            Util.Log("Got response: " + response + "time = " + watch.ElapsedMilliseconds);
+            // Stopwatch watch = Stopwatch.StartNew();
+            // var response = await server.SendRequest<test, string>("custom/data", new test("asdf"));
+            // Util.Log("Got response: " + response + "time = " + watch.ElapsedMilliseconds);
             //   server.SendNotification<test>("custom/data", new test("asdf"));
 
             // server.Client.SendRequest()
