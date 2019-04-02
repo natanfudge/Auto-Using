@@ -11,6 +11,8 @@ namespace AutoUsing.Lsp
     class CompletionProviderNew : ICompletionHandler
     {
 
+        Server server = new Server();
+
         const int maxCompletionAmount = 100;
 
         public CompletionRegistrationOptions GetRegistrationOptions()
@@ -20,9 +22,9 @@ namespace AutoUsing.Lsp
 
         }
 
-        public Task<CompletionList> Handle(CompletionParams request, CancellationToken cancellationToken)
+        public async Task<CompletionList> Handle(CompletionParams request, CancellationToken cancellationToken)
         {
-            var result = await provideCompletionItems(request);
+            var result = await CompletionInstance.ProvideCompletionItems(request,server);
             return result;
         }
 
@@ -31,17 +33,17 @@ namespace AutoUsing.Lsp
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Get the list of completions that are commonly used by the user and are therefore stored in the system.
-        /// </summary>
-		/// //TODO: convert globalState into some json cache file
-        public static IEnumerable<StoredCompletion> getStoredCompletions(vscode.ExtensionContext context)
-        {
-            var completions = context.globalState.get<StoredCompletion[]>(COMPLETION_STORAGE);
+        // /// <summary>
+        // /// Get the list of completions that are commonly used by the user and are therefore stored in the system.
+        // /// </summary>
+		// /// //TODO: convert globalState into some json cache file
+        // public static IEnumerable<StoredCompletion> getStoredCompletions(vscode.ExtensionContext context)
+        // {
+        //     var completions = context.globalState.get<StoredCompletion[]>(COMPLETION_STORAGE);
 
-            if(completions == null) return new List<StoredCompletion>();
-            return completions;
-        }
+        //     if(completions == null) return new List<StoredCompletion>();
+        //     return completions;
+        // }
 
 		 const string COMPLETION_STORAGE = "commonwords";
     }

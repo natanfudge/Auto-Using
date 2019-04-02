@@ -20,7 +20,7 @@ export function activate(context: ExtensionContext) {
    
 
     // Create the language client and start the client.
-    const client = new LanguageClient('languageServerExample', 'Language Server Example', serverOptions, {});
+    const client = new LanguageClient('autousing', 'Auto-Using', serverOptions, {});
     // client.onReady().then(() =>{
     //     client.onRequest("custom/data",(reqargs) =>{
     //         console.log("Got request with args " + reqargs);

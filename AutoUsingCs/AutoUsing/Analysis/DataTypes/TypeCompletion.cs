@@ -25,6 +25,7 @@ namespace AutoUsing.Analysis.DataTypes
             this.Name = name;
             this.Namespaces = namespaces;
         }
+        public TypeCompletion(){}
 
         public override bool Equals(object obj)
         {

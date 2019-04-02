@@ -10,6 +10,7 @@ using AutoUsing.Proxy;
 using FireSharp.Extensions;
 using AutoUsing.Analysis.DataTypes;
 using AutoUsing.Utils;
+using AutoUsing.Lsp;
 
 namespace AutoUsing
 {
@@ -18,7 +19,7 @@ namespace AutoUsing
     /// </summary>
     public class Server
     {
-        public IOProxy Proxy = new IOProxy();
+        // public IOProxy Proxy = new IOProxy();
         private List<Project> Projects = new List<Project>();
 
         public Response Pong(Request req)
@@ -31,39 +32,38 @@ namespace AutoUsing
             return new ErrorResponse { Body = error };
         }
 
-        public void WriteError(string error)
-        {
-            Proxy.WriteData(Error(error));
-        }
+        // public void WriteError(string error)
+        // {
+        //     Proxy.WriteData(Error(error));
+        // }
 
-        public void Listen()
-        {
-            //            Task.Run(() =>
-            {
-                while (true)
-                {
-                    Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-                }
-            }
-            //            );
-        }
+        // public void Listen()
+        // {
+        //     //            Task.Run(() =>
+        //     {
+        //         while (true)
+        //         {
+        //             Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
+        //         }
+        //     }
+        //     //            );
+        // }
 
 
         /// <summary>
         /// Returns the list of types in the .NET base class library + the types in the libraries of the
-        /// requested projected + the types in the requested project, as long as they start with the
+        /// requested projected + the types in the requested project, as long as they contain the
         /// "WordToComplete" field in the request
         /// </summary>
-        public Response GetAllTypes(GetCompletionDataRequest req)
+        public List<TypeCompletion> GetAllTypes(string projectName, string wordToComplete)
         {
-            var project = FindProject(req.ProjectName, out var errorResponse);
-            if (project == null) return errorResponse;
+            var project = FindProject(projectName);
 
             var typeInfo = GlobalCache.Caches.Types.GetCache().Concat(project.Caches.Types.GetCache()).ToList();
             var refinedTypeData = FilterUnnecessaryData(CompletionCaches.ToCompletionFormat(typeInfo),
-                req.WordToComplete, (type) => type.Name);
+                wordToComplete, (type) => type.Name);
 
-            return new GetAllTypesResponse(refinedTypeData);
+            return refinedTypeData;
         }
 
         /// <summary>
@@ -82,78 +82,56 @@ namespace AutoUsing
         }
 
 
-        public Response GetAllExtensionMethods(GetCompletionDataRequest req)
+        public List<ExtensionClass> GetAllExtensionMethods(string projectName, string wordToComplete)
         {
-            var project = FindProject(req.ProjectName, out var errorResponse);
-            if (project == null) return errorResponse;
+            var project = FindProject(projectName);
 
             var extensionInfo = GlobalCache.Caches.Extensions.GetCache().Concat(project.Caches.Extensions.GetCache()).ToList();
-            // Util.Log("Extension info = " + extensionInfo);
             var refinedExtensionData = CompletionCaches.ToCompletionFormat(extensionInfo);
 
             // Remove all extension methods that have been filtered by the word to complete
             refinedExtensionData = refinedExtensionData
                 .Select(extendedClass => new ExtensionClass(extendedClass.ExtendedClass, extendedClass.ExtensionMethods
-                    .Where(extensionMethod => extensionMethod.Name.ToLower().Contains(req.WordToComplete.ToLower())).ToList()))
+                    .Where(extensionMethod => extensionMethod.Name.ToLower().Contains(wordToComplete.ToLower())).ToList()))
                 .Where(extendedClass => extendedClass.ExtensionMethods.Count > 0).ToList();
 
-            return new GetAllExtensionMethodsResponse(refinedExtensionData);
+            return refinedExtensionData;
         }
 
-        public Response GetAllHierarchies(ProjectSpecificRequest req)
+        public List<Hierarchies> GetAllHierarchies(string projectName)
         {
-            var project = FindProject(req.ProjectName, out var errorResponse);
-            if (project == null) return errorResponse;
+            var project = FindProject(projectName);
 
             var hierarchyInfo = GlobalCache.Caches.Hierachies.GetCache().Concat(project.Caches.Hierachies.GetCache()).ToList();
-            return new GetAllHierachiesResponse(CompletionCaches.ToCompletionFormat(hierarchyInfo));
+            return  CompletionCaches.ToCompletionFormat(hierarchyInfo);
         }
 
         /// <summary>
         /// Retrieves the Project object out of the list of projects that were added. 
         /// </summary>
         /// <param name="projectName">The file name of the project without the .csproj extension</param>
-        /// <param name="errorResponse">An error response will be outputted if the project was not found</param>
         /// <returns>The project if the project was added before, and null otherwise.</returns>
-        private Project FindProject(string projectName, out Response errorResponse)
+        /// <exception cref = "ServerException">Throws ServerException if the project was not found or the project name is empty.</throws>
+        private Project FindProject(string projectName)
         {
             if (projectName.IsNullOrEmpty())
             {
-                errorResponse = new ErrorResponse { Body = Errors.ProjectNameIsRequired };
+                throw new ServerException("The project name must not be empty.");
             }
 
             // Using C# 7.2 `is expression` to check for null, and assign variable
             if (Projects.Find(o => o.Name == projectName) is Project project)
             {
-                errorResponse = null;
                 return project;
             }
             else
             {
-                errorResponse = new ErrorResponse
-                {
-                    Body = Errors.SpecifiedProjectWasNotFound +
-                           $"\nRequested project {projectName} is not in this list: {String.Join(",", Projects.Select(proj => proj.Name))}"
-                };
+                throw new ServerException(
+                       $"\nRequested project {projectName} is not in this list: {String.Join(",", Projects.Select(proj => proj.Name))}");
             }
 
-            return null;
         }
 
-
-        //TODO
-        public void AddProject(Request req)
-        {
-            // var projectFilePath = req.Arguments;
-
-            // if (!projectFilePath.IsNullOrEmpty())
-            // {
-            //     Projects.Add(new Project(projectFilePath, watch: true));
-            //     return;
-            // }
-
-            // Proxy.WriteData(new ErrorResponse { Body = Errors.ProjectFilePathIsRequired });
-        }
 
 
 
@@ -179,9 +157,10 @@ namespace AutoUsing
             return new EmptyResponse();
         }
 
-        // public Response Setup(SetupWorkspaceRequest req){
-        //     GlobalCache.SetupGlobalCache(req.GlobalStoragePath);
-        //     return new EmptyResponse();
-        // }
+        public IEnumerable< StoredCompletion> GetCommonCompletions(){
+            //TODO: implement storage mechanism for common completions
+            return new List<StoredCompletion>();
+        }
+
     }
 }

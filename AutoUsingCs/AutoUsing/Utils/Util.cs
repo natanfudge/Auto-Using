@@ -130,7 +130,7 @@ namespace AutoUsing.Utils
             while (!FileIsAccessible(filename)) ;
         }
 
-        
+
 
 
         /// <summary>
@@ -147,6 +147,13 @@ namespace AutoUsing.Utils
         public static void Log(string text)
         {
             if (writeLogs) File.AppendAllText(logLocation, $"{DateTime.Now}: {text}\n");
+        }
+
+        public static T[] SubArray<T>(this T[] data, int index, int length)
+        {
+            T[] result = new T[length];
+            Array.Copy(data, index, result, 0, length);
+            return result;
         }
 
         const bool writeLogs = true;

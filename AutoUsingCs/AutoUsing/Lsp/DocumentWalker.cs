@@ -2,16 +2,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
+using OmniSharp.Extensions.Embedded.MediatR;
+using OmniSharp.Extensions.LanguageServer.Protocol;
+using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
+using OmniSharp.Extensions.LanguageServer.Protocol.Server;
+using OmniSharp.Extensions.LanguageServer.Protocol.Server.Capabilities;
 
 namespace AutoUsing.Lsp
 {
+   
     public class DocumentWalker
     {
         private TextDocumentIdentifier document;
         public DocumentWalker(TextDocumentIdentifier textDocument)
         {
+            TextDocument x;
+            
             this.document = textDocument;
         }
 
@@ -164,11 +173,11 @@ namespace AutoUsing.Lsp
         /// Returns a list of the namespaces being used in the text document
         /// </summary>
         /// <returns></returns>
-        public List<string> GetUsings()
+        public string[] GetUsings()
         {
             var regExp = new Regex(@"^using.*;");
             var matches = this.document.getText().match(regExp);
-            if (matches == null) return new List<string>();
+            if (matches == null) return null;
             var usings = matches.Select(match =>
             {
                 // Get namespace
@@ -262,7 +271,6 @@ namespace AutoUsing.Lsp
         /// Returns All hover info in a position that is provided by vscode and its extensions
         /// </summary>
         /// <param name="vscode.Position"></param>
-        /// <returns></returns>
         private async Task<List<Hover>> GetHover(Position position)
         {
             //TODO: request from client to perform this
