@@ -127,7 +127,7 @@ namespace AutoUsing
             else
             {
                 throw new ServerException(
-                       $"\nRequested project {projectName} is not in this list: {String.Join(",", Projects.Select(proj => proj.Name))}");
+                       $"\nRequested project {projectName} is not in this list: {{{String.Join(", ", Projects.Select(proj => proj.Name))}}}");
             }
 
         }

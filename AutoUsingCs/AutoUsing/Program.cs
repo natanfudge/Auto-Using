@@ -12,6 +12,9 @@ using OmniSharp.Extensions.LanguageServer.Server;
 using AutoUsing.Lsp;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.DependencyInjection;
+using OmniSharp.Extensions.JsonRpc;
+using OmniSharp.Extensions.Embedded.MediatR;
+using System.Threading;
 
 namespace AutoUsing
 {
@@ -38,10 +41,25 @@ namespace AutoUsing
         // {
         //     services.AddSingleton<FileManager>();
         // }
+
+        class TestC : IRequest{
+
+        }
+
+        class Test : IJsonRpcNotificationHandler<TestC>
+        {
+
+            public Task<Unit> Handle(TestC request, CancellationToken cancellationToken)
+            {
+                throw new NotImplementedException();
+            }
+        }
         public static async Task Main()
         {
             var server = await CreateLanguageServer();
             var x = server.Workspace;
+            server.AddHandler("asdf",new Test());
+            //TODO: Send SetupWorkspace from client to server
             // Stopwatch watch = Stopwatch.StartNew();
             // var response = await server.SendRequest<test, string>("custom/data", new test("asdf"));
             // Util.Log("Got response: " + response + "time = " + watch.ElapsedMilliseconds);

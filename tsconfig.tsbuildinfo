@@ -438,7 +438,7 @@
         "signature": "29a23dcaeeae886f1c94107b08fa8e330d3acac273971c50d9d05d8ca11cbd14"
       },
       "c:/users/natan/desktop/auto-using-git/src/extension.ts": {
-        "version": "51c6b4b5cfa34632d3d75605d7ed028ac7a9d7744aa90821ae5f274a14f59df0",
+        "version": "1be76967398960b3f74a8d2d522c8d57d607ce4e24874cfcbaf32113ac843cc4",
         "signature": "5617674a847f5c427cbf79637e3ffc461f0ec58b227578ad7a0af197d004ebb4"
       },
       "c:/users/natan/desktop/auto-using-git/src/speedutil.ts": {
@@ -1955,7 +1955,6 @@
       "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/protocolconverter.d.ts",
       "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/client.d.ts",
       "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/main.d.ts",
-      "c:/users/natan/desktop/auto-using-git/src/extension.ts",
       "c:/users/natan/desktop/auto-using-git/src/speedutil.ts",
       "c:/users/natan/desktop/auto-using-git/src/util.ts",
       "c:/users/natan/desktop/auto-using-git/src/server/autousingserver.ts",
@@ -1973,7 +1972,8 @@
       "c:/users/natan/desktop/auto-using-git/src/test/server/errorresponses.test.ts",
       "c:/users/natan/desktop/auto-using-git/src/test/server/postaddrequests.test.ts",
       "c:/users/natan/desktop/auto-using-git/src/test/server/responses.test.ts",
-      "c:/users/natan/desktop/auto-using-git/node_modules/@types/mocha/index.d.ts"
+      "c:/users/natan/desktop/auto-using-git/node_modules/@types/mocha/index.d.ts",
+      "c:/users/natan/desktop/auto-using-git/src/extension.ts"
     ]
   },
   "version": "3.4.1"

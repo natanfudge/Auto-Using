@@ -57,7 +57,7 @@ namespace AutoUsing.Lsp
             // _bufferManager.UpdateBuffer(documentPath, new StringBuilder(text));
             FileManager.UpdateBuffer(documentPath, new StringBuilder(text));
 
-            _router.Window.LogInfo($"Updated buffer for document: {documentPath}\n{text}");
+            // _router.Window.LogInfo($"Updated buffer for document: {documentPath}\n{text}");
 
             return Unit.Task;
         }

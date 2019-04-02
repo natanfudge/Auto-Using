@@ -18,7 +18,7 @@ export function activate(context: ExtensionContext) {
     }
 
    
-
+//TODO: Send SetupWorkspace from client to server
     // Create the language client and start the client.
     const client = new LanguageClient('autousing', 'Auto-Using', serverOptions, {});
     // client.onReady().then(() =>{
