@@ -219,7 +219,7 @@ namespace AutoUsing.Lsp
                 // We instantly put the using statement only if there is only one option
                 var usingStatementEdit = thereIsOnlyOneClassWithThatName ? new List<TextEdit> { usingEdit(completion.Namespaces[0]) } : null;
 
-                var arr = new List<TypeCompletion>{ completion};
+                var arr = new List<TypeCompletion> { completion };
                 var commandArgs = JArray.FromObject(arr);
 
                 var vscodeCompletion = new CompletionItem
@@ -228,11 +228,12 @@ namespace AutoUsing.Lsp
                     InsertText = name,
                     FilterText = name,
                     Kind = CompletionItemKind.Reference,
-                    AdditionalTextEdits = usingStatementEdit,
+                    // AdditionalTextEdits = usingStatementEdit,
                     CommitCharacters = new List<string> { "." },
                     Detail = string.Join("\n", completion.Namespaces),
                     Command = new Command { Name = HANDLE_COMPLETION, Arguments = commandArgs, Title = "handles completion" }
                 };
+                if (usingStatementEdit != null) vscodeCompletion.AdditionalTextEdits = usingStatementEdit;
                 return vscodeCompletion;
             });
 

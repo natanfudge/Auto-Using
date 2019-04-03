@@ -1,3 +1,4 @@
+using System.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,24 @@ namespace AutoUsing.Lsp
             this.document = new InteractableTextDocument(textDocument);
         }
 
+        /// <summary>
+        /// Returns the string the user has typed already.
+        /// </summary>
         public string GetWordToComplete(Position completionPosition)
         {
-            return document.GetWordAtPosition(completionPosition);
+            var word = new StringBuilder();
+            WalkBackWhile(GetPrev(completionPosition), (c) =>
+            {
+                // Once we hit something like a space or a semicolon it means the word has ended.
+                if (string.IsNullOrWhiteSpace(c) || c == "." || Constants.SyntaxChars.Contains(c)) return false;
+                word.Append(c);
+                return true;
+            });
+
+            return word.ToString();
+
+            // if (completionPosition.Character == 0) return "";
+            // return document.GetWordAtPosition(GetPrev(completionPosition));
         }
 
         /// <summary>
@@ -38,7 +54,7 @@ namespace AutoUsing.Lsp
         /// CompletionType.EXTENSION if the extension methods of a type should show, and CompletionType.NONE if no completions should appear.</returns>
         public CompletionType GetCompletionType(Position completionPos)
         {
-            if(completionPos.IsOrigin()) return CompletionType.NONE;
+            if (completionPos.IsOrigin()) return CompletionType.NONE;
             var currentPos = this.GetPrev(completionPos);
 
             var currentChar = this.GetChar(currentPos);

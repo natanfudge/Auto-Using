@@ -55,6 +55,11 @@
 //         assertContains(completionList,"Binder");
 //     });
 
+// test("Should show completions even where there is not space before", async()=>{
+//     let completionList = await complete("ShouldShowWithoutSpace.cs", 6, 20);
+//         assertContains(completionList,"File");
+// });
+
 //TODO: Test types after the 'this' keyword, it doesn't seem to be working.
 
 
