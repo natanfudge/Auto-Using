@@ -34,6 +34,7 @@ namespace AutoUsing
                         // .WithServices(ConfigureServices)
                         .WithHandler<CompletionProvider>()
                         .WithHandler<TextDocumentHandler>()
+                     // .WithHandler<WorkspaceSetupHandler>()
                      );
         }
 
@@ -42,23 +43,18 @@ namespace AutoUsing
         //     services.AddSingleton<FileManager>();
         // }
 
-        class TestC : IRequest{
+        private const string SetupWorkspace = "setupWorkspace";
 
-        }
-
-        class Test : IJsonRpcNotificationHandler<TestC>
+        public static async Task Main(string[] args)
         {
-
-            public Task<Unit> Handle(TestC request, CancellationToken cancellationToken)
-            {
-                throw new NotImplementedException();
-            }
-        }
-        public static async Task Main()
-        {
+            if (args.Length == 0) throw new ServerException("A workspace setup json must be provided.");
+            Server.Instance.SetupWorkspace(JSON.Parse<SetupWorkspaceRequest>(args[0]));
             var server = await CreateLanguageServer();
-            var x = server.Workspace;
-            server.AddHandler("asdf",new Test());
+            // var x = server.Workspace;
+            // server.AddHandler(SetupWorkspace, new WorkspaceSetupHandler());
+
+            // Util.Log("Parameter: " + args[0]);
+
             //TODO: Send SetupWorkspace from client to server
             // Stopwatch watch = Stopwatch.StartNew();
             // var response = await server.SendRequest<test, string>("custom/data", new test("asdf"));

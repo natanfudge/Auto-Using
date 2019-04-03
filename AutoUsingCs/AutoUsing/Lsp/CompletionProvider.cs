@@ -11,7 +11,9 @@ namespace AutoUsing.Lsp
     class CompletionProvider : ICompletionHandler
     {
         private CompletionCapability _capability;
-        private static Server server = new Server();
+        
+
+
         private readonly ILanguageServer _router;
         // private readonly FileManager _bufferManager;
         private readonly DocumentSelector _documentSelector = new DocumentSelector(
@@ -43,7 +45,7 @@ namespace AutoUsing.Lsp
         {
             // return new CompletionList(new CompletionItem{Label ="new version op"});
             // var result = await CompletionInstance.ProvideCompletionItems(request, server, _bufferManager);
-             var result = await CompletionInstance.ProvideCompletionItems(request, server);
+             var result = await CompletionInstance.ProvideCompletionItems(request, Server.Instance);
             return result;
         }
 

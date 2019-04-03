@@ -4,6 +4,7 @@
    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
    "version": "0.2.0",
    "configurations": [
+		 
         // {
         //     "name": "Launch C#",
         //     "type": "coreclr",
@@ -80,20 +81,7 @@
 			"request": "attach",
 			"processId": "${command:pickProcess}",
 			
-		},
-		// {
-		// 	"name": "Build Client",
-		// 	"type": "extensionHost",
-		// 	"request": "launch",
-		// 	"runtimeExecutable": "${execPath}",
-		// 	"args": [
-		// 		"--extensionDevelopmentPath=${workspaceFolder}"
-		// 	],
-		// 	"outFiles": [
-		// 		"${workspaceFolder}/out/**/*.js"
-		// 	],
-		// 	"preLaunchTask": "npm: compile",
-		// },
+		}
 		// {
 		// 	"name": "Build Client + Server",
 		// 	"type": "extensionHost",

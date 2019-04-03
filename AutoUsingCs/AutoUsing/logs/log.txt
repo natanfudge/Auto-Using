@@ -70,3 +70,4 @@
 3/30/2019 9:13:06 PM: Got request: 
 4/1/2019 6:57:11 PM: Got response: op response
 4/1/2019 6:58:53 PM: Got response: op responsetime = 22
+4/3/2019 6:10:41 PM: Parameter: {"extensionDir":"c:\\Users\\natan\\Desktop\\Auto-Using-Git","projects":["c:\\Users\\natan\\Desktop\\playground\\playground.csproj"],"workspaceStorageDir":"c:\\Users\\natan\\AppData\\Roaming\\Code\\User\\workspaceStorage\\44a45910d53bd355d10616cae3fed39d\\Fudge.auto-using"}

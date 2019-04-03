@@ -1,36 +1,56 @@
 import { workspace, Disposable, ExtensionContext } from 'vscode';
 import { LanguageClient, LanguageClientOptions, SettingMonitor, ServerOptions, TransportKind, InitializeParams } from 'vscode-languageclient';
 import { Trace } from 'vscode-jsonrpc';
+import { getAllProjectFiles } from './util';
 
 export function activate(context: ExtensionContext) {
 
-    console.log("adsfasdf!");
+    console.log("new!");
 
     // The server is implemented in node
     let serverExe = 'dotnet';
     const serverLocation = "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll";
 
+    var setup: SetupWorkspaceRequest = {
+        extensionDir: context.extensionPath,
+        projects: getAllProjectFiles(),
+        workspaceStorageDir: context.storagePath!
+    }
+    var message = JSON.stringify(setup);
     // If the extension is launched in debug mode then the debug server options are used
     // Otherwise the run options are used
     let serverOptions: ServerOptions = {
-        run: { command: serverExe, args: [serverLocation] },
-        debug: { command: serverExe, args: [serverLocation] }
+        run: { command: serverExe, args: [serverLocation, message] },
+        debug: { command: serverExe, args: [serverLocation, message] }
     }
 
-   
-//TODO: Send SetupWorkspace from client to server
+    interface SetupWorkspaceRequest {
+        projects: string[];
+        workspaceStorageDir: string;
+        extensionDir: string;
+
+    }
+
+    const setupWorkspace = "setupWorkspace";
+    //TODO: Send SetupWorkspace from client to server
     // Create the language client and start the client.
     const client = new LanguageClient('autousing', 'Auto-Using', serverOptions, {});
-    // client.onReady().then(() =>{
-    //     client.onRequest("custom/data",(reqargs) =>{
-    //         console.log("Got request with args " + reqargs);
-    //         return "op response";
-    //     });
-    //     client.onNotification("custom/data",(args) =>{
-    //         console.log("Got notif with args " + args);
-    //         return "op response";
-    //     });
-    // });
+    client.onReady().then(() => {
+
+
+        // console.log("Ready!");
+        // client.sendNotification(setupWorkspace, req);
+        // client.sendRequest(setupWorkspace, req);
+
+        client.onRequest("custom/data", (reqargs) => {
+            console.log("Got request with args " + reqargs);
+            return "op response";
+        });
+        client.onNotification("custom/data", (args) => {
+            console.log("Got notif with args " + args);
+            return "op response";
+        });
+    });
     client.trace = Trace.Verbose;
     let disposable = client.start();
 

@@ -437,17 +437,17 @@
         "version": "29a23dcaeeae886f1c94107b08fa8e330d3acac273971c50d9d05d8ca11cbd14",
         "signature": "29a23dcaeeae886f1c94107b08fa8e330d3acac273971c50d9d05d8ca11cbd14"
       },
+      "c:/users/natan/desktop/auto-using-git/src/util.ts": {
+        "version": "56fa9feeb7be937ce4a0ea3578a538a0542491fb336ff765342eefec29f4eaea",
+        "signature": "69efa27d55e5aa3758f68af5ac305151ee578e9b326061af7120f7350136f94d"
+      },
       "c:/users/natan/desktop/auto-using-git/src/extension.ts": {
-        "version": "1be76967398960b3f74a8d2d522c8d57d607ce4e24874cfcbaf32113ac843cc4",
+        "version": "88b6ad7cf7b413a517d0124d4d45d6e91a54e2c4289f7b78b35c0729ee870eb3",
         "signature": "5617674a847f5c427cbf79637e3ffc461f0ec58b227578ad7a0af197d004ebb4"
       },
       "c:/users/natan/desktop/auto-using-git/src/speedutil.ts": {
         "version": "abf58a9470019f9cfc6d73003af84b6f98a0974e341248bde005eb8564a05f78",
         "signature": "392a652c65607d49374951f2c3ce9016ab1fcac7c21cc9ef8f2258a87b7a60e5"
-      },
-      "c:/users/natan/desktop/auto-using-git/src/util.ts": {
-        "version": "56fa9feeb7be937ce4a0ea3578a538a0542491fb336ff765342eefec29f4eaea",
-        "signature": "69efa27d55e5aa3758f68af5ac305151ee578e9b326061af7120f7350136f94d"
       },
       "c:/users/natan/desktop/auto-using-git/src/server/autousingserver.ts": {
         "version": "d51bee41aafb4cf9a10dc9c35a45ad0057d6ca17bac986e3441be729fd76abf6",
@@ -1150,23 +1150,24 @@
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/util.d.ts",
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "c:/users/natan/desktop/auto-using-git/src/extension.ts": [
-        "c:/users/natan/desktop/auto-using-git/node_modules/vscode/vscode.d.ts",
-        "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/main.d.ts",
-        "c:/users/natan/desktop/auto-using-git/node_modules/vscode-jsonrpc/lib/main.d.ts",
-        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/util.d.ts",
-        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "c:/users/natan/desktop/auto-using-git/src/speedutil.ts": [
-        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/util.d.ts",
-        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "c:/users/natan/desktop/auto-using-git/src/util.ts": [
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/path.d.ts",
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/fs.d.ts",
         "c:/users/natan/desktop/auto-using-git/node_modules/vscode/vscode.d.ts",
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/child_process.d.ts",
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/os.d.ts",
+        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/util.d.ts",
+        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/natan/desktop/auto-using-git/src/extension.ts": [
+        "c:/users/natan/desktop/auto-using-git/node_modules/vscode/vscode.d.ts",
+        "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/main.d.ts",
+        "c:/users/natan/desktop/auto-using-git/node_modules/vscode-jsonrpc/lib/main.d.ts",
+        "c:/users/natan/desktop/auto-using-git/src/util.ts",
+        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/util.d.ts",
+        "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/natan/desktop/auto-using-git/src/speedutil.ts": [
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/util.d.ts",
         "c:/users/natan/desktop/auto-using-git/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1955,8 +1956,9 @@
       "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/protocolconverter.d.ts",
       "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/client.d.ts",
       "c:/users/natan/desktop/auto-using-git/node_modules/vscode-languageclient/lib/main.d.ts",
-      "c:/users/natan/desktop/auto-using-git/src/speedutil.ts",
       "c:/users/natan/desktop/auto-using-git/src/util.ts",
+      "c:/users/natan/desktop/auto-using-git/src/extension.ts",
+      "c:/users/natan/desktop/auto-using-git/src/speedutil.ts",
       "c:/users/natan/desktop/auto-using-git/src/server/autousingserver.ts",
       "c:/users/natan/desktop/auto-using-git/src/server/errors.ts",
       "c:/users/natan/desktop/auto-using-git/src/server/eventstream.ts",
@@ -1972,8 +1974,7 @@
       "c:/users/natan/desktop/auto-using-git/src/test/server/errorresponses.test.ts",
       "c:/users/natan/desktop/auto-using-git/src/test/server/postaddrequests.test.ts",
       "c:/users/natan/desktop/auto-using-git/src/test/server/responses.test.ts",
-      "c:/users/natan/desktop/auto-using-git/node_modules/@types/mocha/index.d.ts",
-      "c:/users/natan/desktop/auto-using-git/src/extension.ts"
+      "c:/users/natan/desktop/auto-using-git/node_modules/@types/mocha/index.d.ts"
     ]
   },
   "version": "3.4.1"

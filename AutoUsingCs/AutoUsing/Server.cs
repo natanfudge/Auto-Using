@@ -19,6 +19,7 @@ namespace AutoUsing
     /// </summary>
     public class Server
     {
+        public static Server Instance = new Server();
         // public IOProxy Proxy = new IOProxy();
         private List<Project> Projects = new List<Project>();
 
