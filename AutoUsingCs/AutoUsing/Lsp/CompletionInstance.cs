@@ -219,7 +219,7 @@ namespace AutoUsing.Lsp
                 var thereIsOnlyOneClassWithThatName = completion.Namespaces.Count == 1;
 
                 // We instantly put the using statement only if there is only one option
-                var usingStatementEdit = thereIsOnlyOneClassWithThatName ? new List<TextEdit> { usingEdit(completion.Namespaces[0]) } : null;
+                var usingStatementEdit = thereIsOnlyOneClassWithThatName ? new List<TextEdit> { UsingEdit(completion.Namespaces[0]) } : null;
 
                 var arr = new List<TypeCompletion> { completion };
                 var commandArgs = JArray.FromObject(arr);
@@ -247,7 +247,10 @@ namespace AutoUsing.Lsp
         const string HANDLE_COMPLETION = "HandleCompletion";
 
         //TODO: this might not be right...
-        readonly Func<string, TextEdit> usingEdit = (string @namespace) => new TextEdit { Range = new Range(new Position(0, 0), new Position(0, 1)), NewText = $"using {@namespace};\n" };
+        private TextEdit UsingEdit(string @namespace)
+        {
+            return new TextEdit { Range = new Range(new Position(0, 0), new Position(0, 1)), NewText = $"using {@namespace};\n" };
+        }
 
         /// <summary>
         /// Removes all namespaces that already have a using statement

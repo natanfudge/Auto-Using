@@ -28,7 +28,6 @@
 //         await activateExtension();
 //         //@ts-ignore
 //         context = testHelper.context;
-//         //TODO replace null with a server instance
 //         //@ts-ignore
 //         helper = new DirectCompletionTestHelper(new CompletionProvider(context,testHelper.server));
 
