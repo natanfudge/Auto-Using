@@ -1,45 +1,46 @@
-// import * as vscode from "vscode";
-// import { openTest } from "./testUtil";
-// import { SORT_CHEAT } from "../Constants";
+import * as vscode from "vscode";
+import { openTest } from "./testUtil";
 
-// export class DirectCompletionTestHelper {
-//     constructor(private completionProvider: vscode.CompletionItemProvider) { }
-//     public async  directlyComplete(testName: string, line: number, character: number): Promise<string[]> {
-//         let completions = (await this.directlyCompleteWithData(testName, line, character))[0];
-//         return completions.map(item => removeCheat(item.label));
-//     }
+const SORT_CHEAT = "\u200B";
 
-//     public async  directlyCompleteWithData(testName: string, line: number, character: number):
-//      Promise<[vscode.CompletionItem[], vscode.TextDocument]> {
-//         let doc = await openTest(testName);
-//         let pos = new vscode.Position(line, character);
-//         let token = new vscode.CancellationTokenSource().token;
-//         let completionContext: vscode.CompletionContext = { triggerCharacter: ".", triggerKind: vscode.CompletionTriggerKind.Invoke };
-//         let completions = await this.completionProvider.provideCompletionItems(doc, pos, token, completionContext) as vscode.CompletionItem[];
+export class DirectCompletionTestHelper {
+    constructor(private completionProvider: vscode.CompletionItemProvider) { }
+    public async  directlyComplete(testName: string, line: number, character: number): Promise<string[]> {
+        let completions = (await this.directlyCompleteWithData(testName, line, character))[0];
+        return completions.map(item => removeCheat(item.label));
+    }
 
-//         return [completions, doc];
-//     }
-// }
+    public async  directlyCompleteWithData(testName: string, line: number, character: number):
+        Promise<[vscode.CompletionItem[], vscode.TextDocument]> {
+        let doc = await openTest(testName);
+        let pos = new vscode.Position(line, character);
+        let token = new vscode.CancellationTokenSource().token;
+        let completionContext: vscode.CompletionContext = { triggerCharacter: ".", triggerKind: vscode.CompletionTriggerKind.Invoke };
+        let completions = await this.completionProvider.provideCompletionItems(doc, pos, token, completionContext) as vscode.CompletionItem[];
+
+        return [completions, doc];
+    }
+}
 
 
 
-// export function removeCheat(label: string) {
-//     return label.replace(SORT_CHEAT, "");
-// }
+export function removeCheat(label: string) {
+    return label.replace(SORT_CHEAT, "");
+}
 
-// /**
-//  * The line and character start with an index of 0. 
-//  */
-// export async function complete(testName: string, line: number, character: number): Promise<string[]> {
-//     return (await completeWithData(testName, line, character))[0].items.map(item => removeCheat(item.label));
-// }
+/**
+ * The line and character start with an index of 0. 
+ */
+export async function complete(testName: string, line: number, character: number): Promise<string[]> {
+    return (await completeWithData(testName, line, character))[0].items.map(item => removeCheat(item.label));
+}
 
-// export async function completeWithData(testName: string, line: number, character: number): Promise<[vscode.CompletionList, vscode.TextDocument]> {
-//     let doc = await openTest(testName);
-//     let completions = (await vscode.commands.executeCommand("vscode.executeCompletionItemProvider",
-//         doc.uri, new vscode.Position(line, character), "."));
+export async function completeWithData(testName: string, line: number, character: number): Promise<[vscode.CompletionList, vscode.TextDocument]> {
+    let doc = await openTest(testName);
+    let completions = (await vscode.commands.executeCommand("vscode.executeCompletionItemProvider",
+        doc.uri, new vscode.Position(line, character), "."));
 
-//     let char = doc.getText(new vscode.Range(new vscode.Position(line, character), new vscode.Position(line, character + 1)));
+    let char = doc.getText(new vscode.Range(new vscode.Position(line, character), new vscode.Position(line, character + 1)));
 
-//     return [<vscode.CompletionList>completions, doc];
-// }
+    return [<vscode.CompletionList>completions, doc];
+}

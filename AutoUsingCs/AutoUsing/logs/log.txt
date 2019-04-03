@@ -71,3 +71,54 @@
 4/1/2019 6:57:11 PM: Got response: op response
 4/1/2019 6:58:53 PM: Got response: op responsetime = 22
 4/3/2019 6:10:41 PM: Parameter: {"extensionDir":"c:\\Users\\natan\\Desktop\\Auto-Using-Git","projects":["c:\\Users\\natan\\Desktop\\playground\\playground.csproj"],"workspaceStorageDir":"c:\\Users\\natan\\AppData\\Roaming\\Code\\User\\workspaceStorage\\44a45910d53bd355d10616cae3fed39d\\Fudge.auto-using"}
+4/3/2019 8:35:59 PM: Handling completion request.
+4/3/2019 8:35:59 PM: Word to complete = Fil
+4/3/2019 8:36:18 PM: Handling completion request.
+4/3/2019 8:36:18 PM: Word to complete = Fil
+4/3/2019 8:36:19 PM: Handling completion request.
+4/3/2019 8:36:19 PM: Word to complete = 
+4/3/2019 8:36:19 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 8:36:19 PM: Handling completion request.
+4/3/2019 8:36:19 PM: Handling completion request.
+4/3/2019 8:36:19 PM: Word to complete = IEnu
+4/3/2019 8:36:19 PM: Handling completion request.
+4/3/2019 8:36:19 PM: Word to complete = JSON
+4/3/2019 8:36:19 PM: Handling completion request.
+4/3/2019 8:36:19 PM: Word to complete = Midi
+4/3/2019 8:36:20 PM: Handling completion request.
+4/3/2019 8:36:20 PM: Handling completion request.
+4/3/2019 8:36:20 PM: Word to complete = Fi
+4/3/2019 8:36:20 PM: Handling completion request.
+4/3/2019 8:36:20 PM: Word to complete = Ien
+4/3/2019 8:38:02 PM: Handling completion request.
+4/3/2019 8:39:32 PM: Handling completion request.
+4/3/2019 8:39:59 PM: Handling completion request.
+4/3/2019 8:43:49 PM: Handling completion request.
+4/3/2019 8:43:52 PM: Handling completion request.
+4/3/2019 8:44:11 PM: Handling completion request.
+4/3/2019 8:44:19 PM: Handling completion request.
+4/3/2019 8:45:03 PM: Handling completion request.
+4/3/2019 8:46:01 PM: Handling completion request.
+4/3/2019 8:46:01 PM: Word to complete = 
+4/3/2019 8:46:02 PM: Handling completion request.
+4/3/2019 8:46:02 PM: Word to complete = 
+4/3/2019 8:46:03 PM: Handling completion request.
+4/3/2019 8:46:03 PM: Word to complete = 
+4/3/2019 8:46:28 PM: Handling completion request.
+4/3/2019 8:46:28 PM: Word to complete = Fil
+4/3/2019 8:46:28 PM: Handling completion request.
+4/3/2019 8:46:28 PM: Word to complete = 
+4/3/2019 8:46:28 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 8:46:28 PM: Handling completion request.
+4/3/2019 8:46:28 PM: Handling completion request.
+4/3/2019 8:46:28 PM: Word to complete = IEnu
+4/3/2019 8:46:29 PM: Handling completion request.
+4/3/2019 8:46:29 PM: Word to complete = JSON
+4/3/2019 8:46:29 PM: Handling completion request.
+4/3/2019 8:46:29 PM: Word to complete = Midi
+4/3/2019 8:46:29 PM: Handling completion request.
+4/3/2019 8:46:29 PM: Word to complete = 
+4/3/2019 8:46:29 PM: Handling completion request.
+4/3/2019 8:46:29 PM: Word to complete = Fi
+4/3/2019 8:46:29 PM: Handling completion request.
+4/3/2019 8:46:29 PM: Word to complete = Ien

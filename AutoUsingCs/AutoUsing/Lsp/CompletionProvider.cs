@@ -1,3 +1,4 @@
+using System.IO;
 
 using System.Collections.Generic;
 using System.Threading;
@@ -5,6 +6,7 @@ using System.Threading.Tasks;
 using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 using OmniSharp.Extensions.LanguageServer.Protocol.Server;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Lsp
 {
@@ -43,6 +45,7 @@ namespace AutoUsing.Lsp
 
         public async Task<CompletionList> Handle(CompletionParams request, CancellationToken cancellationToken)
         {
+            Util.Log("Handling completion request.");
             // return new CompletionList(new CompletionItem{Label ="new version op"});
             // var result = await CompletionInstance.ProvideCompletionItems(request, server, _bufferManager);
              var result = await CompletionInstance.ProvideCompletionItems(request, Server.Instance);

@@ -40,7 +40,7 @@ namespace AutoUsing.Lsp
                 return true;
             });
 
-            return word.ToString();
+            return word.ToString().ReverseToString();
 
             // if (completionPosition.Character == 0) return "";
             // return document.GetWordAtPosition(GetPrev(completionPosition));
@@ -74,7 +74,7 @@ namespace AutoUsing.Lsp
             currentPos = this.WalkBackWhile(currentPos, this.ShouldKeepSearchingForCompletionIdentifier);
             if (this.GetChar(currentPos) == ".") return CompletionType.EXTENSION;
 
-            var wordRegex = new Regex(@"([^\s]+)");
+            // var wordRegex = new Regex(@"([^\s]+)");
 
             //TODO: double check this is right
             var wordBefore = this.document.GetWordAtPosition(currentPos);

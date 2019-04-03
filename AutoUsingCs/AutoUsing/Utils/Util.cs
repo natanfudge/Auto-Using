@@ -132,11 +132,16 @@ namespace AutoUsing.Utils
 
 
         public static string LastChar(this string str){
+            if(str == "") return "";
             return str[str.Length - 1].ToString();
         }
 
         public static bool IsOrigin(this Position pos){
             return pos.Character == 0 && pos.Line == 0;
+        }
+
+        public static string ReverseToString(this string str){
+            return string.Concat(str.Reverse());
         }
 
 

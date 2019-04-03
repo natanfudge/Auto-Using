@@ -33,6 +33,8 @@ namespace AutoUsing.Lsp
         {
             var completionType = this.DocumentWalker.GetCompletionType(request.Position);
 
+            Util.Log("Word to complete = " + WordToComplete);
+
 
             if (completionType == CompletionType.NONE)
             {

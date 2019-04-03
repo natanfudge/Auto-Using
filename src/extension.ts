@@ -3,9 +3,18 @@ import { LanguageClient, LanguageClientOptions, SettingMonitor, ServerOptions, T
 import { Trace } from 'vscode-jsonrpc';
 import { getAllProjectFiles } from './util';
 
+export class TestHelper {
+
+    constructor(private client: LanguageClient, private started : boolean = false) { }
+}
+
+
+
+export let testHelper: TestHelper;
+
 export function activate(context: ExtensionContext) {
 
-    console.log("new!");
+    // console.log("new!");
 
     // The server is implemented in node
     let serverExe = 'dotnet';
@@ -35,7 +44,10 @@ export function activate(context: ExtensionContext) {
     //TODO: Send SetupWorkspace from client to server
     // Create the language client and start the client.
     const client = new LanguageClient('autousing', 'Auto-Using', serverOptions, {});
+    testHelper = new TestHelper(client);
     client.onReady().then(() => {
+        //@ts-ignore
+        testHelper.started = true;
 
 
         // console.log("Ready!");
