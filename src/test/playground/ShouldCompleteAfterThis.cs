@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace assets
 {
     public static class ShouldCompleteAfterThis
@@ -5,6 +7,8 @@ namespace assets
            
 
         public static void x(this Ien list){
+            IEnumerable<string> x;
+            
 
         }
     }

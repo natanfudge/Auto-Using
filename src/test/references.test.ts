@@ -66,7 +66,7 @@ suite(`CompletionProvider Types Tests`, () => {
 
     })
 
-    // TODO: Test types after the 'this' keyword, it doesn't seem to be working.
+    // TODO: test the completion adding the using expression.
 
 
 

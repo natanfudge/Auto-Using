@@ -122,3 +122,101 @@
 4/3/2019 8:46:29 PM: Word to complete = Fi
 4/3/2019 8:46:29 PM: Handling completion request.
 4/3/2019 8:46:29 PM: Word to complete = Ien
+4/3/2019 9:14:47 PM: Handling completion request.
+4/3/2019 9:20:07 PM: Word to complete = Ien
+4/3/2019 9:20:33 PM: Handling completion request.
+4/3/2019 9:23:07 PM: Word to complete = Ien
+4/3/2019 9:23:56 PM: Handling completion request.
+4/3/2019 9:23:56 PM: Word to complete = Ien
+4/3/2019 9:24:01 PM: Handling completion request.
+4/3/2019 9:24:01 PM: Word to complete = Ien
+4/3/2019 9:24:07 PM: Handling completion request.
+4/3/2019 9:24:07 PM: Word to complete = 
+4/3/2019 9:24:11 PM: Handling completion request.
+4/3/2019 9:24:11 PM: Word to complete = Ien
+4/3/2019 9:24:13 PM: Handling completion request.
+4/3/2019 9:24:13 PM: Word to complete = Ien
+4/3/2019 9:24:18 PM: Handling completion request.
+4/3/2019 9:24:18 PM: Word to complete = Ien
+4/3/2019 9:24:42 PM: Handling completion request.
+4/3/2019 9:24:42 PM: Word to complete = Fil
+4/3/2019 9:24:42 PM: Handling completion request.
+4/3/2019 9:24:42 PM: Word to complete = 
+4/3/2019 9:24:42 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:24:43 PM: Handling completion request.
+4/3/2019 9:24:43 PM: Handling completion request.
+4/3/2019 9:24:43 PM: Word to complete = IEnu
+4/3/2019 9:24:43 PM: Handling completion request.
+4/3/2019 9:24:43 PM: Word to complete = JSON
+4/3/2019 9:24:44 PM: Handling completion request.
+4/3/2019 9:24:44 PM: Word to complete = Midi
+4/3/2019 9:24:44 PM: Handling completion request.
+4/3/2019 9:24:44 PM: Word to complete = 
+4/3/2019 9:24:44 PM: Handling completion request.
+4/3/2019 9:24:44 PM: Word to complete = Fi
+4/3/2019 9:24:44 PM: Handling completion request.
+4/3/2019 9:24:44 PM: Word to complete = Ien
+4/3/2019 9:26:49 PM: Handling completion request.
+4/3/2019 9:26:49 PM: Word to complete = 
+4/3/2019 9:26:49 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:52 PM: Handling completion request.
+4/3/2019 9:26:52 PM: Word to complete = 
+4/3/2019 9:26:52 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:52 PM: Handling completion request.
+4/3/2019 9:26:52 PM: Word to complete = 
+4/3/2019 9:26:52 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:52 PM: Handling completion request.
+4/3/2019 9:26:52 PM: Word to complete = 
+4/3/2019 9:26:52 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:52 PM: Handling completion request.
+4/3/2019 9:26:52 PM: Word to complete = 
+4/3/2019 9:26:52 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:53 PM: Handling completion request.
+4/3/2019 9:26:53 PM: Word to complete = 
+4/3/2019 9:26:53 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:53 PM: Handling completion request.
+4/3/2019 9:26:53 PM: Word to complete = 
+4/3/2019 9:26:53 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:53 PM: Handling completion request.
+4/3/2019 9:26:53 PM: Word to complete = 
+4/3/2019 9:26:53 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:53 PM: Handling completion request.
+4/3/2019 9:26:53 PM: Word to complete = 
+4/3/2019 9:26:53 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:53 PM: Handling completion request.
+4/3/2019 9:26:53 PM: Word to complete = 
+4/3/2019 9:26:53 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:54 PM: Handling completion request.
+4/3/2019 9:26:54 PM: Word to complete = sel
+4/3/2019 9:26:54 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:26:54 PM: Handling completion request.
+4/3/2019 9:26:54 PM: Word to complete = val
+4/3/2019 9:26:54 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/3/2019 9:27:17 PM: Handling completion request.
+4/3/2019 9:27:17 PM: Word to complete = I
+4/3/2019 9:27:23 PM: Handling completion request.
+4/3/2019 9:27:23 PM: Word to complete = Ie
+4/3/2019 9:27:23 PM: Handling completion request.
+4/3/2019 9:27:23 PM: Word to complete = Ien
+4/3/2019 9:27:27 PM: Handling completion request.
+4/3/2019 9:27:27 PM: Word to complete = x
+4/3/2019 9:27:35 PM: Handling completion request.
+4/3/2019 9:27:35 PM: Word to complete = I
+4/3/2019 9:27:36 PM: Handling completion request.
+4/3/2019 9:27:36 PM: Word to complete = Ie
+4/3/2019 9:27:36 PM: Handling completion request.
+4/3/2019 9:27:36 PM: Word to complete = Ien
+4/3/2019 9:28:30 PM: Handling completion request.
+4/3/2019 9:28:30 PM: Word to complete = IEnumerable
+4/3/2019 9:28:45 PM: Handling completion request.
+4/3/2019 9:28:45 PM: Word to complete = s
+4/3/2019 9:28:46 PM: Handling completion request.
+4/3/2019 9:28:46 PM: Word to complete = st
+4/3/2019 9:28:46 PM: Handling completion request.
+4/3/2019 9:28:46 PM: Word to complete = strin
+4/3/2019 9:28:47 PM: Handling completion request.
+4/3/2019 9:28:47 PM: Word to complete = x
+4/3/2019 9:28:53 PM: Handling completion request.
+4/3/2019 9:28:53 PM: Word to complete = x
+4/3/2019 9:29:01 PM: Handling completion request.
+4/3/2019 9:29:01 PM: Word to complete = x

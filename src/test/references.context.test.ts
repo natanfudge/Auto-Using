@@ -18,7 +18,7 @@
 // // Defines a Mocha test suite to group tests of similar kind together
 // suite("CompletionProvider Type Context Tests",  ()=> {
 
-    
+    //TODO: restore these tests in the server side
 
 //     let context: vscode.ExtensionContext;
 //     let helper: DirectCompletionTestHelper;

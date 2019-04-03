@@ -31,8 +31,20 @@ namespace AutoUsing.Lsp
         /// </summary>
         public string GetWordToComplete(Position completionPosition)
         {
-            var word = new StringBuilder();
-            WalkBackWhile(GetPrev(completionPosition), (c) =>
+            return ParseWordBefore(completionPosition);
+
+            // if (completionPosition.Character == 0) return "";
+            // return document.GetWordAtPosition(GetPrev(completionPosition));
+        }
+
+        /// <summary>
+        /// Returns the word before a certain position.  Considers stuff like brackets and semicolons as not part of words.
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <returns></returns>
+        public string ParseWordBefore(Position pos){
+             var word = new StringBuilder();
+            WalkBackWhile(GetPrev(pos), (c) =>
             {
                 // Once we hit something like a space or a semicolon it means the word has ended.
                 if (string.IsNullOrWhiteSpace(c) || c == "." || Constants.SyntaxChars.Contains(c)) return false;
@@ -41,9 +53,6 @@ namespace AutoUsing.Lsp
             });
 
             return word.ToString().ReverseToString();
-
-            // if (completionPosition.Character == 0) return "";
-            // return document.GetWordAtPosition(GetPrev(completionPosition));
         }
 
         /// <summary>
@@ -76,14 +85,19 @@ namespace AutoUsing.Lsp
 
             // var wordRegex = new Regex(@"([^\s]+)");
 
-            //TODO: double check this is right
-            var wordBefore = this.document.GetWordAtPosition(currentPos);
+            // Take a step forwards to make it right before the previous word
+            currentPos = new Position(currentPos.Line,currentPos.Character + 1);
+            var wordBefore = ParseWordBefore(currentPos);
             var lastCharOfWordBefore = wordBefore.LastChar();
 
             if (Constants.SyntaxChars.Contains(lastCharOfWordBefore)) return CompletionType.TYPE;
             else if (Constants.ShowSuggestFor.Contains(wordBefore)) return CompletionType.TYPE;
             return CompletionType.NONE;
         }
+
+        // private bool ShouldShowSuggestFor(string word){
+        //     var bracketPos = wor
+        // }
 
 
         /// <summary>
