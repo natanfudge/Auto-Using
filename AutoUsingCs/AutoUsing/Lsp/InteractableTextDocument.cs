@@ -27,9 +27,11 @@ namespace AutoUsing.Lsp
         // }
         public string GetWordAtPosition(Position pos)
         {
-            // var absolutePos = GetAbsolutePosition(pos);
+
             var line = pos.Line;
             var text = TextLines[line];
+            // text == "" can cause an out of bounds exception
+            if (text == "") return "";
 
             var wordStart = new StringBuilder();
             var wordEnd = new StringBuilder();
@@ -51,7 +53,7 @@ namespace AutoUsing.Lsp
         {
             if (pos.Character == 0)
             {
-                if (pos.Line == 0) throw new IndexOutOfRangeException("There is position before (0,0).");
+                if (pos.Line == 0) throw new IndexOutOfRangeException("Attempt to get the position before (0,0).");
                 else
                 {
                     var prevLine = pos.Line - 1;

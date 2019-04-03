@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
+using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 
 namespace AutoUsing.Utils
 {
@@ -126,13 +127,16 @@ namespace AutoUsing.Utils
         /// <param name="filename"></param>
         public static void WaitForFileToBeAccessible(string filename)
         {
-
             while (!FileIsAccessible(filename)) ;
         }
 
 
         public static string LastChar(this string str){
             return str[str.Length - 1].ToString();
+        }
+
+        public static bool IsOrigin(this Position pos){
+            return pos.Character == 0 && pos.Line == 0;
         }
 
 

@@ -38,6 +38,7 @@ namespace AutoUsing.Lsp
         /// CompletionType.EXTENSION if the extension methods of a type should show, and CompletionType.NONE if no completions should appear.</returns>
         public CompletionType GetCompletionType(Position completionPos)
         {
+            if(completionPos.IsOrigin()) return CompletionType.NONE;
             var currentPos = this.GetPrev(completionPos);
 
             var currentChar = this.GetChar(currentPos);
