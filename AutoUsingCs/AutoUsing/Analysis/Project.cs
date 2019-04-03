@@ -19,7 +19,7 @@ namespace AutoUsing.Analysis
     public class Project : IDisposable
     {
         private XmlDocument Document { get; set; }
-        //TODO: explain the purpose of this variable
+        //TODO: explain the purpose of this field
         private XmlNamespaceManager NamespaceManager { get; set; }
         private FileWatcher FileWatcher { get; set; }
 
