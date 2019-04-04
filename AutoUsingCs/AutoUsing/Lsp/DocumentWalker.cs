@@ -291,7 +291,7 @@ namespace AutoUsing.Lsp
         private async Task<string> GetHoverString(Position position)
         {
             var request = new HoverRequest { Pos = position, FilePath = Document.Path };
-            string response = await Server.SendRequest<HoverRequest, string>(HoverRequestCommand, request);
+            string response = await Server.SendRequest<HoverRequest, string>(SharedConstants.HoverRequestCommand, request);
             return response;
             // // Get the hover info of the variable from the C# extension
             // var hover = await this.GetHover(position);
@@ -312,13 +312,13 @@ namespace AutoUsing.Lsp
         private async Task<List<Hover>> GetHover(Position position)
         {
             var request = new HoverRequest { Pos = position, FilePath = Document.Path };
-            List<Hover> response = await Server.SendRequest<HoverRequest, List<Hover>>(HoverRequestCommand, request);
+            List<Hover> response = await Server.SendRequest<HoverRequest, List<Hover>>(SharedConstants.HoverRequestCommand, request);
             return response;
             // return new List<Hover>();
             // return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
         }
 
-        private const string HoverRequestCommand = "custom/hoverRequest";
+        
 
         private class HoverRequest : IRequest
         {

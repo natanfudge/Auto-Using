@@ -1,4 +1,4 @@
-import { workspace, Disposable, ExtensionContext, Position, Hover, commands, TextDocument, Uri } from 'vscode';
+import { workspace, Disposable, ExtensionContext, Position, Hover, commands, TextDocument, Uri, window } from 'vscode';
 import { LanguageClient, LanguageClientOptions, SettingMonitor, ServerOptions, TransportKind, InitializeParams } from 'vscode-languageclient';
 import { Trace } from 'vscode-jsonrpc';
 import { getAllProjectFiles } from './util';
@@ -20,20 +20,44 @@ interface HoverRequest {
     pos: Position;
     filePath: string;
 }
+interface Completion {
+    Name: string;
+    Namespaces: string[];
+}
 
 const hoverRequest = "custom/hoverRequest";
 const serverExe = 'dotnet';
 const serverLocation = "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll";
-
+const HANDLE_COMPLETION = "handleCompletion";
+export const SORT_CHEAT = "\u200B";
 export let testHelper: TestHelper;
 
 let client: LanguageClient;
 
 export function activate(context: ExtensionContext) {
 
-    // console.log("new!");
+    let commandDisposable = commands.registerCommand(HANDLE_COMPLETION, async (completion: Completion) => {
+        if (completion.Namespaces.length > 1) {
 
-    // The server is implemented in node
+            let completions = getStoredCompletions(context);
+
+
+            let namespacesSorted = await Promise.all(completion.Namespaces.sort((n1, n2) => {
+                let firstPrio = completionCommon(new StoredCompletion(completion.Name, n1), completions);
+                let secondPrio = completionCommon(new StoredCompletion(completion.Name, n2), completions);
+
+                if (firstPrio && !secondPrio) return -1;
+                if (!firstPrio && secondPrio) return 1;
+                return n1.localeCompare(n2);
+
+            }));
+
+
+            window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, completion));
+        } else {
+            storeCompletion(context, new StoredCompletion(completion.Name, completion.Namespaces[0]));
+        }
+    });
 
     var setup: SetupWorkspaceRequest = {
         extensionDir: context.extensionPath,
@@ -89,7 +113,7 @@ export function activate(context: ExtensionContext) {
             let pos: Position = new Position(request.pos.line, request.pos.character);
             let uri = Uri.file(request.filePath);
             // let command = await commands.executeCommand("vscode.executeHoverProvider", uri, pos);
-            let result = await getHoverString(uri,pos);
+            let result = await getHoverString(uri, pos);
             return result;
             // return "op response";
         });
@@ -99,31 +123,115 @@ export function activate(context: ExtensionContext) {
         });
     });
     client.trace = Trace.Verbose;
-    let disposable = client.start();
+    let clientDisposable = client.start();
 
     // Push the disposable to the context's subscriptions so that the
     // client can be deactivated on extension deactivation
-    context.subscriptions.push(disposable);
+    context.subscriptions.push(clientDisposable,commandDisposable);
 }
 
 export function deactivate(): Thenable<void> {
-    // let x : Thenable<void> = () => {};
-
     if (!client) {
         return new Promise(() => undefined);
     }
     return client.stop();
 }
 
+/**
+ * Returns whether or not a completion is included in the list of common completions that are stored. 
+ */
+export function completionCommon(completion: StoredCompletion, completions: StoredCompletion[]): boolean {
+    return completions.some(c => c.label === completion.label && c.namespace === completion.namespace);
+}
 
-async function getHoverString(uri : Uri,position: Position): Promise<string | undefined> {
+/**
+ * Retrieve from the disk the list of common completions
+ */
+function getStoredCompletions(context: ExtensionContext): StoredCompletion[] {
+    let dir = CommonCompletionDirectory(context);
+    let file = CommonCompletionLocation(context);
+    if (storageInvalid(file, dir)) return [];
+
+    var text = readFileSync(file).toString();
+    // Text should never be empty. 
+    if (text == "") {
+        InitializeStorage(file);
+        return [];
+    }
+
+    return JSON.parse(text);
+}
+
+/**
+ * Adds the completion to the list of common completions in the disk
+ */
+function storeCompletion(context: ExtensionContext, completion: StoredCompletion) {
+    let existingStorage = getStoredCompletions(context);
+    existingStorage.push(completion);
+    let file = CommonCompletionLocation(context);
+    writeFile(file, JSON.stringify(existingStorage), () => null);
+
+
+}
+
+/**
+ * Checks if the required files for the completions exist in the system. If not, it creates them and return false.
+ */
+function storageInvalid(file: string, dir: string): boolean {
+    if (!existsSync(dir)) {
+        mkdirSync(dir);
+        InitializeStorage(file);
+        return true;
+    }
+    else if (!existsSync(file)) {
+        InitializeStorage(file);
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Inserts a using expression at the start of the document in the active text editor
+ */
+function addUsing(pick: string | undefined, context: ExtensionContext, completion: Completion): void {
+    if (typeof pick === "undefined") return;
+    // Remove invisible unicode char
+    if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
+
+    storeCompletion(context, new StoredCompletion(completion.Name, pick));
+
+    let editBuilder = (textEdit: any) => {
+        textEdit.insert(new Position(0, 0), `using ${pick};\n`);
+    };
+
+    window.activeTextEditor!.edit(editBuilder);
+}
+
+function InitializeStorage(location: string): void {
+    writeFileSync(location, "[]");
+}
+
+import path = require('path');
+import { existsSync, mkdirSync, writeFileSync, readFileSync, writeFile } from 'fs';
+const CommonCompletionLocation = (context: ExtensionContext) => path.join(CommonCompletionDirectory(context), "commonCompletions.json");
+const CommonCompletionDirectory = (context: ExtensionContext) => path.join(context.globalStoragePath!, "completions");
+
+
+/**
+ * Gets the string that is in the hover result provided by the C# extension in a given position and file uri.
+ */
+async function getHoverString(uri: Uri, position: Position): Promise<string | undefined> {
     // Get the hover info of the variable from the C# extension
-    let hover = <Hover[]>(await commands.executeCommand("vscode.executeHoverProvider",uri, position));
+    let hover = <Hover[]>(await commands.executeCommand("vscode.executeHoverProvider", uri, position));
     if (hover.length === 0) return undefined;
 
     return (<{ language: string; value: string }>hover[0].contents[1]).value;
 
+}
 
+export class StoredCompletion {
+    constructor(public label: string, public namespace: string) { }
 }
 
 // 'use strict';

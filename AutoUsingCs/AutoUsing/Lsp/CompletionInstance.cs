@@ -29,7 +29,6 @@ namespace AutoUsing.Lsp
             return await completionInstance.provideCompletionItems(request);
         }
 
-        //FIXME: Extension methods don't show immieditialy after typing "."
         public async Task<CompletionList> provideCompletionItems(CompletionParams request)
         {
             var completionType = this.DocumentWalker.GetCompletionType(request.Position);
@@ -160,12 +159,12 @@ namespace AutoUsing.Lsp
 
             if (extendedClassHierarchy.Namespaces.Count == 1)
             {
-                var baseclasses = extendedClassHierarchy.Namespaces[0].Parents;
+                IEnumerable<string> baseclasses = extendedClassHierarchy.Namespaces[0].Parents;
                 // Add the class itself to the list of classes that we will get extension methods for.
                 var classItselfStr = extendedClassHierarchy.Namespaces[0].Namespace + "." + callerType.Class;
                 // Remove generic marker '<>'
                 if (classItselfStr[classItselfStr.Length - 1] == '>') classItselfStr = classItselfStr.Substring(0, classItselfStr.Length - 2);
-                baseclasses.Add(classItselfStr);
+                baseclasses =  baseclasses.Append(classItselfStr);
 
 
                 var result = this.FindExtensionMethodsOfClasses(baseclasses);
@@ -200,6 +199,7 @@ namespace AutoUsing.Lsp
         /// <param name="usings">A list of the using directive in the file. All already imported namespaces will be removed from the array.</param>
         private CompletionList completionDataToVscodeCompletions(IEnumerable<TypeCompletion> completions, string[] usings)
         {
+            // var count = completions.Count();
             completions = filterOutAlreadyUsing(completions, usings);
             var totalCompletionAmount = completions.Count();
             var completionAmount = Math.Min(totalCompletionAmount, MaxCompletionAmount);
@@ -213,7 +213,7 @@ namespace AutoUsing.Lsp
             var commonNames = storedCommonCompletions.Select(completion => completion.Label);
 
             // var vscodeCompletions = new List<CompletionItem>(completionAmount);
-
+            // var count2 = completions.Count();
 
             var vscodeCompletions = completions.Select(completion =>
             {
@@ -231,14 +231,14 @@ namespace AutoUsing.Lsp
 
                 var vscodeCompletion = new CompletionItem
                 {
-                    Label = isCommon ? name : Constants.SORT_CHEAT + name,
+                    Label = isCommon ? name : SharedConstants.SORT_CHEAT + name,
                     InsertText = name,
                     FilterText = name,
                     Kind = CompletionItemKind.Reference,
                     // AdditionalTextEdits = usingStatementEdit,
                     CommitCharacters = new List<string> { "." },
                     Detail = string.Join("\n", completion.Namespaces),
-                    Command = new Command { Name = HANDLE_COMPLETION, Arguments = commandArgs, Title = "handles completion" }
+                    Command = new Command { Name = SharedConstants.HANDLE_COMPLETION, Arguments = commandArgs, Title = "handles completion" }
                 };
                 if (usingStatementEdit != null) vscodeCompletion.AdditionalTextEdits = usingStatementEdit;
                 return vscodeCompletion;
@@ -249,7 +249,7 @@ namespace AutoUsing.Lsp
 
         }
 
-        const string HANDLE_COMPLETION = "HandleCompletion";
+        
 
         //TODO: this might not be right...
         private TextEdit UsingEdit(string @namespace)

@@ -6,8 +6,7 @@ namespace AutoUsing.Lsp
 
 
 
-        // Unicode's `Zero Width Space`. The benefit is that it has a higher unicode that any letter, so things that start with this will sort last.
-        public const string SORT_CHEAT = "\u200B";
+        
 
         public static readonly IEnumerable<string> SyntaxChars = new List<string> { "", "{", "}", "(", ")", "[", "]", "<", ">", "@", ";", "=", "%", "&", "*", "+", ",", "-", "/", ":", "?", "^", "|" };
 

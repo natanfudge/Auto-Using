@@ -31,7 +31,8 @@ namespace AutoUsing.Lsp
             return new CompletionRegistrationOptions
             {
                 DocumentSelector = _documentSelector,
-                ResolveProvider = false
+                ResolveProvider = false,
+                TriggerCharacters= new Container<string>(".")
             };
 
 
@@ -56,6 +57,7 @@ namespace AutoUsing.Lsp
         public void SetCapability(CompletionCapability capability)
         {
             _capability = capability;
+            // capability.
         }
 
         // /// <summary>

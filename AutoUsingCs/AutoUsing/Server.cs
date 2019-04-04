@@ -167,29 +167,32 @@ namespace AutoUsing
         public IEnumerable<StoredCompletion> GetCommonCompletions()
         {
             var location = CommonCompletionLocation();
-            try
-            {
-                var text = File.ReadAllText(location);
-                if (text == "")
-                {
-                    File.WriteAllText(location, "[]");
-                    return new List<StoredCompletion>();
-                }
-                var completions = JSON.Parse<List<StoredCompletion>>(text);
-                return completions;
-            }
-            catch (DirectoryNotFoundException)
+            if (!Directory.Exists(CommonCompletionDirectory()))
             {
                 Directory.CreateDirectory(CommonCompletionDirectory());
-                return new List<StoredCompletion>();
+                return InvalidStorage(location);
             }
-            catch (FileNotFoundException)
+            else if (!File.Exists(location))
             {
-                File.WriteAllText(location, "[]");
-                return new List<StoredCompletion>();
+                return InvalidStorage(location);
             }
 
+            var text = File.ReadAllText(location);
+            if (text == "")
+            {
+                return InvalidStorage(location);
+            }
+            var completions = JSON.Parse<List<StoredCompletion>>(text);
+            return completions;
+
+
             //TODO store these on the client side.
+        }
+
+        private IEnumerable<StoredCompletion> InvalidStorage(string location)
+        {
+            File.WriteAllText(location, "[]");
+            return new List<StoredCompletion>();
         }
 
 

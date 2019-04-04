@@ -1,7 +1,8 @@
 import * as vscode from "vscode";
 import { openTest } from "./testUtil";
+import { SORT_CHEAT } from "../extension";
 
-const SORT_CHEAT = "\u200B";
+
 
 export class DirectCompletionTestHelper {
     constructor(private completionProvider: vscode.CompletionItemProvider) { }
