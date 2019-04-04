@@ -13,6 +13,7 @@ namespace AutoUsing.Models
     {
         public List<string> Projects { get; set; }
         public string WorkspaceStorageDir { get; set; }
+        public string GlobalStorageDir{get;set;}
         public string ExtensionDir { get; set; }
 
     }

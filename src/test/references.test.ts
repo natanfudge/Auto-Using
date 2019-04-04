@@ -62,8 +62,12 @@ suite(`CompletionProvider Types Tests`, () => {
     test("Should show completions after the 'this' keyword", async () => {
         let completionList = await complete("ShouldCompleteAfterThis.cs", 6, 37);
         assertContains(completionList, "IEnumerable");
+    })
 
-
+    test("Should add a using expression at the start of the document", async () => {
+        let [completionList,document] = await completeWithData("ShouldAutoUsing.cs", 4, 11);
+        assertContains(completionList.items.map(item => item.insertText), "List");
+        assertStringContains(document.getText(),"using System.Collections.Generic") 
     })
 
     // TODO: test the completion adding the using expression.

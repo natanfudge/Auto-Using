@@ -22,6 +22,7 @@ namespace AutoUsing
         public static Server Instance = new Server();
         // public IOProxy Proxy = new IOProxy();
         private List<Project> Projects = new List<Project>();
+        private string GlobalStorageDir;
 
         public Response Pong(Request req)
         {
@@ -104,7 +105,7 @@ namespace AutoUsing
             var project = FindProject(projectName);
 
             var hierarchyInfo = GlobalCache.Caches.Hierachies.GetCache().Concat(project.Caches.Hierachies.GetCache()).ToList();
-            return  CompletionCaches.ToCompletionFormat(hierarchyInfo);
+            return CompletionCaches.ToCompletionFormat(hierarchyInfo);
         }
 
         /// <summary>
@@ -141,7 +142,9 @@ namespace AutoUsing
         /// </summary>
         public Response SetupWorkspace(SetupWorkspaceRequest req)
         {
-            GlobalCache.SetupGlobalCache(req.ExtensionDir);
+            GlobalStorageDir = req.GlobalStorageDir;
+            GlobalCache.SetupGlobalCache(GlobalStorageDir);
+
             if (req.Projects.Any(path => !File.Exists(path)))
             {
                 return new ErrorResponse { Body = Errors.NonExistentProject };
@@ -158,10 +161,42 @@ namespace AutoUsing
             return new EmptyResponse();
         }
 
-        public IEnumerable< StoredCompletion> GetCommonCompletions(){
-            //TODO: implement storage mechanism for common completions
-            return new List<StoredCompletion>();
+        /// <summary>
+        /// Returns completions that have been chosen by the user before. The client side is the one who stores these completions.
+        /// </summary>
+        public IEnumerable<StoredCompletion> GetCommonCompletions()
+        {
+            var location = CommonCompletionLocation();
+            try
+            {
+                var text = File.ReadAllText(location);
+                if (text == "")
+                {
+                    File.WriteAllText(location, "[]");
+                    return new List<StoredCompletion>();
+                }
+                var completions = JSON.Parse<List<StoredCompletion>>(text);
+                return completions;
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Directory.CreateDirectory(CommonCompletionDirectory());
+                return new List<StoredCompletion>();
+            }
+            catch (FileNotFoundException)
+            {
+                File.WriteAllText(location, "[]");
+                return new List<StoredCompletion>();
+            }
+
+            //TODO store these on the client side.
         }
+
+
+
+
+        private string CommonCompletionLocation() => Path.Join(CommonCompletionDirectory(), "commonCompletions.json");
+        private string CommonCompletionDirectory() => Path.Join(GlobalStorageDir, "completions");
 
     }
 }

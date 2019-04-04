@@ -16,7 +16,7 @@ namespace AutoUsing.Lsp
         
 
 
-        private readonly ILanguageServer _router;
+        private readonly ILanguageServer LanguageServer;
         // private readonly FileManager _bufferManager;
         private readonly DocumentSelector _documentSelector = new DocumentSelector(
                 new DocumentFilter()
@@ -37,18 +37,19 @@ namespace AutoUsing.Lsp
 
         }
 
-        // public CompletionProvider(ILanguageServer router, FileManager bufferManager)
-        // {
-        //     _router = router;
-        //     _bufferManager = bufferManager;
-        // }
+        public CompletionProvider(ILanguageServer server)
+        {
+            LanguageServer = server;
+            // Util.Log("This got called!");
+            // _bufferManager = bufferManager;
+        }
 
         public async Task<CompletionList> Handle(CompletionParams request, CancellationToken cancellationToken)
         {
-            Util.Log("Handling completion request.");
+            // Util.Log("Handling completion request.");
             // return new CompletionList(new CompletionItem{Label ="new version op"});
             // var result = await CompletionInstance.ProvideCompletionItems(request, server, _bufferManager);
-             var result = await CompletionInstance.ProvideCompletionItems(request, Server.Instance);
+             var result = await CompletionInstance.ProvideCompletionItems(request, Server.Instance,LanguageServer);
             return result;
         }
 
@@ -60,7 +61,6 @@ namespace AutoUsing.Lsp
         // /// <summary>
         // /// Get the list of completions that are commonly used by the user and are therefore stored in the system.
         // /// </summary>
-        // /// //TODO: convert globalState into some json cache file
         // public static IEnumerable<StoredCompletion> getStoredCompletions(vscode.ExtensionContext context)
         // {
         //     var completions = context.globalState.get<StoredCompletion[]>(COMPLETION_STORAGE);

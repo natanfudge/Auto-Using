@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 using System.Collections;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Lsp
 {
@@ -12,6 +13,8 @@ namespace AutoUsing.Lsp
     {
         private string Text;
         private string[] TextLines;
+
+        public string Path{get;set;}
 
         /// <summary>
         /// Gets the absolute numeric position in a text file by line and column.
@@ -83,9 +86,8 @@ namespace AutoUsing.Lsp
         // public InteractableTextDocument(TextDocumentIdentifier identifier, FileManager manager)
         public InteractableTextDocument(TextDocumentIdentifier identifier)
         {
-            var documentPath = identifier.Uri.ToString();
-            // var buffer = manager.GetBuffer(documentPath);
-            var buffer = FileManager.GetBuffer(documentPath);
+            Path = identifier.GetNormalPath();
+            var buffer = FileManager.GetBuffer(Path);
             Text = buffer.ToString();
             TextLines = buffer.ToString().Split("\n");
 

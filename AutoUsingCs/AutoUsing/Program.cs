@@ -55,7 +55,6 @@ namespace AutoUsing
 
             // Util.Log("Parameter: " + args[0]);
 
-            //TODO: Send SetupWorkspace from client to server
             // Stopwatch watch = Stopwatch.StartNew();
             // var response = await server.SendRequest<test, string>("custom/data", new test("asdf"));
             // Util.Log("Got response: " + response + "time = " + watch.ElapsedMilliseconds);
@@ -96,7 +95,6 @@ namespace AutoUsing
             //     switch (requestObject.Command)
             //     {
             //         case EndPoints.GetAllTypes:
-            //             //TODO: Figure out a way to deserialize the request without specifying the type as a generic argument
             //             response = Server.GetAllTypes(args.ToObject<GetCompletionDataRequest>());
             //             break;
             //         case EndPoints.getAllExtensions:

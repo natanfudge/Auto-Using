@@ -144,6 +144,10 @@ namespace AutoUsing.Utils
             return string.Concat(str.Reverse());
         }
 
+        public static string GetNormalPath(this TextDocumentIdentifier doc){
+            return doc.Uri.LocalPath.Substring(1);
+        }
+
 
 
         /// <summary>

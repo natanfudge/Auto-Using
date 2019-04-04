@@ -1,29 +1,45 @@
-import { workspace, Disposable, ExtensionContext } from 'vscode';
+import { workspace, Disposable, ExtensionContext, Position, Hover, commands, TextDocument, Uri } from 'vscode';
 import { LanguageClient, LanguageClientOptions, SettingMonitor, ServerOptions, TransportKind, InitializeParams } from 'vscode-languageclient';
 import { Trace } from 'vscode-jsonrpc';
 import { getAllProjectFiles } from './util';
 
 export class TestHelper {
 
-    constructor(private client: LanguageClient, private started : boolean = false) { }
+    constructor(private client: LanguageClient, private started: boolean = false) { }
 }
 
+interface SetupWorkspaceRequest {
+    projects: string[];
+    workspaceStorageDir: string;
+    globalStorageDir: string;
+    extensionDir: string;
 
+}
+
+interface HoverRequest {
+    pos: Position;
+    filePath: string;
+}
+
+const hoverRequest = "custom/hoverRequest";
+const serverExe = 'dotnet';
+const serverLocation = "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll";
 
 export let testHelper: TestHelper;
+
+let client: LanguageClient;
 
 export function activate(context: ExtensionContext) {
 
     // console.log("new!");
 
     // The server is implemented in node
-    let serverExe = 'dotnet';
-    const serverLocation = "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll";
 
     var setup: SetupWorkspaceRequest = {
         extensionDir: context.extensionPath,
         projects: getAllProjectFiles(),
-        workspaceStorageDir: context.storagePath!
+        workspaceStorageDir: context.storagePath!,
+        globalStorageDir: context.globalStoragePath
     }
     var message = JSON.stringify(setup);
     // If the extension is launched in debug mode then the debug server options are used
@@ -33,17 +49,30 @@ export function activate(context: ExtensionContext) {
         debug: { command: serverExe, args: [serverLocation, message] }
     }
 
-    interface SetupWorkspaceRequest {
-        projects: string[];
-        workspaceStorageDir: string;
-        extensionDir: string;
 
+
+    let clientOptions: LanguageClientOptions = {
+        documentSelector: [
+            {
+                // pattern: '**/*.cs',
+                scheme: "file",
+                language: "csharp"
+            }
+        ],
+        synchronize: {
+            configurationSection: 'autousing',
+            fileEvents: workspace.createFileSystemWatcher('**/*.cs')
+        },
     }
 
-    const setupWorkspace = "setupWorkspace";
-    //TODO: Send SetupWorkspace from client to server
+
+
+
+
+
+    // const setupWorkspace = "setupWorkspace";
     // Create the language client and start the client.
-    const client = new LanguageClient('autousing', 'Auto-Using', serverOptions, {});
+    client = new LanguageClient('autousing', 'Auto-Using', serverOptions, clientOptions);
     testHelper = new TestHelper(client);
     client.onReady().then(() => {
         //@ts-ignore
@@ -54,9 +83,15 @@ export function activate(context: ExtensionContext) {
         // client.sendNotification(setupWorkspace, req);
         // client.sendRequest(setupWorkspace, req);
 
-        client.onRequest("custom/data", (reqargs) => {
-            console.log("Got request with args " + reqargs);
-            return "op response";
+        client.onRequest(hoverRequest, async (request: HoverRequest) => {
+            console.log("Got request with args " + request);
+
+            let pos: Position = new Position(request.pos.line, request.pos.character);
+            let uri = Uri.file(request.filePath);
+            // let command = await commands.executeCommand("vscode.executeHoverProvider", uri, pos);
+            let result = await getHoverString(uri,pos);
+            return result;
+            // return "op response";
         });
         client.onNotification("custom/data", (args) => {
             console.log("Got notif with args " + args);
@@ -71,6 +106,25 @@ export function activate(context: ExtensionContext) {
     context.subscriptions.push(disposable);
 }
 
+export function deactivate(): Thenable<void> {
+    // let x : Thenable<void> = () => {};
+
+    if (!client) {
+        return new Promise(() => undefined);
+    }
+    return client.stop();
+}
+
+
+async function getHoverString(uri : Uri,position: Position): Promise<string | undefined> {
+    // Get the hover info of the variable from the C# extension
+    let hover = <Hover[]>(await commands.executeCommand("vscode.executeHoverProvider",uri, position));
+    if (hover.length === 0) return undefined;
+
+    return (<{ language: string; value: string }>hover[0].contents[1]).value;
+
+
+}
 
 // 'use strict';
 

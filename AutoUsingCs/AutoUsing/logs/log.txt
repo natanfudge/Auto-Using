@@ -220,3 +220,19 @@
 4/3/2019 9:28:53 PM: Word to complete = x
 4/3/2019 9:29:01 PM: Handling completion request.
 4/3/2019 9:29:01 PM: Word to complete = x
+4/4/2019 7:30:20 AM: Handling completion request.
+4/4/2019 7:30:20 AM: Word to complete = x
+4/4/2019 7:32:13 AM: Handling completion request.
+4/4/2019 7:32:31 AM: Word to complete = 
+4/4/2019 7:32:58 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/4/2019 11:24:37 AM: This got called!
+4/4/2019 11:27:30 AM: This got called!
+4/4/2019 11:27:48 AM: This got called!
+4/4/2019 11:28:50 AM: This got called!
+4/4/2019 11:38:44 AM: This got called!
+4/4/2019 11:38:48 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/4/2019 11:46:29 AM: This got called!
+4/4/2019 12:15:33 PM: This got called!
+4/4/2019 12:15:47 PM: Global cache reloading
+4/4/2019 1:06:10 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/4/2019 1:24:19 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.

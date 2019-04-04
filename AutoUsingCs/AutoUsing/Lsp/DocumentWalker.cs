@@ -1,29 +1,29 @@
-using System.Text;
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using AutoUsing.Utils;
 using OmniSharp.Extensions.Embedded.MediatR;
-using OmniSharp.Extensions.LanguageServer.Protocol;
-using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 using OmniSharp.Extensions.LanguageServer.Protocol.Server;
-using OmniSharp.Extensions.LanguageServer.Protocol.Server.Capabilities;
 
 namespace AutoUsing.Lsp
 {
 
     public class DocumentWalker
     {
-        private InteractableTextDocument document;
+        private InteractableTextDocument Document;
+        private ILanguageServer Server;
         // public DocumentWalker(TextDocumentIdentifier textDocument, FileManager manager)
-        public DocumentWalker(TextDocumentIdentifier textDocument)
+        public DocumentWalker(TextDocumentIdentifier textDocument, ILanguageServer server)
         {
             // this.document = new InteractableTextDocument(textDocument, manager);
-            this.document = new InteractableTextDocument(textDocument);
+            this.Document = new InteractableTextDocument(textDocument);
+            this.Server = server;
         }
 
         /// <summary>
@@ -42,8 +42,9 @@ namespace AutoUsing.Lsp
         /// </summary>
         /// <param name="pos"></param>
         /// <returns></returns>
-        public string ParseWordBefore(Position pos){
-             var word = new StringBuilder();
+        public string ParseWordBefore(Position pos)
+        {
+            var word = new StringBuilder();
             WalkBackWhile(GetPrev(pos), (c) =>
             {
                 // Once we hit something like a space or a semicolon it means the word has ended.
@@ -86,7 +87,7 @@ namespace AutoUsing.Lsp
             // var wordRegex = new Regex(@"([^\s]+)");
 
             // Take a step forwards to make it right before the previous word
-            currentPos = new Position(currentPos.Line,currentPos.Character + 1);
+            currentPos = new Position(currentPos.Line, currentPos.Character + 1);
             var wordBefore = ParseWordBefore(currentPos);
             var lastCharOfWordBefore = wordBefore.LastChar();
 
@@ -105,7 +106,7 @@ namespace AutoUsing.Lsp
         ///  </summary>
         private Position GetPrev(Position pos)
         {
-            return this.document.GetPreviousPosition(pos);
+            return this.Document.GetPreviousPosition(pos);
         }
 
         /// <summary>
@@ -114,7 +115,7 @@ namespace AutoUsing.Lsp
         /// <param name="vscode.Position"></param>
         private string GetChar(Position pos)
         {
-            return this.document.GetCharAt(pos);
+            return this.Document.GetCharAt(pos);
         }
 
 
@@ -209,7 +210,7 @@ namespace AutoUsing.Lsp
         public string[] GetUsings()
         {
             var regExp = new Regex(@"^using.*;");
-            var matches = this.document.Match(regExp);
+            var matches = this.Document.Match(regExp);
             if (matches == null) return null;
             var usings = matches.Select(match =>
             {
@@ -289,14 +290,18 @@ namespace AutoUsing.Lsp
         /// </summary>
         private async Task<string> GetHoverString(Position position)
         {
-            // Get the hover info of the variable from the C# extension
-            var hover = await this.GetHover(position);
-            if (hover.Count() == 0) return null;
+            var request = new HoverRequest { Pos = position, FilePath = Document.Path };
+            string response = await Server.SendRequest<HoverRequest, string>(HoverRequestCommand, request);
+            return response;
+            // // Get the hover info of the variable from the C# extension
+            // var hover = await this.GetHover(position);
+            // if (hover.Count() == 0) return null;
 
-            var wantedMessage = hover[0];
-            //TODO: the first() statement should probably be Second() of some sort. This needs to be investigated furthe.r 
-            var wantedContent = wantedMessage.Contents.MarkedStrings.First().Value;
-            return wantedContent;
+            // var wantedMessage = hover[0];
+            // //TODO: the first() statement should probably be Second() of some sort. This needs to be investigated furthe.r 
+            // var wantedContent = wantedMessage.Contents.MarkedStrings.First().Value;
+            // return wantedContent;
+
         }
 
 
@@ -306,9 +311,19 @@ namespace AutoUsing.Lsp
         /// <param name="vscode.Position"></param>
         private async Task<List<Hover>> GetHover(Position position)
         {
-            return new List<Hover>();
-            //TODO: request from client to perform this
+            var request = new HoverRequest { Pos = position, FilePath = Document.Path };
+            List<Hover> response = await Server.SendRequest<HoverRequest, List<Hover>>(HoverRequestCommand, request);
+            return response;
+            // return new List<Hover>();
             // return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
+        }
+
+        private const string HoverRequestCommand = "custom/hoverRequest";
+
+        private class HoverRequest : IRequest
+        {
+            public Position Pos { get; set; }
+            public string FilePath { get; set; }
         }
 
         public enum CompletionType

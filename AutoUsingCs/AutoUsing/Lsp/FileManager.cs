@@ -6,6 +6,7 @@ namespace AutoUsing.Lsp
     public static class FileManager
     {
 
+        
         private static ConcurrentDictionary<string, StringBuilder> buffers = new ConcurrentDictionary<string, StringBuilder>();
 
         public static void UpdateBuffer(string documentPath, StringBuilder buffer)

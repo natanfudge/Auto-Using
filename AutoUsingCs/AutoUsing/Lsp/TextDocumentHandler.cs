@@ -9,11 +9,13 @@ using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 using OmniSharp.Extensions.LanguageServer.Protocol.Server;
 using OmniSharp.Extensions.LanguageServer.Protocol.Server.Capabilities;
+using AutoUsing.Utils;
 
 namespace AutoUsing.Lsp
 {
     public class TextDocumentHandler : ITextDocumentSyncHandler
     {
+        //TODO incremental file handling
         private readonly ILanguageServer _router;
         // private readonly FileManager _bufferManager;
 
@@ -51,7 +53,7 @@ namespace AutoUsing.Lsp
 
         public Task<Unit> Handle(DidChangeTextDocumentParams request, CancellationToken cancellationToken)
         {
-            var documentPath = request.TextDocument.Uri.ToString();
+            var documentPath = request.TextDocument.GetNormalPath();
             var text = request.ContentChanges.FirstOrDefault()?.Text;
 
             // _bufferManager.UpdateBuffer(documentPath, new StringBuilder(text));
@@ -65,7 +67,7 @@ namespace AutoUsing.Lsp
         public Task<Unit> Handle(DidOpenTextDocumentParams request, CancellationToken cancellationToken)
         {
             // _bufferManager.UpdateBuffer(request.TextDocument.Uri.ToString(), new StringBuilder(request.TextDocument.Text));
-            FileManager.UpdateBuffer(request.TextDocument.Uri.ToString(), new StringBuilder(request.TextDocument.Text));
+            FileManager.UpdateBuffer(request.TextDocument.GetNormalPath(), new StringBuilder(request.TextDocument.Text));
             return Unit.Task;
         }
 

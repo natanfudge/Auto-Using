@@ -45,7 +45,6 @@ namespace AutoUsingTest
             };
 
             Server.Start();
-            //TODO this probably only works on windows
             ChildProcessTracker.AddProcess(Server);
 
             string firstLine = Server.StandardOutput.ReadLine();
@@ -54,7 +53,6 @@ namespace AutoUsingTest
             
         }
 
-        //TODO make these tests work
 
         [TestMethod]
         public void Ping()

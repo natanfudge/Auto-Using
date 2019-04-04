@@ -9,6 +9,7 @@ using AutoUsing.Lsp;
 using AutoUsing.Utils;
 using Newtonsoft.Json.Linq;
 using AutoUsing.Analysis.DataTypes;
+using OmniSharp.Extensions.LanguageServer.Protocol.Server;
 
 namespace AutoUsing.Lsp
 {
@@ -17,10 +18,10 @@ namespace AutoUsing.Lsp
     {
 
         // public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server, FileManager fileManager)
-        public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server)
+        public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server, ILanguageServer langServer)
         {
             // var documentWalker = new DocumentWalker(request.TextDocument,fileManager);
-            var documentWalker = new DocumentWalker(request.TextDocument);
+            var documentWalker = new DocumentWalker(request.TextDocument, langServer);
             var wordToComplete = documentWalker.GetWordToComplete(request.Position);
             var projectName = VscodeUtil.GetProjectName(request.TextDocument.Uri.LocalPath);
             var completionInstance = new CompletionInstance(documentWalker, projectName, wordToComplete, server);
@@ -28,17 +29,18 @@ namespace AutoUsing.Lsp
             return await completionInstance.provideCompletionItems(request);
         }
 
-
+        //FIXME: Extension methods don't show immieditialy after typing "."
         public async Task<CompletionList> provideCompletionItems(CompletionParams request)
         {
             var completionType = this.DocumentWalker.GetCompletionType(request.Position);
 
-            Util.Log("Word to complete = " + WordToComplete);
-
+            // Util.Log("Word to complete = " + WordToComplete);
+            CompletionList completions;
 
             if (completionType == CompletionType.NONE)
             {
-                return new CompletionList();
+                completions = new CompletionList();
+                // return new CompletionList();
             }
             else
             {
@@ -72,8 +74,9 @@ namespace AutoUsing.Lsp
                     throw new Exception("this should never happen...");
                 }
 
-                return this.completionDataToVscodeCompletions(completionData, usings);
+                completions = this.completionDataToVscodeCompletions(completionData, usings);
             }
+            return completions;
         }
 
         private DocumentWalker DocumentWalker;
@@ -96,7 +99,7 @@ namespace AutoUsing.Lsp
         {
             // Take the relevant part of the hover that contains the type
             const int start = 10;
-            var typeStart = hoverString.Substring(start, hoverString.Length);
+            var typeStart = hoverString.Substring(start);
 
             // Handle the case it is a generic type
             var generic = false;
@@ -129,9 +132,11 @@ namespace AutoUsing.Lsp
             if (typeClass[typeClass.Length - 1] == ']') typeClass = "Array";
 
             // Convert primitives to objects. I.E. string => String.
-            var typeAsObject = Constants.Primitives[typeClass];
-            if (typeAsObject != null) typeClass = typeAsObject;
-
+            if (Constants.Primitives.ContainsKey(typeClass))
+            {
+                var typeAsObject = Constants.Primitives[typeClass];
+                typeClass = typeAsObject;
+            }
 
             if (generic) typeClass += "<>";
 
@@ -160,7 +165,7 @@ namespace AutoUsing.Lsp
                 var classItselfStr = extendedClassHierarchy.Namespaces[0].Namespace + "." + callerType.Class;
                 // Remove generic marker '<>'
                 if (classItselfStr[classItselfStr.Length - 1] == '>') classItselfStr = classItselfStr.Substring(0, classItselfStr.Length - 2);
-                baseclasses.Append(classItselfStr);
+                baseclasses.Add(classItselfStr);
 
 
                 var result = this.FindExtensionMethodsOfClasses(baseclasses);

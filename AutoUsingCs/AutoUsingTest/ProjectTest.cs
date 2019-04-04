@@ -24,7 +24,6 @@
 //             //         {"C:\\Users\\natan\\Desktop\\Auto-Using-Git\\AutoUsingCs\\AutoUsing\\AutoUsing.csproj"},
 //             //         workspaceStorageDir:""
 //             // );
-//             //TODO: specify arguments of request
 //             var request = new SetupWorkspaceRequest();
 //             var response = Program.Server.SetupWorkspace(request);
 //             // start.LogTimePassed("AddProjects");
@@ -50,7 +49,6 @@
 //         string newProj = $"{dir}Amar.csproj";
 
 //         [TestMethod]
-//         //TODO: filewatcher event is not being triggered when moving using Move()... Need to figure out how to test this
 //         public void ProjectNameChanged()
 //         {
 //             Program.Main();
