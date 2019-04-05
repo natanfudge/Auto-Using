@@ -186,7 +186,6 @@ namespace AutoUsing
             return completions;
 
 
-            //TODO store these on the client side.
         }
 
         private IEnumerable<StoredCompletion> InvalidStorage(string location)

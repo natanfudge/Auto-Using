@@ -24,6 +24,8 @@ namespace AutoUsing.Lsp
             var documentWalker = new DocumentWalker(request.TextDocument, langServer);
             var wordToComplete = documentWalker.GetWordToComplete(request.Position);
             var projectName = VscodeUtil.GetProjectName(request.TextDocument.Uri.LocalPath);
+            // The case in which is no project
+            if(projectName == null) return new CompletionList();
             var completionInstance = new CompletionInstance(documentWalker, projectName, wordToComplete, server);
 
             return await completionInstance.provideCompletionItems(request);
@@ -115,6 +117,7 @@ namespace AutoUsing.Lsp
             var type = typeStart.Substring(0, i);
 
             string typeClass = type;
+            // If it is just a class name return just the class
             string typeNamespace = null;
 
             // If it is a full path return the class and namespace
@@ -122,10 +125,9 @@ namespace AutoUsing.Lsp
             {
                 var classAndNamespace = type.Split(".");
                 typeNamespace = string.Join(".", classAndNamespace.SubArray(0, classAndNamespace.Length - 1));
-                //TODO: this line makes no sense. 
-                typeClass = string.Join(".", classAndNamespace.SubArray(classAndNamespace.Length - 1, classAndNamespace.Length));
-                // If it is just a class name return just the class
+                typeClass = classAndNamespace[classAndNamespace.Length - 1];
             }
+            
 
             // Is an array type
             if (typeClass[typeClass.Length - 1] == ']') typeClass = "Array";
@@ -153,6 +155,9 @@ namespace AutoUsing.Lsp
 
             // The list of classes that we are looking for extension methods for. Usually this is only one class. 
             var extendedClassHierarchy = hierachies.Find(hierarchy => hierarchy.Class.Equals(callerType.Class));
+
+            // Invalid type name
+            if(extendedClassHierarchy == null) return new List<TypeCompletion>();
 
 
 
@@ -251,7 +256,6 @@ namespace AutoUsing.Lsp
 
         
 
-        //TODO: this might not be right...
         private TextEdit UsingEdit(string @namespace)
         {
             return new TextEdit { Range = new Range(new Position(0, 0), new Position(0, 1)), NewText = $"using {@namespace};\n" };

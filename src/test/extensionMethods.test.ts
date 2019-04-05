@@ -2,9 +2,8 @@ import { activateCSharpExtension, assertContains, getTestPlaygroundDirUri, activ
 import * as vscode from "vscode";
 import { complete, completeWithData } from "./TestCompletionUtil";
 
-suite.only(`CompletionProvider Extension Method Tests`, () => {
+suite(`CompletionProvider Extension Method Tests`, () => {
 
-    //TODO: fix extension methods
     suiteSetup(async () => {
         let wait1 = activateExtension();
         let wait2 = activateCSharpExtension();

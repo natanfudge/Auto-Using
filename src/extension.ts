@@ -28,7 +28,7 @@ interface Completion {
 const hoverRequest = "custom/hoverRequest";
 const serverExe = 'dotnet';
 const serverLocation = "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsingCs/AutoUsing/bin/Debug/netcoreapp2.1/AutoUsing.dll";
-const HANDLE_COMPLETION = "handleCompletion";
+const HANDLE_COMPLETION = "custom/handleCompletion";
 export const SORT_CHEAT = "\u200B";
 export let testHelper: TestHelper;
 
@@ -86,7 +86,8 @@ export function activate(context: ExtensionContext) {
         synchronize: {
             configurationSection: 'autousing',
             fileEvents: workspace.createFileSystemWatcher('**/*.cs')
-        },
+        }
+        
     }
 
 
@@ -103,24 +104,18 @@ export function activate(context: ExtensionContext) {
         testHelper.started = true;
 
 
-        // console.log("Ready!");
-        // client.sendNotification(setupWorkspace, req);
-        // client.sendRequest(setupWorkspace, req);
+
 
         client.onRequest(hoverRequest, async (request: HoverRequest) => {
-            console.log("Got request with args " + request);
 
             let pos: Position = new Position(request.pos.line, request.pos.character);
             let uri = Uri.file(request.filePath);
-            // let command = await commands.executeCommand("vscode.executeHoverProvider", uri, pos);
             let result = await getHoverString(uri, pos);
-            return result;
-            // return "op response";
+            if(result == undefined) return undefined;
+            let str : string = result;
+            return str;
         });
-        client.onNotification("custom/data", (args) => {
-            console.log("Got notif with args " + args);
-            return "op response";
-        });
+
     });
     client.trace = Trace.Verbose;
     let clientDisposable = client.start();
@@ -218,6 +213,9 @@ const CommonCompletionLocation = (context: ExtensionContext) => path.join(Common
 const CommonCompletionDirectory = (context: ExtensionContext) => path.join(context.globalStoragePath!, "completions");
 
 
+const typeInfoIdentifier = "```csharp\n";
+
+
 /**
  * Gets the string that is in the hover result provided by the C# extension in a given position and file uri.
  */
@@ -226,13 +224,20 @@ async function getHoverString(uri: Uri, position: Position): Promise<string | un
     let hover = <Hover[]>(await commands.executeCommand("vscode.executeHoverProvider", uri, position));
     if (hover.length === 0) return undefined;
 
-    return (<{ language: string; value: string }>hover[0].contents[1]).value;
+    let hovers = hover[0].contents;
+    let typeHover = <{ language: string; value: string }>hovers.find(hover =>{
+        let cast = <{ language: string; value: string }>hover;
+        return cast.value.startsWith(typeInfoIdentifier);
+    });
 
+    return typeHover.value;
 }
 
 export class StoredCompletion {
     constructor(public label: string, public namespace: string) { }
 }
+
+
 
 // 'use strict';
 

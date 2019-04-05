@@ -33,8 +33,6 @@ namespace AutoUsing.Lsp
         {
             return ParseWordBefore(completionPosition);
 
-            // if (completionPosition.Character == 0) return "";
-            // return document.GetWordAtPosition(GetPrev(completionPosition));
         }
 
         /// <summary>
@@ -44,11 +42,12 @@ namespace AutoUsing.Lsp
         /// <returns></returns>
         public string ParseWordBefore(Position pos)
         {
+            if(pos.IsOrigin()) return "";
             var word = new StringBuilder();
             WalkBackWhile(GetPrev(pos), (c) =>
             {
                 // Once we hit something like a space or a semicolon it means the word has ended.
-                if (string.IsNullOrWhiteSpace(c) || c == "." || Constants.SyntaxChars.Contains(c)) return false;
+                if (string.IsNullOrWhiteSpace(c) || c == "." || Constants.SyntaxChars.Contains(c) || pos.IsOrigin()) return false;
                 word.Append(c);
                 return true;
             });
@@ -133,9 +132,7 @@ namespace AutoUsing.Lsp
             var newLineIncoming = false;
             while (condition(currentChar, newLineIncoming, currentPos))
             {
-                Tuple<Position, bool> currentPosAndNewLineIncoming = this.GetPrevCheckNewline(currentPos);
-                currentPos = currentPosAndNewLineIncoming.Item1;
-                newLineIncoming = currentPosAndNewLineIncoming.Item2;
+                (currentPos, newLineIncoming) = this.GetPrevCheckNewline(currentPos);
                 currentChar = this.GetChar(currentPos);
             }
 
@@ -196,11 +193,11 @@ namespace AutoUsing.Lsp
         /// <summary>
         /// Returns the position before another position in the document AND whether or not the next previous character will reach a new line.
         /// </summary>
-        private Tuple<Position, bool> GetPrevCheckNewline(Position pos)
+        private (Position previousPosition, bool newLineIncoming) GetPrevCheckNewline(Position pos)
         {
             var newPos = this.GetPrev(pos);
             var newLine = newPos.Line != this.GetPrev(newPos).Line;
-            return new Tuple<Position, bool>(newPos, newLine);
+            return (newPos, newLine);
         }
 
         /// <summary>
@@ -256,7 +253,7 @@ namespace AutoUsing.Lsp
                 });
 
                 // Chained method call. In this case get the type of the method
-                if ((await this.GetHover(methodCallPos)).Count > 0)
+                if ((await this.GetHoverString(methodCallPos)) != null)
                 {
                     return methodCallPos;
                 }
@@ -293,32 +290,23 @@ namespace AutoUsing.Lsp
             var request = new HoverRequest { Pos = position, FilePath = Document.Path };
             string response = await Server.SendRequest<HoverRequest, string>(SharedConstants.HoverRequestCommand, request);
             return response;
-            // // Get the hover info of the variable from the C# extension
-            // var hover = await this.GetHover(position);
-            // if (hover.Count() == 0) return null;
-
-            // var wantedMessage = hover[0];
-            // //TODO: the first() statement should probably be Second() of some sort. This needs to be investigated furthe.r 
-            // var wantedContent = wantedMessage.Contents.MarkedStrings.First().Value;
-            // return wantedContent;
-
         }
 
 
-        /// <summary>
-        /// Returns All hover info in a position that is provided by vscode and its extensions
-        /// </summary>
-        /// <param name="vscode.Position"></param>
-        private async Task<List<Hover>> GetHover(Position position)
-        {
-            var request = new HoverRequest { Pos = position, FilePath = Document.Path };
-            List<Hover> response = await Server.SendRequest<HoverRequest, List<Hover>>(SharedConstants.HoverRequestCommand, request);
-            return response;
-            // return new List<Hover>();
-            // return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
-        }
+        // /// <summary>
+        // /// Returns All hover info in a position that is provided by vscode and its extensions
+        // /// </summary>
+        // /// <param name="vscode.Position"></param>
+        // private async Task<List<Hover>> GetHover(Position position)
+        // {
+        //     var request = new HoverRequest { Pos = position, FilePath = Document.Path };
+        //     List<Hover> response = await Server.SendRequest<HoverRequest, string>(SharedConstants.HoverRequestCommand, request);
+        //     return response;
+        //     // return new List<Hover>();
+        //     // return <vscode.Hover[]>(await vscode.commands.executeCommand("vscode.executeHoverProvider", this.document.uri, position));
+        // }
 
-        
+
 
         private class HoverRequest : IRequest
         {

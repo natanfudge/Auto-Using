@@ -25,6 +25,7 @@ namespace AutoUsing.Lsp
         /// <summary>
         /// Searches up the folder hierarchy until it finds a file with the given pattern.
         /// Once a file matching the pattern was found it is returned.
+        /// If not file was found will return null.
         /// </summary>
         public static string FindInParentDirectories(string path, string pattern)
         {
@@ -38,9 +39,11 @@ namespace AutoUsing.Lsp
                     if (files.Length > 1) throw new InvalidOperationException("Did not expect more than 1 project file in directory!");
                     return files[0];
                 }
-                currentDir = Directory.GetParent(currentDir).FullName;
+                var dir = Directory.GetParent(currentDir);
+                if(dir == null) break;
+                currentDir = dir.FullName;
             }
-            throw new InvalidOperationException("Could not find project file!");
+            return null;
         }
     }
 }

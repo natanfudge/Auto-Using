@@ -22,6 +22,7 @@ suite(`CompletionProvider Types Tests`, () => {
         assertNone(completionList.items, (completion) => completion.kind === vscode.CompletionItemKind.Reference);
     });
 
+    //TODO: this text doesn't seem to be actually testing it.
     test("Should filter out already used namespaces", async () => {
         let completionList = await complete("ShouldFilterOut.cs", 4, 4);
         assertNotContains(completionList, "File");
@@ -64,13 +65,6 @@ suite(`CompletionProvider Types Tests`, () => {
         assertContains(completionList, "IEnumerable");
     })
 
-    test("Should add a using expression at the start of the document", async () => {
-        let [completionList,document] = await completeWithData("ShouldAutoUsing.cs", 4, 11);
-        assertContains(completionList.items.map(item => item.insertText), "List");
-        assertStringContains(document.getText(),"using System.Collections.Generic") 
-    })
-
-    // TODO: test the completion adding the using expression.
 
 
 

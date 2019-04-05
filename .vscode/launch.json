@@ -81,20 +81,20 @@
 			"request": "attach",
 			"processId": "${command:pickProcess}",
 			
+		},
+		{
+			"name": "Build Client",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm: compile",
 		}
-		// {
-		// 	"name": "Build Client + Server",
-		// 	"type": "extensionHost",
-		// 	"request": "launch",
-		// 	"runtimeExecutable": "${execPath}",
-		// 	"args": [
-		// 		"--extensionDevelopmentPath=${workspaceFolder}"
-		// 	],
-		// 	"outFiles": [
-		// 		"${workspaceFolder}/out/**/*.js"
-		// 	],
-		// 	"preLaunchTask": "npm: compile",
-		// }
 		
     ]
 }

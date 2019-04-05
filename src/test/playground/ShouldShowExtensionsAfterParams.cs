@@ -7,7 +7,7 @@ namespace assets
         void x()
         {
             IEnumerable<string> x = null;
-            x.Select(str => (str+="test")).First();
+            x.Select(str => (str += "test")).First();
         }
     }
 }
