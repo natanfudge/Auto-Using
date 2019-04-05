@@ -76,8 +76,9 @@ namespace AutoUsing.Lsp
             return TextLines[pos.Line][(int)pos.Character].ToString();
         }
 
-        public IEnumerable<string> Match(Regex regex)
+        public IEnumerable<string> Matches(Regex regex)
         {
+            // regex.Options = new RegexOptions{}
             var matches = regex.Matches(Text);
             return matches.Select(match => match.Value);
         }

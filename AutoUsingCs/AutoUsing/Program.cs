@@ -21,7 +21,6 @@ namespace AutoUsing
     public class Program
     {
         // public static Server Server = new Server();
-        //TODO: already using are not getting filtered out
         //TODO: the using statement inserted by the server doesn't work well
         private static Task<ILanguageServer> CreateLanguageServer()
         {
@@ -48,6 +47,8 @@ namespace AutoUsing
 
         //TODO: have a task that compiles both the server and client and runs extension
         //TODO: Have a task that debugs the server and runs the extension without extra clicking
+        //TODO: omnisharp is going insane about Unable to find workspace/didChangeConfiguration, methods found include 
+        //TODO: Using a document selector without a scheme. Bah!
         public static async Task Main(string[] args)
         {
             if (args.Length == 0) throw new ServerException("A workspace setup json must be provided.");

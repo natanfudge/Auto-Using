@@ -206,8 +206,8 @@ namespace AutoUsing.Lsp
         /// <returns></returns>
         public string[] GetUsings()
         {
-            var regExp = new Regex(@"^using.*;");
-            var matches = this.Document.Match(regExp);
+            var regExp = new Regex(@"^using.*;",RegexOptions.Multiline);
+            var matches = this.Document.Matches(regExp);
             if (matches == null) return null;
             var usings = matches.Select(match =>
             {

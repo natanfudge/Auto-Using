@@ -1,6 +1,6 @@
 import { test, suite, suiteSetup } from 'mocha';
 import * as vscode from "vscode";
-import { activateExtension, assertContains, assertNone, assertNotContains, assertSize, assertStringContains, forServerToBeReady } from './testUtil';
+import { activateExtension, assertContains, assertNone, assertNotContains, assertSize, assertStringContains, forServerToBeReady, assertNotStringContains as assertStringNotContains } from './testUtil';
 import { complete, completeWithData, removeCheat } from './TestCompletionUtil';
 
 suite(`CompletionProvider Types Tests`, () => {
@@ -22,11 +22,23 @@ suite(`CompletionProvider Types Tests`, () => {
         assertNone(completionList.items, (completion) => completion.kind === vscode.CompletionItemKind.Reference);
     });
 
-    //TODO: this text doesn't seem to be actually testing it.
     test("Should filter out already used namespaces", async () => {
-        let completionList = await complete("ShouldFilterOut.cs", 4, 4);
+        let completionList = await complete("ShouldFilterOut.cs", 3, 3);
         assertNotContains(completionList, "File");
     });
+
+    test("Should filter out only specific completions which have a used namespaces", async () => {
+        let [completions] = await completeWithData("ShouldFilterSome.cs", 6, 14);
+        completions.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
+        let files = completions.items.filter(c => removeCheat(c.label) === "File");
+
+        
+
+        let file = files.filter(completion => completion.documentation === undefined) [0];
+
+        assertStringContains(file.detail!, "System.Net");
+        assertStringNotContains(file.detail!, "System.IO");
+    })
 
     test("Should combine types of the same name", async () => {
         let [completionList] = await completeWithData("ShouldCombine.cs", 1, 6);

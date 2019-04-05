@@ -240,7 +240,6 @@ namespace AutoUsing.Lsp
                     InsertText = name,
                     FilterText = name,
                     Kind = CompletionItemKind.Reference,
-                    // AdditionalTextEdits = usingStatementEdit,
                     CommitCharacters = new List<string> { "." },
                     Detail = string.Join("\n", completion.Namespaces),
                     Command = new Command { Name = SharedConstants.HANDLE_COMPLETION, Arguments = commandArgs, Title = "handles completion" }
@@ -255,24 +254,36 @@ namespace AutoUsing.Lsp
         }
 
         
-
+        /// <summary>
+        /// Returns the necessary using edit for Auto Using
+        /// </summary>
         private TextEdit UsingEdit(string @namespace)
         {
-            return new TextEdit { Range = new Range(new Position(0, 0), new Position(0, 1)), NewText = $"using {@namespace};\n" };
+            return new TextEdit { Range = new Range(new Position(0, 0), new Position(0,0)), NewText =  $"using {@namespace};\n"};
         }
 
         /// <summary>
         /// Removes all namespaces that already have a using statement
         /// </summary>
-        /// <param name="completions"></param>
-        /// <param name="usings"></param>
         /// <returns>The length of the remaining array</returns>
         private static IEnumerable<TypeCompletion> filterOutAlreadyUsing(IEnumerable<TypeCompletion> completions, string[] usings)
         {
             //TODO: this might be slow now. just reduce the amount of completions we process in the first place to 100.
             Array.Sort(usings);
 
-            return completions.Where(completion => completion.Namespaces.Any(@namespace => Array.BinarySearch<string>(usings, @namespace) < 0));
+            // Gets rid of all the completions with namespaces that already have a using expression
+            var filtered = completions.Select(completion => new TypeCompletion(completion.Name,completion.Namespaces
+            .Where(@namespace => !BinSearchContains(usings,@namespace)).ToList())).Where(completion => completion.Namespaces.Count > 0);
+
+
+            return filtered;
+        }
+
+        /// <summary>
+        /// Checks if a sorted array contains an element. Is much faster than normal contains.
+        /// </summary>
+        private static bool BinSearchContains<T>(T[] arr, T element){
+            return Array.BinarySearch<T>(arr, element) >=0;
         }
 
 
