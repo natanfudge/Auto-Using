@@ -51,7 +51,7 @@ export function assertContains<T>(arr: Array<T>, element: T): void {
 
 export function assertStringContains(str: string, substring: string): void {
     if (!str.includes(substring)) {
-        let error = "Expected string to contain : ".white + colors.green(substring) +
+        let error = "Expected string to contain : ".white + colors.green(substring) + 
             "\nBut is actually " + str.red;
         throw new AssertionError(error);
     }
