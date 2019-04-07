@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { openTest } from "./testUtil";
-import { SORT_CHEAT } from "../extension";
+import { SORT_CHEAT } from "../util";
 
 
 

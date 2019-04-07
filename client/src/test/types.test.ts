@@ -3,31 +3,31 @@ import * as vscode from "vscode";
 import { activateExtension, assertContains, assertNone, assertNotContains, assertSize, assertStringContains, forServerToBeReady, assertNotStringContains as assertStringNotContains } from './testUtil';
 import { complete, completeWithData, removeCheat } from './TestCompletionUtil';
 
-suite(`CompletionProvider Types Tests`, () => {
+describe(`CompletionProvider Types Tests`, () => {
 
 
-    suiteSetup(async () => {
+    before(async () => {
         await activateExtension();
         await forServerToBeReady();
     });
 
-    test("Should show completions", async () => {
+    it("Should show completions", async () => {
         let completionList = await complete("ShouldShow.cs", 1, 5);
         assertContains(completionList, "File");
 
     });
 
-    test("Should not show completions when not needed", async () => {
+    it("Should not show completions when not needed", async () => {
         let [completionList, doc] = await completeWithData("ShouldNotShow.cs", 1, 4);
         assertNone(completionList.items, (completion) => completion.kind === vscode.CompletionItemKind.Reference);
     });
 
-    test("Should filter out already used namespaces", async () => {
+    it("Should filter out already used namespaces", async () => {
         let completionList = await complete("ShouldFilterOut.cs", 3, 3);
         assertNotContains(completionList, "File");
     });
 
-    test("Should filter out only specific completions which have a used namespaces", async () => {
+    it("Should filter out only specific completions which have a used namespaces", async () => {
         let [completions] = await completeWithData("ShouldFilterSome.cs", 6, 14);
         completions.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
         let files = completions.items.filter(c => removeCheat(c.label) === "File");
@@ -40,7 +40,7 @@ suite(`CompletionProvider Types Tests`, () => {
         assertStringNotContains(file.detail!, "System.IO");
     })
 
-    test("Should combine types of the same name", async () => {
+    it("Should combine types of the same name", async () => {
         let [completionList] = await completeWithData("ShouldCombine.cs", 1, 6);
         completionList.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
         let enumerables = completionList.items.filter(c => removeCheat(c.label) === "IEnumerable");
@@ -52,27 +52,27 @@ suite(`CompletionProvider Types Tests`, () => {
         assertStringContains(enumerable.detail!, "System.Collections.Generic");
     });
 
-    test("Should show types of a library", async () => {
+    it("Should show types of a library", async () => {
         let completionList = await complete("ShouldShowLibraryType.cs", 4, 12);
         assertContains(completionList, "JsonConvert");
     });
 
-    test("Should not show types of a not imported library", async () => {
+    it("Should not show types of a not imported library", async () => {
         let completionList = await complete("ShouldNotShowOtherLibraryType.cs", 4, 12);
         assertNotContains(completionList, "MidiFile");
     });
 
-    test("Should work despite being after a comment dot", async () => {
+    it("Should work despite being after a comment dot", async () => {
         let completionList = await complete("ShouldIgnoreComment.cs", 7, 8);
         assertContains(completionList, "Binder");
     });
 
-    test("Should show completions even where there is no space before", async () => {
+    it("Should show completions even where there is no space before", async () => {
         let completionList = await complete("ShouldShowWithoutSpace.cs", 6, 20);
         assertContains(completionList, "File");
     });
 
-    test("Should show completions after the 'this' keyword", async () => {
+    it("Should show completions after the 'this' keyword", async () => {
         let completionList = await complete("ShouldCompleteAfterThis.cs", 6, 37);
         assertContains(completionList, "IEnumerable");
     })

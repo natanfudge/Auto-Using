@@ -7,7 +7,6 @@ using AutoUsing.Analysis;
 using AutoUsing.Analysis.Cache;
 using AutoUsing.Models;
 using AutoUsing.Proxy;
-using FireSharp.Extensions;
 using AutoUsing.Analysis.DataTypes;
 using AutoUsing.Utils;
 using AutoUsing.Lsp;

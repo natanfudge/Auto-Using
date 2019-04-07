@@ -6,7 +6,7 @@ import { testHelper } from "../extension";
 export const extensionLocation = "C:\\Users\\natan\\Desktop\\Auto-Using-Git";
 
 export async function activateExtension(): Promise<void> {
-    const ext = vscode.extensions.getExtension("Fudge.auto-using")!;
+    const ext = vscode.extensions.getExtension("fudge.auto-using")!;
 
     if (!ext.isActive) {
         await ext.activate();
@@ -26,8 +26,10 @@ export async function activateCSharpExtension(): Promise<void> {
 }
 
 export async function forServerToBeReady(): Promise<void> {
+    let helper = testHelper;
+
     //@ts-ignore
-    let client = testHelper.client;
+    let client = helper.client;
     //@ts-ignore
     let ready = testHelper.started;
     if (ready) return;

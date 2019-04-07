@@ -1,10 +1,10 @@
-﻿using System.Diagnostics;
+﻿using System.IO;
+using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using AutoUsing.Models;
 using AutoUsing.Proxy;
-using Newtonsoft.Json;
 using AutoUsing.Utils;
 using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
@@ -21,7 +21,6 @@ namespace AutoUsing
     public class Program
     {
         // public static Server Server = new Server();
-        //TODO: the using statement inserted by the server doesn't work well
         private static Task<ILanguageServer> CreateLanguageServer()
         {
             return LanguageServer.From(options =>
@@ -37,6 +36,10 @@ namespace AutoUsing
                      // .WithHandler<WorkspaceSetupHandler>()
                      );
         }
+        
+
+        
+        
 
         // private static void ConfigureServices(IServiceCollection services)
         // {
@@ -54,6 +57,8 @@ namespace AutoUsing
             if (args.Length == 0) throw new ServerException("A workspace setup json must be provided.");
             Server.Instance.SetupWorkspace(JSON.Parse<SetupWorkspaceRequest>(args[0]));
             var server = await CreateLanguageServer();
+            //TODO: call activate takes a century. 
+
             // var x = server.Workspace;
             // server.AddHandler(SetupWorkspace, new WorkspaceSetupHandler());
 
@@ -66,6 +71,8 @@ namespace AutoUsing
 
             // server.Client.SendRequest()
             await server.WaitForExit;
+            
+    
 
 
 
@@ -129,6 +136,8 @@ namespace AutoUsing
         private static T ParseRequest<T>(string req)
         {
             return JSON.Parse<T>(req);
+
+            // var x = Console.read
         }
     }
 }
