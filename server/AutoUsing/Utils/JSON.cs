@@ -1,10 +1,20 @@
-using AutoUsing.Proxy;
+using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace AutoUsing.Utils
 {
     public static class JSON
     {
+
+        public static class Serializer
+    {
+        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
+        {
+            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+            DateParseHandling = DateParseHandling.None,
+            ContractResolver = new CamelCasePropertyNamesContractResolver()
+        };
+    }
 
         // private static 
         public static T Parse<T>(string json)

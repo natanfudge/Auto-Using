@@ -5,14 +5,22 @@ using System.IO;
 using System.Threading.Tasks;
 using AutoUsing.Analysis;
 using AutoUsing.Analysis.Cache;
-using AutoUsing.Models;
-using AutoUsing.Proxy;
 using AutoUsing.Analysis.DataTypes;
 using AutoUsing.Utils;
 using AutoUsing.Lsp;
 
 namespace AutoUsing
 {
+
+    public class SetupWorkspaceRequest
+    {
+        public List<string> Projects { get; set; }
+        public string WorkspaceStorageDir { get; set; }
+        public string GlobalStorageDir { get; set; }
+        public string ExtensionDir { get; set; }
+
+    }
+
     /// <summary>
     /// Specifies the logic for every request
     /// </summary>
@@ -22,33 +30,6 @@ namespace AutoUsing
         // public IOProxy Proxy = new IOProxy();
         private List<Project> Projects = new List<Project>();
         private string GlobalStorageDir;
-
-        public Response Pong(Request req)
-        {
-            return new PingResponse();
-        }
-
-        public Response Error(string error)
-        {
-            return new ErrorResponse { Body = error };
-        }
-
-        // public void WriteError(string error)
-        // {
-        //     Proxy.WriteData(Error(error));
-        // }
-
-        // public void Listen()
-        // {
-        //     //            Task.Run(() =>
-        //     {
-        //         while (true)
-        //         {
-        //             Proxy.ReadData(new MessageEventArgs { Data = Console.ReadLine() });
-        //         }
-        //     }
-        //     //            );
-        // }
 
 
         /// <summary>
@@ -139,25 +120,24 @@ namespace AutoUsing
         /// <summary>
         /// Adds .NET projects for the server to watch over and collect assembly info about.
         /// </summary>
-        public Response SetupWorkspace(SetupWorkspaceRequest req)
+        public void SetupWorkspace(SetupWorkspaceRequest req)
         {
             GlobalStorageDir = req.GlobalStorageDir;
             GlobalCache.SetupGlobalCache(GlobalStorageDir);
 
             if (req.Projects.Any(path => !File.Exists(path)))
             {
-                return new ErrorResponse { Body = Errors.NonExistentProject };
+                throw new ServerException(Errors.NonExistentProject);
             }
 
             const string csproj = ".csproj";
 
             if (req.Projects.Any(path => Path.GetExtension(path) != csproj))
             {
-                return new ErrorResponse { Body = Errors.NonExistentProject };
+                throw new ServerException(Errors.NonExistentProject);
             }
 
             Projects.AddRange(req.Projects.Select(path => new Project(path, req.WorkspaceStorageDir, watch: true)));
-            return new EmptyResponse();
         }
 
         /// <summary>
