@@ -1,10 +1,11 @@
 {
 	"name": "auto-using",
 	"displayName": "Auto-Using for C#",
-	"icon": "icon.png",
-	"version": "0.7.4",
-	"publisher": "Fudge",
 	"description": "Provides intellisense for and imports references from all available sources.",
+	"icon": "icon.png",
+	"author": "Fudge",
+	"license": "SEE LICENSE IN LICENSE",
+	"version": "0.7.5",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/natanfudge/Auto-Using"
@@ -12,11 +13,11 @@
 	"bugs": {
 		"url": "https://github.com/natanfudge/Auto-Using/issues"
 	},
-	"files": [
-		"out/**",
-		"!out/test/**"
+	"publisher": "fudge",
+	"categories": [
+		"Other",
+		"Programming Languages"
 	],
-	"license": "SEE LICENSE IN LICENSE",
 	"keywords": [
 		"C#",
 		"csharp",
@@ -27,50 +28,49 @@
 		"auto-import"
 	],
 	"engines": {
-		"vscode": "^1.18.0"
-	},
-	"categories": [
-		"Other",
-		"Programming Languages"
-	],
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.wipeCommon",
-				"title": "Wipe Memory Of Commonly Used References"
-			}
-		],
-		"keybindings": [
-			{
-				"command": "extension.wipeCommon",
-				"key": "Ctrl+Shift+W"
-			}
-		]
+		"vscode": "^1.32.0"
 	},
 	"activationEvents": [
 		"onLanguage:csharp"
 	],
-	"main": "./out/extension.js",
+	"main": "./client/out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Auto-Using For C#",
+			"properties": {
+				"autousing.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				}
+			}
+		}
+	},
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install"
+		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile && cd server/AutoUsing && dotnet publish && cd .. && cd ..",
+		"compile": "tsc -b",
+		"compile-everything": "tsc -b && cd server/AutoUsing && dotnet build && cd .. && cd ..",
+		"compile-everything-test":"tsc -b && cd server/AutoUsing && dotnet build && cd .. && cd .. && dotnet restore client/src/test/playground",
+		"watch": "tsc -b -w",
+		"postinstall": "cd client && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
 	},
 	"devDependencies": {
-		"@types/node": "^6.0.40",
+		"@types/mocha": "^5.2.0",
+		"@types/node": "^8.0.0",
+		"colors": "^1.3.3",
+		"mocha": "^6.0.2",
 		"tslint": "^5.11.0",
-		"typescript": "^2.9.2",
-		"vscode": "^1.1.17"
+		"typescript": "^3.1.3"
 	},
 	"extensionDependencies": [
 		"ms-vscode.csharp"
-	],
-	"dependencies": {
-		"@types/mocha": "^5.2.5",
-		"colors": "^1.3.3",
-		"i": "^0.3.6",
-		"perf_hooks": "0.0.1",
-		"ts-node": "^7.0.1"
-	}
+	]
 }
