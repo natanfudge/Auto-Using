@@ -1626,3 +1626,51 @@
     "lib/netstandard2.0/Newtonsoft.Json.dll"
   ]
 }
+4/8/2019 3:28:45 PM: Watching location: c:\Users\natan\Desktop\Showcase\obj/project.assets.json
+4/8/2019 3:35:10 PM: Could not find the assembly path of a newly added library in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/8/2019 3:35:10 PM: Watching location: c:\Users\natan\Desktop\Showcase\obj/project.assets.json
+4/8/2019 3:38:24 PM: Could not find the assembly path of a newly added library in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/8/2019 3:38:24 PM: Watching location: c:\Users\natan\Desktop\Showcase\obj/project.assets.json
+4/8/2019 3:50:26 PM: Watching location: c:\Users\natan\Desktop\Showcase\obj/project.assets.json
+4/8/2019 4:00:14 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+4/8/2019 4:00:14 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+4/8/2019 4:00:14 PM: Removing packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\FireSharp/2.0.4/lib/portable-net45+sl5+wp8+win8/FireSharp.dll"
+]
+4/8/2019 4:00:57 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
+]
+4/8/2019 4:00:57 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+4/8/2019 4:00:57 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+4/8/2019 4:02:56 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+4/8/2019 4:02:56 PM: New packages : []
+4/8/2019 4:02:56 PM: Removing packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+4/8/2019 4:03:08 PM: Old packages : []
+4/8/2019 4:03:08 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]
+4/8/2019 4:03:08 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
+]

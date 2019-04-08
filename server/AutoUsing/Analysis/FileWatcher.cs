@@ -12,7 +12,8 @@ namespace AutoUsing.Analysis
         {
             base.Path = System.IO.Path.GetDirectoryName(filePath);
             base.Filter = System.IO.Path.GetFileName(filePath);
-            base.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName;
+            base.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName 
+            | NotifyFilters.CreationTime | NotifyFilters.Attributes | NotifyFilters.DirectoryName | NotifyFilters.Security | NotifyFilters.Size;
         }
     }
 }

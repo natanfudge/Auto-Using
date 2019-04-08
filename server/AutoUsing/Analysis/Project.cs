@@ -9,6 +9,7 @@ using AutoUsing.Analysis.Cache;
 using AutoUsing.Analysis.DataTypes;
 using Newtonsoft.Json.Linq;
 using AutoUsing.Utils;
+using Newtonsoft.Json;
 
 namespace AutoUsing.Analysis
 {
@@ -21,7 +22,8 @@ namespace AutoUsing.Analysis
         private XmlDocument Document { get; set; }
         //TODO: explain the purpose of this field
         private XmlNamespaceManager NamespaceManager { get; set; }
-        private FileWatcher FileWatcher { get; set; }
+        private FileWatcher ProjectFileWatcher { get; set; }
+        private FileWatcher AssetsFileWatcher { get; set; }
 
         /// <summary>
         /// The list of library names that are referenced by the .csproj file 
@@ -89,7 +91,11 @@ namespace AutoUsing.Analysis
             LoadPackageReferences();
 
             // Optional: Watch for changes.
-            if (watch) Watch();
+            if (watch)
+            {
+                WatchProjectFile();
+                WatchAssetsFile();
+            }
 
             // Loads completion info from cache files
             LoadCache(vscodeDir);
@@ -133,23 +139,25 @@ namespace AutoUsing.Analysis
         /// </summary>
         private const int watchBuffer = 300;
 
-        private bool fileChangedRecently = false;
+        private bool projectFileChangedRecently = false;
+
+        // private string Get
 
         /// <summary>
         ///     Starts watching the project file for changes.
         /// </summary>
-        private void Watch()
+        private void WatchProjectFile()
         {
-            FileWatcher = new FileWatcher(FilePath);
-            FileWatcher.Changed += (s, e) =>
+            ProjectFileWatcher = new FileWatcher(FilePath);
+            ProjectFileWatcher.Changed += (s, e) =>
             {
 
                 // Prevent the event from getting triggered twice.
-                if (fileChangedRecently) return;
-                fileChangedRecently = true;
+                if (projectFileChangedRecently) return;
+                projectFileChangedRecently = true;
                 Task.Delay(watchBuffer).ContinueWith((t) =>
                 {
-                    fileChangedRecently = false;
+                    projectFileChangedRecently = false;
 
                     if (e.ChangeType is WatcherChangeTypes.Renamed) LoadBasicInfo(e.Name);
 
@@ -161,14 +169,49 @@ namespace AutoUsing.Analysis
 
                     if (e.ChangeType is WatcherChangeTypes.Changed)
                     {
+                        // LoadLibraryAssemblyLocations();
                         LoadPackageReferences();
                         UpdateCache();
                     }
 
                 });
             };
-            FileWatcher.EnableRaisingEvents = true;
+            ProjectFileWatcher.EnableRaisingEvents = true;
         }
+
+        private bool assetsFileChangedRecently = false;
+
+        /// <summary>
+        ///     Starts watching the project.assets.json file for changes.
+        /// </summary>
+        private void WatchAssetsFile()
+        {
+            var location = AssetsFileLocation();
+            // Util.Log("Watching location: " + location);
+            AssetsFileWatcher = new FileWatcher(location);
+            AssetsFileWatcher.Changed += (s, e) =>
+            {
+
+                // Prevent the event from getting triggered twice.
+                if (assetsFileChangedRecently) return;
+                assetsFileChangedRecently = true;
+                Task.Delay(watchBuffer).ContinueWith((t) =>
+                {
+                    assetsFileChangedRecently = false;
+
+                    if (e.ChangeType is WatcherChangeTypes.Changed)
+                    {
+                        LoadLibraryAssemblyLocations();
+                        LoadPackageReferences();
+                        UpdateCache();
+                    }
+
+                });
+            };
+            AssetsFileWatcher.EnableRaisingEvents = true;
+        }
+
+        private string AssetsFileLocation() => Path.Combine(RootDirectory, "obj/project.assets.json");
 
         /// <summary>
         ///     Gets the current NuGet packages installation directory
@@ -186,16 +229,31 @@ namespace AutoUsing.Analysis
         /// </summary>
         private void LoadLibraryAssemblyLocations()
         {
-            var assets = JObject.Parse(File.ReadAllText(Path.Combine(RootDirectory, "obj/project.assets.json")));
+            if (!File.Exists(AssetsFileLocation()))
+            {
+                // Someone fucked with the assets file completely
+                if (LibraryAssemblyLocations == null) LibraryAssemblyLocations = new Dictionary<string, List<string>>();
+                return;
+            }
+            try
+            {
 
-            // TODO: Need to see what we do when we have multiple targets
-            var targets = assets["targets"];
-            var targetLibs = targets.First().First();
+                var assets = JObject.Parse(File.ReadAllText(AssetsFileLocation()));
 
-            LibraryAssemblyLocations = targetLibs
-                .ToDictionary(lib => ((JProperty)lib).Name,
-                    lib => { return lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList(); })
-                .Where(kv => kv.Value != null).ToDictionary();
+                // TODO: Need to see what we do when we have multiple targets
+                var targets = assets["targets"];
+                var targetLibs = targets.First().First();
+
+                LibraryAssemblyLocations = targetLibs
+                    .ToDictionary(lib => ((JProperty)lib).Name,
+                        lib => { return lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList(); })
+                    .Where(kv => kv.Value != null).ToDictionary();
+            }
+            catch (JsonReaderException)
+            {
+                // Someone fucked with the assets file a bit
+                if (LibraryAssemblyLocations == null) LibraryAssemblyLocations = new Dictionary<string, List<string>>();
+            }
         }
 
         /// <summary>
@@ -232,7 +290,6 @@ namespace AutoUsing.Analysis
                     Util.Log(@"Could not find the assembly path of a newly added library in projects.assets.json.
                     This is probably because the dependencies were not restored yet.");
                     return;
-                    //TODO: run the scanning again once dependencies are restored. 
                 }
 
                 foreach (var assemblyPath in LibraryAssemblyLocations[assemblyPathIdentifier])
@@ -259,7 +316,7 @@ namespace AutoUsing.Analysis
         private void UpdateCache()
         {
             // Gets the intersection in case one of the cache files is missing something
-            var oldPackages = GetOldCacheIntersection();
+            var oldPackages = GetOldCacheIntersection().ToList();
             var newPackages = this.References.Select(reference => reference.Path.ParseEnvironmentVariables());
 
             // Add new packages to cache
@@ -291,17 +348,19 @@ namespace AutoUsing.Analysis
                 if (addedPackages.Count() > 0) Util.Log("Adding packages: " + addedPackages.ToIndentedJson());
                 if (removedPackages.Count() > 0) Util.Log("Removing packages : " + removedPackages.ToIndentedJson());
             }
-            
+
         }
 
         /// <summary>
-        ///     Stops the <see cref="FileWatcher"/> used by this instance
+        ///     Stops the <see cref="ProjectFileWatcher"/> used by this instance
         ///     before disposal.
         /// </summary>
         public void Dispose()
         {
-            FileWatcher.EnableRaisingEvents = false;
-            FileWatcher?.Dispose();
+            ProjectFileWatcher.EnableRaisingEvents = false;
+            ProjectFileWatcher?.Dispose();
+            AssetsFileWatcher.EnableRaisingEvents = false;
+            AssetsFileWatcher?.Dispose();
         }
     }
 }

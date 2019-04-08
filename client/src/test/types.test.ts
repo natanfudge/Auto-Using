@@ -27,18 +27,18 @@ describe(`CompletionProvider Types Tests`, () => {
         assertNotContains(completionList, "File");
     });
 
-    it("Should filter out only specific completions which have a used namespaces", async () => {
-        let [completions] = await completeWithData("ShouldFilterSome.cs", 6, 14);
-        completions.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
-        let files = completions.items.filter(c => removeCheat(c.label) === "File");
+    // it("Should filter out only specific completions which have used namespaces", async () => {
+    //     let [completions] = await completeWithData("ShouldFilterSome.cs", 6, 14);
+    //     completions.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
+    //     let files = completions.items.filter(c => removeCheat(c.label) === "File");
 
         
 
-        let file = files.filter(completion => completion.documentation === undefined) [0];
+    //     let file = files.filter(completion => completion.documentation === undefined) [0];
 
-        assertStringContains(file.detail!, "System.Net");
-        assertStringNotContains(file.detail!, "System.IO");
-    })
+    //     assertStringContains(file.detail!, "System.Net");
+    //     assertStringNotContains(file.detail!, "System.IO");
+    // })
 
     it("Should combine types of the same name", async () => {
         let [completionList] = await completeWithData("ShouldCombine.cs", 1, 6);
