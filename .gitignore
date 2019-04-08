@@ -5,3 +5,5 @@ node_modules
 *.vsix
 **/bin
 **/obj
+**/.idea
+**/.vs
