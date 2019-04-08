@@ -36,6 +36,7 @@ namespace AutoUsing
 
         private const string SetupWorkspace = "setupWorkspace";
 
+        //TODO: fix .csproj changes not getting detected. Perhaps we should be looking at the deps file instead of the .csproj file?
         //TODO: Have a task that debugs the server and runs the extension without extra clicking
         //TODO: omnisharp is going insane about Unable to find workspace/didChangeConfiguration, methods found include 
         //TODO: Using a document selector without a scheme. Bah!

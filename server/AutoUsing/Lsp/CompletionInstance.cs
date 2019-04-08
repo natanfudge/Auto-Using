@@ -35,13 +35,12 @@ namespace AutoUsing.Lsp
         {
             var completionType = this.DocumentWalker.GetCompletionType(request.Position);
 
-            // Util.Log("Word to complete = " + WordToComplete);
             CompletionList completions;
 
             if (completionType == CompletionType.NONE)
             {
+                
                 completions = new CompletionList();
-                // return new CompletionList();
             }
             else
             {

@@ -175,7 +175,7 @@ namespace AutoUsing.Utils
 
         const bool writeLogs = false;
         const bool writeBenchmarks = false;
-        const string logLocation = "C:/Users/natan/Desktop/Auto-UsingReference/vscode-extension-samples/lsp-sample/server/AutoUsing/logs/log.txt";
+        const string logLocation = "C:/Users/natan/Desktop/Auto-Using-Git/server/AutoUsing/logs/log.txt";
     }
 
 }
