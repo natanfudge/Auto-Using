@@ -14,7 +14,7 @@ namespace AutoUsing.Lsp
         private string Text;
         private string[] TextLines;
 
-        public string Path{get;set;}
+        public string Path { get; set; }
 
         /// <summary>
         /// Gets the absolute numeric position in a text file by line and column.
@@ -73,7 +73,14 @@ namespace AutoUsing.Lsp
 
         public string GetCharAt(Position pos)
         {
-            return TextLines[pos.Line][(int)pos.Character].ToString();
+            var line = TextLines[pos.Line];
+            if (pos.Character == line.Length) return "";
+            return line[(int)pos.Character].ToString();
+            // if (pos.Character == 0) return "";
+
+            // var str = TextLines[pos.Line];
+            // var length = str.Length;
+
         }
 
         public IEnumerable<string> Matches(Regex regex)

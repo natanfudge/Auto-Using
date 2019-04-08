@@ -47,7 +47,6 @@ namespace AutoUsing
             var server = await CreateLanguageServer();
             
 
-
             await server.WaitForExit;
             
         }
