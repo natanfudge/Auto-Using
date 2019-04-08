@@ -19,7 +19,7 @@ import { TestHelper, Completion, getStoredCompletions, completionCommon, StoredC
 const debugging = false;
 const debugServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "AutoUsing.dll");
 const releaseServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "publish", "AutoUsing.dll");
-const relativeServerLocation = debugging? debugServerLocation : releaseServerLocation;
+// const relativeServerLocation = debugging? debugServerLocation : releaseServerLocation;
 const hoverRequest = "custom/hoverRequest";
 const dotnetExe = 'dotnet';
 const HANDLE_COMPLETION = "custom/handleCompletion";
@@ -27,9 +27,8 @@ export let testHelper: TestHelper;
 let client: LanguageClient;
 export function activate(context: vscode.ExtensionContext) {
 	// The server is implemented in node
-	let serverModule = context.asAbsolutePath(
-		relativeServerLocation
-	);
+	let releaseServerModule = context.asAbsolutePath(releaseServerLocation);
+    let debugServerModule = context.asAbsolutePath(debugServerLocation);
 	let commandDisposable = vscode.commands.registerCommand(HANDLE_COMPLETION, async (completion: Completion) => {
         if (completion.Namespaces.length > 1) {
 
@@ -63,8 +62,8 @@ export function activate(context: vscode.ExtensionContext) {
 	var message = JSON.stringify(setup);
 
 	let serverOptions: ServerOptions = {
-        run: { command: dotnetExe, args: [serverModule, message] },
-        debug: { command: dotnetExe, args: [serverModule, message] },
+        run: { command: dotnetExe, args: [releaseServerModule, message] },
+        debug: { command: dotnetExe, args: [debugServerModule, message] },
 	}
 	
 	let clientOptions: LanguageClientOptions = {

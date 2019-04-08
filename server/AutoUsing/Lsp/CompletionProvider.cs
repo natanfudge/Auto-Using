@@ -47,6 +47,7 @@ namespace AutoUsing.Lsp
 
         public async Task<CompletionList> Handle(CompletionParams request, CancellationToken cancellationToken)
         {
+            
             // Util.Log("Handling completion request.");
             // return new CompletionList(new CompletionItem{Label ="new version op"});
             // var result = await CompletionInstance.ProvideCompletionItems(request, server, _bufferManager);
