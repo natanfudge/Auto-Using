@@ -38,13 +38,13 @@ namespace AutoUsing.Lsp
         /// <summary>
         /// Returns the word before a certain position.  Considers stuff like brackets and semicolons as not part of words.
         /// </summary>
-        /// <param name="pos"></param>
+        /// <param name="wordPosition"></param>
         /// <returns></returns>
-        public string ParseWordBefore(Position pos)
+        public string ParseWordBefore(Position wordPosition)
         {
-            if(pos.IsOrigin()) return "";
+            if(wordPosition.IsOrigin()) return "";
             var word = new StringBuilder();
-            WalkBackWhile(GetPrev(pos), (c) =>
+            WalkBackWhile(GetPrev(wordPosition), (c,newLine,pos) =>
             {
                 // Once we hit something like a space or a semicolon it means the word has ended.
                 if (string.IsNullOrWhiteSpace(c) || c == "." || Constants.SyntaxChars.Contains(c) || pos.IsOrigin()) return false;
