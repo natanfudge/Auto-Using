@@ -10,7 +10,6 @@ namespace AutoUsing.Analysis
 {
     public class AssemblyScan
     {
-
         /// <summary>
         /// Loads assembly from path 
         /// </summary>
@@ -36,7 +35,6 @@ namespace AutoUsing.Analysis
         }
 
 
-
         private Assembly Assembly { get; set; }
 
         public string Path { get; set; }
@@ -45,18 +43,42 @@ namespace AutoUsing.Analysis
         /// Returns true if loading the assembly threw an exception so that assembly cannot be parsed
         /// </summary>
         public bool CouldNotLoad() => Assembly == null;
-
-
         /// <summary>
         /// Extracts type information from the loaded assembly
         /// </summary>
         public List<TypeCompletionInfo> GetTypeInfo()
         {
             var types = Assembly.GetExportedTypes()
-                .Select(type => new TypeCompletionInfo(type.Name.NoTilde(), type.Namespace))
+                .Where(IsNotInternalType)
+                .Select(ConvertToTypeInfo)
                 .ToList();
 
             return types;
+        }
+
+        /// <summary>
+        /// Converts a .NET Type object into a TypeCompletionInfo object that is used by Auto-Using to produce completion items.
+        /// </summary>
+        private static TypeCompletionInfo ConvertToTypeInfo(Type type)
+        {
+            var name = type.Name.NoTilde();
+            // If an attribute has a 'Attribute' suffix, then it is also valid to use it without the 'Attribute' suffix.
+            // Essentially all people omit the 'Attribute' suffix, so we omit it aswell.
+            // Example from NUnit: [TestAttribute] becomes [Test].
+            if (type.IsAttribute() && name.EndsWith(AttributeSuffix)) name = name.Remove(name.Length - AttributeSuffix.Length);
+            return new TypeCompletionInfo(name, type.Namespace);
+        }
+
+        private const string AttributeSuffix = "Attribute";
+
+        // private static bool IsAttri
+
+        /// <summary>
+        /// This is a calculated guess at measuring whether or not a class is internal and should never be imported. 
+        /// </summary>
+        private static bool IsNotInternalType(Type type)
+        {
+            return !type.Namespace.Contains("Internal");
         }
 
         /// <summary>
@@ -65,29 +87,27 @@ namespace AutoUsing.Analysis
         public List<HierarchyInfo> GetHierarchyInfo()
         {
             return Assembly.GetExportedTypes()
-                            .Select(type =>
-                            {
-                                if (type.IsStatic()) return null;
+                .Select(type =>
+                {
+                    if (type.IsStatic()) return null;
 
-                                var fathers = type
-                                    // Add in the interfaces of the class
-                                    .GetInterfaces()
-                                    .Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
-                                    // Add in the baseclass of the class
-                                    .Append(GetBaseClassAsString(type))
-                                    .ToList();
-                                var name = type.Name.NoTilde();
+                    var fathers = type
+                        // Add in the interfaces of the class
+                        .GetInterfaces()
+                        .Select(@interface => @interface.Namespace + "." + @interface.Name.NoTilde())
+                        // Add in the baseclass of the class
+                        .Append(GetBaseClassAsString(type))
+                        .ToList();
+                    var name = type.Name.NoTilde();
 
-                                if (type.IsGenericType) name += "<>";
+                    if (type.IsGenericType) name += "<>";
 
-                                AddRuntimeOnlyHierarchies(fathers, type);
-
-
-                                return new HierarchyInfo(name, type.Namespace, fathers);
-                            })
-                            .Where(info => info != null).ToList();
+                    AddRuntimeOnlyHierarchies(fathers, type);
 
 
+                    return new HierarchyInfo(name, type.Namespace, fathers);
+                })
+                .Where(info => info != null).ToList();
         }
 
         /// <summary>
@@ -118,7 +138,6 @@ namespace AutoUsing.Analysis
         /// <summary>
         /// Extracts extension method information from the loaded assembly
         /// </summary>
-
         public List<ExtensionMethodInfo> GetExtensionMethodInfo()
         {
             var extendingClasses = Assembly
@@ -129,7 +148,8 @@ namespace AutoUsing.Analysis
                 extendingClass => extendingClass.GetExtensionMethods()
                     .Select(extendingMethod =>
                     {
-                        var extendedClassName = extendingMethod.GetExtendedClass().Namespace + "." + extendingMethod.GetExtendedClass().Name.NoTilde();
+                        var extendedClassName = extendingMethod.GetExtendedClass().Namespace + "." +
+                                                extendingMethod.GetExtendedClass().Name.NoTilde();
 
                         return new ExtensionMethodInfo(
                             extendingClass.Namespace,
@@ -141,8 +161,7 @@ namespace AutoUsing.Analysis
             return extensionMethods;
         }
 
-        private static bool ClassCanHaveExtensionMethods(System.Type @class) => @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
-
-
+        private static bool ClassCanHaveExtensionMethods(System.Type @class) =>
+            @class.IsSealed && !@class.IsGenericType && !@class.IsNested;
     }
 }

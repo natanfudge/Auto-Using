@@ -42,6 +42,13 @@ namespace AutoUsing.Utils
         }
 
         /// <summary>
+        /// Returns whether or not a type is an [Attribute]
+        /// </summary>
+        public static bool IsAttribute(this Type type){
+            return type.BaseType?.FullName == "System.Attribute";
+        }
+
+        /// <summary>
         ///     Extension method info.
         /// </summary>
         /// <returns>The class the method is extending</returns>
@@ -161,15 +168,25 @@ namespace AutoUsing.Utils
               $"Executing {benchmarkName} took {(watch.ElapsedMilliseconds)} milliseconds.");
         }
 
+        /// <summary>
+        /// Logs text to the log file with the current date attached to it.
+        /// </summary>
         public static void Log(string text)
         {
             if (writeLogs) File.AppendAllText(logLocation, $"{DateTime.Now}: {text}\n");
         }
 
-        public static T[] SubArray<T>(this T[] data, int index, int length)
+        /// <summary>
+        /// Returns a portion of the array.
+        /// </summary>
+        /// <param name="arr">The array</param>
+        /// <param name="index">The index of the original array the sub array will start from</param>
+        /// <param name="length">How many cells, beginning at the index, will be assigned from the original array to the sub array.</param>
+        /// <typeparam name="T">The type of the array's elements.</typeparam>
+        public static T[] SubArray<T>(this T[] arr, int index, int length)
         {
             T[] result = new T[length];
-            Array.Copy(data, index, result, 0, length);
+            Array.Copy(arr, index, result, 0, length);
             return result;
         }
 

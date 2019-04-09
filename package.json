@@ -51,7 +51,13 @@
 					"description": "Traces the communication between VS Code and the language server."
 				}
 			}
-		}
+		},
+		"commands":[
+			{
+				"command": "autousing.cleanCache",
+				"title": "Auto-Using: Clean All Caches"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile && cd server/AutoUsing && dotnet publish && cd .. && cd ..",

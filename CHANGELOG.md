@@ -5,8 +5,10 @@
 - Completions will now appear for libraries you have added to your project. 
 - Completions should now be much faster in cases in which there are many completions.
 - Fixed completions sometimes not showing working near comments.
-- Fixed the extension hanging when there is no project file
-- Actually fixed completions not appearing after the "this" keyword
+- Fixed the extension hanging when there is no project file.
+- Actually fixed completions not appearing after the "this" keyword.
+- Fixed internal classes appearing in completions.
+- Fixed attributes having an `attribute` suffix.
 
 ### 0.7.4 
 - Fixed extension methods not appearing for arrays.
