@@ -2,7 +2,7 @@
 Auto-imports and provides intellisense for references that were not yet imported in a C# file. 
 
 ## The new beta version of Auto-Using
-[Libraries](libraries.gif)
+![Libraries](libraries.gif)
 - Completions will now appear for libraries you have added to your project. 
 - Completions should now be much faster in cases in which there are many completions.
 - Fixed completions sometimes not showing working near comments.
