@@ -37,7 +37,6 @@ namespace AutoUsing
         private const string SetupWorkspace = "setupWorkspace";
 
         //TODO: Nunit.Framework.Test does not appear in the completions!
-        //TODO: Support attributes and mark it in changelog!
         //TODO: Make it so only attributes appear between []. Low priority. 
         //TODO: Have a task that debugs the server and runs the extension without extra clicking
         //TODO: omnisharp is going insane about Unable to find workspace/didChangeConfiguration, methods found include 

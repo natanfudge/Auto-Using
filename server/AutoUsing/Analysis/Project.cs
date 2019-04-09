@@ -65,8 +65,8 @@ namespace AutoUsing.Analysis
         /// </summary>
         /// <param name="filePath">The path to the `.csproj` file to laod.</param>
         /// <param name="watch">Whether to watch for further file changes.</param>
-        /// <param name= "vscodeDir">The location of the .vscode directory of the VS Code project</param>
-        public Project(string filePath, string vscodeDir, bool watch)
+        /// <param name= "storageDirectory">The location at which project-specific cache files will be stored</param>
+        public Project(string filePath, string storageDirectory, bool watch)
         {
 
             Document = new XmlDocument();
@@ -76,7 +76,7 @@ namespace AutoUsing.Analysis
             NamespaceManager = new XmlNamespaceManager(Document.NameTable);
             NamespaceManager.AddNamespace("x", "http://schemas.microsoft.com/developer/msbuild/2003");
 
-            // Essential info about given project file.
+            // Essential info about a given project file.
             LoadBasicInfo(filePath);
 
             // Using NuGet Packages Location, we won't need to wait for project
@@ -98,7 +98,7 @@ namespace AutoUsing.Analysis
             }
 
             // Loads completion info from cache files
-            LoadCache(vscodeDir);
+            LoadCache(storageDirectory);
 
             // startTime.LogTimePassed("Project Creation");
         }

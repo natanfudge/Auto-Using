@@ -14,9 +14,12 @@ import {
     Trace
 } from 'vscode-languageclient';
 import { join } from 'path';
-import { TestHelper, Completion, getStoredCompletions, completionCommon, StoredCompletion, addUsing, storeCompletion, SetupWorkspaceRequest,
-     getAllProjectFiles, HoverRequest, getHoverString } from './util';
+import {
+    TestHelper, Completion, getStoredCompletions, completionCommon, StoredCompletion, addUsing, storeCompletion, SetupWorkspaceRequest,
+    getAllProjectFiles, HoverRequest, getHoverString
+} from './util';
 import { readdirSync, unlink, unlinkSync, readdir, Stats, lstat, lstatSync } from 'fs';
+import { promisify } from 'util';
 
 const debugServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "AutoUsing.dll");
 const releaseServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "publish", "AutoUsing.dll");
@@ -27,7 +30,7 @@ const HANDLE_COMPLETION = "custom/handleCompletion";
 const CLEAN_CACHE = "autousing.cleanCache";
 export let testHelper: TestHelper;
 let client: LanguageClient;
-export function activate(context: vscode.ExtensionContext) : void{
+export function activate(context: vscode.ExtensionContext): void {
     // The server is implemented in node
     let releaseServerModule = context.asAbsolutePath(releaseServerLocation);
     let debugServerModule = context.asAbsolutePath(debugServerLocation);
@@ -113,64 +116,101 @@ function registerHandleCompletionCommand(context: vscode.ExtensionContext): vsco
 /**
  * Destroy all of the files located at globalStoragePath/cache
  */
-function cleanGlobalCache(context: vscode.ExtensionContext): void {
+async function cleanGlobalCache(context: vscode.ExtensionContext): Promise<void> {
     let dir = join(context.globalStoragePath, globalCacheLocation);
-    removeDirectoryContents(dir);
+    await removeDirectoryContents(dir);
 }
 
-// function parentDirectory(path : string)
 
+const readdirPromise = promisify(readdir);
+const lstatPromise = promisify(lstat);
+const unlinkPromise = promisify(unlink);
 /**
  * Destroy all autousing cache files in all workspace storage directories
  */
-function cleanAllWorkspaceCache(context: vscode.ExtensionContext): void {
+async function cleanAllWorkspaceCache(context: vscode.ExtensionContext): Promise<void> {
     // Go up to the workspaceStorage dir
     let allWorkspaceStorageDir = path.dirname(path.dirname(context.storagePath));
+    //TODO: technically this could be sped up by dumping everything into a list of promises and then at the end awaiting it.
 
-    // Callback hell inc.
-    readdir(allWorkspaceStorageDir, (e1, workspaceDirs) => {
-        // Go through the weird generated numbers workspace directories 
-        for (let workspaceDir of workspaceDirs) {
-            // Go through the weird number directories
-            lstat(join(allWorkspaceStorageDir, workspaceDir), (e2, stats) => {
-                if (stats.isDirectory()) {
-                    // Go through the files in a specific workspace directory
-                    readdir(join(allWorkspaceStorageDir, workspaceDir), (e3, files) => {
-                        for (let file of files) {
-                            // Go inside the auto-using storage directory
-                            if (file === extensionId) {
-                                // Go through the cache files of a specific workspace
-                                let cacheDir = join(allWorkspaceStorageDir, workspaceDir, file, workspaceCacheLocation);
-                                readdir(cacheDir, (e4, projectCaches) => {
-                                    // Remove the cache files of all projects of the workspace
-                                    for (let projectCacheDir of projectCaches) {
-                                        removeDirectoryContents(join(cacheDir, projectCacheDir));
-                                    }
-                                });
-
-                            }
-                        }
-                    });
+    let workspaceDirs = await readdirPromise(allWorkspaceStorageDir);
+    // Go through the weird generated numbers workspace directories 
+    for (let workspaceDir of workspaceDirs) {
+        let absoluteWorkspaceDir = join(allWorkspaceStorageDir, workspaceDir);
+        // Ignore files that are not folders
+        if (!(await lstatPromise(absoluteWorkspaceDir)).isDirectory()) continue;
+        // Go through the files in a specific workspace directory
+        let workspaceFiles = await readdirPromise(absoluteWorkspaceDir);
+        for (let workspaceFile of workspaceFiles) {
+            // Go only inside the auto-using storage directory
+            if (workspaceFile === extensionId) {
+                // Go through the cache files of a specific workspace
+                let cacheDir = join(allWorkspaceStorageDir, workspaceDir, workspaceFile, workspaceCacheLocation);
+                let projectCaches = await readdirPromise(cacheDir);
+                // Remove the cache files of all projects of the workspace
+                for (let projectCacheDir of projectCaches) {
+                   await removeDirectoryContents(join(cacheDir, projectCacheDir));
                 }
-            });
+            }
+
         }
-    });
+    }
+
+   
+
+
+
+    // // Callback hell inc.
+    // readdir(allWorkspaceStorageDir, (e1, workspaceDirs) => {
+
+    //     for (let workspaceDir of workspaceDirs) {
+    //         // Go through the weird number directories
+    //         lstat(join(allWorkspaceStorageDir, workspaceDir), (e2, stats) => {
+    //             if (stats.isDirectory()) {
+    //                 // Go through the files in a specific workspace directory
+    //                 readdir(join(allWorkspaceStorageDir, workspaceDir), (e3, files) => {
+    //                     for (let file of files) {
+    //                         // Go inside the auto-using storage directory
+    //                         if (file === extensionId) {
+    //                             // Go through the cache files of a specific workspace
+    //                             let cacheDir = join(allWorkspaceStorageDir, workspaceDir, file, workspaceCacheLocation);
+    //                             readdir(cacheDir, (e4, projectCaches) => {
+    //                                 // Remove the cache files of all projects of the workspace
+    //                                 for (let projectCacheDir of projectCaches) {
+    //                                     removeDirectoryContents(join(cacheDir, projectCacheDir));
+    //                                 }
+    //                             });
+
+    //                         }
+    //                     }
+    //                 });
+    //             }
+    //         });
+    //     }
+    // });
 }
 
-function removeDirectoryContents(dir: string) : void {
-    readdir(dir, (error, files) => {
-        for (let file of files) {
-            unlink(join(dir, file), () => null);
-        }
-    });
+
+
+async function removeDirectoryContents(dir: string): Promise<void> {
+    for(let file of await readdirPromise(dir)){
+        await unlinkPromise(join(dir, file));
+    }
 }
 
 const extensionId = "fudge.auto-using";
 
 function registerCleanGlobalCacheCommand(context: vscode.ExtensionContext): vscode.Disposable {
-    return vscode.commands.registerCommand(CLEAN_CACHE, () => {
-        cleanGlobalCache(context);
-        cleanAllWorkspaceCache(context);
+    return vscode.commands.registerCommand(CLEAN_CACHE, async () => {
+        await Promise.all([cleanGlobalCache(context),cleanAllWorkspaceCache(context)]);
+
+        const reloadOption = "Yes, reload.";
+
+        let choice = await vscode.window.showInformationMessage("Caches have been cleaned. Would you like to reload the window to apply changes?",
+            reloadOption);
+        if (choice === reloadOption) {
+            vscode.commands.executeCommand("workbench.action.reloadWindow");
+        }
     });
 }
 

@@ -65,7 +65,11 @@ namespace AutoUsing.Analysis
             // If an attribute has a 'Attribute' suffix, then it is also valid to use it without the 'Attribute' suffix.
             // Essentially all people omit the 'Attribute' suffix, so we omit it aswell.
             // Example from NUnit: [TestAttribute] becomes [Test].
-            if (type.IsAttribute() && name.EndsWith(AttributeSuffix)) name = name.Remove(name.Length - AttributeSuffix.Length);
+            if (type.IsAttribute() && name.EndsWith(AttributeSuffix))
+            {
+                name = name.Remove(name.Length - AttributeSuffix.Length);
+            }
+            //TODO: the bug is probably that attribute is not the direct base class
             return new TypeCompletionInfo(name, type.Namespace);
         }
 

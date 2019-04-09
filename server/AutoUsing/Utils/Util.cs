@@ -45,7 +45,13 @@ namespace AutoUsing.Utils
         /// Returns whether or not a type is an [Attribute]
         /// </summary>
         public static bool IsAttribute(this Type type){
-            return type.BaseType?.FullName == "System.Attribute";
+            var currentBaseType = type.BaseType;
+            // Travels all the way up the hierarchy tree to check if it inherits from System.Attribute. 
+            while(currentBaseType != null){
+                if(currentBaseType.FullName == "System.Attribute") return true;
+                currentBaseType = currentBaseType.BaseType;
+            }
+            return false;
         }
 
         /// <summary>
