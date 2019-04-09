@@ -64,7 +64,14 @@ export function activate(context: vscode.ExtensionContext): void {
         }
 
     };
-
+// "dependencies": {
+	// 	"package": "^1.0.1",
+	// 	"vsce": "^1.59.0",
+	// 	"vscode-jsonrpc": "^4.0.0",
+	// 	"vscode-languageclient": "^5.2.1",
+	// 	"vscode-languageserver-protocol": "^3.15.0-next.1",
+	// 	"vscode-languageserver-types": "^3.14.0"
+	// },
 
     // Create the language client and start the client.
     client = new LanguageClient('autousing', 'Auto-Using', serverOptions, clientOptions);

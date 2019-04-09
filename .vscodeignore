@@ -1,10 +1,10 @@
 **
 # !client/out
 # client/out/test/**/*
-!client/node_modules/vscode-jsonrpc/**
-!client/node_modules/vscode-languageclient/**
-!client/node_modules/vscode-languageserver-protocol/**
-!client/node_modules/vscode-languageserver-types/**
+# !client/node_modules/vscode-jsonrpc/**
+# !client/node_modules/vscode-languageclient/**
+# !client/node_modules/vscode-languageserver-protocol/**
+# !client/node_modules/vscode-languageserver-types/**
 !server/AutoUsing/bin/Debug/netcoreapp2.1/publish
 !README.md
 !CHANELOG.md
