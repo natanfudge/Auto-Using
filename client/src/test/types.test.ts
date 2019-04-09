@@ -75,7 +75,7 @@ describe(`CompletionProvider Types Tests`, () => {
     it("Should show completions after the 'this' keyword", async () => {
         let completionList = await complete("ShouldCompleteAfterThis.cs", 6, 37);
         assertContains(completionList, "IEnumerable");
-    })
+    });
 
 
 

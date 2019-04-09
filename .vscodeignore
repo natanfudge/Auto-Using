@@ -1,6 +1,6 @@
 **
-!client/out
-client/out/test/**/*
+# !client/out
+# client/out/test/**/*
 !client/node_modules/vscode-jsonrpc/**
 !client/node_modules/vscode-languageclient/**
 !client/node_modules/vscode-languageserver-protocol/**
@@ -9,3 +9,4 @@ client/out/test/**/*
 !README.md
 !CHANELOG.md
 !icon.png
+!dist/**

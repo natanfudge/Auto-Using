@@ -33,7 +33,7 @@
 	"activationEvents": [
 		"onLanguage:csharp"
 	],
-	"main": "./client/out/extension",
+	"main": "./dist/extension",
 	"contributes": {
 		"configuration": {
 			"type": "object",
@@ -52,7 +52,7 @@
 				}
 			}
 		},
-		"commands":[
+		"commands": [
 			{
 				"command": "autousing.cleanCache",
 				"title": "Auto-Using: Clean All Caches"
@@ -60,21 +60,32 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile && cd server/AutoUsing && dotnet publish && cd .. && cd ..",
-		"compile": "tsc -b",
-		"compile-everything": "tsc -b && cd server/AutoUsing && dotnet build && cd .. && cd ..",
-		"compile-everything-test":"tsc -b && cd server/AutoUsing && dotnet build && cd .. && cd .. && dotnet restore client/src/test/playground",
-		"watch": "tsc -b -w",
+		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && cd server/AutoUsing && dotnet publish && cd .. && cd .. && webpack --mode production",
+		"compile": "webpack --mode none",
+		"compile-everything": " dotnet build server/AutoUsing && webpack --mode none",
+		"compile-everything-test": "tsc -b && dotnet build server/AutoUsing && dotnet restore client/src/test/playground",
+		"watch": "tsc -b -w webpack --mode none --watch",
 		"postinstall": "cd client && npm install && cd ..",
 		"test": "sh ./scripts/e2e.sh"
+	},
+	"dependencies": {
+		"package": "^1.0.1",
+		"vsce": "^1.59.0",
+		"vscode-jsonrpc": "^4.0.0",
+		"vscode-languageclient": "^5.2.1",
+		"vscode-languageserver-protocol": "^3.15.0-next.1",
+		"vscode-languageserver-types": "^3.14.0"
 	},
 	"devDependencies": {
 		"@types/mocha": "^5.2.0",
 		"@types/node": "^8.0.0",
 		"colors": "^1.3.3",
 		"mocha": "^6.0.2",
+		"ts-loader": "^5.3.3",
 		"tslint": "^5.11.0",
-		"typescript": "^3.1.3"
+		"typescript": "^3.1.3",
+		"webpack": "^4.29.6",
+		"webpack-cli": "^3.3.0"
 	},
 	"extensionDependencies": [
 		"ms-vscode.csharp"

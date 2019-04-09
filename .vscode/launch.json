@@ -2,13 +2,14 @@
 {
 	"version": "0.2.0",
 	"configurations": [
+		
 		{
 			"type": "extensionHost",
 			"request": "launch",
 			"name": "Run Extension",
 			"runtimeExecutable": "${execPath}",
 			"args": ["--extensionDevelopmentPath=${workspaceRoot}"],
-			"outFiles": ["${workspaceRoot}/client/out/**/*.js"],
+			"outFiles": ["${workspaceRoot}/dist/*.js"],
 			"preLaunchTask": "npm: compile-everything"
 		},
 		{
@@ -16,8 +17,16 @@
 			"type": "coreclr",
 			"request": "attach",
 			"processId": "${command:pickProcess}",
+			// "processName": "The process name to attach to. If this is used, 'processId' should not be used."
 			
 		},
+		// {
+		// 	"name": "Attach debugger to server by name",
+		// 	"type": "coreclr",
+		// 	"request": "attach",
+		// 	"processName": "dotnet"
+			
+		// },
 		{
 			"name": "Extension Tests",
 			"type": "extensionHost",

@@ -21,6 +21,7 @@ import {
 import { readdirSync, unlink, unlinkSync, readdir, Stats, lstat, lstatSync } from 'fs';
 import { promisify } from 'util';
 
+
 const debugServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "AutoUsing.dll");
 const releaseServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "publish", "AutoUsing.dll");
 // const relativeServerLocation = debugging? debugServerLocation : releaseServerLocation;
@@ -31,6 +32,7 @@ const CLEAN_CACHE = "autousing.cleanCache";
 export let testHelper: TestHelper;
 let client: LanguageClient;
 export function activate(context: vscode.ExtensionContext): void {
+
     // The server is implemented in node
     let releaseServerModule = context.asAbsolutePath(releaseServerLocation);
     let debugServerModule = context.asAbsolutePath(debugServerLocation);

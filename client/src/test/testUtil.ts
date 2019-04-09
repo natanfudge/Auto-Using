@@ -12,7 +12,7 @@ export async function activateExtension(): Promise<void> {
         await ext.activate();
     }
 
-}
+}// "main": "./dist/extension",
 
 export async function activateCSharpExtension(): Promise<void> {
     const csharpExtension = vscode.extensions.getExtension("ms-vscode.csharp")!;

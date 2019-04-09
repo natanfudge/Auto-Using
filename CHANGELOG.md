@@ -4,6 +4,7 @@
 ### 0.8.0
 - Completions will now appear for libraries you have added to your project. 
 - Completions should now be much faster in cases in which there are many completions.
+- Improved startup time by using Webpack
 - Fixed completions sometimes not showing working near comments.
 - Fixed the extension hanging when there is no project file.
 - Actually fixed completions not appearing after the "this" keyword.
