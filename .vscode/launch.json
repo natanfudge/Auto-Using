@@ -16,9 +16,7 @@
 			"name": "Attach debugger to server",
 			"type": "coreclr",
 			"request": "attach",
-			"processId": "${command:pickProcess}",
-			// "processName": "The process name to attach to. If this is used, 'processId' should not be used."
-			
+			"processName": "AutoUsing.exe",			
 		},
 		// {
 		// 	"name": "Attach debugger to server by name",

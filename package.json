@@ -60,10 +60,10 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && cd server/AutoUsing && dotnet publish && cd .. && cd .. && webpack --mode production",
+		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && cd server/AutoUsing && dotnet publish -c Release && cd .. && cd .. && webpack --mode production",
 		"compile": "webpack --mode none",
-		"compile-everything": " dotnet build server/AutoUsing && webpack --mode none",
-		"compile-everything-test": "tsc -b && dotnet build server/AutoUsing && dotnet restore client/src/test/playground",
+		"compile-everything": " dotnet build -r win10-x64 server/AutoUsing && webpack --mode none",
+		"compile-everything-test": "tsc -b && dotnet build -r win10-x64 server/AutoUsing && dotnet restore client/src/test/playground",
 		"watch": "tsc -b -w webpack --mode none --watch",
 		"postinstall": "cd client && npm install && cd ..",
 		"test": "sh ./scripts/e2e.sh"

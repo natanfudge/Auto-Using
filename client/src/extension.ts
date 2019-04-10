@@ -19,12 +19,11 @@ import {
     getAllProjectFiles, HoverRequest, getHoverString
 } from './util';
 import { readdirSync, unlink, unlinkSync, readdir, Stats, lstat, lstatSync } from 'fs';
-import { promisify } from 'util';
+import { promisify, debug } from 'util';
 
 
-const debugServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "AutoUsing.dll");
-const releaseServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "publish", "AutoUsing.dll");
-// const relativeServerLocation = debugging? debugServerLocation : releaseServerLocation;
+const debugServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "win10-x64", "AutoUsing.exe");
+const releaseServerLocation = join("server", "AutoUsing", "bin", "Release", "netcoreapp2.1", "publish", "AutoUsing.dll");
 const hoverRequest = "custom/hoverRequest";
 const dotnetExe = 'dotnet';
 const HANDLE_COMPLETION = "custom/handleCompletion";
@@ -48,7 +47,7 @@ export function activate(context: vscode.ExtensionContext): void {
 
     let serverOptions: ServerOptions = {
         run: { command: dotnetExe, args: [releaseServerModule, message] },
-        debug: { command: dotnetExe, args: [debugServerModule, message] },
+        debug: { command: debugServerModule, args: [message] }
     };
 
     let clientOptions: LanguageClientOptions = {
@@ -64,14 +63,14 @@ export function activate(context: vscode.ExtensionContext): void {
         }
 
     };
-// "dependencies": {
-	// 	"package": "^1.0.1",
-	// 	"vsce": "^1.59.0",
-	// 	"vscode-jsonrpc": "^4.0.0",
-	// 	"vscode-languageclient": "^5.2.1",
-	// 	"vscode-languageserver-protocol": "^3.15.0-next.1",
-	// 	"vscode-languageserver-types": "^3.14.0"
-	// },
+    // "dependencies": {
+    // 	"package": "^1.0.1",
+    // 	"vsce": "^1.59.0",
+    // 	"vscode-jsonrpc": "^4.0.0",
+    // 	"vscode-languageclient": "^5.2.1",
+    // 	"vscode-languageserver-protocol": "^3.15.0-next.1",
+    // 	"vscode-languageserver-types": "^3.14.0"
+    // },
 
     // Create the language client and start the client.
     client = new LanguageClient('autousing', 'Auto-Using', serverOptions, clientOptions);
@@ -158,14 +157,14 @@ async function cleanAllWorkspaceCache(context: vscode.ExtensionContext): Promise
                 let projectCaches = await readdirPromise(cacheDir);
                 // Remove the cache files of all projects of the workspace
                 for (let projectCacheDir of projectCaches) {
-                   await removeDirectoryContents(join(cacheDir, projectCacheDir));
+                    await removeDirectoryContents(join(cacheDir, projectCacheDir));
                 }
             }
 
         }
     }
 
-   
+
 
 
 
@@ -202,7 +201,7 @@ async function cleanAllWorkspaceCache(context: vscode.ExtensionContext): Promise
 
 
 async function removeDirectoryContents(dir: string): Promise<void> {
-    for(let file of await readdirPromise(dir)){
+    for (let file of await readdirPromise(dir)) {
         await unlinkPromise(join(dir, file));
     }
 }
@@ -211,7 +210,7 @@ const extensionId = "fudge.auto-using";
 
 function registerCleanGlobalCacheCommand(context: vscode.ExtensionContext): vscode.Disposable {
     return vscode.commands.registerCommand(CLEAN_CACHE, async () => {
-        await Promise.all([cleanGlobalCache(context),cleanAllWorkspaceCache(context)]);
+        await Promise.all([cleanGlobalCache(context), cleanAllWorkspaceCache(context)]);
 
         const reloadOption = "Yes, reload.";
 
