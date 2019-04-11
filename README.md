@@ -35,8 +35,8 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
-### 0.7.5
-- Fixed the extension hanging when used in an empty file 
+### 0.7.6
+- Fixed the extension hanging when used in an empty file.
 
 ### 0.7.4 
 - Fixed extension methods not appearing for arrays.
