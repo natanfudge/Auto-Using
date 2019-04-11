@@ -1674,3 +1674,96 @@
   "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
   "C:\\Users\\natan\\.nuget\\packages\\Melanchall.DryWetMidi/4.0.0/lib/net45/Melanchall.DryWetMidi.dll"
 ]
+4/11/2019 7:44:44 PM: Could not find the assembly path of a newly added library in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:45:41 PM: Old packages : []
+4/11/2019 7:45:41 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:45:41 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:45:54 PM: Could not find the assembly path of a newly added library in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:45:54 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:45:54 PM: New packages : []
+4/11/2019 7:45:54 PM: Removing packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:46:22 PM: Could not find the assembly path of a newly added library in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:47:33 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:47:55 PM: Old packages : []
+4/11/2019 7:47:55 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:47:55 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:49:46 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:49:46 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:49:46 PM: New packages : []
+4/11/2019 7:49:46 PM: Removing packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:49:53 PM: Old packages : []
+4/11/2019 7:49:53 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:49:53 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:50:51 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:50:51 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:50:51 PM: New packages : []
+4/11/2019 7:50:51 PM: Removing packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:51:59 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:51:59 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:53:36 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:53:37 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:53:38 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:53:38 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:53:39 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:54:25 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/11/2019 7:54:25 PM: Old packages : []
+4/11/2019 7:54:25 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 7:54:25 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\NUnit/3.11.0/lib/netstandard2.0/nunit.framework.dll"
+]
+4/11/2019 8:07:05 PM: Could not find the assembly path of a newly added library 'Microsoft.NET.Test.Sdk/16.0.1' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.

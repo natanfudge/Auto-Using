@@ -244,10 +244,17 @@ namespace AutoUsing.Analysis
                 var targets = assets["targets"];
                 var targetLibs = targets.First().First();
 
-                LibraryAssemblyLocations = targetLibs
+                var locations = targetLibs
                     .ToDictionary(lib => ((JProperty)lib).Name,
-                        lib => { return lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList(); })
-                    .Where(kv => kv.Value != null).ToDictionary();
+                        lib =>
+                        {
+                            // Go through the tree to get the value that points to the dll
+                            var location = lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList();
+                            return location ?? new List<string>();
+                        });
+
+                this.LibraryAssemblyLocations = locations;
+
             }
             catch (JsonReaderException)
             {
@@ -287,9 +294,9 @@ namespace AutoUsing.Analysis
                 var assemblyPathIdentifier = packageName + "/" + packageVersion;
                 if (!LibraryAssemblyLocations.ContainsKey(assemblyPathIdentifier))
                 {
-                    Util.Log(@"Could not find the assembly path of a newly added library in projects.assets.json.
+                    Util.Log($@"Could not find the assembly path of a newly added library '{assemblyPathIdentifier}' in projects.assets.json.
                     This is probably because the dependencies were not restored yet.");
-                    return;
+                    continue;
                 }
 
                 foreach (var assemblyPath in LibraryAssemblyLocations[assemblyPathIdentifier])

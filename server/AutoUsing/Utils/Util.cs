@@ -196,7 +196,7 @@ namespace AutoUsing.Utils
             return result;
         }
 
-        const bool writeLogs = false;
+        const bool writeLogs = true;
         const bool writeBenchmarks = false;
         const string logLocation = "C:/Users/natan/Desktop/Auto-Using-Git/server/AutoUsing/logs/log.txt";
     }
