@@ -33,7 +33,7 @@
 	"activationEvents": [
 		"onLanguage:csharp"
 	],
-	"main": "./dist/extension",
+	"main": "./d/extension",
 	"contributes": {
 		"configuration": {
 			"type": "object",
@@ -55,7 +55,11 @@
 		"commands": [
 			{
 				"command": "autousing.cleanCache",
-				"title": "Auto-Using: Clean All Caches"
+				"title": "Auto-Using: Clean All Assembly Caches"
+			},
+			{
+				"command": "autousing.cleanCommon",
+				"title": "Auto-Using: Clean Memory Of Commonly Used Completions"
 			}
 		]
 	},
@@ -68,7 +72,6 @@
 		"postinstall": "cd client && npm install && cd ..",
 		"test": "sh ./scripts/e2e.sh"
 	},
-	
 	"devDependencies": {
 		"@types/mocha": "^5.2.0",
 		"@types/node": "^8.0.0",

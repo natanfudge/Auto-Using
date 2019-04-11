@@ -18,13 +18,6 @@
 			"request": "attach",
 			"processName": "AutoUsing.exe",			
 		},
-		// {
-		// 	"name": "Attach debugger to server by name",
-		// 	"type": "coreclr",
-		// 	"request": "attach",
-		// 	"processName": "dotnet"
-			
-		// },
 		{
 			"name": "Extension Tests",
 			"type": "extensionHost",

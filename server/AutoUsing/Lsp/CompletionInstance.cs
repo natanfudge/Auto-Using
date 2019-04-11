@@ -17,10 +17,8 @@ namespace AutoUsing.Lsp
     class CompletionInstance
     {
 
-        // public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server, FileManager fileManager)
         public static async Task<CompletionList> ProvideCompletionItems(CompletionParams request, Server server, ILanguageServer langServer)
         {
-            // var documentWalker = new DocumentWalker(request.TextDocument,fileManager);
             var documentWalker = new DocumentWalker(request.TextDocument, langServer);
             var wordToComplete = documentWalker.GetWordToComplete(request.Position);
             var projectName = VscodeUtil.GetProjectName(request.TextDocument.Uri.LocalPath);
@@ -203,7 +201,6 @@ namespace AutoUsing.Lsp
         /// <param name="usings">A list of the using directive in the file. All already imported namespaces will be removed from the array.</param>
         private CompletionList completionDataToVscodeCompletions(IEnumerable<TypeCompletion> completions, string[] usings)
         {
-            // var count = completions.Count();
             completions = filterOutAlreadyUsing(completions, usings);
             var totalCompletionAmount = completions.Count();
             var completionAmount = Math.Min(totalCompletionAmount, MaxCompletionAmount);
@@ -215,9 +212,6 @@ namespace AutoUsing.Lsp
             if (takingOnlySomeCompletions) completions = completions.Take(MaxCompletionAmount).Concat(commonCompletions);
 
             var commonNames = storedCommonCompletions.Select(completion => completion.Label);
-
-            // var vscodeCompletions = new List<CompletionItem>(completionAmount);
-            // var count2 = completions.Count();
 
             var vscodeCompletions = completions.Select(completion =>
             {
@@ -286,18 +280,15 @@ namespace AutoUsing.Lsp
         }
 
 
-
-
-
         private static IEnumerable<TypeCompletion> ConvertStoredCompletionsToCompletions(IEnumerable<StoredCompletion> commonNames)
         {
             var completions = new List<TypeCompletion>();
             foreach (var commonName in commonNames)
             {
-                var refWithSameName = completions.Find(completion => completion.Name == commonName.Label);
+                var completionWithSameName = completions.Find(completion => completion.Name == commonName.Label);
                 // If one exists with the same name we combine their namespaces 
-                if (refWithSameName != null) refWithSameName.Namespaces.Append(commonName.Namespace);
-                else completions.Append(new TypeCompletion { Name = commonName.Label, Namespaces = new List<string> { commonName.Namespace } });
+                if (completionWithSameName != null) completionWithSameName.Namespaces.Append(commonName.Namespace);
+                else completions.Add(new TypeCompletion { Name = commonName.Label, Namespaces = new List<string> { commonName.Namespace } });
 
             }
             return completions;

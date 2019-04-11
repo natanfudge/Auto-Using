@@ -38,13 +38,13 @@ export function completionCommon(completion: StoredCompletion, completions: Stor
  * Retrieve from the disk the list of common completions
  */
 export function getStoredCompletions(context: vscode.ExtensionContext): StoredCompletion[] {
-    let dir = CommonCompletionDirectory(context);
-    let file = CommonCompletionLocation(context);
+    let dir = commonCompletionDirectory(context);
+    let file = commonCompletionLocation(context);
     if (storageInvalid(file, dir)) return [];
 
-    var text = readFileSync(file).toString();
+    let text = readFileSync(file).toString();
     // Text should never be empty. 
-    if (text == "") {
+    if (text === "") {
         InitializeStorage(file);
         return [];
     }
@@ -55,10 +55,10 @@ export function getStoredCompletions(context: vscode.ExtensionContext): StoredCo
 /**
  * Adds the completion to the list of common completions in the disk
  */
-export function storeCompletion(context: vscode.ExtensionContext, completion: StoredCompletion) {
+export function storeCompletion(context: vscode.ExtensionContext, completion: StoredCompletion)  : void{
     let existingStorage = getStoredCompletions(context);
-    existingStorage.push(completion);
-    let file = CommonCompletionLocation(context);
+    if(!existingStorage.includes(completion)) existingStorage.push(completion);
+    let file = commonCompletionLocation(context);
     writeFile(file, JSON.stringify(existingStorage), () => null);
 
 
@@ -104,8 +104,8 @@ export function InitializeStorage(location: string): void {
 
 // import path = require('path');
 // import { existsSync, mkdirSync, writeFileSync, readFileSync, writeFile } from 'fs';
-const CommonCompletionLocation = (context: vscode.ExtensionContext) => join(CommonCompletionDirectory(context), "commonCompletions.json");
-const CommonCompletionDirectory = (context: vscode.ExtensionContext) => join(context.globalStoragePath!, "completions");
+export const commonCompletionLocation = (context: vscode.ExtensionContext) => join(commonCompletionDirectory(context), "commonCompletions.json");
+const commonCompletionDirectory = (context: vscode.ExtensionContext) => join(context.globalStoragePath!, "completions");
 
 
 const typeInfoIdentifier = "```csharp\n";

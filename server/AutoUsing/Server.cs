@@ -8,6 +8,7 @@ using AutoUsing.Analysis.Cache;
 using AutoUsing.Analysis.DataTypes;
 using AutoUsing.Utils;
 using AutoUsing.Lsp;
+using Newtonsoft.Json;
 
 namespace AutoUsing
 {
@@ -59,7 +60,7 @@ namespace AutoUsing
         private static List<T> FilterUnnecessaryData<T>(List<T> dataList, string wordToComplete,
             Func<T, string> identifierOfElements)
         {
-            return dataList.Where(element => identifierOfElements(element).ToLower().Contains(wordToComplete.ToLower()))
+            return dataList.Where(element => identifierOfElements(element).ToLower().StartsWith(wordToComplete.ToLower()))
                 .ToList();
         }
 
@@ -71,10 +72,10 @@ namespace AutoUsing
             var extensionInfo = GlobalCache.Caches.Extensions.GetCache().Concat(project.Caches.Extensions.GetCache()).ToList();
             var refinedExtensionData = CompletionCaches.ToCompletionFormat(extensionInfo);
 
-            // Remove all extension methods that have been filtered by the word to complete
             refinedExtensionData = refinedExtensionData
-                .Select(extendedClass => new ExtensionClass(extendedClass.ExtendedClass, extendedClass.ExtensionMethods
-                    .Where(extensionMethod => extensionMethod.Name.ToLower().Contains(wordToComplete.ToLower())).ToList()))
+                .Select(extendedClass => new ExtensionClass(extendedClass.ExtendedClass,
+                 FilterUnnecessaryData(extendedClass.ExtensionMethods, wordToComplete, (extensionMethod) => extensionMethod.Name))
+                 )
                 .Where(extendedClass => extendedClass.ExtensionMethods.Count > 0).ToList();
 
             return refinedExtensionData;
@@ -161,8 +162,19 @@ namespace AutoUsing
             {
                 return InvalidStorage(location);
             }
-            var completions = JSON.Parse<List<StoredCompletion>>(text);
-            return completions;
+
+            try
+            {
+                var completions = JSON.Parse<List<StoredCompletion>>(text);
+                return completions;
+            }
+            // Someone fucked up the memory file for the common completions
+            catch (JsonSerializationException)
+            {
+                return InvalidStorage(location);
+            }
+
+
 
 
         }

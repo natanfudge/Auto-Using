@@ -16,9 +16,9 @@ import {
 import { join } from 'path';
 import {
     TestHelper, Completion, getStoredCompletions, completionCommon, StoredCompletion, addUsing, storeCompletion, SetupWorkspaceRequest,
-    getAllProjectFiles, HoverRequest, getHoverString
+    getAllProjectFiles, HoverRequest, getHoverString, commonCompletionLocation
 } from './util';
-import { readdirSync, unlink, unlinkSync, readdir, Stats, lstat, lstatSync } from 'fs';
+import { readdirSync, unlink, unlinkSync, readdir, Stats, lstat, lstatSync, writeFile, writeFileSync } from 'fs';
 import { promisify, debug } from 'util';
 
 
@@ -28,6 +28,7 @@ const hoverRequest = "custom/hoverRequest";
 const dotnetExe = 'dotnet';
 const HANDLE_COMPLETION = "custom/handleCompletion";
 const CLEAN_CACHE = "autousing.cleanCache";
+const CLEAN_COMMON = "autousing.cleanCommon";
 export let testHelper: TestHelper;
 let client: LanguageClient;
 export function activate(context: vscode.ExtensionContext): void {
@@ -97,28 +98,57 @@ export function activate(context: vscode.ExtensionContext): void {
 
     // Push the disposable to the context's subscriptions so that the
     // client can be deactivated on extension deactivation
-    context.subscriptions.push(clientDisposable, registerHandleCompletionCommand(context), registerCleanGlobalCacheCommand(context));
+    context.subscriptions.push(
+        clientDisposable,
+        registerHandleCompletionCommand(context),
+        registerCleanCacheCommand(context),
+        registerCleanCommonCommand(context)
+    );
 }
 
+function registerCleanCommonCommand(context: vscode.ExtensionContext): vscode.Disposable {
+    return vscode.commands.registerCommand(CLEAN_COMMON, async () => {
+        writeFileSync(commonCompletionLocation(context), "[]");
+        const reloadOption = "Yes, reload.";
+
+        let choice = await vscode.window.showInformationMessage("Common completions have been cleaned. Reload the window to apply changes?",
+            reloadOption);
+        if (choice === reloadOption) {
+            vscode.commands.executeCommand("workbench.action.reloadWindow");
+        }
+    });
+}
+
+/**
+ * This command is activated whenever  a common is selected. 
+ * If there is just one namespace for a completion name, the using statement was already inserted so there is nothing to do.
+ * Otherwise, it will show a popup that will let the user choose between the available namespaces and THEN insert a using statement. 
+ */
 function registerHandleCompletionCommand(context: vscode.ExtensionContext): vscode.Disposable {
     return vscode.commands.registerCommand(HANDLE_COMPLETION, async (completion: Completion) => {
         if (completion.Namespaces.length > 1) {
             let completions = getStoredCompletions(context);
-            let namespacesSorted = await Promise.all(completion.Namespaces.sort((n1, n2) => {
-                let firstPrio = completionCommon(new StoredCompletion(completion.Name, n1), completions);
-                let secondPrio = completionCommon(new StoredCompletion(completion.Name, n2), completions);
-                if (firstPrio && !secondPrio)
-                    return -1;
-                if (!firstPrio && secondPrio)
-                    return 1;
-                return n1.localeCompare(n2);
-            }));
+            let namespacesSorted = completion.Namespaces.sort((n1, n2) => byNamespaceSortingOrder(completion, completions, n1, n2));
             vscode.window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, completion));
         }
+        // In the multiple namespace case the completion is stored later. 
         else {
             storeCompletion(context, new StoredCompletion(completion.Name, completion.Namespaces[0]));
         }
     });
+}
+
+/**
+ * Just gives higher priority to common completions
+ */
+function byNamespaceSortingOrder(completion: Completion, storedCompletions: StoredCompletion[], namespace1: string, namespace2: string): number {
+    let firstPrio = completionCommon(new StoredCompletion(completion.Name, namespace1), storedCompletions);
+    let secondPrio = completionCommon(new StoredCompletion(completion.Name, namespace2), storedCompletions);
+    if (firstPrio && !secondPrio)
+        return -1;
+    if (!firstPrio && secondPrio)
+        return 1;
+    return namespace1.localeCompare(namespace2);
 }
 
 /**
@@ -164,38 +194,6 @@ async function cleanAllWorkspaceCache(context: vscode.ExtensionContext): Promise
         }
     }
 
-
-
-
-
-    // // Callback hell inc.
-    // readdir(allWorkspaceStorageDir, (e1, workspaceDirs) => {
-
-    //     for (let workspaceDir of workspaceDirs) {
-    //         // Go through the weird number directories
-    //         lstat(join(allWorkspaceStorageDir, workspaceDir), (e2, stats) => {
-    //             if (stats.isDirectory()) {
-    //                 // Go through the files in a specific workspace directory
-    //                 readdir(join(allWorkspaceStorageDir, workspaceDir), (e3, files) => {
-    //                     for (let file of files) {
-    //                         // Go inside the auto-using storage directory
-    //                         if (file === extensionId) {
-    //                             // Go through the cache files of a specific workspace
-    //                             let cacheDir = join(allWorkspaceStorageDir, workspaceDir, file, workspaceCacheLocation);
-    //                             readdir(cacheDir, (e4, projectCaches) => {
-    //                                 // Remove the cache files of all projects of the workspace
-    //                                 for (let projectCacheDir of projectCaches) {
-    //                                     removeDirectoryContents(join(cacheDir, projectCacheDir));
-    //                                 }
-    //                             });
-
-    //                         }
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     }
-    // });
 }
 
 
@@ -208,7 +206,7 @@ async function removeDirectoryContents(dir: string): Promise<void> {
 
 const extensionId = "fudge.auto-using";
 
-function registerCleanGlobalCacheCommand(context: vscode.ExtensionContext): vscode.Disposable {
+function registerCleanCacheCommand(context: vscode.ExtensionContext): vscode.Disposable {
     return vscode.commands.registerCommand(CLEAN_CACHE, async () => {
         await Promise.all([cleanGlobalCache(context), cleanAllWorkspaceCache(context)]);
 

@@ -37,15 +37,11 @@ namespace AutoUsing
         private const string SetupWorkspace = "setupWorkspace";
 
 
-        //TODO: call activate takes a century. 
-
         public static async Task Main(string[] args)
         {
             if (args.Length == 0) throw new ServerException("A workspace setup json must be provided.");
             Server.Instance.SetupWorkspace(JSON.Parse<SetupWorkspaceRequest>(args[0]));
             var server = await CreateLanguageServer();
-
-            // Console
 
             await server.WaitForExit;
 
