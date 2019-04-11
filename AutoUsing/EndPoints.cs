@@ -5,6 +5,9 @@ namespace AutoUsing
         public const string AddProject = "addProject",
                             RemoveProject = "removeProject",
                             GetAllCompletions = "getAllCompletions",
-                            Ping = "ping";
+                            Ping = "ping"; 
+                            
+                            
+                            
     }
 }

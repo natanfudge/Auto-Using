@@ -11,6 +11,7 @@ export class DocumentWalker {
      * 
      */
     public async getCompletionType(completionPos: vscode.Position): Promise<CompletionType> {
+        if(completionPos.character === 0 && completionPos.line === 0) return CompletionType.REFERENCE;
         let currentPos = this.getPrev(completionPos);
 
         let currentChar = this.getChar(currentPos);
@@ -25,7 +26,7 @@ export class DocumentWalker {
             currentChar = this.getChar(currentPos);
         }
 
-        currentPos = this.walkBackWhile(currentPos, isWhitespace);
+        currentPos = this.walkBackWhile(currentPos,  isWhitespace);
         if (this.getChar(currentPos) === ".") return CompletionType.EXTENSION;
 
         let wordRegex = /([^\s]+)/;
@@ -59,8 +60,10 @@ export class DocumentWalker {
     private async getTypeInfoPosition(completionPos: vscode.Position): Promise<vscode.Position> {
         let startOfCaller = this.walkBackWhile(completionPos, isWhitespace);
         let dotPos = this.walkBackWhile(startOfCaller, char => char !== ".");
-        let endOfWordBefore = this.getPrev( this.walkBackWhile(dotPos, isWhitespace));
-
+        let aBitAfterEndOfWordBefore = this.walkBackWhile(dotPos, isWhitespace);
+        if(aBitAfterEndOfWordBefore.line === 0 && aBitAfterEndOfWordBefore.character === 0) return aBitAfterEndOfWordBefore;
+        let endOfWordBefore = this.getPrev( aBitAfterEndOfWordBefore);
+        if(endOfWordBefore.line === 0 && endOfWordBefore.character === 0) return endOfWordBefore;
         // If there are brackets we need to check if it's because of a chained method call or because of redundant parentheses
         if (this.getChar(endOfWordBefore) === ")") {
             let bracketsThatNeedToBeClosed = 1;
@@ -105,6 +108,7 @@ export class DocumentWalker {
         while (condition(currentChar)) {
             currentPos = this.getPrev(currentPos);
             currentChar = this.getChar(currentPos);
+            if(currentPos.line === 0 && currentPos.character === 0) break;
         }
 
         return currentPos;
@@ -142,6 +146,7 @@ export class DocumentWalker {
      * Returns the position before another position in the document
      */
     private getPrev(pos: vscode.Position): vscode.Position {
+        if(pos.character === 0 && pos.line === 0) throw new Error("Attempt to get position before (0,0)!");
         return this.document.positionAt(this.document.offsetAt(pos) - 1);
     }
 

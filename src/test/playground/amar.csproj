@@ -3,6 +3,11 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>&#xD;
+  </ItemGroup>
   <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1"/>
   </ItemGroup>
 </Project>

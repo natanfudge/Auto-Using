@@ -1,6 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json.Linq;
+
 using System.Linq;
+using System;
+using System.Collections.Generic;
 
 namespace AutoUsing
 {
@@ -15,6 +17,7 @@ namespace AutoUsing
             // TODO: Error Handling.. 👌
             // I just wanna see this working, a very rough version. 
             // then i'll write tests, refactor the code.
+            
 
             args = new[]
             {
@@ -22,8 +25,9 @@ namespace AutoUsing
                 // "/Volumes/Workspace/csharp-extensions/Auto-Using/AutoUsingTest/AutoUsingTest.csproj"
                "C:/Users/natan/Desktop/Auto-Using-Git/AutoUsing/AutoUsing.csproj"
             };
-
-
+            
+            
+            
             if (args.Length <= 0)
             {
                 Proxy.WriteData(new ErrorResponse { Body = Errors.AtLeastOneProjectFileIsRequired });
@@ -90,6 +94,8 @@ namespace AutoUsing
                                 {
                                     Projects.Remove(project);
                                 }
+
+                                
 
                                 break;
                             }
