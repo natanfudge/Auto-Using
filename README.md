@@ -11,7 +11,7 @@ Auto-imports and provides intellisense for references that were not yet imported
 - Fixed internal classes appearing in completions.
 - Fixed attributes having an `attribute` suffix.
 
-To beta test the new version of Auto-Using, download [The VSIX file for auto-using-0.7.5](https://github.com/natanfudge/Auto-Using/blob/master/auto-using-0.7.5.vsix) (0.8.0 is reserved for the release verison.)
+To beta test the new version of Auto-Using, download [The VSIX file for auto-using-0.7.99](https://github.com/natanfudge/Auto-Using/blob/master/auto-using-0.7.99.vsix) (0.8.0 is reserved for the release verison.)
 Then in Visual Studio Code, Go to `Extensions`, then press the `...` icon at the top right corner of the extensions screen, and select  `Install from VSIX...`.
 Locate the Auto-Using vsix file you have downloaded, select and and press `install`.  
 If you find any bugs, please direct them to [The issue tracker](https://github.com/natanfudge/Auto-Using/issues).
