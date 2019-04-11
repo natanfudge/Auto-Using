@@ -1,6 +1,9 @@
 
 ## Changelog
 
+### 0.7.5
+- Fixed the extension hanging when used in an empty file 
+
 ### 0.7.4 
 - Fixed extension methods not appearing for arrays.
 
