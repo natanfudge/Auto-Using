@@ -1,7 +1,7 @@
 
 ## Changelog
 
-### 0.7.6
+### 0.7.7
 - Fixed the extension hanging when used in an empty file.
 
 ### 0.7.4 

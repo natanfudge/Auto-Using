@@ -35,7 +35,7 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
-### 0.7.6
+### 0.7.7
 - Fixed the extension hanging when used in an empty file.
 
 ### 0.7.4 
