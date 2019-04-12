@@ -43,6 +43,10 @@ namespace AutoUsing
             var project = FindProject(projectName);
 
             var typeInfo = GlobalCache.Caches.Types.GetCache().Concat(project.Caches.Types.GetCache()).ToList();
+            //TODO: remove
+            typeInfo.Sort((e1,e2) => e1.Name.CompareTo(e2.Name));
+            var filtered = typeInfo.Where(t => t.Name.Contains("Fi"));
+
             var refinedTypeData = FilterUnnecessaryData(CompletionCaches.ToCompletionFormat(typeInfo),
                 wordToComplete, (type) => type.Name);
 

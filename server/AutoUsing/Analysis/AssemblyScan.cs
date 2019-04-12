@@ -33,6 +33,7 @@ namespace AutoUsing.Analysis
         public AssemblyScan(Assembly assembly)
         {
             Assembly = assembly;
+
         }
 
 
@@ -127,7 +128,7 @@ namespace AutoUsing.Analysis
             }
         }
 
-        readonly List<string> ArrayRuntimeImplementations = new List<string>
+        readonly static List<string> ArrayRuntimeImplementations = new List<string>
         {
             "System.Collections.Generic.IList", "System.Collections.Generic.ICollection",
             "System.Collections.Generic.IEnumerable"
@@ -145,7 +146,6 @@ namespace AutoUsing.Analysis
         /// </summary>
         public List<ExtensionMethodInfo> GetExtensionMethodInfo()
         {
-            // Assembly.
             // Get all classes that declared an extension method inside them
             var extendingClasses = Assembly
                 .GetExportedTypes()

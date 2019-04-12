@@ -19,6 +19,8 @@ namespace AutoUsing.Analysis.Cache
         /// </summary>
         public void LoadScanResults(IEnumerable<AssemblyScan> scans)
         {
+            Util.Verbose("Loading types: \n" + GetTypeInfoOfScans(scans).ToIndentedJson());
+
             Types.SetCache(GetTypeInfoOfScans(scans));
             Hierachies.SetCache(GetHierarchyInfoOfScans(scans));
             Extensions.SetCache(GetExtensionsInfoOfScans(scans));
@@ -34,6 +36,9 @@ namespace AutoUsing.Analysis.Cache
         public void AppendScanResults(IEnumerable<AssemblyScan> scans)
         {
             if (scans.Count() == 0) return;
+
+            Util.Verbose("Apending types: \n" + GetTypeInfoOfScans(scans).ToIndentedJson());
+
             Types.AddCache(GetTypeInfoOfScans(scans));
             Hierachies.AddCache(GetHierarchyInfoOfScans(scans));
             Extensions.AddCache(GetExtensionsInfoOfScans(scans));

@@ -1,89 +1,87 @@
 {
-	"name": "auto-using",
-	"displayName": "Auto-Using for C#",
-	"description": "Provides intellisense for and imports references from all available sources.",
-	"icon": "icon.png",
-	"author": "Fudge",
-	"license": "SEE LICENSE IN LICENSE",
-	"version": "0.7.99",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/natanfudge/Auto-Using"
-	},
-	"bugs": {
-		"url": "https://github.com/natanfudge/Auto-Using/issues"
-	},
-	"publisher": "fudge",
-	"categories": [
-		"Other",
-		"Programming Languages"
-	],
-	"keywords": [
-		"C#",
-		"csharp",
-		"import",
-		"require",
-		"using",
-		"auto-using",
-		"auto-import"
-	],
-	"engines": {
-		"vscode": "^1.32.0"
-	},
-	"activationEvents": [
-		"onLanguage:csharp"
-	],
-	"main": "./dist/extension",
-	"contributes": {
-		"configuration": {
-			"type": "object",
-			"title": "Auto-Using For C#",
-			"properties": {
-				"autousing.trace.server": {
-					"scope": "window",
-					"type": "string",
-					"enum": [
-						"off",
-						"messages",
-						"verbose"
-					],
-					"default": "off",
-					"description": "Traces the communication between VS Code and the language server."
-				}
-			}
-		},
-		"commands": [
-			{
-				"command": "autousing.cleanCache",
-				"title": "Auto-Using: Clean All Assembly Caches"
-			},
-			{
-				"command": "autousing.cleanCommon",
-				"title": "Auto-Using: Clean Memory Of Commonly Used Completions"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && cd server/AutoUsing && dotnet publish -c Release && cd .. && cd .. && webpack --mode production",
-		"compile": "webpack --mode none",
-		"compile-everything": " dotnet build -r win10-x64 server/AutoUsing && webpack --mode none",
-		"compile-everything-test": "tsc -b && dotnet build -r win10-x64 server/AutoUsing && dotnet restore client/src/test/playground",
-		"watch": "tsc -b -w webpack --mode none --watch",
-		"postinstall": "cd client && npm install && cd ..",
-		"test": "sh ./scripts/e2e.sh"
-	},
-	"devDependencies": {
-		"@types/mocha": "^5.2.6",
-		"@types/node": "^11.13.4",
-		"colors": "^1.3.3",
-		"mocha": "^6.1.2",
-		"ts-loader": "^5.3.3",
-		"tslint": "^5.15.0",
-		"typescript": "^3.4.3",
-		"webpack": "^4.29.6",
-		"webpack-cli": "^3.3.0"
-	},
-	"extensionDependencies": [
-		"ms-vscode.csharp"
-	]
+  "name": "auto-using",
+  "displayName": "Auto-Using for C#",
+  "description": "Provides intellisense for and imports references from all available sources.",
+  "icon": "icon.png",
+  "author": "Fudge",
+  "license": "SEE LICENSE IN LICENSE",
+  "version": "0.7.99",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natanfudge/Auto-Using"
+  },
+  "bugs": {
+    "url": "https://github.com/natanfudge/Auto-Using/issues"
+  },
+  "publisher": "fudge",
+  "categories": [
+    "Other",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "C#",
+    "csharp",
+    "import",
+    "require",
+    "using",
+    "auto-using",
+    "auto-import"
+  ],
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "activationEvents": [
+    "onLanguage:csharp"
+  ],
+  "main": "./client/out/extension",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Auto-Using For C#",
+      "properties": {
+        "autousing.trace.server": {
+          "scope": "window",
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Traces the communication between VS Code and the language server."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "autousing.cleanCache",
+        "title": "Auto-Using: Clean All Assembly Caches"
+      },
+      {
+        "command": "autousing.cleanCommon",
+        "title": "Auto-Using: Clean Memory Of Commonly Used Completions"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "sh ./scripts/prebulish.sh",
+    "compile-everything": "sh ./scripts/build.sh",
+    "compile-everything-test": "sh ./scripts/test.sh",
+    "watch": "tsc -b -w webpack --mode none --watch",
+    "postinstall": "cd client && npm install && cd .."
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.13.4",
+    "colors": "^1.3.3",
+    "mocha": "^6.1.2",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "extensionDependencies": [
+    "ms-vscode.csharp"
+  ]
 }

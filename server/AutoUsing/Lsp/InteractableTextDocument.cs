@@ -63,7 +63,16 @@ namespace AutoUsing.Lsp
                 else
                 {
                     var prevLine = pos.Line - 1;
-                    var posOfLastCharOfPrevLine = TextLines[prevLine].Length - 1;
+                    var prevLineLength =  TextLines[prevLine].Length;
+
+                    // Skip blank lines
+                    while(prevLineLength == 0){
+                        // if(prevLine == 0) throw new IndexOutOfRangeException("Attempt to get the position before (0,0).");
+                        prevLine--;
+                        prevLineLength = TextLines[prevLine].Length;
+                    }
+                    
+                    var posOfLastCharOfPrevLine = prevLineLength- 1;
                     return new Position(prevLine, posOfLastCharOfPrevLine);
                 }
             }

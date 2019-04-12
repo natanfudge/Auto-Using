@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using System.Threading;
 using Newtonsoft.Json;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 
@@ -44,11 +45,13 @@ namespace AutoUsing.Utils
         /// <summary>
         /// Returns whether or not a type is an [Attribute]
         /// </summary>
-        public static bool IsAttribute(this Type type){
+        public static bool IsAttribute(this Type type)
+        {
             var currentBaseType = type.BaseType;
             // Travels all the way up the hierarchy tree to check if it inherits from System.Attribute. 
-            while(currentBaseType != null){
-                if(currentBaseType.FullName == "System.Attribute") return true;
+            while (currentBaseType != null)
+            {
+                if (currentBaseType.FullName == "System.Attribute") return true;
                 currentBaseType = currentBaseType.BaseType;
             }
             return false;
@@ -144,20 +147,24 @@ namespace AutoUsing.Utils
         }
 
 
-        public static string LastChar(this string str){
-            if(str == "") return "";
+        public static string LastChar(this string str)
+        {
+            if (str == "") return "";
             return str[str.Length - 1].ToString();
         }
 
-        public static bool IsOrigin(this Position pos){
+        public static bool IsOrigin(this Position pos)
+        {
             return pos.Character == 0 && pos.Line == 0;
         }
 
-        public static string ReverseToString(this string str){
+        public static string ReverseToString(this string str)
+        {
             return string.Concat(str.Reverse());
         }
 
-        public static string GetNormalPath(this TextDocumentIdentifier doc){
+        public static string GetNormalPath(this TextDocumentIdentifier doc)
+        {
             return doc.Uri.LocalPath.Substring(1);
         }
 
@@ -183,6 +190,14 @@ namespace AutoUsing.Utils
         }
 
         /// <summary>
+        /// Logs text to the log file with the current date attached to it only if verbose logging is enabled. //TODO: if you complete in this position (after .) it will crash.
+        /// </summary>
+        public static void Verbose(string text)
+        {
+            if (writeVerbose) Log(text);
+        }
+
+        /// <summary>
         /// Returns a portion of the array.
         /// </summary>
         /// <param name="arr">The array</param>
@@ -196,8 +211,19 @@ namespace AutoUsing.Utils
             return result;
         }
 
+        public static void WaitForDebugger(){
+            while(!Debugger.IsAttached) Thread.Sleep(500);
+        }
+
+        const bool writeVerbose = true;
+
+#if DEBUG
         const bool writeLogs = true;
+#else
+        const bool writeLogs = false;
+#endif
         const bool writeBenchmarks = false;
+        //HARDCODED
         const string logLocation = "C:/Users/natan/Desktop/Auto-Using-Git/server/AutoUsing/logs/log.txt";
     }
 

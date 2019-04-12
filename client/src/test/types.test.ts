@@ -1,6 +1,7 @@
 import { test, suite, suiteSetup } from 'mocha';
 import * as vscode from "vscode";
-import { activateExtension, assertContains, assertNone, assertNotContains, assertSize, assertStringContains, forServerToBeReady, assertNotStringContains as assertStringNotContains } from './testUtil';
+import { activateExtension, assertContains, assertNone, assertNotContains, assertSize, assertStringContains, forServerToBeReady,
+     assertNotStringContains as assertStringNotContains } from './testUtil';
 import { complete, completeWithData, removeCheat } from './TestCompletionUtil';
 
 describe(`CompletionProvider Types Tests`, () => {
@@ -32,7 +33,7 @@ describe(`CompletionProvider Types Tests`, () => {
     //     completions.items.sort((item1, item2) => item1.label.localeCompare(item2.label));
     //     let files = completions.items.filter(c => removeCheat(c.label) === "File");
 
-        
+
 
     //     let file = files.filter(completion => completion.documentation === undefined) [0];
 
@@ -75,6 +76,10 @@ describe(`CompletionProvider Types Tests`, () => {
     it("Should show completions after the 'this' keyword", async () => {
         let completionList = await complete("ShouldCompleteAfterThis.cs", 6, 37);
         assertContains(completionList, "IEnumerable");
+    });
+
+    it("Should not throw an error when there is a blank line nearby", async () => {
+        let completionList = await complete("ShouldNotCrashWhenEmptyLine.cs", 7, 4);
     });
 
 

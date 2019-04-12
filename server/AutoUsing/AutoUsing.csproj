@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UseNETCoreGenerator>true</UseNETCoreGenerator>
     <LangVersion>latest</LangVersion>
+   
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1"/>

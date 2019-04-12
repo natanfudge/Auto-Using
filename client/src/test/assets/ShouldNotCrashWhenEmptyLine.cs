@@ -1,0 +1,9 @@
+namespace Assets
+{
+    class ShouldNotCrashWhenEmptyLine
+    {
+
+    }
+
+    
+}

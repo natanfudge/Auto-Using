@@ -29,6 +29,7 @@ namespace AutoUsing.Analysis.Cache
                 // Scan .NET libraries
                 var scanners = GetBaseAssemblyScans();
                 Util.Log("Global cache reloading");
+                Util.Verbose($"Paths to global cache: {scanners.Select(scan => scan.Path).ToIndentedJson()}");
                 Caches.LoadScanResults(scanners);
             }
         }
@@ -40,21 +41,30 @@ namespace AutoUsing.Analysis.Cache
         /// </summary>
         private static string[] GetBinFiles()
         {
-            var dotnetDir = Directory.GetParent(typeof(int).Assembly.Location);
-            var files = Directory.GetFiles(dotnetDir.FullName, "*.dll");
+#if DEBUG
+            //HARDCODED
+            var dotnetDir = @"C:\Program Files\dotnet\shared\Microsoft.NETCore.App\2.1.9";
+#else
+            var dotnetDir = Directory.GetParent(typeof(int).Assembly.Location).FullName;
+#endif
+            var files = Directory.GetFiles(dotnetDir, "*.dll");
             return files;
         }
 
 
         private static IEnumerable<AssemblyScan> GetBaseAssemblyScans()
         {
+            // Util.WaitForDebugger();
             var bins = GetBinFiles();
+
             var scans = bins.Select(file =>
             {
                 return new AssemblyScan(file);
-            }).Where(assembly => !assembly.CouldNotLoad())
+            });
+
+            scans = scans.Where(assembly => !assembly.CouldNotLoad())
                 .Append(new AssemblyScan(typeof(int).Assembly));
-            ;
+
             return scans;
         }
     }
