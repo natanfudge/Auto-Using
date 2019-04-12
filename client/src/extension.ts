@@ -86,7 +86,7 @@ export function activate(context: vscode.ExtensionContext): void {
             let pos: vscode.Position = new vscode.Position(request.pos.line, request.pos.character);
             let uri = vscode.Uri.file(request.filePath);
             let result = await getHoverString(uri, pos);
-            if (result === undefined) return undefined;
+            if (result === undefined) return "";
             let str: string = result;
             return str;
         });

@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -144,6 +145,7 @@ namespace AutoUsing.Analysis
         /// </summary>
         public List<ExtensionMethodInfo> GetExtensionMethodInfo()
         {
+            // Assembly.
             // Get all classes that declared an extension method inside them
             var extendingClasses = Assembly
                 .GetExportedTypes()
