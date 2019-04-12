@@ -2,8 +2,10 @@
 Auto-imports and provides intellisense for references that were not yet imported in a C# file. 
 
 ## The new beta version of Auto-Using
+- Increased the amount of references you can import from .NET base library (~3000 references) to every NuGet package you add to your project (up to **~1,000,000** references).
+
 ![Libraries](libraries.gif)
-- Increased the amount of references you can import from .NET base library (~3000 references) to every nuget package you add to your project (**~1,000,000** references).
+
 - Completions will now appear for libraries you have added to your project. 
 - Completions should now be much faster in cases in which there are many completions.
 - Fixed completions sometimes not showing working near comments.

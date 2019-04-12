@@ -289,6 +289,7 @@ namespace AutoUsing.Lsp
         {
             var request = new HoverRequest { Pos = position, FilePath = Document.Path };
             string response = await Server.SendRequest<HoverRequest, string>(SharedConstants.HoverRequestCommand, request);
+            if(response == "") return null;
             return response;
         }
 
