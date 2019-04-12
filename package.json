@@ -33,7 +33,7 @@
   "activationEvents": [
     "onLanguage:csharp"
   ],
-  "main": "./client/out/extension",
+  "main": "./dist/extension",
   "contributes": {
     "configuration": {
       "type": "object",
@@ -64,7 +64,7 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "sh ./scripts/prebulish.sh",
+    "vscode:prepublish": "sh ./scripts/prepublish.sh",
     "compile-everything": "sh ./scripts/build.sh",
     "compile-everything-test": "sh ./scripts/test.sh",
     "watch": "tsc -b -w webpack --mode none --watch",
