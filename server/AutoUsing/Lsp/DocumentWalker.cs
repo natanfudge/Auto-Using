@@ -76,6 +76,7 @@ namespace AutoUsing.Lsp
                     return CompletionType.EXTENSION;
                 }
                 if (Constants.SyntaxChars.Contains(currentChar)) return CompletionType.TYPE;
+                if(currentPos.IsOrigin()) return CompletionType.TYPE;
                 currentPos = this.GetPrev(currentPos);
                 currentChar = this.GetChar(currentPos);
             }
@@ -196,7 +197,9 @@ namespace AutoUsing.Lsp
         private (Position previousPosition, bool newLineIncoming) GetPrevCheckNewline(Position pos)
         {
             var newPos = this.GetPrev(pos);
-            var newLine = newPos.Line != this.GetPrev(newPos).Line;
+            bool newLine;
+            if(newPos.IsOrigin()) newLine = false;
+            else newLine = newPos.Line != this.GetPrev(newPos).Line;
             return (newPos, newLine);
         }
 
