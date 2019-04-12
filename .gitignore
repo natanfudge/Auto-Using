@@ -1,6 +1,7 @@
 node_modules
 .vscode-test
 server/.vs
+dist
 server/.idea
 server/AutoUsing/bin
 server/AutoUsing/obj

@@ -5,7 +5,7 @@
         "package-lock.json": true,
         "LICENSE" :true,
         // ".vscodeignore" : true,
-        ".gitignore" : true,
+        // ".gitignore" : true,
         "tslint.json" : true
     },
     // Place your settings in this file to overwrite default and user settings.

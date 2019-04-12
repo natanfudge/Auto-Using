@@ -1,18 +1,9 @@
-﻿using System.IO;
-using System.Diagnostics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using AutoUsing.Utils;
-using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 using OmniSharp.Extensions.LanguageServer.Server;
 using AutoUsing.Lsp;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.DependencyInjection;
-using OmniSharp.Extensions.JsonRpc;
-using OmniSharp.Extensions.Embedded.MediatR;
-using System.Threading;
 
 namespace AutoUsing
 {

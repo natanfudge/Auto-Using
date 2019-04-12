@@ -144,6 +144,7 @@ namespace AutoUsing.Analysis
         /// </summary>
         public List<ExtensionMethodInfo> GetExtensionMethodInfo()
         {
+            // Get all classes that declared an extension method inside them
             var extendingClasses = Assembly
                 .GetExportedTypes()
                 .Where(ClassCanHaveExtensionMethods);
