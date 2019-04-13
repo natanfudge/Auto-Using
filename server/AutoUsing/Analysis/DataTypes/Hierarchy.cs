@@ -29,8 +29,8 @@ namespace AutoUsing.Analysis.DataTypes
 
         public override bool Equals(object obj)
         {
-            var hiearchies = obj as Hierarchy;
-            return hiearchies != null &&
+            // var hiearchies = obj as Hierarchy;
+            return obj is Hierarchy hiearchies &&
                    Namespace == hiearchies.Namespace &&
                    Parents.SequenceEqual(hiearchies.Parents);
         }

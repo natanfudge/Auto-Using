@@ -25,9 +25,9 @@ namespace AutoUsing
 
 
 
-        private const string SetupWorkspace = "setupWorkspace";
+        // private const string SetupWorkspace = "setupWorkspace";
 
-
+    //TODO: code fix provider is not being provided.
         public static async Task Main(string[] args)
         {
             if (args.Length == 0) throw new ServerException("A workspace setup json must be provided.");

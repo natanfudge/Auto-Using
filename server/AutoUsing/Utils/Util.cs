@@ -1,3 +1,12 @@
+
+#if DEBUG
+#define WRITE_LOGS
+#define WRITE_VERBOSE
+// #define WRITE_BENCHMARKS
+#endif
+
+
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,6 +23,7 @@ namespace AutoUsing.Utils
 {
     public static class Util
     {
+
         /// <summary>
         ///     Indicates whether the specified string is null or an System.String.Empty string.
         /// </summary>
@@ -176,9 +186,11 @@ namespace AutoUsing.Utils
         /// <param name="benchmarkName">Benchmark identifier</param>
         public static void LogTimePassed(this Stopwatch watch, string benchmarkName)
         {
-            // watch.Stop();
-            if (writeBenchmarks) Log(
+#if WRITE_BENCHMARKS
+            Log(
               $"Executing {benchmarkName} took {(watch.ElapsedMilliseconds)} milliseconds.");
+#endif
+
         }
 
         /// <summary>
@@ -186,15 +198,20 @@ namespace AutoUsing.Utils
         /// </summary>
         public static void Log(string text)
         {
-            if (writeLogs) File.AppendAllText(logLocation, $"{DateTime.Now}: {text}\n");
+#if WRITE_LOGS
+
+            File.AppendAllText(logLocation, $"{DateTime.Now}: {text}\n");
+#endif
         }
 
         /// <summary>
-        /// Logs text to the log file with the current date attached to it only if verbose logging is enabled. //TODO: if you complete in this position (after .) it will crash.
+        /// Logs text to the log file with the current date attached to it only if verbose logging is enabled.//todo: it crashes here..
         /// </summary>
         public static void Verbose(string text)
         {
-            if (writeVerbose) Log(text);
+#if WRITE_VERBOSE
+            Log(text);
+#endif
         }
 
         /// <summary>
@@ -211,18 +228,14 @@ namespace AutoUsing.Utils
             return result;
         }
 
-        public static void WaitForDebugger(){
-            while(!Debugger.IsAttached) Thread.Sleep(500);
+        public static void WaitForDebugger()
+        {
+            while (!Debugger.IsAttached) Thread.Sleep(500);
         }
 
-        const bool writeVerbose = true;
 
-#if DEBUG
-        const bool writeLogs = true;
-#else
-        const bool writeLogs = false;
-#endif
-        const bool writeBenchmarks = false;
+
+
         //HARDCODED
         const string logLocation = "C:/Users/natan/Desktop/Auto-Using-Git/server/AutoUsing/logs/log.txt";
     }

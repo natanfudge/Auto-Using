@@ -11,8 +11,8 @@ namespace AutoUsing.Lsp
 {
     public class InteractableTextDocument
     {
-        private string Text;
-        private string[] TextLines;
+        private readonly string Text;
+        private readonly string[] TextLines;
 
         public string Path { get; set; }
 
@@ -39,7 +39,7 @@ namespace AutoUsing.Lsp
             var wordStart = new StringBuilder();
             var wordEnd = new StringBuilder();
 
-            var c = text[(int)pos.Character];
+            // var c = text[(int)pos.Character];
 
             // Get all chars BEFORE the position and at the position until there is a space
             for (var i = (int)pos.Character; i >= 0 && !string.IsNullOrWhiteSpace(text[i].ToString()); i--) wordStart.Append(text[i]);

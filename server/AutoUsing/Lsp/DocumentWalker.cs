@@ -16,8 +16,8 @@ namespace AutoUsing.Lsp
 
     public class DocumentWalker
     {
-        private InteractableTextDocument Document;
-        private ILanguageServer Server;
+        private readonly InteractableTextDocument Document;
+        private readonly ILanguageServer Server;
         // public DocumentWalker(TextDocumentIdentifier textDocument, FileManager manager)
         public DocumentWalker(TextDocumentIdentifier textDocument, ILanguageServer server)
         {

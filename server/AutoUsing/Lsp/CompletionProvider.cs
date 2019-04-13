@@ -12,7 +12,7 @@ namespace AutoUsing.Lsp
 {
     class CompletionProvider : ICompletionHandler
     {
-        private CompletionCapability _capability;
+        // private CompletionCapability _capability;
         
 
 
@@ -24,7 +24,7 @@ namespace AutoUsing.Lsp
                     Pattern = "**/*.cs"
                 }
             );
-        const int maxCompletionAmount = 100;
+        // const int maxCompletionAmount = 100;
 
         public CompletionRegistrationOptions GetRegistrationOptions()
         {
@@ -57,7 +57,7 @@ namespace AutoUsing.Lsp
 
         public void SetCapability(CompletionCapability capability)
         {
-            _capability = capability;
+            // _capability = capability;
             // capability.
         }
 
@@ -72,7 +72,7 @@ namespace AutoUsing.Lsp
         //     return completions;
         // }
 
-        const string COMPLETION_STORAGE = "commonwords";
+        // const string COMPLETION_STORAGE = "commonwords";
     }
 
     public class StoredCompletion

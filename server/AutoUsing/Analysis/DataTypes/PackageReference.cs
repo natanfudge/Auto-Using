@@ -12,17 +12,16 @@ namespace AutoUsing.Analysis.DataTypes
 
         public override bool Equals(object obj)
         {
-            var reference = obj as PackageReference;
-            return reference != null &&
-                   Name == reference.Name &&
+            return obj is PackageReference reference &&
                    Version == reference.Version &&
                    Path == reference.Path;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Name, Version, Path);
+            return HashCode.Combine(Version, Path);
         }
+
 
 
     }

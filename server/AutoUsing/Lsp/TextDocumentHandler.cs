@@ -16,7 +16,7 @@ namespace AutoUsing.Lsp
     public class TextDocumentHandler : ITextDocumentSyncHandler
     {
         //TODO incremental file handling
-        private readonly ILanguageServer _router;
+        // private readonly ILanguageServer _router;
         // private readonly FileManager _bufferManager;
 
         private readonly DocumentSelector _documentSelector = new DocumentSelector(
@@ -27,7 +27,7 @@ namespace AutoUsing.Lsp
             }
         );
 
-        private SynchronizationCapability _capability;
+        // private readonly SynchronizationCapability _capability;
 
         // public TextDocumentHandler(ILanguageServer router, FileManager bufferManager)
         // {

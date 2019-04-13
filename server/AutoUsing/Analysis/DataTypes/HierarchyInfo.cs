@@ -23,8 +23,7 @@ namespace AutoUsing.Analysis.DataTypes
 
         public override bool Equals(object obj)
         {
-            var info = obj as HierarchyInfo;
-            return info != null &&
+            return obj is HierarchyInfo info &&
                    Name == info.Name &&
                    Namespace == info.Namespace &&
                   Parents.SequenceEqual( info.Parents);

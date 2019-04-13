@@ -4,10 +4,11 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UseNETCoreGenerator>true</UseNETCoreGenerator>
     <LangVersion>latest</LangVersion>
-   
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-    <PackageReference Include="OmniSharp.Extensions.LanguageServer" Version="0.12.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1"/>
+    <PackageReference Include="OmniSharp.Extensions.LanguageServer" Version="0.12.0"/>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.1"/>
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="3.0.0"/>
   </ItemGroup>
 </Project>

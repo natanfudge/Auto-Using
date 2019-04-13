@@ -26,10 +26,10 @@ namespace AutoUsing.Lsp
             if(projectName == null) return new CompletionList();
             var completionInstance = new CompletionInstance(documentWalker, projectName, wordToComplete, server);
 
-            return await completionInstance.provideCompletionItems(request);
+            return await completionInstance.ProvideCompletionItems(request);
         }
 
-        public async Task<CompletionList> provideCompletionItems(CompletionParams request)
+        public async Task<CompletionList> ProvideCompletionItems(CompletionParams request)
         {
             var completionType = this.DocumentWalker.GetCompletionType(request.Position);
 
@@ -72,15 +72,15 @@ namespace AutoUsing.Lsp
                     throw new Exception("this should never happen...");
                 }
 
-                completions = this.completionDataToVscodeCompletions(completionData, usings);
+                completions = this.CompletionDataToVscodeCompletions(completionData, usings);
             }
             return completions;
         }
 
-        private DocumentWalker DocumentWalker;
-        private string ProjectName;
-        private string WordToComplete;
-        private Server Server;
+        private readonly DocumentWalker DocumentWalker;
+        private readonly string ProjectName;
+        private readonly string WordToComplete;
+        private readonly Server Server;
 
         public CompletionInstance(DocumentWalker documentWalker, string projectName, string wordToComplete, Server server)
         {
@@ -199,9 +199,9 @@ namespace AutoUsing.Lsp
         /// Map pure completion data to vscode's CompletionList format
         /// </summary>
         /// <param name="usings">A list of the using directive in the file. All already imported namespaces will be removed from the array.</param>
-        private CompletionList completionDataToVscodeCompletions(IEnumerable<TypeCompletion> completions, string[] usings)
+        private CompletionList CompletionDataToVscodeCompletions(IEnumerable<TypeCompletion> completions, string[] usings)
         {
-            completions = filterOutAlreadyUsing(completions, usings);
+            completions = FilterOutAlreadyUsing(completions, usings);
             var totalCompletionAmount = completions.Count();
             var completionAmount = Math.Min(totalCompletionAmount, MaxCompletionAmount);
             var takingOnlySomeCompletions = totalCompletionAmount > MaxCompletionAmount;
@@ -259,7 +259,7 @@ namespace AutoUsing.Lsp
         /// Removes all namespaces that already have a using statement
         /// </summary>
         /// <returns>The length of the remaining array</returns>
-        private static IEnumerable<TypeCompletion> filterOutAlreadyUsing(IEnumerable<TypeCompletion> completions, string[] usings)
+        private static IEnumerable<TypeCompletion> FilterOutAlreadyUsing(IEnumerable<TypeCompletion> completions, string[] usings)
         {
             //TODO: this might be slow now. just reduce the amount of completions we process in the first place to 100.
             Array.Sort(usings);

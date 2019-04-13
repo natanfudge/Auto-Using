@@ -7,7 +7,7 @@ namespace AutoUsing.Lsp
     {
 
         
-        private static ConcurrentDictionary<string, StringBuilder> buffers = new ConcurrentDictionary<string, StringBuilder>();
+        private static readonly ConcurrentDictionary<string, StringBuilder> buffers = new ConcurrentDictionary<string, StringBuilder>();
 
         public static void UpdateBuffer(string documentPath, StringBuilder buffer)
         {

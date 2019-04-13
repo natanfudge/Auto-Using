@@ -6,7 +6,7 @@ namespace TestProg
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
 
             var loop = new List<int>();

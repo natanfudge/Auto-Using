@@ -29,7 +29,7 @@ namespace AutoUsing
     {
         public static Server Instance = new Server();
         // public IOProxy Proxy = new IOProxy();
-        private List<Project> Projects = new List<Project>();
+        private readonly List<Project> Projects = new List<Project>();
         private string GlobalStorageDir;
 
 
