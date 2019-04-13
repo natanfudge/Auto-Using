@@ -1,10 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 namespace AutoUsing.Analysis.Cache
 {
-    public class SixBitString
+    public class SevenBitString
     {
-        public static byte[] Compress(string str)
+        public  static byte[] Compress(string str)
         {
-            var bytes = System.Text.Encoding.
-        } 
+            return Encoding.ASCII.GetBytes(str);
+        }
+
+        public static string Uncompress(byte[] sevenBitStrings)
+        {
+            return Encoding.ASCII.GetString(sevenBitStrings);
+        }
     }
 }

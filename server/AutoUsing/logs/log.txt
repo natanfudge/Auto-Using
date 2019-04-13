@@ -58418,3 +58418,294 @@
   "C:\\Users\\natan\\.nuget\\packages\\Newtonsoft.Json/12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll"
 ]
 4/12/2019 5:30:14 PM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/13/2019 8:16:56 PM: Apending types: 
+[
+  {
+    "Identifier": "C:\\Users\\natan\\.nuget\\packages\\JetBrains.dotMemoryUnit/3.0.20171219.105559/lib/netstandard2.0/dotMemory.Unit.dll",
+    "Content": [
+      {
+        "Name": "AssemblyIdentity",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "AssertTraffic",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "TypeMemoryInfo",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "TypeTrafficInfo",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "dotMemory",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "DotMemoryUnit",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "DotMemoryUnitConstants",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "DotMemoryUnitController",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "DotMemoryUnitTestOutput",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "EnableDotMemoryUnitSupport",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "Memory",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "MemoryCheckPoint",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "MemoryInfo",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "ObjectSet",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "ObjectSetBase",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "ObjectSetQuery",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "Origin",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "QueryBuilder",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "SavingStrategy",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "SnapshotDifference",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "SpecialDirectory",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "SuppressXUnitOutputException",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "Traffic",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "TrafficQuery",
+        "Namespace": "JetBrains.dotMemoryUnit"
+      },
+      {
+        "Name": "IReadOnlyCollection",
+        "Namespace": "JetBrains.dotMemoryUnit.Util"
+      },
+      {
+        "Name": "nameof",
+        "Namespace": "JetBrains.dotMemoryUnit.Util"
+      },
+      {
+        "Name": "dotMemoryApi",
+        "Namespace": "JetBrains.dotMemoryUnit.Kernel"
+      },
+      {
+        "Name": "Snapshot",
+        "Namespace": "JetBrains.dotMemoryUnit.Kernel"
+      },
+      {
+        "Name": "TestController",
+        "Namespace": "JetBrains.dotMemoryUnit.Controller"
+      },
+      {
+        "Name": "ClientSerializer",
+        "Namespace": "JetBrains.dotMemoryUnit.Client"
+      },
+      {
+        "Name": "Contract",
+        "Namespace": "JetBrains.dotMemoryUnit.Client"
+      },
+      {
+        "Name": "DotMemoryUnitDataContractSerializer",
+        "Namespace": "JetBrains.dotMemoryUnit.Client"
+      },
+      {
+        "Name": "StandardSerializer",
+        "Namespace": "JetBrains.dotMemoryUnit.Client"
+      },
+      {
+        "Name": "Intersection",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "Query",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "QueryExpression",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "QuerySet",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "Union",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "ExpressionType",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "Operation",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "SnapshotPair",
+        "Namespace": "JetBrains.dotMemoryUnit.Client.Interface"
+      },
+      {
+        "Name": "PublicKey",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "Resources",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "AssemblyProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "Generation",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "GenerationProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "InterfaceProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "NamespaceProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "ObjectProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "TrafficProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "TypeProperty",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      },
+      {
+        "Name": "TypePropertyBase",
+        "Namespace": "JetBrains.dotMemoryUnit.Properties"
+      }
+    ]
+  },
+  {
+    "Identifier": "C:\\Users\\natan\\.nuget\\packages\\System.Text.Utf8/0.1.0-preview2-180322-4/lib/netcoreapp2.1/System.Text.Utf8.dll",
+    "Content": [
+      {
+        "Name": "UnicodeScalar",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8Char",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8CharEnumerator",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8Extensions",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8SpanTextElementEnumerator",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8SpanUnicodeScalarEnumerator",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8String",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8TextElement",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8TextElementEnumerator",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8UnicodeScalarEnumerator",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8CharSpanTextElementEnumerable",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8StringTextElementEnumerable",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8CharSpanUnicodeScalarEnumerable",
+        "Namespace": "System.Text"
+      },
+      {
+        "Name": "Utf8StringUnicodeScalarEnumerable",
+        "Namespace": "System.Text"
+      }
+    ]
+  }
+]
+4/13/2019 8:16:56 PM: Old packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\MSTest.TestFramework/1.3.2/lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\MSTest.TestFramework/1.3.2/lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll"
+]
+4/13/2019 8:16:56 PM: New packages : [
+  "C:\\Users\\natan\\.nuget\\packages\\JetBrains.dotMemoryUnit/3.0.20171219.105559/lib/netstandard2.0/dotMemory.Unit.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\MSTest.TestFramework/1.3.2/lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\MSTest.TestFramework/1.3.2/lib/netstandard1.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\System.Text.Utf8/0.1.0-preview2-180322-4/lib/netcoreapp2.1/System.Text.Utf8.dll"
+]
+4/13/2019 8:16:56 PM: Adding packages: [
+  "C:\\Users\\natan\\.nuget\\packages\\JetBrains.dotMemoryUnit/3.0.20171219.105559/lib/netstandard2.0/dotMemory.Unit.dll",
+  "C:\\Users\\natan\\.nuget\\packages\\System.Text.Utf8/0.1.0-preview2-180322-4/lib/netcoreapp2.1/System.Text.Utf8.dll"
+]

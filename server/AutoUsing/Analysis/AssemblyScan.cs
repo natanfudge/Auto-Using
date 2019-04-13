@@ -84,7 +84,9 @@ namespace AutoUsing.Analysis
         /// </summary>
         private static bool IsNotInternalType(Type type)
         {
-            return !type.Namespace.Contains("Internal");
+
+            return !type.Namespace?.Contains("Internal") ?? false;
+
         }
 
         /// <summary>

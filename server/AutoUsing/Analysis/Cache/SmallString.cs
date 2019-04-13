@@ -1,7 +1,7 @@
 namespace AutoUsing.Analysis.Cache
 {
-    public class SmallString
+    public interface SmallString
     {
-        
+        string ToString();
     }
 }

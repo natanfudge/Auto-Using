@@ -1,7 +1,10 @@
 namespace AutoUsing.Analysis.DataTypes
 {
-    public class TypeCompletionStorage
-    {
-        
-    }
+    /// <summary>
+    /// The format in which type completions are stored in cache
+    /// </summary>
+//    public class TypeCompletionStorage
+//    {
+//        public string 
+//    }
 }
