@@ -58709,3 +58709,10 @@
   "C:\\Users\\natan\\.nuget\\packages\\JetBrains.dotMemoryUnit/3.0.20171219.105559/lib/netstandard2.0/dotMemory.Unit.dll",
   "C:\\Users\\natan\\.nuget\\packages\\System.Text.Utf8/0.1.0-preview2-180322-4/lib/netcoreapp2.1/System.Text.Utf8.dll"
 ]
+4/14/2019 10:08:51 AM: Could not find the assembly path of a newly added library 'SonarAnalyzer.CSharp/7.12.0.8217' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.
+4/14/2019 10:09:28 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/14/2019 10:09:32 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/14/2019 10:09:55 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/14/2019 10:10:04 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.
+4/14/2019 10:10:06 AM: Could not find method caller type! Assuming it's just a non-existent type followed by a dot.

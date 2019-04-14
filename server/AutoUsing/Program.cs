@@ -23,6 +23,10 @@ namespace AutoUsing
                      );
         }
 
+        public void f<T> where T : Program(){
+
+        }
+
 
 
         // private const string SetupWorkspace = "setupWorkspace";

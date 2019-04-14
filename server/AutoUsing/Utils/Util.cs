@@ -205,7 +205,7 @@ namespace AutoUsing.Utils
         }
 
         /// <summary>
-        /// Logs text to the log file with the current date attached to it only if verbose logging is enabled.//todo: it crashes here..
+        /// Logs text to the log file with the current date attached to it only if verbose logging is enabled.
         /// </summary>
         public static void Verbose(string text)
         {
