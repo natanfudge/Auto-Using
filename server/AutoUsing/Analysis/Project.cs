@@ -343,12 +343,16 @@ namespace AutoUsing.Analysis
 
             References = new List<PackageReference>();
 
+            // Util.WaitForDebugger();
+
             foreach (XmlNode node in Document.SelectNodes("//PackageReference"))
             {
                 var packageName = node?.Attributes?.GetNamedItem("Include")?.InnerText;
                 var packageVersion = node?.Attributes?.GetNamedItem("Version")?.InnerText;
 
                 if (packageName.IsNullOrEmpty() || packageVersion.IsNullOrEmpty()) continue;
+
+                
 
 
                 var libraryName = new LibraryIdentifier(packageName, packageVersion);

@@ -93,7 +93,7 @@ namespace AutoUsing.Lsp
         /// <summary>
         /// Takes a omnisharp hover string from when you hover over a type, and returns the type that is written in it.
         /// </summary>
-        private Type ParseType(string hoverString)
+        private OmnisharpType ParseType(string hoverString)
         {
             // Take the relevant part of the hover that contains the type
             const int start = 10;
@@ -138,7 +138,7 @@ namespace AutoUsing.Lsp
 
             if (generic) typeClass += "<>";
 
-            return new Type { Class = typeClass, Namespace = typeNamespace };
+            return new OmnisharpType { Class = typeClass, Namespace = typeNamespace };
         }
 
 
@@ -146,7 +146,7 @@ namespace AutoUsing.Lsp
         /// <summary>
         /// Get all extension methods of a type
         /// </summary>
-        private IEnumerable<TypeCompletion> GetExtensionMethods(Type callerType)
+        private IEnumerable<TypeCompletion> GetExtensionMethods(OmnisharpType callerType)
         {
             var hierachies = this.Server.GetAllHierarchies(this.ProjectName);
 

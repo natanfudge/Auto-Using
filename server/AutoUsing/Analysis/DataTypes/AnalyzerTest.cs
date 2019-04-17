@@ -1,8 +1,8 @@
-using Microsoft.CodeAnalysis.Editing;
+// using Microsoft.CodeAnalysis.Editing;
 
-namespace Test
-{
-//    class AnalyzerTest : provider
-//    {
-//    }
-}
+// namespace Test
+// {
+// //    class AnalyzerTest : provider
+// //    {
+// //    }
+// }

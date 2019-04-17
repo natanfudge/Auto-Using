@@ -33,7 +33,7 @@
   "activationEvents": [
     "onLanguage:csharp"
   ],
-  "main": "./client/out/extension",
+  "main": "./dist/extension",
   "contributes": {
     "configuration": {
       "type": "object",
@@ -65,7 +65,7 @@
   },
   "scripts": {
     "vscode:prepublish": "sh ./scripts/prepublish.sh",
-    "compile-everything": "sh ./scripts/build.sh",
+    "compile-everything": "sh ./scripts/debug.sh",
     "compile-everything-test": "sh ./scripts/test.sh",
     "watch": "tsc -b -w webpack --mode none --watch",
     "postinstall": "cd client && npm install && cd .."
@@ -78,7 +78,7 @@
     "ts-loader": "^5.3.3",
     "tslint": "^5.15.0",
     "typescript": "^3.4.3",
-    "webpack": "^4.29.6",
+    "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"
   },
   "extensionDependencies": [

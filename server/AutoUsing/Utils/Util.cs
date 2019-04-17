@@ -16,6 +16,8 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading;
+using System.Threading.Tasks;
+using AutoUsing.Lsp;
 using Newtonsoft.Json;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 
@@ -192,7 +194,7 @@ namespace AutoUsing.Utils
 
          public static void Deconstruct<T>(this IList<T> list, out T first, out T second, out T third) {
             if(list.Count != 3) throw new IndexOutOfRangeException
-                ("Attempt to deconstruct a list that doesn't have 3 elements to 3 parts.");
+                ($"Attempt to deconstruct a list '{list.ToIndentedJson()}' that doesn't have 3 elements to 3 parts.");
             first = list[0];
             second = list[1];
             third = list[2];
@@ -257,8 +259,11 @@ namespace AutoUsing.Utils
             list.RemoveAll(s => true);
         }
 
+
+
         public static void WaitForDebugger()
         {
+            // Task.Run(() => Program.SendNotificationToClient(SharedConstants.DebugRequestCommand));
             while (!Debugger.IsAttached) Thread.Sleep(500);
         }
 

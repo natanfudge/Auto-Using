@@ -25,6 +25,8 @@ import { promisify, debug } from 'util';
 const debugServerLocation = join("server", "AutoUsing", "bin", "Debug", "netcoreapp2.1", "win10-x64", "AutoUsing.exe");
 const releaseServerLocation = join("server", "AutoUsing", "bin", "Release", "netcoreapp2.1", "publish", "AutoUsing.dll");
 const hoverRequest = "custom/hoverRequest";
+const debugRequest = "custom/debugRequest";
+const attachDebuggerConfig = "Attach debugger to server";
 const dotnetExe = 'dotnet';
 const HANDLE_COMPLETION = "custom/handleCompletion";
 const CLEAN_CACHE = "autousing.cleanCache";
@@ -82,7 +84,7 @@ export function activate(context: vscode.ExtensionContext): void {
 
 
         client.onRequest(hoverRequest, async (request: HoverRequest) => {
-
+            // Get the hover information of a variable from omnisharp
             let pos: vscode.Position = new vscode.Position(request.pos.line, request.pos.character);
             let uri = vscode.Uri.file(request.filePath);
             let result = await getHoverString(uri, pos);
@@ -90,6 +92,14 @@ export function activate(context: vscode.ExtensionContext): void {
             let str: string = result;
             return str;
         });
+
+        // client.onNotification(debugRequest,() =>{
+        //     // Attach debugger to server when asked
+        //     let path = vscode.Uri.parse(context.asAbsolutePath(""));
+        //     let folder = vscode.workspace.getWorkspaceFolder( path);
+        //     vscode.debug.startDebugging(  folder,attachDebuggerConfig);
+        //     let x = 2;
+        // });
 
     });
 
