@@ -45,5 +45,11 @@
 		]
 
 	},
-	"defaultSeverity": "warning"
+	"defaultSeverity": "warning",
+	"linterOptions": {
+		"exclude": [
+			"src/test/extensionMethods.test.ts",
+			"src/test/types.test.ts"
+		]
+	}
 }

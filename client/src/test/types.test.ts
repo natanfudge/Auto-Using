@@ -65,7 +65,7 @@ describe(`CompletionProvider Types Tests`, () => {
 
     it("Should work despite being after a comment dot", async () => {
         let completionList = await complete("ShouldIgnoreComment.cs", 7, 8);
-        assertContains(completionList, "Binder");
+        assertContains(completionList, "ADVF");
     });
 
     it("Should show completions even where there is no space before", async () => {

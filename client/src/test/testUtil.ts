@@ -112,7 +112,7 @@ function assertBool(checking: boolean, trueOrFalse: boolean): void {
 /**
  * Asserts that none of the elements in the array return true to the specified attribute
  */
-export function assertNone<T>(arr: Array<T>, attribute: (element: T) => boolean) {
+export function assertNone<T>(arr: Array<T>, attribute: (element: T) => boolean) : void{
     for (let i = 0; i < arr.length; i++) {
         const el = arr[i];
         if (attribute(el)) {
@@ -150,7 +150,7 @@ function getTestPlaygroundUri(testname: string): vscode.Uri {
 export async function openTest(testName: string): Promise<vscode.TextDocument> {
 
     // Move test to playground
-    await writeFileSync(getTestPlaygroundPath(testName), await readFileSync(getTestAssetPath(testName)));
+     writeFileSync(getTestPlaygroundPath(testName),  readFileSync(getTestAssetPath(testName)));
 
     let doc = await vscode.workspace.openTextDocument(getTestPlaygroundUri(testName));
     await vscode.window.showTextDocument(doc);

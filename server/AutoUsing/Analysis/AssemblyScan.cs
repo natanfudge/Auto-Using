@@ -23,6 +23,7 @@ namespace AutoUsing.Analysis
             }
             catch (Exception e)
             {
+                //TODO: ignore files that end with _._
                 if (e is BadImageFormatException || e is FileLoadException) Assembly = null;
             }
         }
@@ -35,6 +36,10 @@ namespace AutoUsing.Analysis
             Assembly = assembly;
 
         }
+
+        // public static class test : AssemblyScan{
+
+        // }
 
 
         private Assembly Assembly { get; set; }
@@ -71,7 +76,6 @@ namespace AutoUsing.Analysis
             {
                 name = name.Remove(name.Length - AttributeSuffix.Length);
             }
-            //TODO: the bug is probably that attribute is not the direct base class
             return new TypeCompletionInfo(name, type.Namespace);
         }
 

@@ -178,6 +178,26 @@ namespace AutoUsing.Utils
             return doc.Uri.LocalPath.Substring(1);
         }
 
+        public static void AddIfNotContains<T>(this IList<T> list, T element)
+        {
+            if (!list.Contains(element)) list.Add(element);
+        }
+        
+        public static void Deconstruct<T>(this IList<T> list, out T first, out T second) {
+            if(list.Count != 2) throw new IndexOutOfRangeException
+                ("Attempt to deconstruct a list that doesn't have 2 elements to 2 parts.");
+            first = list[0];
+            second = list[1];
+        }
+
+         public static void Deconstruct<T>(this IList<T> list, out T first, out T second, out T third) {
+            if(list.Count != 3) throw new IndexOutOfRangeException
+                ("Attempt to deconstruct a list that doesn't have 3 elements to 3 parts.");
+            first = list[0];
+            second = list[1];
+            third = list[2];
+        }
+
 
 
         /// <summary>
@@ -226,6 +246,15 @@ namespace AutoUsing.Utils
             T[] result = new T[length];
             Array.Copy(arr, index, result, 0, length);
             return result;
+        }
+
+
+        public static bool IsEmpty<T>(this IEnumerable<T> list){
+            return list.Count() == 0;
+        }
+
+        public static void RemoveAll<T>(this List<T> list){
+            list.RemoveAll(s => true);
         }
 
         public static void WaitForDebugger()

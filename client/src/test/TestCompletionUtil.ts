@@ -25,7 +25,7 @@ export class DirectCompletionTestHelper {
 
 
 
-export function removeCheat(label: string) {
+export function removeCheat(label: string) : string{
     return label.replace(SORT_CHEAT, "");
 }
 

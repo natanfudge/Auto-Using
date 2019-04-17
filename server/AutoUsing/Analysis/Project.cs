@@ -20,6 +20,7 @@ namespace AutoUsing.Analysis
     public class Project : IDisposable
     {
         private XmlDocument Document { get; set; }
+
         //TODO: explain the purpose of this field
         private XmlNamespaceManager NamespaceManager { get; set; }
         private FileWatcher ProjectFileWatcher { get; set; }
@@ -29,34 +30,39 @@ namespace AutoUsing.Analysis
         /// The list of library names that are referenced by the .csproj file 
         /// </summary>
         public List<PackageReference> References { get; set; }
+
         /// <summary>
         /// The locations of the assemblies of the libraries in the .csproj file
         /// </summary>
-        public Dictionary<string, List<string>> LibraryAssemblyLocations { get; set; }
+        public IEnumerable<Library> LibraryAssemblyLocations { get; set; }
+
         /// <summary>
         /// The directory of the project file
         /// </summary>
         public string RootDirectory { get; private set; }
+
         /// <summary>
         /// The file name of the .csproj file NOT including the extension
         /// </summary>
         /// 
         public string Name { get; private set; }
+
         /// <summary>
         /// The location of the nuget packages
         /// </summary>
         public string NuGetPackageRoot { get; private set; }
+
         /// <summary>
         /// The full path to the .csproj file
         /// </summary>
         public string FilePath { get; private set; }
+
         /// <summary>
         /// The file name of the .csproj file including the extension
         /// </summary>
         public string FileName { get; private set; }
 
         public CompletionCaches Caches { get; private set; }
-
 
 
         /// <summary>
@@ -68,7 +74,6 @@ namespace AutoUsing.Analysis
         /// <param name= "storageDirectory">The location at which project-specific cache files will be stored</param>
         public Project(string filePath, string storageDirectory, bool watch)
         {
-
             Document = new XmlDocument();
             References = new List<PackageReference>();
 
@@ -105,7 +110,6 @@ namespace AutoUsing.Analysis
 
         private void LoadCache(string vscodeDir)
         {
-
             Caches = new CompletionCaches
             {
                 Types = new Cache<TypeCompletionInfo>(GetCacheLocation("types", vscodeDir)),
@@ -151,7 +155,6 @@ namespace AutoUsing.Analysis
             ProjectFileWatcher = new FileWatcher(FilePath);
             ProjectFileWatcher.Changed += (s, e) =>
             {
-
                 // Prevent the event from getting triggered twice.
                 if (projectFileChangedRecently) return;
                 projectFileChangedRecently = true;
@@ -173,7 +176,6 @@ namespace AutoUsing.Analysis
                         LoadPackageReferences();
                         UpdateCache();
                     }
-
                 });
             };
             ProjectFileWatcher.EnableRaisingEvents = true;
@@ -191,7 +193,6 @@ namespace AutoUsing.Analysis
             AssetsFileWatcher = new FileWatcher(location);
             AssetsFileWatcher.Changed += (s, e) =>
             {
-
                 // Prevent the event from getting triggered twice.
                 if (assetsFileChangedRecently) return;
                 assetsFileChangedRecently = true;
@@ -205,7 +206,6 @@ namespace AutoUsing.Analysis
                         LoadPackageReferences();
                         UpdateCache();
                     }
-
                 });
             };
             AssetsFileWatcher.EnableRaisingEvents = true;
@@ -232,36 +232,97 @@ namespace AutoUsing.Analysis
             if (!File.Exists(AssetsFileLocation()))
             {
                 // Someone fucked with the assets file completely
-                if (LibraryAssemblyLocations == null) LibraryAssemblyLocations = new Dictionary<string, List<string>>();
+                if (LibraryAssemblyLocations == null) LibraryAssemblyLocations = new List<Library>();
                 return;
             }
             try
             {
-
-                var assets = JObject.Parse(File.ReadAllText(AssetsFileLocation()));
-
-                // TODO: Need to see what we do when we have multiple targets
-                var targets = assets["targets"];
-                var targetLibs = targets.First().First();
-
-                var locations = targetLibs
-                    .ToDictionary(lib => ((JProperty)lib).Name,
-                        lib =>
-                        {
-                            // Go through the tree to get the value that points to the dll
-                            var location = lib.First()["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList();
-                            return location ?? new List<string>();
-                        });
-
-                this.LibraryAssemblyLocations = locations;
-
+                LoadLibraryAssemblyLocationsChecked();
             }
             catch (JsonReaderException)
             {
                 // Someone fucked with the assets file a bit
-                if (LibraryAssemblyLocations == null) LibraryAssemblyLocations = new Dictionary<string, List<string>>();
+                if (LibraryAssemblyLocations == null) LibraryAssemblyLocations = new List<Library>();
             }
         }
+
+        private void LoadLibraryAssemblyLocationsChecked()
+        {
+            var assets = JObject.Parse(File.ReadAllText(AssetsFileLocation()));
+
+            // TODO: Need to see what we do when we have multiple targets
+            var targets = assets["targets"];
+            var targetLibs = targets.First().First();
+
+            // Util.WaitForDebugger();
+
+            var locations = targetLibs.Select(lib =>
+            {
+                var (name, version) = ((JProperty)lib).Name.Split("/");
+
+                // The json node that stores the dependencies, and some other things.
+                var infoNode = lib.First();
+                // The assembly locations live in the "compile" node
+                var assemblies = infoNode["compile"]?.Select(assembly => ((JProperty)assembly).Name).ToList();
+
+
+
+                RemoveNonsensePaths(assemblies,name : name, version : version);
+
+                var dependencies = infoNode["dependencies"]
+                   ?.Select(dependencyNode =>
+                    {
+                        var dependency = dependencyNode as JProperty;
+                        // Sometimes there are square brackets that need to be removed.
+                        var dependencyVersion = ((JValue)dependency.First()).Value.ToString().Replace("[", "").Replace("]", "");
+                        return new LibraryIdentifier(dependency.Name, dependencyVersion);
+                    });
+
+                // Return empty enumerables instead of nulls
+                return new Library(new LibraryIdentifier(name, version), assemblies ?? Enumerable.Empty<string>(), dependencies ?? Enumerable.Empty<LibraryIdentifier>());
+            });
+            // // We are not interested in libraries with no assemblies
+            // .Where(library => library.Assemblies.Any());
+
+
+
+
+            this.LibraryAssemblyLocations = locations;
+        }
+
+        /// <summary>
+        /// Sometimes the assets file gives a path of the form "a/b/c/_._" which is not an actual file.
+        /// Sometimes there is no path.
+        /// Sometimes the path is a base class library and is not in the nuget folder.
+        /// Removes all of the paths that are of these cases.
+        /// </summary>
+        private void RemoveNonsensePaths(List<string> paths,   string name, string version)
+        {
+
+            if(name.StartsWith("System.")){
+                // Base class library
+                paths?.RemoveAll();
+                return;
+            }
+
+            paths?.RemoveAll(path =>{
+                var pathParts = path.Split("/");
+                
+                // if(pathParts[0] == "ref") return true;
+                // nonsense _._
+                if(pathParts.Last() == "_._") return true;
+                return false;
+                // var fullPath = Path.Combine(NuGetPackageRoot,name.ToLower(),version, path).ParseEnvironmentVariables();
+                // return !File.Exists(fullPath);
+            } );
+            //  || ;
+            // return paths.First().Split("/").Last() == "_._";
+        }
+
+        // public void x<T>() where T :class{
+
+        // }
+
 
         /// <summary>
         ///     Loads full package info for each reference of the project.
@@ -289,31 +350,52 @@ namespace AutoUsing.Analysis
 
                 if (packageName.IsNullOrEmpty() || packageVersion.IsNullOrEmpty()) continue;
 
-                var packagePath = Path.Combine(NuGetPackageRoot, $"{packageName}/{packageVersion}/");
 
-                var assemblyPathIdentifier = packageName + "/" + packageVersion;
-                if (!LibraryAssemblyLocations.ContainsKey(assemblyPathIdentifier))
-                {
-                    Util.Log($@"Could not find the assembly path of a newly added library '{assemblyPathIdentifier}' in projects.assets.json.
-                    This is probably because the dependencies were not restored yet.");
-                    continue;
-                }
+                var libraryName = new LibraryIdentifier(packageName, packageVersion);
+                AddReferencesOfLibrary(libraryName);
 
-                foreach (var assemblyPath in LibraryAssemblyLocations[assemblyPathIdentifier])
-                {
-                    References.Add(new PackageReference
-                    {
-                        Name = packageName,
-                        Version = packageVersion,
-                        Path = Path.Combine(packagePath, assemblyPath)
-                    });
-                }
             }
         }
 
 
+        /// <summary>
+        /// Recursively adds the assemblies of a library and its dependencies
+        /// </summary>
+        /// <param name="libraryIdentifier">The identifier of the library</param>
+        private void AddReferencesOfLibrary(LibraryIdentifier libraryIdentifier)
+        {
+            var library = LibraryAssemblyLocations.FirstOrDefault(lib => lib.Matches(libraryIdentifier));
+            if (library == null)
+            {
+                Util.Log(
+                    $@"Could not find the assembly path of a newly added library '{libraryIdentifier}' in projects.assets.json.
+                    This is probably because the dependencies were not restored yet.");
+                return;
+            }
 
 
+            var packageName = libraryIdentifier.Name;
+            var packageVersion = libraryIdentifier.Version.ToString();
+
+            var packagePath = Path.Combine(NuGetPackageRoot, $"{packageName}/{packageVersion}/");
+
+            // Add references of current library
+            foreach (var assemblyPath in library.Assemblies)
+            {
+                References.AddIfNotContains(new PackageReference
+                {
+                    Name = packageName,
+                    Version = packageVersion,
+                    Path = Path.Combine(packagePath, assemblyPath)
+                });
+            }
+
+            // Recursively add the references of the dependencies
+            foreach (var dependency in library.Dependencies)
+            {
+                AddReferencesOfLibrary(dependency);
+            }
+        }
 
 
         /// <summary>
@@ -322,13 +404,16 @@ namespace AutoUsing.Analysis
         /// <param name="oldReferences"></param>
         private void UpdateCache()
         {
+            // Util.WaitForDebugger();
             // Gets the intersection in case one of the cache files is missing something
             var oldPackages = GetOldCacheIntersection().ToList();
             var newPackages = this.References.Select(reference => reference.Path.ParseEnvironmentVariables());
 
+            var filtered = newPackages.Where(p => p.Contains("ObjectModel"));
             // Add new packages to cache
             var addedPackages = newPackages.Except(oldPackages);
-            var scans = addedPackages.Select(package => new AssemblyScan(package)).Where(scanner => !scanner.CouldNotLoad());
+            var scans = addedPackages.Select(package => new AssemblyScan(package))
+                .Where(scanner => !scanner.CouldNotLoad());
             Caches.AppendScanResults(scans);
 
             // Delete packages that no longer exist from the cache
@@ -336,26 +421,25 @@ namespace AutoUsing.Analysis
             Caches.DeletePackages(deletedPackages);
 
             LogPackageChange(oldPackages, newPackages, addedPackages, deletedPackages);
-
         }
 
         private IEnumerable<string> GetOldCacheIntersection()
         {
-            return Caches.Types.GetIdentifiers().Intersect(Caches.Hierachies.GetIdentifiers()).Intersect(Caches.Extensions.GetIdentifiers());
+            return Caches.Types.GetIdentifiers().Intersect(Caches.Hierachies.GetIdentifiers())
+                .Intersect(Caches.Extensions.GetIdentifiers());
         }
 
         private static void LogPackageChange(IEnumerable<string> oldPackages, IEnumerable<string> newPackages,
-         IEnumerable<string> addedPackages, IEnumerable<string> removedPackages)
+            IEnumerable<string> addedPackages, IEnumerable<string> removedPackages)
         {
             if (oldPackages.Count() != newPackages.Count())
             {
                 Util.Log("Old packages : " + oldPackages.ToIndentedJson());
                 Util.Log("New packages : " + newPackages.ToIndentedJson());
 
-                if (addedPackages.Count() > 0) Util.Log("Adding packages: " + addedPackages.ToIndentedJson());
-                if (removedPackages.Count() > 0) Util.Log("Removing packages : " + removedPackages.ToIndentedJson());
+                if (addedPackages.Any()) Util.Log("Adding packages: " + addedPackages.ToIndentedJson());
+                if (removedPackages.Any()) Util.Log("Removing packages : " + removedPackages.ToIndentedJson());
             }
-
         }
 
         /// <summary>

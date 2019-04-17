@@ -37,7 +37,7 @@ namespace AutoUsing.Analysis.Cache
         {
             if (scans.Count() == 0) return;
 
-            Util.Verbose("Apending types: \n" + GetTypeInfoOfScans(scans).ToIndentedJson());
+            Util.Verbose("Appending types: \n" + GetTypeInfoOfScans(scans).ToIndentedJson());
 
             Types.AddCache(GetTypeInfoOfScans(scans));
             Hierachies.AddCache(GetHierarchyInfoOfScans(scans));

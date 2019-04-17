@@ -3,8 +3,8 @@ namespace AutoUsing.Analysis.DataTypes
 {
     public class HierarchyTree
     {
-         .
+        
     }
 
-    
+
 }

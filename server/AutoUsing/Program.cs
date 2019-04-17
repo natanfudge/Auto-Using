@@ -23,11 +23,11 @@ namespace AutoUsing
                      );
         }
 
-        public void f<T> where T : Program(){
+        // public void f<T> where T : Program(){
 
-        }
+        // }
 
-
+        //TODO: do a Util.Debug() utility
 
         // private const string SetupWorkspace = "setupWorkspace";
 

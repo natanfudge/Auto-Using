@@ -33,7 +33,7 @@
   "activationEvents": [
     "onLanguage:csharp"
   ],
-  "main": "./dist/extension",
+  "main": "./client/out/extension",
   "contributes": {
     "configuration": {
       "type": "object",
