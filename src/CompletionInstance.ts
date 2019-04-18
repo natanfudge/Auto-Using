@@ -12,7 +12,7 @@ import { binSearch, binarySearch } from "./speedutil";
 
 
 export async function provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
-	 token: vscode.CancellationToken, context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext): Promise<vscode.CompletionItem[]> {
+	token: vscode.CancellationToken, context: vscode.CompletionContext, extensionContext: vscode.ExtensionContext): Promise<vscode.CompletionItem[]> {
 	let completionInstance = new CompletionInstance(extensionContext, new DocumentWalker(document));
 	return completionInstance.provideCompletionItems(document, position, token, context);
 }
@@ -29,7 +29,7 @@ class CompletionInstance {
 
 
 	public async provideCompletionItems(document: vscode.TextDocument, position: vscode.Position,
-		 token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
+		token: vscode.CancellationToken, context: vscode.CompletionContext): Promise<vscode.CompletionItem[]> {
 		let completionType = await this.documentWalker.getCompletionType(position);
 
 		let completions: vscode.CompletionItem[];
@@ -153,6 +153,7 @@ class CompletionInstance {
 		commonNames.sort();
 
 		let completions = new Array<vscode.CompletionItem>(completionAmount);
+		let usingPos = this.documentWalker.getUsingPosition();
 
 		for (let i = 0; i < completionAmount; i++) {
 
@@ -163,7 +164,7 @@ class CompletionInstance {
 			let thereIsOnlyOneClassWithThatName = reference.namespaces.length === 1;
 
 			// We instantly put the using statement only if there is only one option
-			let usingStatementEdit = thereIsOnlyOneClassWithThatName ? [usingEdit(reference.namespaces[0])] : undefined;
+			let usingStatementEdit = thereIsOnlyOneClassWithThatName ? [usingEdit(reference.namespaces[0], usingPos)] : undefined;
 
 			let completion: vscode.CompletionItem = {
 				label: isCommon ? name : SORT_CHEAT + name,
@@ -173,7 +174,7 @@ class CompletionInstance {
 				additionalTextEdits: usingStatementEdit,
 				commitCharacters: ["."],
 				detail: reference.namespaces.join("\n"),
-				command: { command: HANDLE_COMPLETION, arguments: [reference], title: "handles completion" }
+				command: { command: HANDLE_COMPLETION, arguments: [reference,usingPos.line], title: "handles completion" }
 			};
 
 			completions[i] = completion;
@@ -186,7 +187,7 @@ class CompletionInstance {
 }
 
 
-const usingEdit = (namespace: string) => vscode.TextEdit.insert(new vscode.Position(0, 0), `using ${namespace};\n`);
+const usingEdit = (namespace: string, pos: vscode.Position) => vscode.TextEdit.insert(pos, `using ${namespace};\n`);
 
 
 /**

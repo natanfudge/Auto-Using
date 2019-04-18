@@ -33,7 +33,7 @@ suite("CompletionProvider References Context Tests", function () {
 
     test("Should add using expression", async () => {
         let [list, doc] = await completeWithData("ShouldAddUsing.cs", 1, 5);
-        await addUsing("System.Collections.Specialized", context, { name: "BitVector32", namespaces: ["System.Collections.Specialized"] });
+        await addUsing("System.Collections.Specialized", context, { name: "BitVector32", namespaces: ["System.Collections.Specialized"] },0);
 
         let addedLine = doc.lineAt(0).text;
         assert.equal(addedLine, "using System.Collections.Specialized;");

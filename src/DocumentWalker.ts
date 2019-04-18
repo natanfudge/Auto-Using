@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { isWhitespace, syntaxChars, showSuggestFor } from "./Constants";
 export class DocumentWalker {
-    public constructor(private document: vscode.TextDocument) {}
+    public constructor(private document: vscode.TextDocument) { }
 
     /**
      * @param completionPos The position at which the user is currently typing
@@ -11,13 +11,13 @@ export class DocumentWalker {
      * 
      */
     public async getCompletionType(completionPos: vscode.Position): Promise<CompletionType> {
-        if(completionPos.character === 0 && completionPos.line === 0) return CompletionType.REFERENCE;
+        if (completionPos.character === 0 && completionPos.line === 0) return CompletionType.REFERENCE;
         let currentPos = this.getPrev(completionPos);
 
         let currentChar = this.getChar(currentPos);
 
         // Travel to before this word
-        while (!isWhitespace(currentChar)) {
+        while (!isWhitespace(currentChar) && !(currentPos.character == 0 && currentPos.line == 0)) {
             if (currentChar === ".") {
                 return CompletionType.EXTENSION;
             }
@@ -26,7 +26,7 @@ export class DocumentWalker {
             currentChar = this.getChar(currentPos);
         }
 
-        currentPos = this.walkBackWhile(currentPos,  isWhitespace);
+        currentPos = this.walkBackWhile(currentPos, isWhitespace);
         if (this.getChar(currentPos) === ".") return CompletionType.EXTENSION;
 
         let wordRegex = /([^\s]+)/;
@@ -50,6 +50,36 @@ export class DocumentWalker {
     }
 
     /**
+     * Skips lines that have preprocessor statements
+     */
+    public getUsingPosition(): vscode.Position {
+        let line = 0;
+        
+        let firstCharInLine;
+        do {
+            let currentPos = new vscode.Position(line, 0);
+            currentPos = this.skipSpaces(currentPos);
+            firstCharInLine = this.getChar(currentPos);
+            line++;
+        } while (firstCharInLine == '#' || isWhitespace(firstCharInLine));
+
+        return new vscode.Position(line - 1, 0);
+    }
+
+    private skipSpaces(pos: vscode.Position): vscode.Position {
+        let currentChar = this.getChar(pos);
+        while (isWhitespace(currentChar)) {
+            let [oldLine,oldChar] = [pos.line,pos.character];
+            pos = this.getNext(pos);
+             // This the last char in the document
+             if(oldChar == pos.character && oldLine == pos.line) break;
+            currentChar = this.getChar(pos);
+        }
+
+        return pos;
+    }
+
+    /**
      * Travels through the document to see where exactly is the variable that is trying to invoker a method.
      * This could also be a method call. Examples:
      * x.F   <--- completionPos is after f, we are looking for x.
@@ -61,9 +91,9 @@ export class DocumentWalker {
         let startOfCaller = this.walkBackWhile(completionPos, isWhitespace);
         let dotPos = this.walkBackWhile(startOfCaller, char => char !== ".");
         let aBitAfterEndOfWordBefore = this.walkBackWhile(dotPos, isWhitespace);
-        if(aBitAfterEndOfWordBefore.line === 0 && aBitAfterEndOfWordBefore.character === 0) return aBitAfterEndOfWordBefore;
-        let endOfWordBefore = this.getPrev( aBitAfterEndOfWordBefore);
-        if(endOfWordBefore.line === 0 && endOfWordBefore.character === 0) return endOfWordBefore;
+        if (aBitAfterEndOfWordBefore.line === 0 && aBitAfterEndOfWordBefore.character === 0) return aBitAfterEndOfWordBefore;
+        let endOfWordBefore = this.getPrev(aBitAfterEndOfWordBefore);
+        if (endOfWordBefore.line === 0 && endOfWordBefore.character === 0) return endOfWordBefore;
         // If there are brackets we need to check if it's because of a chained method call or because of redundant parentheses
         if (this.getChar(endOfWordBefore) === ")") {
             let bracketsThatNeedToBeClosed = 1;
@@ -84,7 +114,7 @@ export class DocumentWalker {
                 return variablePos;
             }
 
-            
+
 
 
 
@@ -108,7 +138,7 @@ export class DocumentWalker {
         while (condition(currentChar)) {
             currentPos = this.getPrev(currentPos);
             currentChar = this.getChar(currentPos);
-            if(currentPos.line === 0 && currentPos.character === 0) break;
+            if (currentPos.line === 0 && currentPos.character === 0) break;
         }
 
         return currentPos;
@@ -146,11 +176,18 @@ export class DocumentWalker {
      * Returns the position before another position in the document
      */
     private getPrev(pos: vscode.Position): vscode.Position {
-        if(pos.character === 0 && pos.line === 0) throw new Error("Attempt to get position before (0,0)!");
+        if (pos.character === 0 && pos.line === 0) throw new Error("Attempt to get position before (0,0)!");
         return this.document.positionAt(this.document.offsetAt(pos) - 1);
     }
 
-    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]) :Promise<Reference[]>{
+    /*
+     * Returns the position before another position in the document
+     */
+    private getNext(pos: vscode.Position): vscode.Position {
+        return this.document.positionAt(this.document.offsetAt(pos) + 1);
+    }
+
+    public async filterByTypedWord(completionPosition: vscode.Position, references: Reference[]): Promise<Reference[]> {
         let wordToComplete = '';
         let range = this.document.getWordRangeAtPosition(completionPosition);
         if (range) {

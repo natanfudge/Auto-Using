@@ -1,6 +1,9 @@
 
 ## Changelog
 
+### 0.7.8
+- Fixed `using` expressions being placed above preprocessor statements (this also makes the extension more compatible with C# script files).
+
 ### 0.7.7
 - Fixed the extension hanging when used in an empty file.
 

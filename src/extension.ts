@@ -44,7 +44,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 	testHelper = new TestHelper(context);
 
 
-	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference) => {
+	let handleCompletionCommand = vscode.commands.registerCommand(HANDLE_COMPLETION, async (reference: Reference, line : number) => {
 		if (reference.namespaces.length > 1) {
 
 			let completions = getStoredCompletions(context);
@@ -61,7 +61,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
 			}));
 
 
-			vscode.window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, reference));
+			vscode.window.showQuickPick(namespacesSorted).then(pick => addUsing(pick, context, reference,line));
 		} else {
 			storeCompletion(context, new Completion(reference.name, reference.namespaces[0]));
 		}
@@ -82,7 +82,7 @@ export function wipeStoredCompletions(context: vscode.ExtensionContext): void {
 	context.globalState.update(COMPLETION_STORAGE, []);
 }
 
-export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, reference: Reference): Promise<void> {
+export async function addUsing(pick: string | undefined, context: vscode.ExtensionContext, reference: Reference,line : number): Promise<void> {
 	if (typeof pick === "undefined") return;
 	// Remove invisible unicode char
 	if (pick[0] === SORT_CHEAT) pick = pick.substr(1, pick.length);
@@ -90,7 +90,7 @@ export async function addUsing(pick: string | undefined, context: vscode.Extensi
 	storeCompletion(context, new Completion(reference.name, pick));
 
 	let editBuilder = (textEdit: any) => {
-		textEdit.insert(new vscode.Position(0, 0), `using ${pick};\n`);
+		textEdit.insert(new vscode.Position(line, 0), `using ${pick};\n`);
 	};
 
 	await vscode.window.activeTextEditor!.edit(editBuilder);
