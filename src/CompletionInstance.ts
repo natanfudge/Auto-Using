@@ -73,13 +73,18 @@ class CompletionInstance {
 		let typeStart = hoverString.substring(start, hoverString.length);
 
 		let generic = false;
-		let i: number;
+		let i: number = 0;
+		if (hoverString === "") {
+			throw Error("unexpected empty hover string");
+		}
 		for (i = 0; typeStart[i] !== " " && typeStart[i] !== "\n"; i++) {
 			if (typeStart[i] === "<") {
 				generic = true;
 				break;
 			}
 		}
+
+
 
 		let type = typeStart.substr(0, i);
 
@@ -174,7 +179,7 @@ class CompletionInstance {
 				additionalTextEdits: usingStatementEdit,
 				commitCharacters: ["."],
 				detail: reference.namespaces.join("\n"),
-				command: { command: HANDLE_COMPLETION, arguments: [reference,usingPos.line], title: "handles completion" }
+				command: { command: HANDLE_COMPLETION, arguments: [reference, usingPos.line], title: "handles completion" }
 			};
 
 			completions[i] = completion;

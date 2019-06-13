@@ -152,7 +152,7 @@ export class DocumentWalker {
         let hover = await this.getHover(position);
         if (hover.length === 0) return undefined;
 
-        return (<{ language: string; value: string }>hover[0].contents[1]).value;
+        return (<{ language: string; value: string }>hover[0].contents[0]).value;
 
 
     }
