@@ -35,6 +35,9 @@ Sometimes there are multiple completions with the same name. In that case they a
 
 ## Changelog
 
+### 0.7.9
+- Fixed the 1.20.0 version of the C# extension breaking this extension.
+
 ### 0.7.8
 - Fixed `using` expressions being placed above preprocessor statements (this also makes the extension more compatible with C# script files).
 
