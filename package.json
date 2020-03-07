@@ -82,6 +82,6 @@
     "webpack-cli": "^3.3.0"
   },
   "extensionDependencies": [
-    "ms-vscode.csharp"
+    "ms-dotnettools.csharp"
   ]
 }
