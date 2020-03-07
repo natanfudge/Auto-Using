@@ -1,6 +1,9 @@
 
 ## Changelog
 
+### 0.7.10
+- Fixed some version after the 1.34.13 version of the C# extension breaking this extension.
+
 ### 0.7.9
 - Fixed the 1.20.0 version of the C# extension breaking this extension.
 
